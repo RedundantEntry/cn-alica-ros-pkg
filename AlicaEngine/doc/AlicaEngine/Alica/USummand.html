@@ -1,0 +1,711 @@
+<html>
+  <head>
+    <title>Alica.USummand</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">AlicaEngine</a> : <a href="index.html">Alica Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Alica.USummand">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Alica.USummand:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Alica.USummand:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Alica.USummand:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Alica.USummand">USummand  Class</h1>
+    <p class="Summary" id="T:Alica.USummand:Summary">
+            Abstract super class for domain dependent utility summands.
+            </p>
+    <div id="T:Alica.USummand:Signature">
+      <h2>Syntax</h2>
+      <div class="Signature">public abstract class  <b>USummand</b></div>
+    </div>
+    <div class="Remarks" id="T:Alica.USummand:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Alica.USummand:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Alica.USummand:Docs:Version Information">
+        <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Protected Constructors</h2>
+        <div class="SectionBox" id="Protected Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Alica.USummand">USummand</a>
+                    </b>()</div>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Fields</h2>
+        <div class="SectionBox" id="Protected Fields">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.USummand.id">id</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.USummand.info">info</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.USummand.name">name</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.USummand.relevantEntryPointIds">relevantEntryPointIds</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>[]</i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.USummand.relevantEntryPoints">relevantEntryPoints</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Alica/EntryPoint.html">EntryPoint</a>[]</i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.USummand.ui">ui</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Alica/UtilityInterval.html">UtilityInterval</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.USummand.weight">weight</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.USummand.Weight">Weight</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.USummand.CacheEvalData">CacheEvalData</a>
+                  </b>()<blockquote> Cache every data for the current evaluation, to
+            assure consistancy over the complete current evaluation. </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.USummand.Differentiate(Alica.IAssignment)">Differentiate</a>
+                  </b>(<a href="../Alica/IAssignment.html">IAssignment</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Tuple`2">Tuple&lt;Double[], double&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.USummand.Eval(Alica.IAssignment)">Eval</a>
+                  </b>(<a href="../Alica/IAssignment.html">IAssignment</a>)<nobr> : <a href="../Alica/UtilityInterval.html">UtilityInterval</a></nobr><blockquote> Evaluates the utilityfunction summand </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.USummand.Init">Init</a>
+                  </b>()<blockquote>
+            Searches every needed entrypoint in the hashtable of the xmlparser
+            and stores it in the relevant entrypoint array. This will increase the
+            performance of the evaluation of this utility summand.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.USummand.ToString">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Alica.USummand:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Alica.USummand">USummand Constructor</h3>
+        <blockquote id="C:Alica.USummand:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected  <b>USummand</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Alica.USummand:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Alica.USummand:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.USummand.CacheEvalData">CacheEvalData Method</h3>
+        <blockquote id="M:Alica.USummand.CacheEvalData:member">
+          <p class="Summary"> Cache every data for the current evaluation, to
+            assure consistancy over the complete current evaluation. </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>CacheEvalData</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.USummand.CacheEvalData:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.USummand.CacheEvalData:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.USummand.Differentiate(Alica.IAssignment)">Differentiate Method</h3>
+        <blockquote id="M:Alica.USummand.Differentiate(Alica.IAssignment):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Tuple`2">Tuple&lt;Double[], double&gt;</a> <b>Differentiate</b> (<a href="../Alica/IAssignment.html">IAssignment</a> newAss)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.USummand.Differentiate(Alica.IAssignment):Parameters">
+            <dl>
+              <dt>
+                <i>newAss</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.USummand.Differentiate(Alica.IAssignment):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.USummand.Differentiate(Alica.IAssignment):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.USummand.Differentiate(Alica.IAssignment):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.USummand.Eval(Alica.IAssignment)">Eval Method</h3>
+        <blockquote id="M:Alica.USummand.Eval(Alica.IAssignment):member">
+          <p class="Summary"> Evaluates the utilityfunction summand </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="../Alica/UtilityInterval.html">UtilityInterval</a> <b>Eval</b> (<a href="../Alica/IAssignment.html">IAssignment</a> ass)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.USummand.Eval(Alica.IAssignment):Parameters">
+            <dl>
+              <dt>
+                <i>ass</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.USummand.Eval(Alica.IAssignment):Returns"> The result of the evaluation </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.USummand.Eval(Alica.IAssignment):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.USummand.Eval(Alica.IAssignment):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.USummand.id">id Field</h3>
+        <blockquote id="F:Alica.USummand.id:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>id</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.USummand.id:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.USummand.id:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.USummand.info">info Field</h3>
+        <blockquote id="F:Alica.USummand.info:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>info</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.USummand.info:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.USummand.info:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.USummand.Init">Init Method</h3>
+        <blockquote id="M:Alica.USummand.Init:member">
+          <p class="Summary">
+            Searches every needed entrypoint in the hashtable of the xmlparser
+            and stores it in the relevant entrypoint array. This will increase the
+            performance of the evaluation of this utility summand.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Init</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.USummand.Init:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.USummand.Init:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.USummand.name">name Field</h3>
+        <blockquote id="F:Alica.USummand.name:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>name</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.USummand.name:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.USummand.name:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.USummand.relevantEntryPointIds">relevantEntryPointIds Field</h3>
+        <blockquote id="F:Alica.USummand.relevantEntryPointIds:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>[] <b>relevantEntryPointIds</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.USummand.relevantEntryPointIds:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.USummand.relevantEntryPointIds:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.USummand.relevantEntryPoints">relevantEntryPoints Field</h3>
+        <blockquote id="F:Alica.USummand.relevantEntryPoints:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/EntryPoint.html">EntryPoint</a>[] <b>relevantEntryPoints</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.USummand.relevantEntryPoints:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.USummand.relevantEntryPoints:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.USummand.ToString">ToString Method</h3>
+        <blockquote id="M:Alica.USummand.ToString:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.USummand.ToString:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.USummand.ToString:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.USummand.ToString:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.USummand.ui">ui Field</h3>
+        <blockquote id="F:Alica.USummand.ui:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/UtilityInterval.html">UtilityInterval</a> <b>ui</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.USummand.ui:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.USummand.ui:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.USummand.weight">weight Field</h3>
+        <blockquote id="F:Alica.USummand.weight:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>weight</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.USummand.weight:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.USummand.weight:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.USummand.Weight">Weight Property</h3>
+        <blockquote id="P:Alica.USummand.Weight:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>Weight</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.USummand.Weight:Value"> Weight of this UtilitySummand </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.USummand.Weight:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.USummand.Weight:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1252 @@
+<html>
+  <head>
+    <title>Alica.BasicBehaviour</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">AlicaEngine</a> : <a href="index.html">Alica Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Alica.BasicBehaviour">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Alica.BasicBehaviour:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Alica.BasicBehaviour:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Alica.BasicBehaviour:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Alica.BasicBehaviour">BasicBehaviour  Class</h1>
+    <p class="Summary" id="T:Alica.BasicBehaviour:Summary">
+            The base class for all behaviours. All Behaviours must inherit from this class.
+            </p>
+    <div id="T:Alica.BasicBehaviour:Signature">
+      <h2>Syntax</h2>
+      <div class="Signature">public abstract class  <b>BasicBehaviour</b></div>
+    </div>
+    <div class="Remarks" id="T:Alica.BasicBehaviour:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Alica.BasicBehaviour:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Alica.BasicBehaviour:Docs:Version Information">
+        <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Alica.BasicBehaviour(System.String)">BasicBehaviour</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Fields</h2>
+        <div class="SectionBox" id="Protected Fields">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.BasicBehaviour.name">name</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.BasicBehaviour.parameters">parameters</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, string&gt;</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.BasicBehaviour.DueTime">DueTime</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.BasicBehaviour.FailureStatus">FailureStatus</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            The Failure flag. Raised by a behaviour to indicate it has failed in some way.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.BasicBehaviour.MessageObj">MessageObj</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.BasicBehaviour.Name">Name</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.BasicBehaviour.Parameters">Parameters</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, string&gt;</a>
+                  </i>. 
+            The set of static Parameters as defined by the <a href="../Alica/BehaviourConfiguration.html">Alica.BehaviourConfiguration</a>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.BasicBehaviour.Period">Period</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.BasicBehaviour.RunningPlan">RunningPlan</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Alica/RunningPlan.html">RunningPlan</a>
+                  </i>. 
+            The running plan representing this behaviour within the <a href="../Alica/PlanBase.html">Alica.PlanBase</a>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.BasicBehaviour.Signaler">Signaler</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.AutoResetEvent">System.Threading.AutoResetEvent</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.BasicBehaviour.SuccessStatus">SuccessStatus</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            The Success flag. Raised by a behaviour to indicate it reached whatever it ment to reach.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.BasicBehaviour.Variables">Variables</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.LinkedList`1">LinkedList&lt;Variable&gt;</a>
+                  </i>. 
+            The set of <a href="../Alica/Variable.html">Alica.Variable</a>s attached to this behaviours as defined by the <a href="../Alica/BehaviourConfiguration.html">Alica.BehaviourConfiguration</a>.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.BasicBehaviour.Run(System.Object)">Run</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>)<blockquote>
+            The running loop of a behaviour, to be overriden by a specific behaviour
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.BasicBehaviour.SetTrigger(Alica.EngineTrigger)">SetTrigger</a>
+                  </b>(<a href="../Alica/EngineTrigger.html">EngineTrigger</a>)<blockquote>
+            Override this to have <a href="../Alica/BasicBehaviour.html#M:Alica.BasicBehaviour.Run(System.Object)">BasicBehaviour.Run(object)</a> called on specific events.
+            The EngineTrigger can be added to any appropriately typed event. SetTrigger will only be called once.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.BasicBehaviour.VariableByName(System.String)">VariableByName</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../Alica/Variable.html">Variable</a></nobr><blockquote>
+            Access a variable by its name. This is the most common way to access variables during the <a href="../Alica/BasicBehaviour.html#M:Alica.BasicBehaviour.Run(System.Object)">BasicBehaviour.Run(object)</a> method of the behaviour.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.BasicBehaviour.VariableIdByName(System.String)">VariableIdByName</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a></nobr><blockquote>
+            Access a variable's by its name.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Methods</h2>
+        <div class="SectionBox" id="Protected Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.BasicBehaviour.GetHigherEntryPoint(System.String,System.String)">GetHigherEntryPoint</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../Alica/EntryPoint.html">EntryPoint</a></nobr><blockquote>
+            Similar to <a href="../Alica/BasicBehaviour.html#M:Alica.BasicBehaviour.GetParentEntryPoint(System.String)">BasicBehaviour.GetParentEntryPoint(string)</a>, but queries the plan hierarchy upwards.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.BasicBehaviour.GetOwnId">GetOwnId</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>
+            Convenience method to obtain the robot's own id.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.BasicBehaviour.GetParentEntryPoint(System.String)">GetParentEntryPoint</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../Alica/EntryPoint.html">EntryPoint</a></nobr><blockquote>
+            Can be used to query plan information of the parent plan from within a behaviour.
+            Usually called from within <a href="../Alica/BasicBehaviour.html#M:Alica.BasicBehaviour.InitializeParameters">BasicBehaviour.InitializeParameters</a></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.BasicBehaviour.InitializeParameters">InitializeParameters</a>
+                  </b>()<blockquote>
+            Called whenever a behaviour is started, i.e., when the corresponding state is entered.
+            Override for behaviour specific initialisation
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.BasicBehaviour.RobotsInEntryPoint(Alica.EntryPoint)">RobotsInEntryPoint</a>
+                  </b>(<a href="../Alica/EntryPoint.html">EntryPoint</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.ICollection`1">ICollection&lt;int&gt;</a></nobr><blockquote></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.BasicBehaviour.RobotsInEntryPointOfHigherPlan(Alica.EntryPoint)">RobotsInEntryPointOfHigherPlan</a>
+                  </b>(<a href="../Alica/EntryPoint.html">EntryPoint</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.ICollection`1">ICollection&lt;int&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.BasicBehaviour.RobotsInState(Alica.State)">RobotsInState</a>
+                  </b>(<a href="../Alica/State.html">State</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.HashSet`1">HashSet&lt;int&gt;</a></nobr><blockquote>
+            Returns the set of robots that currently inhabit state s in the parent plan.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.BasicBehaviour.RobotsInThisPlan">RobotsInThisPlan</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;int&gt;</a></nobr><blockquote>
+            Returns all robots currently working on the parent plan.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.BasicBehaviour.RobotsInThisState">RobotsInThisState</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.HashSet`1">HashSet&lt;int&gt;</a></nobr><blockquote>
+            Returns the set of robots that are currently inhabiting the state in which this behaviour is executed
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.BasicBehaviour.RobotsInThisTask">RobotsInThisTask</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.ICollection`1">ICollection&lt;int&gt;</a></nobr><blockquote>
+            Returns all robots currently working on the task this robot is assigned to in the parent plan.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Alica.BasicBehaviour:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Alica.BasicBehaviour(System.String)">BasicBehaviour Constructor</h3>
+        <blockquote id="C:Alica.BasicBehaviour(System.String):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>BasicBehaviour</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Alica.BasicBehaviour(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>name</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Alica.BasicBehaviour(System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Alica.BasicBehaviour(System.String):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.BasicBehaviour.DueTime">DueTime Property</h3>
+        <blockquote id="P:Alica.BasicBehaviour.DueTime:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>DueTime</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.BasicBehaviour.DueTime:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.BasicBehaviour.DueTime:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.BasicBehaviour.DueTime:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.BasicBehaviour.FailureStatus">FailureStatus Property</h3>
+        <blockquote id="P:Alica.BasicBehaviour.FailureStatus:member">
+          <p class="Summary">
+            The Failure flag. Raised by a behaviour to indicate it has failed in some way.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>FailureStatus</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.BasicBehaviour.FailureStatus:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.BasicBehaviour.FailureStatus:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.BasicBehaviour.FailureStatus:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.BasicBehaviour.GetHigherEntryPoint(System.String,System.String)">GetHigherEntryPoint Method</h3>
+        <blockquote id="M:Alica.BasicBehaviour.GetHigherEntryPoint(System.String,System.String):member">
+          <p class="Summary">
+            Similar to <a href="../Alica/BasicBehaviour.html#M:Alica.BasicBehaviour.GetParentEntryPoint(System.String)">BasicBehaviour.GetParentEntryPoint(string)</a>, but queries the plan hierarchy upwards.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/EntryPoint.html">EntryPoint</a> <b>GetHigherEntryPoint</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> planName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> taskName)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.BasicBehaviour.GetHigherEntryPoint(System.String,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>planName</i>
+              </dt>
+              <dd>
+            A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></dd>
+              <dt>
+                <i>taskName</i>
+              </dt>
+              <dd>
+            A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.BasicBehaviour.GetHigherEntryPoint(System.String,System.String):Returns">
+            The <a href="../Alica/EntryPoint.html">Alica.EntryPoint</a> of an ancestor plan. Can be used to query for robots (<a href="../Alica/BasicBehaviour.html#M:Alica.BasicBehaviour.RobotsInEntryPointOfHigherPlan(Alica.EntryPoint)">BasicBehaviour.RobotsInEntryPointOfHigherPlan(EntryPoint)</a>).
+            </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.GetHigherEntryPoint(System.String,System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.GetHigherEntryPoint(System.String,System.String):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.BasicBehaviour.GetOwnId">GetOwnId Method</h3>
+        <blockquote id="M:Alica.BasicBehaviour.GetOwnId:member">
+          <p class="Summary">
+            Convenience method to obtain the robot's own id.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>GetOwnId</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.BasicBehaviour.GetOwnId:Returns">
+            A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.GetOwnId:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.GetOwnId:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.BasicBehaviour.GetParentEntryPoint(System.String)">GetParentEntryPoint Method</h3>
+        <blockquote id="M:Alica.BasicBehaviour.GetParentEntryPoint(System.String):member">
+          <p class="Summary">
+            Can be used to query plan information of the parent plan from within a behaviour.
+            Usually called from within <a href="../Alica/BasicBehaviour.html#M:Alica.BasicBehaviour.InitializeParameters">BasicBehaviour.InitializeParameters</a></p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/EntryPoint.html">EntryPoint</a> <b>GetParentEntryPoint</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> taskName)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.BasicBehaviour.GetParentEntryPoint(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>taskName</i>
+              </dt>
+              <dd>
+            A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.BasicBehaviour.GetParentEntryPoint(System.String):Returns">
+            The <a href="../Alica/EntryPoint.html">Alica.EntryPoint</a> of the parent plan. Can be used to query for robots (<a href="../Alica/BasicBehaviour.html#M:Alica.BasicBehaviour.RobotsInEntryPoint(Alica.EntryPoint)">BasicBehaviour.RobotsInEntryPoint(EntryPoint)</a>).
+            </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.GetParentEntryPoint(System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.GetParentEntryPoint(System.String):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.BasicBehaviour.InitializeParameters">InitializeParameters Method</h3>
+        <blockquote id="M:Alica.BasicBehaviour.InitializeParameters:member">
+          <p class="Summary">
+            Called whenever a behaviour is started, i.e., when the corresponding state is entered.
+            Override for behaviour specific initialisation
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>InitializeParameters</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.InitializeParameters:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.InitializeParameters:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.BasicBehaviour.MessageObj">MessageObj Property</h3>
+        <blockquote id="P:Alica.BasicBehaviour.MessageObj:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> <b>MessageObj</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.BasicBehaviour.MessageObj:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.BasicBehaviour.MessageObj:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.BasicBehaviour.MessageObj:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.BasicBehaviour.name">name Field</h3>
+        <blockquote id="F:Alica.BasicBehaviour.name:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>name</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.BasicBehaviour.name:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.BasicBehaviour.name:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.BasicBehaviour.Name">Name Property</h3>
+        <blockquote id="P:Alica.BasicBehaviour.Name:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Name</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.BasicBehaviour.Name:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.BasicBehaviour.Name:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.BasicBehaviour.Name:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.BasicBehaviour.parameters">parameters Field</h3>
+        <blockquote id="F:Alica.BasicBehaviour.parameters:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, string&gt;</a> <b>parameters</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.BasicBehaviour.parameters:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.BasicBehaviour.parameters:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.BasicBehaviour.Parameters">Parameters Property</h3>
+        <blockquote id="P:Alica.BasicBehaviour.Parameters:member">
+          <p class="Summary">
+            The set of static Parameters as defined by the <a href="../Alica/BehaviourConfiguration.html">Alica.BehaviourConfiguration</a>.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, string&gt;</a> <b>Parameters</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.BasicBehaviour.Parameters:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.BasicBehaviour.Parameters:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.BasicBehaviour.Parameters:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.BasicBehaviour.Period">Period Property</h3>
+        <blockquote id="P:Alica.BasicBehaviour.Period:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>Period</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.BasicBehaviour.Period:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.BasicBehaviour.Period:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.BasicBehaviour.Period:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.BasicBehaviour.RobotsInEntryPoint(Alica.EntryPoint)">RobotsInEntryPoint Method</h3>
+        <blockquote id="M:Alica.BasicBehaviour.RobotsInEntryPoint(Alica.EntryPoint):member">
+          <p class="Summary">
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.ICollection`1">ICollection&lt;int&gt;</a> <b>RobotsInEntryPoint</b> (<a href="../Alica/EntryPoint.html">EntryPoint</a> ep)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.BasicBehaviour.RobotsInEntryPoint(Alica.EntryPoint):Parameters">
+            <dl>
+              <dt>
+                <i>ep</i>
+              </dt>
+              <dd>
+            A <a href="../Alica/EntryPoint.html">Alica.EntryPoint</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.BasicBehaviour.RobotsInEntryPoint(Alica.EntryPoint):Returns">
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">.</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.RobotsInEntryPoint(Alica.EntryPoint):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.RobotsInEntryPoint(Alica.EntryPoint):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.BasicBehaviour.RobotsInEntryPointOfHigherPlan(Alica.EntryPoint)">RobotsInEntryPointOfHigherPlan Method</h3>
+        <blockquote id="M:Alica.BasicBehaviour.RobotsInEntryPointOfHigherPlan(Alica.EntryPoint):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.ICollection`1">ICollection&lt;int&gt;</a> <b>RobotsInEntryPointOfHigherPlan</b> (<a href="../Alica/EntryPoint.html">EntryPoint</a> ep)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.BasicBehaviour.RobotsInEntryPointOfHigherPlan(Alica.EntryPoint):Parameters">
+            <dl>
+              <dt>
+                <i>ep</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.BasicBehaviour.RobotsInEntryPointOfHigherPlan(Alica.EntryPoint):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.RobotsInEntryPointOfHigherPlan(Alica.EntryPoint):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.RobotsInEntryPointOfHigherPlan(Alica.EntryPoint):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.BasicBehaviour.RobotsInState(Alica.State)">RobotsInState Method</h3>
+        <blockquote id="M:Alica.BasicBehaviour.RobotsInState(Alica.State):member">
+          <p class="Summary">
+            Returns the set of robots that currently inhabit state s in the parent plan.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.HashSet`1">HashSet&lt;int&gt;</a> <b>RobotsInState</b> (<a href="../Alica/State.html">State</a> s)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.BasicBehaviour.RobotsInState(Alica.State):Parameters">
+            <dl>
+              <dt>
+                <i>s</i>
+              </dt>
+              <dd>
+            A <a href="../Alica/State.html">Alica.State</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.BasicBehaviour.RobotsInState(Alica.State):Returns">
+            A set of robot ids.
+            </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.RobotsInState(Alica.State):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.RobotsInState(Alica.State):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.BasicBehaviour.RobotsInThisPlan">RobotsInThisPlan Method</h3>
+        <blockquote id="M:Alica.BasicBehaviour.RobotsInThisPlan:member">
+          <p class="Summary">
+            Returns all robots currently working on the parent plan.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;int&gt;</a> <b>RobotsInThisPlan</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.BasicBehaviour.RobotsInThisPlan:Returns">
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">.</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.RobotsInThisPlan:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.RobotsInThisPlan:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.BasicBehaviour.RobotsInThisState">RobotsInThisState Method</h3>
+        <blockquote id="M:Alica.BasicBehaviour.RobotsInThisState:member">
+          <p class="Summary">
+            Returns the set of robots that are currently inhabiting the state in which this behaviour is executed
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.HashSet`1">HashSet&lt;int&gt;</a> <b>RobotsInThisState</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.BasicBehaviour.RobotsInThisState:Returns">
+            A set containing all ids of robots inhabiting the state in which the current behaviour is executed
+            </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.RobotsInThisState:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.RobotsInThisState:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.BasicBehaviour.RobotsInThisTask">RobotsInThisTask Method</h3>
+        <blockquote id="M:Alica.BasicBehaviour.RobotsInThisTask:member">
+          <p class="Summary">
+            Returns all robots currently working on the task this robot is assigned to in the parent plan.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.ICollection`1">ICollection&lt;int&gt;</a> <b>RobotsInThisTask</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.BasicBehaviour.RobotsInThisTask:Returns">
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">.</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.RobotsInThisTask:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.RobotsInThisTask:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.BasicBehaviour.Run(System.Object)">Run Method</h3>
+        <blockquote id="M:Alica.BasicBehaviour.Run(System.Object):member">
+          <p class="Summary">
+            The running loop of a behaviour, to be overriden by a specific behaviour
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Run</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> msg)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.BasicBehaviour.Run(System.Object):Parameters">
+            <dl>
+              <dt>
+                <i>msg</i>
+              </dt>
+              <dd>
+            A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>, null is called by a timer, otherwise defined by the callee of the <a href="../Alica/EngineTrigger.html">Alica.EngineTrigger</a></dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.Run(System.Object):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.Run(System.Object):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.BasicBehaviour.RunningPlan">RunningPlan Property</h3>
+        <blockquote id="P:Alica.BasicBehaviour.RunningPlan:member">
+          <p class="Summary">
+            The running plan representing this behaviour within the <a href="../Alica/PlanBase.html">Alica.PlanBase</a>.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../Alica/RunningPlan.html">RunningPlan</a> <b>RunningPlan</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.BasicBehaviour.RunningPlan:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.BasicBehaviour.RunningPlan:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.BasicBehaviour.RunningPlan:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.BasicBehaviour.SetTrigger(Alica.EngineTrigger)">SetTrigger Method</h3>
+        <blockquote id="M:Alica.BasicBehaviour.SetTrigger(Alica.EngineTrigger):member">
+          <p class="Summary">
+            Override this to have <a href="../Alica/BasicBehaviour.html#M:Alica.BasicBehaviour.Run(System.Object)">BasicBehaviour.Run(object)</a> called on specific events.
+            The EngineTrigger can be added to any appropriately typed event. SetTrigger will only be called once.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetTrigger</b> (<a href="../Alica/EngineTrigger.html">EngineTrigger</a> e)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.BasicBehaviour.SetTrigger(Alica.EngineTrigger):Parameters">
+            <dl>
+              <dt>
+                <i>e</i>
+              </dt>
+              <dd>
+            A <a href="../Alica/EngineTrigger.html">Alica.EngineTrigger</a></dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.SetTrigger(Alica.EngineTrigger):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.SetTrigger(Alica.EngineTrigger):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.BasicBehaviour.Signaler">Signaler Property</h3>
+        <blockquote id="P:Alica.BasicBehaviour.Signaler:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.AutoResetEvent">System.Threading.AutoResetEvent</a> <b>Signaler</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.BasicBehaviour.Signaler:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.BasicBehaviour.Signaler:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.BasicBehaviour.Signaler:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.BasicBehaviour.SuccessStatus">SuccessStatus Property</h3>
+        <blockquote id="P:Alica.BasicBehaviour.SuccessStatus:member">
+          <p class="Summary">
+            The Success flag. Raised by a behaviour to indicate it reached whatever it ment to reach.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>SuccessStatus</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.BasicBehaviour.SuccessStatus:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.BasicBehaviour.SuccessStatus:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.BasicBehaviour.SuccessStatus:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.BasicBehaviour.VariableByName(System.String)">VariableByName Method</h3>
+        <blockquote id="M:Alica.BasicBehaviour.VariableByName(System.String):member">
+          <p class="Summary">
+            Access a variable by its name. This is the most common way to access variables during the <a href="../Alica/BasicBehaviour.html#M:Alica.BasicBehaviour.Run(System.Object)">BasicBehaviour.Run(object)</a> method of the behaviour.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../Alica/Variable.html">Variable</a> <b>VariableByName</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.BasicBehaviour.VariableByName(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>name</i>
+              </dt>
+              <dd>
+            A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.BasicBehaviour.VariableByName(System.String):Returns">
+            A <a href="../Alica/Variable.html">Alica.Variable</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.VariableByName(System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.VariableByName(System.String):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.BasicBehaviour.VariableIdByName(System.String)">VariableIdByName Method</h3>
+        <blockquote id="M:Alica.BasicBehaviour.VariableIdByName(System.String):member">
+          <p class="Summary">
+            Access a variable's by its name.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>VariableIdByName</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.BasicBehaviour.VariableIdByName(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>name</i>
+              </dt>
+              <dd>
+            A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.BasicBehaviour.VariableIdByName(System.String):Returns">
+            A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.VariableIdByName(System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.BasicBehaviour.VariableIdByName(System.String):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.BasicBehaviour.Variables">Variables Property</h3>
+        <blockquote id="P:Alica.BasicBehaviour.Variables:member">
+          <p class="Summary">
+            The set of <a href="../Alica/Variable.html">Alica.Variable</a>s attached to this behaviours as defined by the <a href="../Alica/BehaviourConfiguration.html">Alica.BehaviourConfiguration</a>.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.LinkedList`1">LinkedList&lt;Variable&gt;</a> <b>Variables</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.BasicBehaviour.Variables:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.BasicBehaviour.Variables:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.BasicBehaviour.Variables:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

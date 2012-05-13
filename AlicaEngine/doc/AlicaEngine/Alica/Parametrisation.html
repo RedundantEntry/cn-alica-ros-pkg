@@ -1,0 +1,576 @@
+<html>
+  <head>
+    <title>Alica.Parametrisation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">AlicaEngine</a> : <a href="index.html">Alica Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Alica.Parametrisation">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Alica.Parametrisation:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Alica.Parametrisation:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Alica.Parametrisation:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Alica.Parametrisation">Parametrisation  Class</h1>
+    <p class="Summary" id="T:Alica.Parametrisation:Summary">
+      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+    </p>
+    <div id="T:Alica.Parametrisation:Signature">
+      <h2>Syntax</h2>
+      <div class="Signature">public class  <b>Parametrisation</b> : <a href="../Alica/PlanElement.html">PlanElement</a></div>
+    </div>
+    <div class="Remarks" id="T:Alica.Parametrisation:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Alica.Parametrisation:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Alica.Parametrisation:Docs:Version Information">
+        <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../Alica/PlanElement.html">PlanElement</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Alica.Parametrisation">Parametrisation</a>
+                    </b>()</div>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Fields</h2>
+        <div class="SectionBox" id="Protected Fields">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.Parametrisation.subPlan">subPlan</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Alica/AbstractPlan.html">AbstractPlan</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.Parametrisation.subVar">subVar</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Alica/Variable.html">Variable</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.Parametrisation.var">var</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Alica/Variable.html">Variable</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../Alica/PlanElement.html#P:Alica.PlanElement.Comment">Comment</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../Alica/PlanElement.html">PlanElement</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../Alica/PlanElement.html#P:Alica.PlanElement.Id">Id</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>
+                  </i>. 
+            This element's unique id
+             (<i>Inherited from <a href="../Alica/PlanElement.html">PlanElement</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../Alica/PlanElement.html#P:Alica.PlanElement.Name">Name</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            This element's descriptive name.
+             (<i>Inherited from <a href="../Alica/PlanElement.html">PlanElement</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.Parametrisation.SubPlan">SubPlan</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Alica/AbstractPlan.html">AbstractPlan</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.Parametrisation.SubVar">SubVar</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Alica/Variable.html">Variable</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.Parametrisation.Var">Var</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Alica/Variable.html">Variable</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.Parametrisation.ToString">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Alica.Parametrisation:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Alica.Parametrisation">Parametrisation Constructor</h3>
+        <blockquote id="C:Alica.Parametrisation:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>Parametrisation</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Alica.Parametrisation:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Alica.Parametrisation:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.Parametrisation.subPlan">subPlan Field</h3>
+        <blockquote id="F:Alica.Parametrisation.subPlan:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/AbstractPlan.html">AbstractPlan</a> <b>subPlan</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.Parametrisation.subPlan:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.Parametrisation.subPlan:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.Parametrisation.SubPlan">SubPlan Property</h3>
+        <blockquote id="P:Alica.Parametrisation.SubPlan:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../Alica/AbstractPlan.html">AbstractPlan</a> <b>SubPlan</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.Parametrisation.SubPlan:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.Parametrisation.SubPlan:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.Parametrisation.SubPlan:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.Parametrisation.subVar">subVar Field</h3>
+        <blockquote id="F:Alica.Parametrisation.subVar:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/Variable.html">Variable</a> <b>subVar</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.Parametrisation.subVar:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.Parametrisation.subVar:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.Parametrisation.SubVar">SubVar Property</h3>
+        <blockquote id="P:Alica.Parametrisation.SubVar:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../Alica/Variable.html">Variable</a> <b>SubVar</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.Parametrisation.SubVar:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.Parametrisation.SubVar:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.Parametrisation.SubVar:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.Parametrisation.ToString">ToString Method</h3>
+        <blockquote id="M:Alica.Parametrisation.ToString:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.Parametrisation.ToString:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.Parametrisation.ToString:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.Parametrisation.ToString:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.Parametrisation.var">var Field</h3>
+        <blockquote id="F:Alica.Parametrisation.var:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/Variable.html">Variable</a> <b>var</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.Parametrisation.var:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.Parametrisation.var:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.Parametrisation.Var">Var Property</h3>
+        <blockquote id="P:Alica.Parametrisation.Var:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../Alica/Variable.html">Variable</a> <b>Var</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.Parametrisation.Var:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.Parametrisation.Var:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.Parametrisation.Var:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<workflow>
+	<!--<component id="xmiParser" class="org.openarchitectureware.emf.XmiReader">
+		<modelFile value="${modelFile}"/>
+		<metaModelPackage value="${metaModelPackage}"/> 
+		<outputSlot value="model"/>
+		<firstElementOnly value="true"/>
+	</component>-->
+	
+	<!--<component id="dirCleaner" class="org.openarchitectureware.workflow.common.DirectoryCleaner" skipOnErrors="true">
+		<directories value="${srcGenPath}"/>
+	</component>-->
+   
+	<component id="generator" class="org.openarchitectureware.xpand2.Generator" skipOnErrors="true">
+		<fileEncoding value="ISO-8859-1"/>
+		<metaModel id="mm" class="org.openarchitectureware.type.emf.EmfMetaModel">
+		  <metaModelPackage value="${metaModelPackage}"/> 
+		</metaModel>
+		
+		<outlet path="${srcGenPath}">
+		
+		</outlet>
+				
+		<!--protected regions configuration 	-->
+		<prSrcPaths value="${srcGenPath}"/>
+		<prExcludes value="*~"/>		
+		<!-- new engine: -->	
+		<expand value="de::uni_kassel::cn::planDesigner::codegeneration::templates::ExpressionsCSharp::Root FOR model"/>
+		<!-- old engine: -->
+		<!--<expand value="de::uni_kassel::cn::planDesigner::codegeneration::templates::RootCSharp::Root FOR model"/>-->				
+	</component>    
+	
+	<component id="generator" class="org.openarchitectureware.xpand2.Generator" skipOnErrors="true">
+		<fileEncoding value="ISO-8859-1"/>
+		<metaModel id="mm" class="org.openarchitectureware.type.emf.EmfMetaModel">
+		  <metaModelPackage value="${metaModelPackage}"/> 
+		</metaModel>
+		
+		<outlet path="${srcGenPath}/constraints/">
+			<!--<postprocessor class="de.uni_kassel.cn.planDesigner.codegeneration.CNBeautifier"/>-->
+		</outlet>
+						
+		<prSrcPaths value="${srcGenPath}/constraints/"/>
+		<prExcludes value="*~"/>		
+				
+		
+		<expand value="de::uni_kassel::cn::planDesigner::codegeneration::templates::ConstraintsCSharp::Root FOR model"/>
+	</component>   
+	<!--
+	<component id="generator" class="org.openarchitectureware.xpand2.Generator" skipOnErrors="true">
+		<fileEncoding value="ISO-8859-1"/>
+		<metaModel id="mm" class="org.openarchitectureware.type.emf.EmfMetaModel">
+		  <metaModelPackage value="${metaModelPackage}"/> 
+		</metaModel>
+		
+		<outlet path="${srcGenPath}/goalexpressions/">			
+		</outlet>
+						
+		<prSrcPaths value="${srcGenPath}/goalexpressions/"/>
+		<prExcludes value="*~"/>		
+				
+		
+		<expand value="de::uni_kassel::cn::planDesigner::codegeneration::templates::GoalExpressionsCSharp::Root FOR model"/>
+	</component>
+	-->
+</workflow>

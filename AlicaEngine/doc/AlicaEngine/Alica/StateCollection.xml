@@ -1,0 +1,438 @@
+<Type Name="StateCollection" FullName="Alica.StateCollection">
+  <TypeSignature Language="C#" Value="public class StateCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StateCollection extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StateCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StateCollection (Alica.AssignmentCollection ac);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Alica.AssignmentCollection ac) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ac" Type="Alica.AssignmentCollection" />
+      </Parameters>
+      <Docs>
+        <param name="ac">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StateCollection (int maxSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 maxSize) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="maxSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="maxSize">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StateCollection (System.Collections.Generic.List&lt;int&gt; robots, System.Collections.Generic.List&lt;Alica.State&gt; states);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.List`1&lt;int32&gt; robots, class System.Collections.Generic.List`1&lt;class Alica.State&gt; states) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="robots" Type="System.Collections.Generic.List&lt;System.Int32&gt;" />
+        <Parameter Name="states" Type="System.Collections.Generic.List&lt;Alica.State&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="robots">To be added.</param>
+        <param name="states">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRobotsInState">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.HashSet&lt;int&gt; GetRobotsInState (Alica.State s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.HashSet`1&lt;int32&gt; GetRobotsInState(class Alica.State s) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.HashSet&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="Alica.State" />
+      </Parameters>
+      <Docs>
+        <param name="s">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRobotsInState">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.HashSet&lt;int&gt; GetRobotsInState (long sid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.HashSet`1&lt;int32&gt; GetRobotsInState(int64 sid) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.HashSet&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sid" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="sid">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetState">
+      <MemberSignature Language="C#" Value="public Alica.State GetState (int r);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Alica.State GetState(int32 r) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.State</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="r">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="keys">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.List&lt;int&gt; keys;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Generic.List`1&lt;int32&gt; keys" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReconsiderOldAssignment">
+      <MemberSignature Language="C#" Value="public void ReconsiderOldAssignment (Alica.Assignment olda, Alica.Assignment newa);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReconsiderOldAssignment(class Alica.Assignment olda, class Alica.Assignment newa) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="olda" Type="Alica.Assignment" />
+        <Parameter Name="newa" Type="Alica.Assignment" />
+      </Parameters>
+      <Docs>
+        <param name="olda">To be added.</param>
+        <param name="newa">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveRobot">
+      <MemberSignature Language="C#" Value="public void RemoveRobot (int r);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveRobot(int32 r) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="r">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Robots">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;int&gt; Robots { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;int32&gt; Robots" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetInitialState">
+      <MemberSignature Language="C#" Value="public void SetInitialState (int robot, Alica.EntryPoint ep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetInitialState(int32 robot, class Alica.EntryPoint ep) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="robot" Type="System.Int32" />
+        <Parameter Name="ep" Type="Alica.EntryPoint" />
+      </Parameters>
+      <Docs>
+        <param name="robot">To be added.</param>
+        <param name="ep">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetState">
+      <MemberSignature Language="C#" Value="public void SetState (int robot, Alica.State state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetState(int32 robot, class Alica.State state) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="robot" Type="System.Int32" />
+        <Parameter Name="state" Type="Alica.State" />
+      </Parameters>
+      <Docs>
+        <param name="robot">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetStates">
+      <MemberSignature Language="C#" Value="public void SetStates (System.Collections.Generic.ICollection&lt;int&gt; robots, Alica.State state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetStates(class System.Collections.Generic.ICollection`1&lt;int32&gt; robots, class Alica.State state) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="robots" Type="System.Collections.Generic.ICollection&lt;System.Int32&gt;" />
+        <Parameter Name="state" Type="Alica.State" />
+      </Parameters>
+      <Docs>
+        <param name="robots">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateOfRobot">
+      <MemberSignature Language="C#" Value="public Alica.State StateOfRobot (int robot);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Alica.State StateOfRobot(int32 robot) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.State</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="robot" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="robot">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="States">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;Alica.State&gt; States { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Alica.State&gt; States" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Alica.State&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="values">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.List&lt;Alica.State&gt; values;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Generic.List`1&lt;class Alica.State&gt; values" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Alica.State&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

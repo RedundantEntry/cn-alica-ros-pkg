@@ -1,0 +1,665 @@
+<Type Name="Assignment" FullName="Alica.Assignment">
+  <TypeSignature Language="C#" Value="public class Assignment : Alica.IAssignment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Assignment extends System.Object implements class Alica.IAssignment" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Alica.IAssignment</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Contains all allocation information for a single plan. This includes the robot-task mapping, robot-state mapping and success information.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="allowIdling">
+      <MemberSignature Language="C#" Value="protected static bool allowIdling;" />
+      <MemberSignature Language="ILAsm" Value=".field family static bool allowIdling" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntryPointOfRobot">
+      <MemberSignature Language="C#" Value="public Alica.EntryPoint EntryPointOfRobot (int robot);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Alica.EntryPoint EntryPointOfRobot(int32 robot) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.EntryPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="robot" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="robot">
+            A <see cref="T:System.Int32" /></param>
+        <summary>
+            Returns the EntryPoint a robot is currently working on. Returns null, if the robot is currently not working on the respective plan.
+            </summary>
+        <returns>
+            A <see cref="T:Alica.EntryPoint" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="epRobotsMapping">
+      <MemberSignature Language="C#" Value="protected Alica.AssignmentCollection epRobotsMapping;" />
+      <MemberSignature Language="ILAsm" Value=".field family class Alica.AssignmentCollection epRobotsMapping" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.AssignmentCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EpSuccessMapping">
+      <MemberSignature Language="C#" Value="public Alica.SuccessCollection EpSuccessMapping { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Alica.SuccessCollection EpSuccessMapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.SuccessCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Information about succeeded tasks.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="epSucMapping">
+      <MemberSignature Language="C#" Value="protected Alica.SuccessCollection epSucMapping;" />
+      <MemberSignature Language="ILAsm" Value=".field family class Alica.SuccessCollection epSucMapping" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.SuccessCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllRobots">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;int&gt; GetAllRobots ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.List`1&lt;int32&gt; GetAllRobots() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntryPointCount">
+      <MemberSignature Language="C#" Value="public int GetEntryPointCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetEntryPointCount() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            NUmber of Entrypoints in this assignment's plan.
+            </summary>
+        <returns>
+            A <see cref="T:System.Int32" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntryPoints">
+      <MemberSignature Language="C#" Value="public Alica.EntryPoint[] GetEntryPoints ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Alica.EntryPoint[] GetEntryPoints() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.EntryPoint[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            The array of EntryPoints this assignment considers relevant.
+            </summary>
+        <returns>
+            A <see cref="T:Alica.EntryPoint[]" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRobotsWorking">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;int&gt; GetRobotsWorking (Alica.EntryPoint ep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.ICollection`1&lt;int32&gt; GetRobotsWorking(class Alica.EntryPoint ep) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ep" Type="Alica.EntryPoint" />
+      </Parameters>
+      <Docs>
+        <param name="ep">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRobotsWorking">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;int&gt; GetRobotsWorking (long epid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.ICollection`1&lt;int32&gt; GetRobotsWorking(int64 epid) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="epid" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="epid">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRobotsWorkingAndFinished">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;int&gt; GetRobotsWorkingAndFinished (Alica.EntryPoint ep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.List`1&lt;int32&gt; GetRobotsWorkingAndFinished(class Alica.EntryPoint ep) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ep" Type="Alica.EntryPoint" />
+      </Parameters>
+      <Docs>
+        <param name="ep">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRobotsWorkingAndFinished">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;int&gt; GetRobotsWorkingAndFinished (long epid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.List`1&lt;int32&gt; GetRobotsWorkingAndFinished(int64 epid) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="epid" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="epid">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUniqueRobotsWorkingAndFinished">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;int&gt; GetUniqueRobotsWorkingAndFinished (Alica.EntryPoint ep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.List`1&lt;int32&gt; GetUniqueRobotsWorkingAndFinished(class Alica.EntryPoint ep) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ep" Type="Alica.EntryPoint" />
+      </Parameters>
+      <Docs>
+        <param name="ep">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEntryPointNonEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEntryPointNonEmpty (Alica.EntryPoint ep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsEntryPointNonEmpty(class Alica.EntryPoint ep) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ep" Type="Alica.EntryPoint" />
+      </Parameters>
+      <Docs>
+        <param name="ep">
+            A <see cref="T:Alica.EntryPoint" /> identifiying the task in question.
+            </param>
+        <summary>
+            Test whether at least one robot is working on a task or succeeded with a task.
+            </summary>
+        <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEqual">
+      <MemberSignature Language="C#" Value="public bool IsEqual (Alica.Assignment otherAssignment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsEqual(class Alica.Assignment otherAssignment) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="otherAssignment" Type="Alica.Assignment" />
+      </Parameters>
+      <Docs>
+        <param name="otherAssignment">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSuccessfull">
+      <MemberSignature Language="C#" Value="public bool IsSuccessfull ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsSuccessfull() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Tests wether all required tasks have been succesfully completed and thus the plan can be considered as successful.
+            </summary>
+        <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public bool IsValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsValid() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Tests whether this assignment is valid with respect to the plan's cardinalities.
+            </summary>
+        <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="max">
+      <MemberSignature Language="C#" Value="protected double max;" />
+      <MemberSignature Language="ILAsm" Value=".field family float64 max" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Max">
+      <MemberSignature Language="C#" Value="public double Max { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Max" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The maximal utility of this assignment, equals <see cref="P:Alica.Assignment.Min" /> since Assignemnts are always complete.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="min">
+      <MemberSignature Language="C#" Value="protected double min;" />
+      <MemberSignature Language="ILAsm" Value=".field family float64 min" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Min">
+      <MemberSignature Language="C#" Value="public double Min { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Min" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The minimal utility of this assignment, equals <see cref="P:Alica.Assignment.Max" /> since Assignemnts are always complete.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumUnAssignedRobots">
+      <MemberSignature Language="C#" Value="public int NumUnAssignedRobots { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NumUnAssignedRobots" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            returns 0, as assignemts are always complete. (also see <see cref="T:Alica.IAssignment" />)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="plan">
+      <MemberSignature Language="C#" Value="protected Alica.Plan plan;" />
+      <MemberSignature Language="ILAsm" Value=".field family class Alica.Plan plan" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.Plan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Plan">
+      <MemberSignature Language="C#" Value="public Alica.Plan Plan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Alica.Plan Plan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.Plan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The Plan this Assignment refers to
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="robotStateMapping">
+      <MemberSignature Language="C#" Value="protected Alica.StateCollection robotStateMapping;" />
+      <MemberSignature Language="ILAsm" Value=".field family class Alica.StateCollection robotStateMapping" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.StateCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RobotStateMapping">
+      <MemberSignature Language="C#" Value="public Alica.StateCollection RobotStateMapping { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Alica.StateCollection RobotStateMapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.StateCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The robot-to-state mapping of this assignment.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToHackString">
+      <MemberSignature Language="C#" Value="public string ToHackString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToHackString() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalRobotCount">
+      <MemberSignature Language="C#" Value="public int TotalRobotCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 TotalRobotCount() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnAssignedRobots">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;int&gt; UnAssignedRobots { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;int32&gt; UnAssignedRobots" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            returns null, as no unassigned robot is left.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

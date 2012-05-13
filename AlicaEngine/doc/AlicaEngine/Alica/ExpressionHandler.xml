@@ -1,0 +1,231 @@
+<Type Name="ExpressionHandler" FullName="Alica.ExpressionHandler">
+  <TypeSignature Language="C#" Value="public class ExpressionHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExpressionHandler extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The Expressionhandler attaches expressions and constraints to plans during start-up of the engine.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExpressionHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Constructor, loads the assembly containing expressions and constraints.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="assem">
+      <MemberSignature Language="C#" Value="protected System.Reflection.Assembly assem;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Reflection.Assembly assem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachAll">
+      <MemberSignature Language="C#" Value="public void AttachAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AttachAll() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Attaches expressions and constraints to the plans. Called by the <see cref="T:Alica.AlicaEngine" /> during start up.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachConstraint">
+      <MemberSignature Language="C#" Value="protected void AttachConstraint (Alica.Condition c, Type t);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AttachConstraint(class Alica.Condition c, class System.Type t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="Alica.Condition" />
+        <Parameter Name="t" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="c">To be added.</param>
+        <param name="t">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachPlanConditions">
+      <MemberSignature Language="C#" Value="protected void AttachPlanConditions (Alica.Plan p, Type exprType, Type consType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AttachPlanConditions(class Alica.Plan p, class System.Type exprType, class System.Type consType) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p" Type="Alica.Plan" />
+        <Parameter Name="exprType" Type="System.Type" />
+        <Parameter Name="consType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="p">To be added.</param>
+        <param name="exprType">To be added.</param>
+        <param name="consType">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachTransConditions">
+      <MemberSignature Language="C#" Value="protected void AttachTransConditions (Alica.Transition t, Type exprType, Type consType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AttachTransConditions(class Alica.Transition t, class System.Type exprType, class System.Type consType) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t" Type="Alica.Transition" />
+        <Parameter Name="exprType" Type="System.Type" />
+        <Parameter Name="consType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="t">To be added.</param>
+        <param name="exprType">To be added.</param>
+        <param name="consType">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DummyConstraint">
+      <MemberSignature Language="C#" Value="public void DummyConstraint (Alica.ConstraintDescriptor cd, Alica.RunningPlan rp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DummyConstraint(class Alica.ConstraintDescriptor cd, class Alica.RunningPlan rp) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cd" Type="Alica.ConstraintDescriptor" />
+        <Parameter Name="rp" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="cd">To be added.</param>
+        <param name="rp">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        <summary>
+            Dummy Constraint builder in case none was found in the assembly.
+            </summary>
+        <returns>
+            A <see cref="T:Alica.ConstraintDescriptor" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DummyFalse">
+      <MemberSignature Language="C#" Value="public bool DummyFalse (Alica.RunningPlan rp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool DummyFalse(class Alica.RunningPlan rp) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rp" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="rp">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DummyTrue">
+      <MemberSignature Language="C#" Value="public bool DummyTrue (Alica.RunningPlan rp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool DummyTrue(class Alica.RunningPlan rp) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rp" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="rp">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,192 @@
+<Type Name="TaskAssignment" FullName="Alica.TaskAssignment">
+  <TypeSignature Language="C#" Value="public class TaskAssignment : Alica.ITaskAssignment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TaskAssignment extends System.Object implements class Alica.ITaskAssignment" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Alica.ITaskAssignment</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents an instance of an assignment problem for one plan or a plantype.
+            All parameters, which are static for this problem, are stored here.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskAssignment (System.Collections.Generic.LinkedList&lt;Alica.Plan&gt; planList, System.Collections.Generic.ICollection&lt;int&gt; paraRobots, bool preassignOtherRobots);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.LinkedList`1&lt;class Alica.Plan&gt; planList, class System.Collections.Generic.ICollection`1&lt;int32&gt; paraRobots, bool preassignOtherRobots) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="planList" Type="System.Collections.Generic.LinkedList&lt;Alica.Plan&gt;" />
+        <Parameter Name="paraRobots" Type="System.Collections.Generic.ICollection&lt;System.Int32&gt;" />
+        <Parameter Name="preassignOtherRobots" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="planList">To be added.</param>
+        <param name="paraRobots">To be added.</param>
+        <param name="preassignOtherRobots">
+            A <see cref="T:System.Boolean" /></param>
+        <summary> Constructor of a new TaskAssignment </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAlreadyAssignedRobots">
+      <MemberSignature Language="C#" Value="protected bool AddAlreadyAssignedRobots (Alica.PartialAssignment pa, System.Collections.Generic.Dictionary&lt;int,Alica.SimplePlanTree&gt; simplePlanTreeDic);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool AddAlreadyAssignedRobots(class Alica.PartialAssignment pa, class System.Collections.Generic.Dictionary`2&lt;int32, class Alica.SimplePlanTree&gt; simplePlanTreeDic) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pa" Type="Alica.PartialAssignment" />
+        <Parameter Name="simplePlanTreeDic" Type="System.Collections.Generic.Dictionary&lt;System.Int32,Alica.SimplePlanTree&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="pa">To be added.</param>
+        <param name="simplePlanTreeDic">To be added.</param>
+        <summary> If any robot has already assigned itself, this method updates the partial assignment accordingly.</summary>
+        <returns> True if any robot has already assigned itself, false otherwise. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="entryPointArray">
+      <MemberSignature Language="C#" Value="protected Alica.EntryPoint[] entryPointArray;" />
+      <MemberSignature Language="ILAsm" Value=".field family class Alica.EntryPoint[] entryPointArray" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.EntryPoint[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="fringe">
+      <MemberSignature Language="C#" Value="protected C5.SortedArray&lt;Alica.PartialAssignment&gt; fringe;" />
+      <MemberSignature Language="ILAsm" Value=".field family class C5.SortedArray`1&lt;class Alica.PartialAssignment&gt; fringe" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>C5.SortedArray&lt;Alica.PartialAssignment&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextBestAssignment">
+      <MemberSignature Language="C#" Value="public Alica.Assignment GetNextBestAssignment (Alica.IAssignment oldAss);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Alica.Assignment GetNextBestAssignment(class Alica.IAssignment oldAss) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.Assignment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldAss" Type="Alica.IAssignment" />
+      </Parameters>
+      <Docs>
+        <param name="oldAss">To be added.</param>
+        <summary> Gets the Assignment with next best utility </summary>
+        <returns> An Assignment for the plan </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="planList">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.LinkedList&lt;Alica.Plan&gt; planList;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Generic.LinkedList`1&lt;class Alica.Plan&gt; planList" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.LinkedList&lt;Alica.Plan&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="robots">
+      <MemberSignature Language="C#" Value="protected int[] robots;" />
+      <MemberSignature Language="ILAsm" Value=".field family int32[] robots" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

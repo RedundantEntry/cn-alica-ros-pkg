@@ -1,0 +1,1577 @@
+<html>
+  <head>
+    <title>Alica.TeamObserver</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">AlicaEngine</a> : <a href="index.html">Alica Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Alica.TeamObserver">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Alica.TeamObserver:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Alica.TeamObserver:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Alica.TeamObserver:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Alica.TeamObserver">TeamObserver  Class</h1>
+    <p class="Summary" id="T:Alica.TeamObserver:Summary">
+            The TeamObserver manages communication with the team. Thus it sends and receives PlanTreeInfo messages.
+            Specialised Modules may communicate through other means.
+            </p>
+    <div id="T:Alica.TeamObserver:Signature">
+      <h2>Syntax</h2>
+      <div class="Signature">public class  <b>TeamObserver</b> : <a href="../Alica/ITeamObserver.html">ITeamObserver</a></div>
+    </div>
+    <div class="Remarks" id="T:Alica.TeamObserver:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Alica.TeamObserver:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Alica.TeamObserver:Docs:Version Information">
+        <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Alica.TeamObserver">TeamObserver</a>
+                    </b>()</div>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Fields</h2>
+        <div class="SectionBox" id="Protected Fields">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.TeamObserver.ae">ae</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Alica/AlicaEngine.html">AlicaEngine</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.TeamObserver.allOtherRobots">allOtherRobots</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;RobotEngineData&gt;</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.TeamObserver.ignoredRobots">ignoredRobots</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.HashSet`1">HashSet&lt;int&gt;</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.TeamObserver.log">log</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Alica/Logger.html">Logger</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.TeamObserver.me">me</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Alica/RobotEngineData.html">RobotEngineData</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.TeamObserver.myId">myId</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.TeamObserver.planTreePublisher">planTreePublisher</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.TeamObserver.rosNode">rosNode</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">RosCS.Node</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.TeamObserver.simplePlanTrees">simplePlanTrees</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;int, SimplePlanTree&gt;</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.TeamObserver.teamTimeOut">teamTimeOut</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.Close">Close</a>
+                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.DoBroadcast(System.Collections.Generic.List{System.Int64})">DoBroadcast</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;long&gt;</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.GetAvailableRobotIds">GetAvailableRobotIds</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;int&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.GetAvailableRobotProperties">GetAvailableRobotProperties</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;RobotProperties&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.GetAvailableRobots">GetAvailableRobots</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;RobotEngineData&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.GetOwnEngineData">GetOwnEngineData</a>
+                  </b>()<nobr> : <a href="../Alica/RobotEngineData.html">RobotEngineData</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.GetOwnId">GetOwnId</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>
+            Returns this robot's own unique id.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.GetOwnRobotProperties">GetOwnRobotProperties</a>
+                  </b>()<nobr> : <a href="../Alica/RobotProperties.html">RobotProperties</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.GetRobotById(System.Int32)">GetRobotById</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="../Alica/RobotEngineData.html">RobotEngineData</a></nobr><blockquote>
+            Access engine data of a robot by its id. Returns null if none found.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.GetSuccessCollection(Alica.Plan)">GetSuccessCollection</a>
+                  </b>(<a href="../Alica/Plan.html">Plan</a>)<nobr> : <a href="../Alica/SuccessCollection.html">SuccessCollection</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.GetTeamPlanTrees">GetTeamPlanTrees</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;int, SimplePlanTree&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.HandlePlanTreeInfo(RosCS.AlicaEngine.PlanTreeInfo)">HandlePlanTreeInfo</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">RosCS.AlicaEngine.PlanTreeInfo</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.IgnoreRobot(System.Int32)">IgnoreRobot</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
+            Ignore all messages received by a robot.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.Init">Init</a>
+                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.IsRobotIgnored(System.Int32)">IsRobotIgnored</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.MessageReceivedFrom(System.Int32)">MessageReceivedFrom</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.NotifyILeftPlan(Alica.AbstractPlan)">NotifyILeftPlan</a>
+                  </b>(<a href="../Alica/AbstractPlan.html">AbstractPlan</a>)<blockquote>
+            Notify the TeamObserver that this robot has left a plan. This will reset any successmarks left, if no other robot is beliefed to be left in the plan.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.NotifyTeamLeftPlan(Alica.AbstractPlan)">NotifyTeamLeftPlan</a>
+                  </b>(<a href="../Alica/AbstractPlan.html">AbstractPlan</a>)<blockquote>
+            Notify the TeamObserver that the team has left a plan. This will reset any successmarks left.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.SuccessesInPlan(Alica.Plan)">SuccessesInPlan</a>
+                  </b>(<a href="../Alica/Plan.html">Plan</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>
+            Returns the number of successes the team knows about in the given plan.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.TeamSize">TeamSize</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>
+            The current size of the team.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.Tick(Alica.RunningPlan)">Tick</a>
+                  </b>(<a href="../Alica/RunningPlan.html">RunningPlan</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.UnIgnoreRobot(System.Int32)">UnIgnoreRobot</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.UpdateSuccessCollection(Alica.Plan,Alica.SuccessCollection)">UpdateSuccessCollection</a>
+                  </b>(<a href="../Alica/Plan.html">Plan</a>, <a href="../Alica/SuccessCollection.html">SuccessCollection</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Methods</h2>
+        <div class="SectionBox" id="Protected Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.CleanOwnSuccessMarks(Alica.RunningPlan)">CleanOwnSuccessMarks</a>
+                  </b>(<a href="../Alica/RunningPlan.html">RunningPlan</a>)<blockquote>
+            Removes any successmarks left by this robot in plans no longer inhabited by any agent.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.EntryPointOfState(Alica.State)">EntryPointOfState</a>
+                  </b>(<a href="../Alica/State.html">State</a>)<nobr> : <a href="../Alica/EntryPoint.html">EntryPoint</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.TeamObserver.SptFromMessage(System.Int32,System.Collections.Generic.List{System.Int64})">SptFromMessage</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;long&gt;</a>)<nobr> : <a href="../Alica/SimplePlanTree.html">SimplePlanTree</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Events</h2>
+        <div class="SectionBox" id="Public Events">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#E:Alica.TeamObserver.OnTeamChangeEvent">OnTeamChangeEvent</a>
+                  </b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Alica.TeamObserver:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Alica.TeamObserver">TeamObserver Constructor</h3>
+        <blockquote id="C:Alica.TeamObserver:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>TeamObserver</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Alica.TeamObserver:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Alica.TeamObserver:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.TeamObserver.ae">ae Field</h3>
+        <blockquote id="F:Alica.TeamObserver.ae:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/AlicaEngine.html">AlicaEngine</a> <b>ae</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.TeamObserver.ae:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.TeamObserver.ae:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.TeamObserver.allOtherRobots">allOtherRobots Field</h3>
+        <blockquote id="F:Alica.TeamObserver.allOtherRobots:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;RobotEngineData&gt;</a> <b>allOtherRobots</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.TeamObserver.allOtherRobots:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.TeamObserver.allOtherRobots:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.CleanOwnSuccessMarks(Alica.RunningPlan)">CleanOwnSuccessMarks Method</h3>
+        <blockquote id="M:Alica.TeamObserver.CleanOwnSuccessMarks(Alica.RunningPlan):member">
+          <p class="Summary">
+            Removes any successmarks left by this robot in plans no longer inhabited by any agent.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>CleanOwnSuccessMarks</b> (<a href="../Alica/RunningPlan.html">RunningPlan</a> root)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.CleanOwnSuccessMarks(Alica.RunningPlan):Parameters">
+            <dl>
+              <dt>
+                <i>root</i>
+              </dt>
+              <dd>
+            A <a href="../Alica/RunningPlan.html">Alica.RunningPlan</a></dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.CleanOwnSuccessMarks(Alica.RunningPlan):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.CleanOwnSuccessMarks(Alica.RunningPlan):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.Close">Close Method</h3>
+        <blockquote id="M:Alica.TeamObserver.Close:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Close</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.Close:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.Close:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.DoBroadcast(System.Collections.Generic.List{System.Int64})">DoBroadcast Method</h3>
+        <blockquote id="M:Alica.TeamObserver.DoBroadcast(System.Collections.Generic.List{System.Int64}):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>DoBroadcast</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;long&gt;</a> msg)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.DoBroadcast(System.Collections.Generic.List{System.Int64}):Parameters">
+            <dl>
+              <dt>
+                <i>msg</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.DoBroadcast(System.Collections.Generic.List{System.Int64}):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.DoBroadcast(System.Collections.Generic.List{System.Int64}):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.EntryPointOfState(Alica.State)">EntryPointOfState Method</h3>
+        <blockquote id="M:Alica.TeamObserver.EntryPointOfState(Alica.State):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/EntryPoint.html">EntryPoint</a> <b>EntryPointOfState</b> (<a href="../Alica/State.html">State</a> s)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.EntryPointOfState(Alica.State):Parameters">
+            <dl>
+              <dt>
+                <i>s</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.EntryPointOfState(Alica.State):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.EntryPointOfState(Alica.State):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.EntryPointOfState(Alica.State):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.GetAvailableRobotIds">GetAvailableRobotIds Method</h3>
+        <blockquote id="M:Alica.TeamObserver.GetAvailableRobotIds:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;int&gt;</a> <b>GetAvailableRobotIds</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.GetAvailableRobotIds:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.GetAvailableRobotIds:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.GetAvailableRobotIds:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.GetAvailableRobotProperties">GetAvailableRobotProperties Method</h3>
+        <blockquote id="M:Alica.TeamObserver.GetAvailableRobotProperties:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;RobotProperties&gt;</a> <b>GetAvailableRobotProperties</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.GetAvailableRobotProperties:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.GetAvailableRobotProperties:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.GetAvailableRobotProperties:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.GetAvailableRobots">GetAvailableRobots Method</h3>
+        <blockquote id="M:Alica.TeamObserver.GetAvailableRobots:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;RobotEngineData&gt;</a> <b>GetAvailableRobots</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.GetAvailableRobots:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.GetAvailableRobots:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.GetAvailableRobots:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.GetOwnEngineData">GetOwnEngineData Method</h3>
+        <blockquote id="M:Alica.TeamObserver.GetOwnEngineData:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../Alica/RobotEngineData.html">RobotEngineData</a> <b>GetOwnEngineData</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.GetOwnEngineData:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.GetOwnEngineData:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.GetOwnEngineData:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.GetOwnId">GetOwnId Method</h3>
+        <blockquote id="M:Alica.TeamObserver.GetOwnId:member">
+          <p class="Summary">
+            Returns this robot's own unique id.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>GetOwnId</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.GetOwnId:Returns">
+            A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.GetOwnId:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.GetOwnId:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.GetOwnRobotProperties">GetOwnRobotProperties Method</h3>
+        <blockquote id="M:Alica.TeamObserver.GetOwnRobotProperties:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../Alica/RobotProperties.html">RobotProperties</a> <b>GetOwnRobotProperties</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.GetOwnRobotProperties:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.GetOwnRobotProperties:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.GetOwnRobotProperties:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.GetRobotById(System.Int32)">GetRobotById Method</h3>
+        <blockquote id="M:Alica.TeamObserver.GetRobotById(System.Int32):member">
+          <p class="Summary">
+            Access engine data of a robot by its id. Returns null if none found.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../Alica/RobotEngineData.html">RobotEngineData</a> <b>GetRobotById</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> id)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.GetRobotById(System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>id</i>
+              </dt>
+              <dd>
+            A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.GetRobotById(System.Int32):Returns">
+            A <a href="../Alica/RobotEngineData.html">Alica.RobotEngineData</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.GetRobotById(System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.GetRobotById(System.Int32):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.GetSuccessCollection(Alica.Plan)">GetSuccessCollection Method</h3>
+        <blockquote id="M:Alica.TeamObserver.GetSuccessCollection(Alica.Plan):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../Alica/SuccessCollection.html">SuccessCollection</a> <b>GetSuccessCollection</b> (<a href="../Alica/Plan.html">Plan</a> p)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.GetSuccessCollection(Alica.Plan):Parameters">
+            <dl>
+              <dt>
+                <i>p</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.GetSuccessCollection(Alica.Plan):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.GetSuccessCollection(Alica.Plan):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.GetSuccessCollection(Alica.Plan):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.GetTeamPlanTrees">GetTeamPlanTrees Method</h3>
+        <blockquote id="M:Alica.TeamObserver.GetTeamPlanTrees:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;int, SimplePlanTree&gt;</a> <b>GetTeamPlanTrees</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.GetTeamPlanTrees:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.GetTeamPlanTrees:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.GetTeamPlanTrees:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.HandlePlanTreeInfo(RosCS.AlicaEngine.PlanTreeInfo)">HandlePlanTreeInfo Method</h3>
+        <blockquote id="M:Alica.TeamObserver.HandlePlanTreeInfo(RosCS.AlicaEngine.PlanTreeInfo):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>HandlePlanTreeInfo</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">RosCS.AlicaEngine.PlanTreeInfo</a> incoming)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.HandlePlanTreeInfo(RosCS.AlicaEngine.PlanTreeInfo):Parameters">
+            <dl>
+              <dt>
+                <i>incoming</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.HandlePlanTreeInfo(RosCS.AlicaEngine.PlanTreeInfo):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.HandlePlanTreeInfo(RosCS.AlicaEngine.PlanTreeInfo):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.TeamObserver.ignoredRobots">ignoredRobots Field</h3>
+        <blockquote id="F:Alica.TeamObserver.ignoredRobots:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.HashSet`1">HashSet&lt;int&gt;</a> <b>ignoredRobots</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.TeamObserver.ignoredRobots:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.TeamObserver.ignoredRobots:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.IgnoreRobot(System.Int32)">IgnoreRobot Method</h3>
+        <blockquote id="M:Alica.TeamObserver.IgnoreRobot(System.Int32):member">
+          <p class="Summary">
+            Ignore all messages received by a robot.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>IgnoreRobot</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> rid)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.IgnoreRobot(System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>rid</i>
+              </dt>
+              <dd>
+            A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> identifying the robot to ignore.
+            </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.IgnoreRobot(System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.IgnoreRobot(System.Int32):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.Init">Init Method</h3>
+        <blockquote id="M:Alica.TeamObserver.Init:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Init</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.Init:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.Init:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.IsRobotIgnored(System.Int32)">IsRobotIgnored Method</h3>
+        <blockquote id="M:Alica.TeamObserver.IsRobotIgnored(System.Int32):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsRobotIgnored</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> rid)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.IsRobotIgnored(System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>rid</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.IsRobotIgnored(System.Int32):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.IsRobotIgnored(System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.IsRobotIgnored(System.Int32):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.TeamObserver.log">log Field</h3>
+        <blockquote id="F:Alica.TeamObserver.log:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/Logger.html">Logger</a> <b>log</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.TeamObserver.log:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.TeamObserver.log:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.TeamObserver.me">me Field</h3>
+        <blockquote id="F:Alica.TeamObserver.me:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/RobotEngineData.html">RobotEngineData</a> <b>me</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.TeamObserver.me:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.TeamObserver.me:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.MessageReceivedFrom(System.Int32)">MessageReceivedFrom Method</h3>
+        <blockquote id="M:Alica.TeamObserver.MessageReceivedFrom(System.Int32):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>MessageReceivedFrom</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> rid)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.MessageReceivedFrom(System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>rid</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.MessageReceivedFrom(System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.MessageReceivedFrom(System.Int32):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.TeamObserver.myId">myId Field</h3>
+        <blockquote id="F:Alica.TeamObserver.myId:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>myId</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.TeamObserver.myId:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.TeamObserver.myId:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.NotifyILeftPlan(Alica.AbstractPlan)">NotifyILeftPlan Method</h3>
+        <blockquote id="M:Alica.TeamObserver.NotifyILeftPlan(Alica.AbstractPlan):member">
+          <p class="Summary">
+            Notify the TeamObserver that this robot has left a plan. This will reset any successmarks left, if no other robot is beliefed to be left in the plan.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>NotifyILeftPlan</b> (<a href="../Alica/AbstractPlan.html">AbstractPlan</a> p)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.NotifyILeftPlan(Alica.AbstractPlan):Parameters">
+            <dl>
+              <dt>
+                <i>p</i>
+              </dt>
+              <dd>
+            The <a href="../Alica/AbstractPlan.html">Alica.AbstractPlan</a> left by the robot
+            </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.NotifyILeftPlan(Alica.AbstractPlan):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.NotifyILeftPlan(Alica.AbstractPlan):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.NotifyTeamLeftPlan(Alica.AbstractPlan)">NotifyTeamLeftPlan Method</h3>
+        <blockquote id="M:Alica.TeamObserver.NotifyTeamLeftPlan(Alica.AbstractPlan):member">
+          <p class="Summary">
+            Notify the TeamObserver that the team has left a plan. This will reset any successmarks left.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>NotifyTeamLeftPlan</b> (<a href="../Alica/AbstractPlan.html">AbstractPlan</a> p)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.NotifyTeamLeftPlan(Alica.AbstractPlan):Parameters">
+            <dl>
+              <dt>
+                <i>p</i>
+              </dt>
+              <dd>
+            The <a href="../Alica/AbstractPlan.html">Alica.AbstractPlan</a> left by the team.
+            </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.NotifyTeamLeftPlan(Alica.AbstractPlan):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.NotifyTeamLeftPlan(Alica.AbstractPlan):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="E:Alica.TeamObserver.OnTeamChangeEvent">OnTeamChangeEvent Event</h3>
+        <blockquote id="E:Alica.TeamObserver.OnTeamChangeEvent:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public event <a href="../Alica/OnTeamChange.html">OnTeamChange</a> <b>OnTeamChangeEvent</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="E:Alica.TeamObserver.OnTeamChangeEvent:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="E:Alica.TeamObserver.OnTeamChangeEvent:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.TeamObserver.planTreePublisher">planTreePublisher Field</h3>
+        <blockquote id="F:Alica.TeamObserver.planTreePublisher:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> <b>planTreePublisher</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.TeamObserver.planTreePublisher:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.TeamObserver.planTreePublisher:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.TeamObserver.rosNode">rosNode Field</h3>
+        <blockquote id="F:Alica.TeamObserver.rosNode:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="javascript:alert(&quot;Documentation not found.&quot;)">RosCS.Node</a> <b>rosNode</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.TeamObserver.rosNode:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.TeamObserver.rosNode:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.TeamObserver.simplePlanTrees">simplePlanTrees Field</h3>
+        <blockquote id="F:Alica.TeamObserver.simplePlanTrees:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;int, SimplePlanTree&gt;</a> <b>simplePlanTrees</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.TeamObserver.simplePlanTrees:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.TeamObserver.simplePlanTrees:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.SptFromMessage(System.Int32,System.Collections.Generic.List{System.Int64})">SptFromMessage Method</h3>
+        <blockquote id="M:Alica.TeamObserver.SptFromMessage(System.Int32,System.Collections.Generic.List{System.Int64}):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/SimplePlanTree.html">SimplePlanTree</a> <b>SptFromMessage</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> robotId, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;long&gt;</a> ids)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.SptFromMessage(System.Int32,System.Collections.Generic.List{System.Int64}):Parameters">
+            <dl>
+              <dt>
+                <i>robotId</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>ids</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.SptFromMessage(System.Int32,System.Collections.Generic.List{System.Int64}):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.SptFromMessage(System.Int32,System.Collections.Generic.List{System.Int64}):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.SptFromMessage(System.Int32,System.Collections.Generic.List{System.Int64}):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.SuccessesInPlan(Alica.Plan)">SuccessesInPlan Method</h3>
+        <blockquote id="M:Alica.TeamObserver.SuccessesInPlan(Alica.Plan):member">
+          <p class="Summary">
+            Returns the number of successes the team knows about in the given plan.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>SuccessesInPlan</b> (<a href="../Alica/Plan.html">Plan</a> p)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.SuccessesInPlan(Alica.Plan):Parameters">
+            <dl>
+              <dt>
+                <i>p</i>
+              </dt>
+              <dd>
+            A <a href="../Alica/Plan.html">Alica.Plan</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.SuccessesInPlan(Alica.Plan):Returns">
+            A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.SuccessesInPlan(Alica.Plan):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.SuccessesInPlan(Alica.Plan):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.TeamSize">TeamSize Method</h3>
+        <blockquote id="M:Alica.TeamObserver.TeamSize:member">
+          <p class="Summary">
+            The current size of the team.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>TeamSize</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.TeamSize:Returns">
+            A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.TeamSize:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.TeamSize:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.TeamObserver.teamTimeOut">teamTimeOut Field</h3>
+        <blockquote id="F:Alica.TeamObserver.teamTimeOut:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a> <b>teamTimeOut</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.TeamObserver.teamTimeOut:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.TeamObserver.teamTimeOut:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.Tick(Alica.RunningPlan)">Tick Method</h3>
+        <blockquote id="M:Alica.TeamObserver.Tick(Alica.RunningPlan):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Tick</b> (<a href="../Alica/RunningPlan.html">RunningPlan</a> root)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.Tick(Alica.RunningPlan):Parameters">
+            <dl>
+              <dt>
+                <i>root</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.Tick(Alica.RunningPlan):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.Tick(Alica.RunningPlan):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.UnIgnoreRobot(System.Int32)">UnIgnoreRobot Method</h3>
+        <blockquote id="M:Alica.TeamObserver.UnIgnoreRobot(System.Int32):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>UnIgnoreRobot</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> rid)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.UnIgnoreRobot(System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>rid</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.UnIgnoreRobot(System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.UnIgnoreRobot(System.Int32):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.TeamObserver.UpdateSuccessCollection(Alica.Plan,Alica.SuccessCollection)">UpdateSuccessCollection Method</h3>
+        <blockquote id="M:Alica.TeamObserver.UpdateSuccessCollection(Alica.Plan,Alica.SuccessCollection):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>UpdateSuccessCollection</b> (<a href="../Alica/Plan.html">Plan</a> p, <a href="../Alica/SuccessCollection.html">SuccessCollection</a> sc)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.TeamObserver.UpdateSuccessCollection(Alica.Plan,Alica.SuccessCollection):Parameters">
+            <dl>
+              <dt>
+                <i>p</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>sc</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.UpdateSuccessCollection(Alica.Plan,Alica.SuccessCollection):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.TeamObserver.UpdateSuccessCollection(Alica.Plan,Alica.SuccessCollection):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

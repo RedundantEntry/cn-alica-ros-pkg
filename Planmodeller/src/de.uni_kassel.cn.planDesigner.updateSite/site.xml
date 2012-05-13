@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/de.uni_kassel.cn.planDesigner.core.feature_1.0.0.qualifier.jar" id="de.uni_kassel.cn.planDesigner.core.feature" version="1.0.0.qualifier">
+      <category name="Plan Designer"/>
+   </feature>
+   <feature url="features/de.uni_kassel.cn.planDesigner.emf.feature_2.4.1.qualifier.jar" id="de.uni_kassel.cn.planDesigner.emf.feature" version="2.4.1.qualifier">
+      <category name="Plan Designer"/>
+   </feature>
+   <feature url="features/de.uni_kassel.cn.planDesigner.gef.feature_3.4.0.qualifier.jar" id="de.uni_kassel.cn.planDesigner.gef.feature" version="3.4.0.qualifier">
+      <category name="Plan Designer"/>
+   </feature>
+   <feature url="features/de.uni_kassel.cn.planDesigner.oaw.feature_4.3.0.qualifier.jar" id="de.uni_kassel.cn.planDesigner.oaw.feature" version="4.3.0.qualifier">
+      <category name="Plan Designer"/>
+   </feature>
+   <feature url="features/de.uni_kassel.cn.planDesigner.platform.feature_1.0.1.qualifier.jar" id="de.uni_kassel.cn.planDesigner.platform.feature" version="1.0.1.qualifier">
+      <category name="Plan Designer"/>
+   </feature>
+   <feature url="features/de.uni_kassel.cn.planDesigner.svn_1.0.0.qualifier.jar" id="de.uni_kassel.cn.planDesigner.svn" version="1.0.0.qualifier">
+      <category name="Plan Designer"/>
+   </feature>
+   <feature url="features/de.uni_kassel.cn.planDesigner.utility.feature_1.0.0.jar" id="de.uni_kassel.cn.planDesigner.utility.feature" version="1.0.0">
+      <category name="Plan Designer"/>
+   </feature>
+   <feature url="features/de.uni_kassel.cn.planDesigner.validation.feature_1.0.0.qualifier.jar" id="de.uni_kassel.cn.planDesigner.validation.feature" version="1.0.0.qualifier">
+      <category name="Plan Designer"/>
+   </feature>
+   <feature url="features/de.uni_kassel.cn.planDesigner.zest.feature_3.4.0.qualifier.jar" id="de.uni_kassel.cn.planDesigner.zest.feature" version="3.4.0.qualifier">
+      <category name="Plan Designer"/>
+   </feature>
+   <category-def name="Plan Designer" label="Plan Designer"/>
+</site>

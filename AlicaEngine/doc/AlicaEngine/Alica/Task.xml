@@ -1,0 +1,157 @@
+<Type Name="Task" FullName="Alica.Task">
+  <TypeSignature Language="C#" Value="public class Task : Alica.PlanElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Task extends Alica.PlanElement" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Alica.PlanElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            an abstract description of parts of plans to be taken on by a set of robots
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Task ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Basic ctor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Task (bool defaultTask);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool defaultTask) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultTask" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="defaultTask">
+            A <see cref="T:System.Boolean" /></param>
+        <summary>
+            Ctor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="defaultTask">
+      <MemberSignature Language="C#" Value="protected bool defaultTask;" />
+      <MemberSignature Language="ILAsm" Value=".field family bool defaultTask" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="description">
+      <MemberSignature Language="C#" Value="protected string description;" />
+      <MemberSignature Language="ILAsm" Value=".field family string description" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IDLEID">
+      <MemberSignature Language="C#" Value="public const long IDLEID = -1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int64 IDLEID = (-1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <MemberValue>-1</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

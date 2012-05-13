@@ -1,0 +1,814 @@
+<html>
+  <head>
+    <title>Alica.ConstraintDescriptor</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">AlicaEngine</a> : <a href="index.html">Alica Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Alica.ConstraintDescriptor">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Alica.ConstraintDescriptor:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Alica.ConstraintDescriptor:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Alica.ConstraintDescriptor:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Alica.ConstraintDescriptor">ConstraintDescriptor  Class</h1>
+    <p class="Summary" id="T:Alica.ConstraintDescriptor:Summary">
+            Holds all information relevant to a constraint imposed by a <a href="../Alica/Condition.html">Alica.Condition</a>. The information is typically provided by a <a href="../Alica/GetConstraint.html">Alica.GetConstraint</a> delegate.
+            </p>
+    <div id="T:Alica.ConstraintDescriptor:Signature">
+      <h2>Syntax</h2>
+      <div class="Signature">public class  <b>ConstraintDescriptor</b></div>
+    </div>
+    <div class="Remarks" id="T:Alica.ConstraintDescriptor:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Alica.ConstraintDescriptor:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Alica.ConstraintDescriptor:Docs:Version Information">
+        <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Alica.ConstraintDescriptor(AutoDiff.Variable[],System.Collections.Generic.List{System.Collections.Generic.List{AutoDiff.Term[]}})">ConstraintDescriptor</a>
+                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Variable</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;List&lt;AutoDiff.Term[]&gt;&gt;</a>)</div>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.ConstraintDescriptor.AgentsInScope">AgentsInScope</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;ICollection&lt;int&gt;&gt;</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.ConstraintDescriptor.AllVars">AllVars</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;AutoDiff.Term&gt;</a>
+                  </i>. 
+            All variables, both static and dynamic
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.ConstraintDescriptor.Constraint">Constraint</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>
+                  </i>. 
+            The Constraint function
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.ConstraintDescriptor.DomainRanges">DomainRanges</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;List&lt;Double[, ]&gt;&gt;</a>
+                  </i>. 
+            The ranges, i.e., lower and upper bounds for all dynamic domain variables.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.ConstraintDescriptor.DomainVars">DomainVars</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;List&lt;AutoDiff.Term[]&gt;&gt;</a>
+                  </i>. 
+            The current instance of the domain quantifiers, each quantifier results in a list of arrays of Variables (or potentially terms).
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.ConstraintDescriptor.SetsUtilitySignificanceThreshold">SetsUtilitySignificanceThreshold</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.ConstraintDescriptor.StaticRanges">StaticRanges</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>[,]</i>. 
+            The ranges, i.e., lower and upper bounds for all static domain variables.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.ConstraintDescriptor.StaticVars">StaticVars</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>[]</i>. 
+            The static variables used in the constraint and the utility
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.ConstraintDescriptor.Utility">Utility</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>
+                  </i>. 
+            The objective function.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.ConstraintDescriptor.UtilitySignificanceThreshold">UtilitySignificanceThreshold</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.ConstraintDescriptor.UtilitySufficiencyThreshold">UtilitySufficiencyThreshold</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>
+                  </i>. 
+            A value above which the utility is deemed to be sufficient, i.e., close enough to the global optimum.
+            A solver may stop looking for a solution if this value has been reached.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.ConstraintDescriptor.AllRanges">AllRanges</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>[,]</nobr><blockquote>
+            Returns the ranges of all variables involved. Used by <a href="javascript:alert(&quot;Documentation not found.&quot;)">Reasoner.CGSolver</a> to initialiase a constraint problem for solving.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.ConstraintDescriptor.FixedValue(AutoDiff.Term)">FixedValue</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a></nobr><blockquote>
+            The fixed value of a variable. Returns null if the value is not fixed (nonground variable).
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.ConstraintDescriptor.SetFixedValue(AutoDiff.Term,System.Object)">SetFixedValue</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>)<blockquote>
+            Set an arbitrary fixed value for a varable, i.e, ground a variable.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Alica.ConstraintDescriptor:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Alica.ConstraintDescriptor(AutoDiff.Variable[],System.Collections.Generic.List{System.Collections.Generic.List{AutoDiff.Term[]}})">ConstraintDescriptor Constructor</h3>
+        <blockquote id="C:Alica.ConstraintDescriptor(AutoDiff.Variable[],System.Collections.Generic.List{System.Collections.Generic.List{AutoDiff.Term[]}}):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>ConstraintDescriptor</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Variable</a>[] vars, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;List&lt;AutoDiff.Term[]&gt;&gt;</a> domVars)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Alica.ConstraintDescriptor(AutoDiff.Variable[],System.Collections.Generic.List{System.Collections.Generic.List{AutoDiff.Term[]}}):Parameters">
+            <dl>
+              <dt>
+                <i>vars</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>domVars</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Alica.ConstraintDescriptor(AutoDiff.Variable[],System.Collections.Generic.List{System.Collections.Generic.List{AutoDiff.Term[]}}):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Alica.ConstraintDescriptor(AutoDiff.Variable[],System.Collections.Generic.List{System.Collections.Generic.List{AutoDiff.Term[]}}):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.ConstraintDescriptor.AgentsInScope">AgentsInScope Property</h3>
+        <blockquote id="P:Alica.ConstraintDescriptor.AgentsInScope:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;ICollection&lt;int&gt;&gt;</a> <b>AgentsInScope</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.ConstraintDescriptor.AgentsInScope:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.AgentsInScope:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.AgentsInScope:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.ConstraintDescriptor.AllRanges">AllRanges Method</h3>
+        <blockquote id="M:Alica.ConstraintDescriptor.AllRanges:member">
+          <p class="Summary">
+            Returns the ranges of all variables involved. Used by <a href="javascript:alert(&quot;Documentation not found.&quot;)">Reasoner.CGSolver</a> to initialiase a constraint problem for solving.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>[,] <b>AllRanges</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintDescriptor.AllRanges:Returns">
+            A 2-dimensional double array.
+            </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintDescriptor.AllRanges:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintDescriptor.AllRanges:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.ConstraintDescriptor.AllVars">AllVars Property</h3>
+        <blockquote id="P:Alica.ConstraintDescriptor.AllVars:member">
+          <p class="Summary">
+            All variables, both static and dynamic
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;AutoDiff.Term&gt;</a> <b>AllVars</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.ConstraintDescriptor.AllVars:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.AllVars:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.AllVars:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.ConstraintDescriptor.Constraint">Constraint Property</h3>
+        <blockquote id="P:Alica.ConstraintDescriptor.Constraint:member">
+          <p class="Summary">
+            The Constraint function
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> <b>Constraint</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.ConstraintDescriptor.Constraint:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.Constraint:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.Constraint:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.ConstraintDescriptor.DomainRanges">DomainRanges Property</h3>
+        <blockquote id="P:Alica.ConstraintDescriptor.DomainRanges:member">
+          <p class="Summary">
+            The ranges, i.e., lower and upper bounds for all dynamic domain variables.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;List&lt;Double[, ]&gt;&gt;</a> <b>DomainRanges</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.ConstraintDescriptor.DomainRanges:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.DomainRanges:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.DomainRanges:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.ConstraintDescriptor.DomainVars">DomainVars Property</h3>
+        <blockquote id="P:Alica.ConstraintDescriptor.DomainVars:member">
+          <p class="Summary">
+            The current instance of the domain quantifiers, each quantifier results in a list of arrays of Variables (or potentially terms).
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;List&lt;AutoDiff.Term[]&gt;&gt;</a> <b>DomainVars</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.ConstraintDescriptor.DomainVars:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.DomainVars:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.DomainVars:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.ConstraintDescriptor.FixedValue(AutoDiff.Term)">FixedValue Method</h3>
+        <blockquote id="M:Alica.ConstraintDescriptor.FixedValue(AutoDiff.Term):member">
+          <p class="Summary">
+            The fixed value of a variable. Returns null if the value is not fixed (nonground variable).
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> <b>FixedValue</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> variable)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintDescriptor.FixedValue(AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>variable</i>
+              </dt>
+              <dd>
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintDescriptor.FixedValue(AutoDiff.Term):Returns">
+            A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintDescriptor.FixedValue(AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintDescriptor.FixedValue(AutoDiff.Term):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.ConstraintDescriptor.SetFixedValue(AutoDiff.Term,System.Object)">SetFixedValue Method</h3>
+        <blockquote id="M:Alica.ConstraintDescriptor.SetFixedValue(AutoDiff.Term,System.Object):member">
+          <p class="Summary">
+            Set an arbitrary fixed value for a varable, i.e, ground a variable.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetFixedValue</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> variable, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> val)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintDescriptor.SetFixedValue(AutoDiff.Term,System.Object):Parameters">
+            <dl>
+              <dt>
+                <i>variable</i>
+              </dt>
+              <dd>
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>, the variable the object is bound to.
+            </dd>
+              <dt>
+                <i>val</i>
+              </dt>
+              <dd>
+            A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>, the object bound to the variable.
+            </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintDescriptor.SetFixedValue(AutoDiff.Term,System.Object):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintDescriptor.SetFixedValue(AutoDiff.Term,System.Object):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.ConstraintDescriptor.SetsUtilitySignificanceThreshold">SetsUtilitySignificanceThreshold Property</h3>
+        <blockquote id="P:Alica.ConstraintDescriptor.SetsUtilitySignificanceThreshold:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>SetsUtilitySignificanceThreshold</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.ConstraintDescriptor.SetsUtilitySignificanceThreshold:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.SetsUtilitySignificanceThreshold:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.SetsUtilitySignificanceThreshold:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.ConstraintDescriptor.StaticRanges">StaticRanges Property</h3>
+        <blockquote id="P:Alica.ConstraintDescriptor.StaticRanges:member">
+          <p class="Summary">
+            The ranges, i.e., lower and upper bounds for all static domain variables.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>[,] <b>StaticRanges</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.ConstraintDescriptor.StaticRanges:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.StaticRanges:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.StaticRanges:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.ConstraintDescriptor.StaticVars">StaticVars Property</h3>
+        <blockquote id="P:Alica.ConstraintDescriptor.StaticVars:member">
+          <p class="Summary">
+            The static variables used in the constraint and the utility
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>[] <b>StaticVars</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.ConstraintDescriptor.StaticVars:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.StaticVars:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.StaticVars:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.ConstraintDescriptor.Utility">Utility Property</h3>
+        <blockquote id="P:Alica.ConstraintDescriptor.Utility:member">
+          <p class="Summary">
+            The objective function.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> <b>Utility</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.ConstraintDescriptor.Utility:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.Utility:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.Utility:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.ConstraintDescriptor.UtilitySignificanceThreshold">UtilitySignificanceThreshold Property</h3>
+        <blockquote id="P:Alica.ConstraintDescriptor.UtilitySignificanceThreshold:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>UtilitySignificanceThreshold</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.ConstraintDescriptor.UtilitySignificanceThreshold:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.UtilitySignificanceThreshold:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.UtilitySignificanceThreshold:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.ConstraintDescriptor.UtilitySufficiencyThreshold">UtilitySufficiencyThreshold Property</h3>
+        <blockquote id="P:Alica.ConstraintDescriptor.UtilitySufficiencyThreshold:member">
+          <p class="Summary">
+            A value above which the utility is deemed to be sufficient, i.e., close enough to the global optimum.
+            A solver may stop looking for a solution if this value has been reached.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>UtilitySufficiencyThreshold</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.ConstraintDescriptor.UtilitySufficiencyThreshold:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.UtilitySufficiencyThreshold:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.ConstraintDescriptor.UtilitySufficiencyThreshold:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<Type Name="Evaluate" FullName="Alica.Evaluate">
+  <TypeSignature Language="C#" Value="public delegate bool Evaluate(RunningPlan rp);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Evaluate extends System.MulticastDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="rp" Type="Alica.RunningPlan" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="rp">To be added.</param>
+    <summary>
+            The delegate type used to attach conditions to plans.
+            </summary>
+    <returns>To be added.</returns>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

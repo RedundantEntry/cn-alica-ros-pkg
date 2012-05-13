@@ -1,0 +1,644 @@
+<Type Name="Term" FullName="AutoDiff.Term">
+  <TypeSignature Language="C#" Value="public abstract class Term" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit Term extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>AutoDiff</AssemblyName>
+    <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Base class for all automatically-differentiable terms.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Term ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="public abstract void Accept (AutoDiff.ITermVisitor visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Accept(class AutoDiff.ITermVisitor visitor) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visitor" Type="AutoDiff.ITermVisitor" />
+      </Parameters>
+      <Docs>
+        <param name="visitor">The term visitor to accept</param>
+        <summary>
+            Accepts a term visitor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Accept&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public abstract TResult Accept&lt;TResult&gt; (AutoDiff.ITermVisitor&lt;TResult&gt; visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!TResult Accept&lt;TResult&gt;(class AutoDiff.ITermVisitor`1&lt;!!TResult&gt; visitor) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="visitor" Type="AutoDiff.ITermVisitor&lt;TResult&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+        <param name="visitor">The visitor to accept</param>
+        <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+        <returns>The result from the visitor's visit function.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AggregateConstants">
+      <MemberSignature Language="C#" Value="public abstract AutoDiff.Term AggregateConstants ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class AutoDiff.Term AggregateConstants() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="andop">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term.AndType andop;" />
+      <MemberSignature Language="ILAsm" Value=".field public static valuetype AutoDiff.Term/AndType andop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term+AndType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="constraint_steepness">
+      <MemberSignature Language="C#" Value="public static double constraint_steepness;" />
+      <MemberSignature Language="ILAsm" Value=".field public static float64 constraint_steepness" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConstraintSteepness">
+      <MemberSignature Language="C#" Value="public static double ConstraintSteepness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property float64 ConstraintSteepness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Derivative">
+      <MemberSignature Language="C#" Value="public abstract AutoDiff.Term Derivative (AutoDiff.Variable v);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class AutoDiff.Term Derivative(class AutoDiff.Variable v) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v" Type="AutoDiff.Variable" />
+      </Parameters>
+      <Docs>
+        <param name="v">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Epsilon">
+      <MemberSignature Language="C#" Value="public static readonly double Epsilon;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly float64 Epsilon" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="False">
+      <MemberSignature Language="C#" Value="public static readonly AutoDiff.Term False;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class AutoDiff.Term False" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Max">
+      <MemberSignature Language="C#" Value="public double Max;" />
+      <MemberSignature Language="ILAsm" Value=".field public float64 Max" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Min">
+      <MemberSignature Language="C#" Value="public double Min;" />
+      <MemberSignature Language="ILAsm" Value=".field public float64 Min" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Negate">
+      <MemberSignature Language="C#" Value="public virtual AutoDiff.Term Negate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class AutoDiff.Term Negate() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Addition">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term op_Addition (AutoDiff.Term left, AutoDiff.Term right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.Term op_Addition(class AutoDiff.Term left, class AutoDiff.Term right) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="AutoDiff.Term" />
+        <Parameter Name="right" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="left">First term in the sum</param>
+        <param name="right">Second term in the sum</param>
+        <summary>
+            Constructs a sum of the two given terms.
+            </summary>
+        <returns>A term representing the sum of <see cref="!:left" /> and <see cref="!:right" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_BitwiseAnd">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term op_BitwiseAnd (AutoDiff.Term t1, AutoDiff.Term t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.Term op_BitwiseAnd(class AutoDiff.Term t1, class AutoDiff.Term t2) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="AutoDiff.Term" />
+        <Parameter Name="t2" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="t1">To be added.</param>
+        <param name="t2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_BitwiseOr">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term op_BitwiseOr (AutoDiff.Term t1, AutoDiff.Term t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.Term op_BitwiseOr(class AutoDiff.Term t1, class AutoDiff.Term t2) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="AutoDiff.Term" />
+        <Parameter Name="t2" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="t1">To be added.</param>
+        <param name="t2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Division">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term op_Division (AutoDiff.Term numerator, AutoDiff.Term denominator);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.Term op_Division(class AutoDiff.Term numerator, class AutoDiff.Term denominator) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="numerator" Type="AutoDiff.Term" />
+        <Parameter Name="denominator" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="numerator">The numerator of the fraction. That is, the "top" part.</param>
+        <param name="denominator">The denominator of the fraction. That is, the "bottom" part.</param>
+        <summary>
+            Constructs a fraction term of the two given terms.
+            </summary>
+        <returns>A term representing the fraction <paramref name="numerator" /> over <paramref name="denominator" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_ExclusiveOr">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term op_ExclusiveOr (AutoDiff.Term t1, AutoDiff.Term t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.Term op_ExclusiveOr(class AutoDiff.Term t1, class AutoDiff.Term t2) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="AutoDiff.Term" />
+        <Parameter Name="t2" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="t1">To be added.</param>
+        <param name="t2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThan">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term op_GreaterThan (AutoDiff.Term t1, AutoDiff.Term t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.Term op_GreaterThan(class AutoDiff.Term t1, class AutoDiff.Term t2) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="AutoDiff.Term" />
+        <Parameter Name="t2" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="t1">To be added.</param>
+        <param name="t2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThanOrEqual">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term op_GreaterThanOrEqual (AutoDiff.Term t1, AutoDiff.Term t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.Term op_GreaterThanOrEqual(class AutoDiff.Term t1, class AutoDiff.Term t2) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="AutoDiff.Term" />
+        <Parameter Name="t2" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="t1">To be added.</param>
+        <param name="t2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term op_Implicit (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.Term op_Implicit(float64 value) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">The floating point constnat</param>
+        <summary>
+            Converts a floating point constant to a constant term.
+            </summary>
+        <returns>The resulting term.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThan">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term op_LessThan (AutoDiff.Term t1, AutoDiff.Term t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.Term op_LessThan(class AutoDiff.Term t1, class AutoDiff.Term t2) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="AutoDiff.Term" />
+        <Parameter Name="t2" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="t1">To be added.</param>
+        <param name="t2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThanOrEqual">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term op_LessThanOrEqual (AutoDiff.Term t1, AutoDiff.Term t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.Term op_LessThanOrEqual(class AutoDiff.Term t1, class AutoDiff.Term t2) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="AutoDiff.Term" />
+        <Parameter Name="t2" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="t1">To be added.</param>
+        <param name="t2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LogicalNot">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term op_LogicalNot (AutoDiff.Term t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.Term op_LogicalNot(class AutoDiff.Term t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="t">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Modulus">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term op_Modulus (AutoDiff.Term t1, AutoDiff.Term t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.Term op_Modulus(class AutoDiff.Term t1, class AutoDiff.Term t2) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="AutoDiff.Term" />
+        <Parameter Name="t2" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="t1">To be added.</param>
+        <param name="t2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Multiply">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term op_Multiply (AutoDiff.Term left, AutoDiff.Term right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.Term op_Multiply(class AutoDiff.Term left, class AutoDiff.Term right) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="AutoDiff.Term" />
+        <Parameter Name="right" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="left">The first term in the product</param>
+        <param name="right">The second term in the product</param>
+        <summary>
+            Constructs a product term of the two given terms.
+            </summary>
+        <returns>A term representing the product of <see cref="!:left" /> and <see cref="!:right" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Subtraction">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term op_Subtraction (AutoDiff.Term left, AutoDiff.Term right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.Term op_Subtraction(class AutoDiff.Term left, class AutoDiff.Term right) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="AutoDiff.Term" />
+        <Parameter Name="right" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="left">The first term in the difference</param>
+        <param name="right">The second term in the difference.</param>
+        <summary>
+            Constructs a difference of the two given terms.
+            </summary>
+        <returns>A term representing <paramref name="left" /> - <paramref name="right" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_UnaryNegation">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term op_UnaryNegation (AutoDiff.Term term);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.Term op_UnaryNegation(class AutoDiff.Term term) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="term" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="term">The term to negate</param>
+        <summary>
+            Constructs a negated term
+            </summary>
+        <returns>A term representing <c>-term</c>.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="orop">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term.OrType orop;" />
+      <MemberSignature Language="ILAsm" Value=".field public static valuetype AutoDiff.Term/OrType orop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term+OrType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAnd">
+      <MemberSignature Language="C#" Value="public static void SetAnd (AutoDiff.Term.AndType a);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetAnd(valuetype AutoDiff.Term/AndType a) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="AutoDiff.Term+AndType" />
+      </Parameters>
+      <Docs>
+        <param name="a">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOr">
+      <MemberSignature Language="C#" Value="public static void SetOr (AutoDiff.Term.OrType o);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetOr(valuetype AutoDiff.Term/OrType o) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="AutoDiff.Term+OrType" />
+      </Parameters>
+      <Docs>
+        <param name="o">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="True">
+      <MemberSignature Language="C#" Value="public static readonly AutoDiff.Term True;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class AutoDiff.Term True" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

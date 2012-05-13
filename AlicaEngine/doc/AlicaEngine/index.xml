@@ -1,0 +1,144 @@
+<Overview>
+  <Assemblies>
+    <Assembly Name="AlicaEngine" Version="0.9.4514.23556">
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCompany("Distributed Autonomous Systems Labratory, University of Kassel")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyConfiguration("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCopyright("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyDescription("An Efficient Multi-Agent Execution and Coordination Framework for Dynamic Domains.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyFileVersion("1.0.0.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyProduct("AlicaEnigne")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTitle("AlicaEngine")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTrademark("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.Guid("e3e84288-2c81-11e1-ae3d-1c6f6530df57")</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Assembly>
+  </Assemblies>
+  <Remarks>To be added.</Remarks>
+  <Copyright>To be added.</Copyright>
+  <Types>
+    <Namespace Name="Alica">
+      <Type Name="AbstractExpressions" Kind="Class" />
+      <Type Name="AbstractPlan" Kind="Class" />
+      <Type Name="AlicaEngine" Kind="Class" />
+      <Type Name="AllocationDifference" Kind="Class" />
+      <Type Name="AllocationDifference+Reason" Kind="Enumeration" />
+      <Type Name="Assignment" Kind="Class" />
+      <Type Name="AssignmentCollection" Kind="Class" />
+      <Type Name="AuthorityManager" Kind="Class" />
+      <Type Name="BasicBehaviour" Kind="Class" />
+      <Type Name="Behaviour" Kind="Class" />
+      <Type Name="BehaviourConfiguration" Kind="Class" />
+      <Type Name="BehaviourPool" Kind="Class" />
+      <Type Name="Capability" Kind="Class" />
+      <Type Name="CapabilityDefinitionSet" Kind="Class" />
+      <Type Name="CapValue" Kind="Class" />
+      <Type Name="Characteristic" Kind="Class" />
+      <Type Name="Condition" Kind="Class" />
+      <Type Name="ConstraintBuilder" Kind="Class" />
+      <Type Name="ConstraintDescriptor" Kind="Class" />
+      <Type Name="ConstraintHelper" Kind="Class" />
+      <Type Name="ConstraintQuery" Kind="Class" />
+      <Type Name="ConstraintStore" Kind="Class" />
+      <Type Name="CycleManager" Kind="Class" />
+      <Type Name="DefaultUtilityFunction" Kind="Class" />
+      <Type Name="EngineTrigger" Kind="Delegate" />
+      <Type Name="EntryPoint" Kind="Class" />
+      <Type Name="EntryPointRobotPair" Kind="Class" />
+      <Type Name="EpByTaskComparer" Kind="Class" />
+      <Type Name="Evaluate" Kind="Delegate" />
+      <Type Name="EventListener" Kind="Class" />
+      <Type Name="ExitPoint" Kind="Class" />
+      <Type Name="ExploratingUtilityFunction" Kind="Class" />
+      <Type Name="ExpressionHandler" Kind="Class" />
+      <Type Name="FailurePoint" Kind="Class" />
+      <Type Name="ForallAgents" Kind="Class" />
+      <Type Name="GetConstraint" Kind="Delegate" />
+      <Type Name="IAssignment" Kind="Interface" />
+      <Type Name="IBehaviourPool" Kind="Interface" />
+      <Type Name="IConstraintSolver" Kind="Interface" />
+      <Type Name="IPlanParser" Kind="Interface" />
+      <Type Name="IPlanSelector" Kind="Interface" />
+      <Type Name="IPlanTreeVisitor" Kind="Interface" />
+      <Type Name="IRoleAssignment" Kind="Interface" />
+      <Type Name="ISyncModul" Kind="Interface" />
+      <Type Name="ITaskAssignment" Kind="Interface" />
+      <Type Name="ITeamObserver" Kind="Interface" />
+      <Type Name="Logger" Kind="Class" />
+      <Type Name="ModelFactory" Kind="Class" />
+      <Type Name="OnTeamChange" Kind="Delegate" />
+      <Type Name="Parametrisation" Kind="Class" />
+      <Type Name="PartialAssignment" Kind="Class" />
+      <Type Name="Plan" Kind="Class" />
+      <Type Name="PlanBase" Kind="Class" />
+      <Type Name="PlanChange" Kind="Enumeration" />
+      <Type Name="PlanElement" Kind="Class" />
+      <Type Name="PlanParser" Kind="Class" />
+      <Type Name="PlanRepository" Kind="Class" />
+      <Type Name="PlanSelector" Kind="Class" />
+      <Type Name="PlanStatus" Kind="Enumeration" />
+      <Type Name="PlanType" Kind="Class" />
+      <Type Name="PlanWriter" Kind="Class" />
+      <Type Name="PreCondition" Kind="Class" />
+      <Type Name="Quantifier" Kind="Class" />
+      <Type Name="Result" Kind="Class" />
+      <Type Name="RobotEngineData" Kind="Class" />
+      <Type Name="RobotProperties" Kind="Class" />
+      <Type Name="RobotRoleUtility" Kind="Class" />
+      <Type Name="Role" Kind="Class" />
+      <Type Name="RoleAssignment" Kind="Class" />
+      <Type Name="RoleDefinitionSet" Kind="Class" />
+      <Type Name="RolePriority" Kind="Class" />
+      <Type Name="RoleSet" Kind="Class" />
+      <Type Name="RoleTaskMapping" Kind="Class" />
+      <Type Name="RoleUsage" Kind="Class" />
+      <Type Name="RuleBook" Kind="Class" />
+      <Type Name="RunningPlan" Kind="Class" />
+      <Type Name="RuntimeCondition" Kind="Class" />
+      <Type Name="SimplePlanTree" Kind="Class" />
+      <Type Name="State" Kind="Class" />
+      <Type Name="StateCollection" Kind="Class" />
+      <Type Name="SuccessCollection" Kind="Class" />
+      <Type Name="SuccessMarks" Kind="Class" />
+      <Type Name="SuccessPoint" Kind="Class" />
+      <Type Name="Synchronisation" Kind="Class" />
+      <Type Name="SyncModul" Kind="Class" />
+      <Type Name="SyncRow" Kind="Class" />
+      <Type Name="SyncTransition" Kind="Class" />
+      <Type Name="Task" Kind="Class" />
+      <Type Name="TaskAssignment" Kind="Class" />
+      <Type Name="TaskRoleStruct" Kind="Structure" />
+      <Type Name="TeamObserver" Kind="Class" />
+      <Type Name="Transition" Kind="Class" />
+      <Type Name="USummand" Kind="Class" />
+      <Type Name="UtilityFunction" Kind="Class" />
+      <Type Name="UtilityInterval" Kind="Structure" />
+      <Type Name="Variable" Kind="Class" />
+    </Namespace>
+  </Types>
+  <Title>AlicaEngine</Title>
+</Overview>

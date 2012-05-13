@@ -1,0 +1,98 @@
+<Type Name="PlanChange" FullName="Alica.PlanChange">
+  <TypeSignature Language="C#" Value="public enum PlanChange" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PlanChange extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Captures the result of a rule application.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FailChange">
+      <MemberSignature Language="C#" Value="FailChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Alica.PlanChange FailChange = int32(3)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.PlanChange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Change occurred and led to a failure, upper level should react
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalChange">
+      <MemberSignature Language="C#" Value="InternalChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Alica.PlanChange InternalChange = int32(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.PlanChange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Change occurred, but is of no interest to upper level plans
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoChange">
+      <MemberSignature Language="C#" Value="NoChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Alica.PlanChange NoChange = int32(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.PlanChange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            No Change occurred, rule was not applicable
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SuccessChange">
+      <MemberSignature Language="C#" Value="SuccessChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Alica.PlanChange SuccessChange = int32(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.PlanChange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Change occurred and led to a success, upper level can react
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

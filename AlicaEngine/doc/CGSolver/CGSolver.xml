@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>/home/hendrik/impera/cn/Alica/AlicaEngine/../../lib/CGSolver</name>
+    </assembly>
+    <members>
+        <member name="T:Alica.Reasoner.CGSolver">
+            <summary>
+            The Alica Constraint Solver.
+            </summary>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.Reasoner.CGSolver.ExistsSolution(System.Collections.Generic.List{Alica.Variable},System.Collections.Generic.List{Alica.ConstraintDescriptor})-->
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.Reasoner.CGSolver.GetSolution(System.Collections.Generic.List{Alica.Variable},System.Collections.Generic.List{Alica.ConstraintDescriptor},System.Double[]@)-->
+        <member name="T:Alica.Reasoner.ResultStore">
+            <summary>
+            Stores results for constraint variables, publishes them and integrates received results
+            </summary>
+        </member>
+        <member name="T:Alica.Reasoner.ResultStore.VotedSeed">
+            <summary>
+            Internal class to calculate merged seeds.
+            </summary>
+        </member>
+        <member name="M:Alica.Reasoner.ResultStore.Get">
+            <summary>
+            Singleton
+            </summary>
+            <returns>
+            The single <see cref="T:Alica.Reasoner.ResultStore" /></returns>
+        </member>
+        <member name="M:Alica.Reasoner.ResultStore.Init">
+            <summary>
+            Initialises the store.
+            </summary>
+        </member>
+        <member name="M:Alica.Reasoner.ResultStore.Close">
+            <summary>
+            Closes the store
+            </summary>
+        </member>
+        <member name="M:Alica.Reasoner.ResultStore.Clear">
+            <summary>
+            Clears the result store. Mainly for testing purposes.
+            </summary>
+        </member>
+        <member name="M:Alica.Reasoner.ResultStore.OnSolverResult(RosCS.AlicaEngine.SolverResult)">
+            <summary>
+            Callback for receiving solver results
+            </summary>
+            <param name="msg">
+            A <see cref="T:RosCS.AlicaEngine.SolverResult" /></param>
+        </member>
+        <member name="M:Alica.Reasoner.ResultStore.PublishContent(System.Object)">
+            <summary>
+            Publishes results if sufficiently new ones are available. Called periodically by a timer.
+            </summary>
+            <param name="o">
+            ignored
+            </param>
+        </member>
+        <member name="M:Alica.Reasoner.ResultStore.PostResult(System.Int64,System.Double)">
+            <summary>
+            Integrates a local result into the store. Called by <see cref="T:Alica.Reasoner.CGSolver" />.
+            </summary>
+            <param name="vid">
+            The variable's id, a <see cref="T:System.Int64" /> to be stored
+            </param>
+            <param name="result">
+            The value of the variable, a <see cref="T:System.Double" /></param>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.Reasoner.ResultStore.GetSeeds(System.Collections.Generic.List{Alica.Variable},System.Double[,])-->
+    </members>
+</doc>

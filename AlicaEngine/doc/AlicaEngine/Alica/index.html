@@ -1,0 +1,985 @@
+<html>
+  <head>
+    <title>AlicaEngine</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">AlicaEngine</a>
+    </div>
+    <h1 class="PageTitle">Alica Namespace</h1>
+    <p class="Summary">
+    </p>
+    <div>
+    </div>
+    <div class="Remarks">
+      <h2 class="Section"> Namespace</h2>
+      <p>
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </p>
+      <table class="TypesListing" style="margin-top: 1em">
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./AbstractExpressions.html">AbstractExpressions</a>
+          </td>
+          <td>
+            The base class of all Expressions, implements staitc helper functions to query the plan base.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./AbstractPlan.html">AbstractPlan</a>
+          </td>
+          <td>
+            Super class of plans, plantypes and behaviourconfigurations.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./AlicaEngine.html">AlicaEngine</a>
+          </td>
+          <td>
+            The main class.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./AllocationDifference.html">AllocationDifference</a>
+          </td>
+          <td>
+            A representation of the difference between two allocations
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./AllocationDifference+Reason.html">AllocationDifference.Reason</a>
+          </td>
+          <td>
+            Denoting the reason for an allocation switch
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./Assignment.html">Assignment</a>
+          </td>
+          <td>
+            Contains all allocation information for a single plan. This includes the robot-task mapping, robot-state mapping and success information.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./AssignmentCollection.html">AssignmentCollection</a>
+          </td>
+          <td>
+            Holds the mapping from <a href="../Alica/EntryPoint.html">Alica.EntryPoint</a>s to robots.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./AuthorityManager.html">AuthorityManager</a>
+          </td>
+          <td>
+            Manages communication wrt. conflict resolution.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./BasicBehaviour.html">BasicBehaviour</a>
+          </td>
+          <td>
+            The base class for all behaviours. All Behaviours must inherit from this class.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./Behaviour.html">Behaviour</a>
+          </td>
+          <td>
+            Represents a behaviour within the plan tree
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./BehaviourConfiguration.html">BehaviourConfiguration</a>
+          </td>
+          <td>
+            A Behaviour Configuration encapsulates a set of static parameters and a set of variables for a Behaviour.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./BehaviourPool.html">BehaviourPool</a>
+          </td>
+          <td>
+            Loads behaviours from the specified assembly and manages the context of behaviours started.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./Capability.html">Capability</a>
+          </td>
+          <td>
+            A capability is used to match agents to roles.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./CapabilityDefinitionSet.html">CapabilityDefinitionSet</a>
+          </td>
+          <td>
+            A capability definition set holds all defined capabilities.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./CapValue.html">CapValue</a>
+          </td>
+          <td>
+            A value for a <a href="../Alica/Capability.html">Alica.Capability</a>.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./Characteristic.html">Characteristic</a>
+          </td>
+          <td>
+            A characteristic encapsulates a <a href="../Alica/Capability.html">Alica.Capability</a> and a <a href="../Alica/CapValue.html">Alica.CapValue</a>.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./Condition.html">Condition</a>
+          </td>
+          <td>
+            A condition encapsulates expressions and constraint specific to a planelement, e.g., a transition, or a plan.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./ConstraintBuilder.html">ConstraintBuilder</a>
+          </td>
+          <td>
+            A static helper class, providing simple factory methods for domain-independent constraints.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./ConstraintDescriptor.html">ConstraintDescriptor</a>
+          </td>
+          <td>
+            Holds all information relevant to a constraint imposed by a <a href="../Alica/Condition.html">Alica.Condition</a>. The information is typically provided by a <a href="../Alica/GetConstraint.html">Alica.GetConstraint</a> delegate.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./ConstraintHelper.html">ConstraintHelper</a>
+          </td>
+          <td>
+            The Constraint Helper offers methods to query for variables for valid values and test if solutions exists
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./ConstraintQuery.html">ConstraintQuery</a>
+          </td>
+          <td>
+            Encapsulates specific queries to constraint variable, usually used by behaviours.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./ConstraintStore.html">ConstraintStore</a>
+          </td>
+          <td>
+            Holds information about active constraints in the corresponding <a href="../Alica/RunningPlan.html">Alica.RunningPlan</a></td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./CycleManager.html">CycleManager</a>
+          </td>
+          <td>
+            Responsibile for detecting cycles in assignment updates and reactions to these
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./DefaultUtilityFunction.html">DefaultUtilityFunction</a>
+          </td>
+          <td>
+            A default implementation for a plan's utility function. The only occuring summand referrs to the task-role preferences.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./EngineTrigger.html">EngineTrigger</a>
+          </td>
+          <td>
+            An engine trigger is a delegate used to call eventDriven <a href="../Alica/BasicBehaviour.html">Alica.BasicBehaviour</a>s. Events of this type can be used by a BasicBehaviour to manage when it is called.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./EntryPoint.html">EntryPoint</a>
+          </td>
+          <td>
+            An EntryPoint is used to identify the initial state of a task within a plan.
+            It also holds cardinalities and any information specific to this (task,plan) tuple.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./EntryPointRobotPair.html">EntryPointRobotPair</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./EpByTaskComparer.html">EpByTaskComparer</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./Evaluate.html">Evaluate</a>
+          </td>
+          <td>
+            The delegate type used to attach conditions to plans.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./EventListener.html">EventListener</a>
+          </td>
+          <td>
+            Handles triggering of behaviours.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./ExitPoint.html">ExitPoint</a>
+          </td>
+          <td>
+            A terminal state within a plan. Indicates termination of the corresponding task.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./ExploratingUtilityFunction.html">ExploratingUtilityFunction</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./ExpressionHandler.html">ExpressionHandler</a>
+          </td>
+          <td>
+            The Expressionhandler attaches expressions and constraints to plans during start-up of the engine.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./FailurePoint.html">FailurePoint</a>
+          </td>
+          <td>
+            A terminal failure state in a plan. Indicates unsuccesful termination.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./ForallAgents.html">ForallAgents</a>
+          </td>
+          <td>
+            A quantifier associated with agents, i.e., the domain identifiers of this quantifier refer to properties of an agent
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./GetConstraint.html">GetConstraint</a>
+          </td>
+          <td>
+            The delegate type used to attach constraints to plans.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./IAssignment.html">IAssignment</a>
+          </td>
+          <td>
+            An IAssignment describes a potentially partial assignment of robots to <a href="../Alica/EntryPoint.html">Alica.EntryPoint</a>s within a plan.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./IBehaviourPool.html">IBehaviourPool</a>
+          </td>
+          <td>
+            An IBehaviourPool manages the actual behaviours controlling the agent's actuators.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./IConstraintSolver.html">IConstraintSolver</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./IPlanParser.html">IPlanParser</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./IPlanSelector.html">IPlanSelector</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./IPlanTreeVisitor.html">IPlanTreeVisitor</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./IRoleAssignment.html">IRoleAssignment</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./ISyncModul.html">ISyncModul</a>
+          </td>
+          <td>
+            Handles synchronisations between agents, that is tightly synchronised transitions.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./ITaskAssignment.html">ITaskAssignment</a>
+          </td>
+          <td>
+            Interface for the task allocation algorithm.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./ITeamObserver.html">ITeamObserver</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./Logger.html">Logger</a>
+          </td>
+          <td>
+            The Plan Logger will write a log file according to the settings in the Alica.conf file.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./ModelFactory.html">ModelFactory</a>
+          </td>
+          <td>
+            Constructs Model elements, i.e., objects inheriting from <a href="../Alica/PlanElement.html">Alica.PlanElement</a> given their XML representation.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./OnTeamChange.html">OnTeamChange</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./Parametrisation.html">Parametrisation</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./PartialAssignment.html">PartialAssignment</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./Plan.html">Plan</a>
+          </td>
+          <td>
+            An ALICA plan
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./PlanBase.html">PlanBase</a>
+          </td>
+          <td>
+            A PlanBase holds the internal representation of the plan graph and issues all operations on it.
+            It is the most central object within the ALICA Engine.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./PlanChange.html">PlanChange</a>
+          </td>
+          <td>
+            Captures the result of a rule application.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./PlanElement.html">PlanElement</a>
+          </td>
+          <td>
+            Base class of all model elements
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./PlanParser.html">PlanParser</a>
+          </td>
+          <td>
+            The default parser, parsing the XML encoding of an ALICA plan-tree
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./PlanRepository.html">PlanRepository</a>
+          </td>
+          <td>
+            The PlanRepository holds the ALICA program, neatly seperated into different Dictionaries.
+            It is especially useful to map element ids back to their object, e.g., when receiving messages referring to plan elements.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./PlanSelector.html">PlanSelector</a>
+          </td>
+          <td>
+            Implements the task allocation algorithm
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./PlanStatus.html">PlanStatus</a>
+          </td>
+          <td>
+            Reflects the status of a Running Plan.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./PlanType.html">PlanType</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./PlanWriter.html">PlanWriter</a>
+          </td>
+          <td>
+            The PlanWriter can be used to store generated plans.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./PreCondition.html">PreCondition</a>
+          </td>
+          <td>
+            A precondition guards a <a href="../Alica/Plan.html">Alica.Plan</a> or a <a href="../Alica/Transition.html">Alica.Transition</a>.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./Quantifier.html">Quantifier</a>
+          </td>
+          <td>
+            A quantifier encapsulates a set of <a href="../Alica/Variable.html">Alica.Variable</a>s, belonging to a domain artifact, scoped under a PlanElement
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./Result.html">Result</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./RobotEngineData.html">RobotEngineData</a>
+          </td>
+          <td>
+            Basic Runtime information relating to a robot within the team
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./RobotProperties.html">RobotProperties</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./RobotRoleUtility.html">RobotRoleUtility</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./Role.html">Role</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./RoleAssignment.html">RoleAssignment</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./RoleDefinitionSet.html">RoleDefinitionSet</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./RolePriority.html">RolePriority</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./RoleSet.html">RoleSet</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./RoleTaskMapping.html">RoleTaskMapping</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./RoleUsage.html">RoleUsage</a>
+          </td>
+          <td>
+            RoleUsage contains a role with it's priorty.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./RuleBook.html">RuleBook</a>
+          </td>
+          <td>
+            Defines the operational semantics of the used ALICA dialect.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./RunningPlan.html">RunningPlan</a>
+          </td>
+          <td>
+            A RunningPlan represents a plan or a behaviour in execution, holding all informaiton relevant at runtime.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./RuntimeCondition.html">RuntimeCondition</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./SimplePlanTree.html">SimplePlanTree</a>
+          </td>
+          <td>
+            A SimplePlanTree is a simplified version of the <a href="../Alica/RunningPlan.html">Alica.RunningPlan</a>, usually created from an incoming message. It thus represents the plan graph of another robot.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./State.html">State</a>
+          </td>
+          <td>
+            A State is a plan element inhabitable by agents, which contains sub-plans, sub-plantypes, and behaviours.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./StateCollection.html">StateCollection</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./SuccessCollection.html">SuccessCollection</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./SuccessMarks.html">SuccessMarks</a>
+          </td>
+          <td>
+            Globally holds information about succeeded entrypoints for a specific robot
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./SuccessPoint.html">SuccessPoint</a>
+          </td>
+          <td>
+            A terminal state, encoding the succesful termination of a task.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./Synchronisation.html">Synchronisation</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./SyncModul.html">SyncModul</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./SyncRow.html">SyncRow</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./SyncTransition.html">SyncTransition</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./Task.html">Task</a>
+          </td>
+          <td>
+            an abstract description of parts of plans to be taken on by a set of robots
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./TaskAssignment.html">TaskAssignment</a>
+          </td>
+          <td>
+            Represents an instance of an assignment problem for one plan or a plantype.
+            All parameters, which are static for this problem, are stored here.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./TaskRoleStruct.html">TaskRoleStruct</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./TeamObserver.html">TeamObserver</a>
+          </td>
+          <td>
+            The TeamObserver manages communication with the team. Thus it sends and receives PlanTreeInfo messages.
+            Specialised Modules may communicate through other means.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./Transition.html">Transition</a>
+          </td>
+          <td>
+            Connects two <a href="../Alica/State.html">Alica.State</a>s in a <a href="../Alica/Plan.html">Alica.Plan</a></td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./USummand.html">USummand</a>
+          </td>
+          <td>
+            Abstract super class for domain dependent utility summands.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./UtilityFunction.html">UtilityFunction</a>
+          </td>
+          <td>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./UtilityInterval.html">UtilityInterval</a>
+          </td>
+          <td>
+            Holds a minimal and a maximal possible utility value. Used internally for searching.
+            </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./Variable.html">Variable</a>
+          </td>
+          <td>
+            A variable is constraint by conditions, feasible values can be queried using a <a href="../Alica/ConstraintQuery.html">Alica.ConstraintQuery</a>.
+            </td>
+        </tr>
+      </table>
+    </div>
+    <div class="Members">
+    </div>
+    <hr size="1" />
+    <div class="Copyright">To be added.</div>
+  </body>
+</html>

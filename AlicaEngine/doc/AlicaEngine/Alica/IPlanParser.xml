@@ -1,0 +1,86 @@
+<Type Name="IPlanParser" FullName="Alica.IPlanParser">
+  <TypeSignature Language="C#" Value="public interface IPlanParser" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPlanParser" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetParsedElements">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;long,Alica.PlanElement&gt; GetParsedElements ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.Dictionary`2&lt;int64, class Alica.PlanElement&gt; GetParsedElements() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.Int64,Alica.PlanElement&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParsePlanTree">
+      <MemberSignature Language="C#" Value="public Alica.Plan ParsePlanTree (string masterplan);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Alica.Plan ParsePlanTree(string masterplan) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.Plan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="masterplan" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="masterplan">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseRoleSet">
+      <MemberSignature Language="C#" Value="public Alica.RoleSet ParseRoleSet (string roleSetName, string roleSetDir);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Alica.RoleSet ParseRoleSet(string roleSetName, string roleSetDir) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.RoleSet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleSetName" Type="System.String" />
+        <Parameter Name="roleSetDir" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleSetName">To be added.</param>
+        <param name="roleSetDir">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

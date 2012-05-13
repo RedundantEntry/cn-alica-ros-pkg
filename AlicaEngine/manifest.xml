@@ -1,0 +1,22 @@
+<package>
+  <description brief="AlicaEngine">
+
+     AlicaEngine
+
+  </description>
+  <author>Hendrik Skubch</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://carpenoctem.das-lab.net/research/ALICA</url>
+
+  <!--<depend package="std_msgs"/>-->
+  <depend package="roscs" />
+  <depend package="roscpp" />
+  <depend package="Castor"/>
+  <!--<depend package="CNMessages"/>-->
+ <export>
+    <cs lpath="${prefix}/../../lib" />
+  </export>
+</package>
+
+

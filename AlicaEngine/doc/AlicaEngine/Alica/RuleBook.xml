@@ -1,0 +1,482 @@
+<Type Name="RuleBook" FullName="Alica.RuleBook">
+  <TypeSignature Language="C#" Value="public class RuleBook" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RuleBook extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines the operational semantics of the used ALICA dialect.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleBook ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Your basic constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllocationRule">
+      <MemberSignature Language="C#" Value="protected Alica.PlanChange AllocationRule (Alica.RunningPlan r);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype Alica.PlanChange AllocationRule(class Alica.RunningPlan r) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.PlanChange</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        <summary>
+            Allocates agents in the current state within r to sub-plans.
+            </summary>
+        <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthorityOverrideRule">
+      <MemberSignature Language="C#" Value="protected Alica.PlanChange AuthorityOverrideRule (Alica.RunningPlan r);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype Alica.PlanChange AuthorityOverrideRule(class Alica.RunningPlan r) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.PlanChange</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        <summary>
+            Adopts an authorative assignment in case the <see cref="T:Alica.CycleManager" /> of r is in overridden mode.
+            </summary>
+        <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeOccurred">
+      <MemberSignature Language="C#" Value="public bool ChangeOccurred { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ChangeOccurred" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DynamicAllocationRule">
+      <MemberSignature Language="C#" Value="protected Alica.PlanChange DynamicAllocationRule (Alica.RunningPlan r);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype Alica.PlanChange DynamicAllocationRule(class Alica.RunningPlan r) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.PlanChange</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        <summary>
+            Changes the allocation of r to a better one, if one can be found and the plan is currently allowed to change allocation.
+            </summary>
+        <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="log">
+      <MemberSignature Language="C#" Value="protected Alica.Logger log;" />
+      <MemberSignature Language="ILAsm" Value=".field family class Alica.Logger log" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.Logger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="maxConsecutiveChanges">
+      <MemberSignature Language="C#" Value="protected int maxConsecutiveChanges;" />
+      <MemberSignature Language="ILAsm" Value=".field family int32 maxConsecutiveChanges" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlanAbortRule">
+      <MemberSignature Language="C#" Value="protected Alica.PlanChange PlanAbortRule (Alica.RunningPlan r);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype Alica.PlanChange PlanAbortRule(class Alica.RunningPlan r) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.PlanChange</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        <summary>
+            The abort rule, sets a failure if a failure state is reached, the allocation invalid or the runtimecondition does not hold.
+            </summary>
+        <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlanPropagationRule">
+      <MemberSignature Language="C#" Value="protected Alica.PlanChange PlanPropagationRule (Alica.RunningPlan r);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype Alica.PlanChange PlanPropagationRule(class Alica.RunningPlan r) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.PlanChange</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        <summary>
+            Propagates a failure to the parent in case it couldn't be repaired on this level.
+            </summary>
+        <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlanRedoRule">
+      <MemberSignature Language="C#" Value="protected Alica.PlanChange PlanRedoRule (Alica.RunningPlan r);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype Alica.PlanChange PlanRedoRule(class Alica.RunningPlan r) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.PlanChange</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        <summary>
+            Tries to repair a plan by moving all robots in the current state to the corresponding initial state.
+            </summary>
+        <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlanReplaceRule">
+      <MemberSignature Language="C#" Value="protected Alica.PlanChange PlanReplaceRule (Alica.RunningPlan r);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype Alica.PlanChange PlanReplaceRule(class Alica.RunningPlan r) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.PlanChange</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        <summary>
+            Tries to repair a failure by removing this plan and triggering a new task allocation.
+            </summary>
+        <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ps">
+      <MemberSignature Language="C#" Value="protected Alica.IPlanSelector ps;" />
+      <MemberSignature Language="ILAsm" Value=".field family class Alica.IPlanSelector ps" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.IPlanSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="sm">
+      <MemberSignature Language="C#" Value="protected Alica.ISyncModul sm;" />
+      <MemberSignature Language="ILAsm" Value=".field family class Alica.ISyncModul sm" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.ISyncModul</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SynchTransitionRule">
+      <MemberSignature Language="C#" Value="protected Alica.PlanChange SynchTransitionRule (Alica.RunningPlan r);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype Alica.PlanChange SynchTransitionRule(class Alica.RunningPlan r) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.PlanChange</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        <summary>
+            Moves the agent along a synchronised transition, if the corresponding transition holds and the <see cref="!:SynchModul" />
+            deems the transition as synchronised.
+            </summary>
+        <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="to">
+      <MemberSignature Language="C#" Value="protected Alica.ITeamObserver to;" />
+      <MemberSignature Language="ILAsm" Value=".field family class Alica.ITeamObserver to" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.ITeamObserver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopFailRule">
+      <MemberSignature Language="C#" Value="protected Alica.PlanChange TopFailRule (Alica.RunningPlan r);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype Alica.PlanChange TopFailRule(class Alica.RunningPlan r) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.PlanChange</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        <summary>
+            Handles a failure at the top-level plan by resetting everything.
+            </summary>
+        <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransitionRule">
+      <MemberSignature Language="C#" Value="protected Alica.PlanChange TransitionRule (Alica.RunningPlan r);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype Alica.PlanChange TransitionRule(class Alica.RunningPlan r) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.PlanChange</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        <summary>
+            The transition rule, moves an agent along a transition to a next state if the corresponding condition holds,
+            flags the RunningPlan for allocation in the next state.
+            Note, in case multiple transitions are eligble, one is chosen implementation dependent.
+            </summary>
+        <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateChange">
+      <MemberSignature Language="C#" Value="public Alica.PlanChange UpdateChange (Alica.PlanChange cur, Alica.PlanChange update);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Alica.PlanChange UpdateChange(valuetype Alica.PlanChange cur, valuetype Alica.PlanChange update) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.PlanChange</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cur" Type="Alica.PlanChange" />
+        <Parameter Name="update" Type="Alica.PlanChange" />
+      </Parameters>
+      <Docs>
+        <param name="cur">
+            A <see cref="T:Alica.PlanChange" /></param>
+        <param name="update">
+            A <see cref="T:Alica.PlanChange" /></param>
+        <summary>
+            Combines to PlanChange flags to one, giving priority to Failures.
+            </summary>
+        <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public virtual Alica.PlanChange Visit (Alica.RunningPlan r);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype Alica.PlanChange Visit(class Alica.RunningPlan r) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.PlanChange</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        <summary>
+            Called in every iteration by a RunningPlan to apply rules to it.
+            Will consequetively apply rules until no further changes can be made or
+            <see cref="F:Alica.RuleBook.maxConsecutiveChanges" /> are made. This method also dictates the sequence in which rules are applied.
+            </summary>
+        <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

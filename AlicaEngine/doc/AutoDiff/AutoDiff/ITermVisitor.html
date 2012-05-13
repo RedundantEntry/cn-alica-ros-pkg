@@ -1,0 +1,1063 @@
+<html>
+  <head>
+    <title>AutoDiff.ITermVisitor</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">AutoDiff</a> : <a href="index.html">AutoDiff Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:AutoDiff.ITermVisitor">Overview</a>
+      </p>
+      <p>
+        <a href="#T:AutoDiff.ITermVisitor:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:AutoDiff.ITermVisitor:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:AutoDiff.ITermVisitor:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:AutoDiff.ITermVisitor">ITermVisitor  Interface</h1>
+    <p class="Summary" id="T:AutoDiff.ITermVisitor:Summary">
+            Visitor for terms that has no result from its computations.
+            </p>
+    <div id="T:AutoDiff.ITermVisitor:Signature">
+      <h2>Syntax</h2>
+      <div class="Signature">public interface  <b>ITermVisitor</b></div>
+    </div>
+    <div class="Remarks" id="T:AutoDiff.ITermVisitor:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:AutoDiff.ITermVisitor:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:AutoDiff.ITermVisitor:Docs:Version Information">
+        <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.Abs)">Visit</a>
+                  </b>(<a href="../AutoDiff/Abs.html">Abs</a>)<blockquote>
+            Performs an action for an abs term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.And)">Visit</a>
+                  </b>(<a href="../AutoDiff/And.html">And</a>)<blockquote>
+            Performs an action for an and term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.Atan2)">Visit</a>
+                  </b>(<a href="../AutoDiff/Atan2.html">Atan2</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.Constant)">Visit</a>
+                  </b>(<a href="../AutoDiff/Constant.html">Constant</a>)<blockquote>
+            Performs an action for a constant term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.ConstraintUtility)">Visit</a>
+                  </b>(<a href="../AutoDiff/ConstraintUtility.html">ConstraintUtility</a>)<blockquote>
+            Performs an action for a ConstraintUtility term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.Cos)">Visit</a>
+                  </b>(<a href="../AutoDiff/Cos.html">Cos</a>)<blockquote>
+            Performs an action for a cosine term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.Exp)">Visit</a>
+                  </b>(<a href="../AutoDiff/Exp.html">Exp</a>)<blockquote>
+            Performs an action for an exponential function term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.IntPower)">Visit</a>
+                  </b>(<a href="../AutoDiff/IntPower.html">IntPower</a>)<blockquote>
+            Performs an action for a power term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.Log)">Visit</a>
+                  </b>(<a href="../AutoDiff/Log.html">Log</a>)<blockquote>
+            Performs an action for a logarithm term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.LTConstraint)">Visit</a>
+                  </b>(<a href="../AutoDiff/LTConstraint.html">LTConstraint</a>)<blockquote>
+            Performs an action for a less-than constraint.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.LTEConstraint)">Visit</a>
+                  </b>(<a href="../AutoDiff/LTEConstraint.html">LTEConstraint</a>)<blockquote>
+            Performs an action for a less-than-or-equal constraint.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.Max)">Visit</a>
+                  </b>(<a href="../AutoDiff/Max.html">Max</a>)<blockquote>
+            Performs an action for a max term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.Min)">Visit</a>
+                  </b>(<a href="../AutoDiff/Min.html">Min</a>)<blockquote>
+            Performs an action for a min term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.Or)">Visit</a>
+                  </b>(<a href="../AutoDiff/Or.html">Or</a>)<blockquote>
+            Performs an action for an or term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.Product)">Visit</a>
+                  </b>(<a href="../AutoDiff/Product.html">Product</a>)<blockquote>
+            Performs an action for a product term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.Reification)">Visit</a>
+                  </b>(<a href="../AutoDiff/Reification.html">Reification</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sigmoid)">Visit</a>
+                  </b>(<a href="../AutoDiff/Sigmoid.html">Sigmoid</a>)<blockquote>
+            Performs an action for a sigmoid term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sin)">Visit</a>
+                  </b>(<a href="../AutoDiff/Sin.html">Sin</a>)<blockquote>
+            Performs an action for a sine term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sum)">Visit</a>
+                  </b>(<a href="../AutoDiff/Sum.html">Sum</a>)<blockquote>
+            Performs an action for a sum term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.Variable)">Visit</a>
+                  </b>(<a href="../AutoDiff/Variable.html">Variable</a>)<blockquote>
+            Performs an action for a variable term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor.Visit(AutoDiff.Zero)">Visit</a>
+                  </b>(<a href="../AutoDiff/Zero.html">Zero</a>)<blockquote>
+            Performs an action for a zero term.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:AutoDiff.ITermVisitor:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Abs)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Abs):member">
+          <p class="Summary">
+            Performs an action for an abs term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/Abs.html">Abs</a> abs)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Abs):Parameters">
+            <dl>
+              <dt>
+                <i>abs</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Abs):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Abs):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Abs):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.And)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.And):member">
+          <p class="Summary">
+            Performs an action for an and term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/And.html">And</a> and)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.And):Parameters">
+            <dl>
+              <dt>
+                <i>and</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.And):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.And):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.And):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Atan2)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Atan2):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/Atan2.html">Atan2</a> atan2)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Atan2):Parameters">
+            <dl>
+              <dt>
+                <i>atan2</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Atan2):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Atan2):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Constant)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Constant):member">
+          <p class="Summary">
+            Performs an action for a constant term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/Constant.html">Constant</a> constant)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Constant):Parameters">
+            <dl>
+              <dt>
+                <i>constant</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Constant):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Constant):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Constant):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.ConstraintUtility)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.ConstraintUtility):member">
+          <p class="Summary">
+            Performs an action for a ConstraintUtility term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/ConstraintUtility.html">ConstraintUtility</a> cu)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.ConstraintUtility):Parameters">
+            <dl>
+              <dt>
+                <i>cu</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.ConstraintUtility):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.ConstraintUtility):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.ConstraintUtility):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Cos)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Cos):member">
+          <p class="Summary">
+            Performs an action for a cosine term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/Cos.html">Cos</a> cos)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Cos):Parameters">
+            <dl>
+              <dt>
+                <i>cos</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Cos):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Cos):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Cos):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Exp)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Exp):member">
+          <p class="Summary">
+            Performs an action for an exponential function term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/Exp.html">Exp</a> exp)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Exp):Parameters">
+            <dl>
+              <dt>
+                <i>exp</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Exp):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Exp):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Exp):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.IntPower)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.IntPower):member">
+          <p class="Summary">
+            Performs an action for a power term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/IntPower.html">IntPower</a> intPower)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.IntPower):Parameters">
+            <dl>
+              <dt>
+                <i>intPower</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.IntPower):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.IntPower):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.IntPower):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Log)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Log):member">
+          <p class="Summary">
+            Performs an action for a logarithm term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/Log.html">Log</a> log)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Log):Parameters">
+            <dl>
+              <dt>
+                <i>log</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Log):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Log):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Log):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.LTConstraint)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.LTConstraint):member">
+          <p class="Summary">
+            Performs an action for a less-than constraint.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/LTConstraint.html">LTConstraint</a> constraint)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.LTConstraint):Parameters">
+            <dl>
+              <dt>
+                <i>constraint</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.LTConstraint):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.LTConstraint):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.LTConstraint):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.LTEConstraint)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.LTEConstraint):member">
+          <p class="Summary">
+            Performs an action for a less-than-or-equal constraint.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/LTEConstraint.html">LTEConstraint</a> constraint)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.LTEConstraint):Parameters">
+            <dl>
+              <dt>
+                <i>constraint</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.LTEConstraint):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.LTEConstraint):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.LTEConstraint):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Max)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Max):member">
+          <p class="Summary">
+            Performs an action for a max term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/Max.html">Max</a> max)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Max):Parameters">
+            <dl>
+              <dt>
+                <i>max</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Max):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Max):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Max):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Min)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Min):member">
+          <p class="Summary">
+            Performs an action for a min term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/Min.html">Min</a> min)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Min):Parameters">
+            <dl>
+              <dt>
+                <i>min</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Min):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Min):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Min):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Or)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Or):member">
+          <p class="Summary">
+            Performs an action for an or term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/Or.html">Or</a> or)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Or):Parameters">
+            <dl>
+              <dt>
+                <i>or</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Or):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Or):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Or):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Product)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Product):member">
+          <p class="Summary">
+            Performs an action for a product term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/Product.html">Product</a> product)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Product):Parameters">
+            <dl>
+              <dt>
+                <i>product</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Product):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Product):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Product):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Reification)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Reification):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/Reification.html">Reification</a> r)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Reification):Parameters">
+            <dl>
+              <dt>
+                <i>r</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Reification):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Reification):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sigmoid)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sigmoid):member">
+          <p class="Summary">
+            Performs an action for a sigmoid term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/Sigmoid.html">Sigmoid</a> sigmoid)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sigmoid):Parameters">
+            <dl>
+              <dt>
+                <i>sigmoid</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sigmoid):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sigmoid):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sigmoid):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sin)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sin):member">
+          <p class="Summary">
+            Performs an action for a sine term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/Sin.html">Sin</a> sin)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sin):Parameters">
+            <dl>
+              <dt>
+                <i>sin</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sin):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sin):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sin):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sum)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sum):member">
+          <p class="Summary">
+            Performs an action for a sum term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/Sum.html">Sum</a> sum)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sum):Parameters">
+            <dl>
+              <dt>
+                <i>sum</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sum):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sum):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sum):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Variable)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Variable):member">
+          <p class="Summary">
+            Performs an action for a variable term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/Variable.html">Variable</a> variable)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Variable):Parameters">
+            <dl>
+              <dt>
+                <i>variable</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Variable):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Variable):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Variable):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Zero)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Zero):member">
+          <p class="Summary">
+            Performs an action for a zero term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Visit</b> (<a href="../AutoDiff/Zero.html">Zero</a> zero)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Zero):Parameters">
+            <dl>
+              <dt>
+                <i>zero</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Zero):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Zero):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Zero):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

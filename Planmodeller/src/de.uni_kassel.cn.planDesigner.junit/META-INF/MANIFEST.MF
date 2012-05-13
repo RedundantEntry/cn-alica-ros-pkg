@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Junit Plug-in
+Bundle-SymbolicName: de.uni_kassel.cn.planDesigner.junit
+Bundle-Version: 1.0.0
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.junit,
+ org.eclipse.emf.ecore.xmi;bundle-version="2.4.0",
+ de.uni_kassel.cn.alica;bundle-version="1.0.0",
+ de.uni_kassel.cn.planDesigner.ui;bundle-version="1.0.0"

@@ -1,0 +1,45 @@
+<Type Name="Term+AndType" FullName="AutoDiff.Term+AndType">
+  <TypeSignature Language="C#" Value="public enum Term.AndType" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed Term/AndType extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>AutoDiff</AssemblyName>
+    <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="and">
+      <MemberSignature Language="C#" Value="and" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype AutoDiff.Term/AndType and = int32(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term+AndType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="min">
+      <MemberSignature Language="C#" Value="min" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype AutoDiff.Term/AndType min = int32(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term+AndType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

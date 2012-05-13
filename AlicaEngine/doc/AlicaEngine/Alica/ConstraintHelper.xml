@@ -1,0 +1,71 @@
+<Type Name="ConstraintHelper" FullName="Alica.ConstraintHelper">
+  <TypeSignature Language="C#" Value="public static class ConstraintHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ConstraintHelper extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The Constraint Helper offers methods to query for variables for valid values and test if solutions exists
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public static bool Init (Alica.IConstraintSolver thesolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Init(class Alica.IConstraintSolver thesolver) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thesolver" Type="Alica.IConstraintSolver" />
+      </Parameters>
+      <Docs>
+        <param name="thesolver">
+            A <see cref="T:Alica.IConstraintSolver" /></param>
+        <summary>
+            Init the ConstraintHelper, called once during Initialisation
+            </summary>
+        <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Solver">
+      <MemberSignature Language="C#" Value="public static Alica.IConstraintSolver Solver { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Alica.IConstraintSolver Solver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.IConstraintSolver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the constraint solver used
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

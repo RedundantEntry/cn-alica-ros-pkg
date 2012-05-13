@@ -1,0 +1,61 @@
+«IMPORT alica»  
+«EXTENSION de::uni_kassel::cn::planDesigner::codegeneration::extensions::util»
+
+«DEFINE Root FOR AbstractPlan»
+
+	«FILE name + ".cs"»
+	
+		using System;
+		using System.Collections.Generic;
+		using Alica;
+		using Alica.PlannerBase;
+		
+		namespace Alica.Goals
+		{	
+			//Plan:«this.name»
+			public partial class Goals : AbstractGoal {
+			«EXPAND abstractPlanChecking»
+			}	
+		}
+	«ENDFILE»
+«ENDDEFINE»
+
+«DEFINE abstractPlanChecking FOR AbstractPlan»							
+				«EXPAND planCheckingMethods»
+«ENDDEFINE»
+
+«DEFINE planCheckingMethods FOR AbstractPlan»
+	«FOREACH runtimeConditions() AS rc»
+			  //Check of RuntimeCondition - (Name): «rc.name», (ConditionString): «rc.conditionString» 
+			  /*
+			  * Available Vars:«FOREACH rc.vars AS var»
+			  *	- «var.name» («var.id»)«ENDFOREACH»
+			  */
+			  public static AbstractFormula Run«rc.id»(RunningPlan rp)
+			  {
+			  	return AntlrFormularBuilder.GetFormula("«rc.conditionString»", ConditionType.Term);
+			  }				
+	«ENDFOREACH»
+	«FOREACH preConditions() AS pc»
+			  //Check of PreCondition - (Name): «pc.name», (ConditionString): «pc.conditionString» 
+			  /*
+			  * Available Vars:«FOREACH pc.vars AS var»
+			  *	- «var.name» («var.id»)«ENDFOREACH»
+			  */
+			  public AbstractFormula Pre«pc.id»(RunningPlan rp)
+			  {
+			  	return AntlrFormularBuilder.GetFormula("«pc.conditionString»", ConditionType.Term);
+			  }				
+	«ENDFOREACH»
+	«FOREACH posConditions() AS pc»
+			  //Check of PostCondition - (Name): «pc.name», (ConditionString): «pc.conditionString» 
+			  /*
+			  * Available Vars:«FOREACH pc.vars AS var»
+			  *	- «var.name» («var.id»)«ENDFOREACH»
+			  */
+			  public AbstractFormula Post«pc.id»(RunningPlan rp)
+			  {
+			  	return AntlrFormularBuilder.GetFormula("«pc.conditionString»", ConditionType.Term);
+			  }				
+	«ENDFOREACH»
+«ENDDEFINE»

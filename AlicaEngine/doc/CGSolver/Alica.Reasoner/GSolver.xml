@@ -1,0 +1,473 @@
+<Type Name="GSolver" FullName="Alica.Reasoner.GSolver">
+  <TypeSignature Language="C#" Value="public class GSolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GSolver extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>CGSolver</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GSolver ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseLog">
+      <MemberSignature Language="C#" Value="protected void CloseLog ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CloseLog() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvalResults">
+      <MemberSignature Language="C#" Value="protected bool EvalResults ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool EvalResults() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="fcounter">
+      <MemberSignature Language="C#" Value="protected static int fcounter;" />
+      <MemberSignature Language="ILAsm" Value=".field family static int32 fcounter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FEvals">
+      <MemberSignature Language="C#" Value="public long FEvals { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 FEvals" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialPoint">
+      <MemberSignature Language="C#" Value="protected double[] InitialPoint (Alica.Reasoner.GSolver.RpropResult res);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance float64[] InitialPoint(class Alica.Reasoner.GSolver/RpropResult res) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="res" Type="Alica.Reasoner.GSolver+RpropResult" />
+      </Parameters>
+      <Docs>
+        <param name="res">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialPointFromSeed">
+      <MemberSignature Language="C#" Value="protected double[] InitialPointFromSeed (Alica.Reasoner.GSolver.RpropResult res, double[] seed);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance float64[] InitialPointFromSeed(class Alica.Reasoner.GSolver/RpropResult res, float64[] seed) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="res" Type="Alica.Reasoner.GSolver+RpropResult" />
+        <Parameter Name="seed" Type="System.Double[]" />
+      </Parameters>
+      <Docs>
+        <param name="res">To be added.</param>
+        <param name="seed">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialStepSize">
+      <MemberSignature Language="C#" Value="protected void InitialStepSize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InitialStepSize() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitLog">
+      <MemberSignature Language="C#" Value="protected void InitLog ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InitLog() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Log">
+      <MemberSignature Language="C#" Value="protected void Log (double util, double[] val);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Log(float64 util, float64[] val) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="util" Type="System.Double" />
+        <Parameter Name="val" Type="System.Double[]" />
+      </Parameters>
+      <Docs>
+        <param name="util">To be added.</param>
+        <param name="val">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogStep">
+      <MemberSignature Language="C#" Value="protected void LogStep ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void LogStep() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxFEvals">
+      <MemberSignature Language="C#" Value="public long MaxFEvals { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxFEvals" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RPropLoop">
+      <MemberSignature Language="C#" Value="protected Alica.Reasoner.GSolver.RpropResult RPropLoop (double[] seed);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class Alica.Reasoner.GSolver/RpropResult RPropLoop(float64[] seed) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.Reasoner.GSolver+RpropResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="seed" Type="System.Double[]" />
+      </Parameters>
+      <Docs>
+        <param name="seed">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RPropLoop">
+      <MemberSignature Language="C#" Value="protected Alica.Reasoner.GSolver.RpropResult RPropLoop (double[] seed, bool precise);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class Alica.Reasoner.GSolver/RpropResult RPropLoop(float64[] seed, bool precise) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.Reasoner.GSolver+RpropResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="seed" Type="System.Double[]" />
+        <Parameter Name="precise" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="seed">To be added.</param>
+        <param name="precise">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RPropLoopSimple">
+      <MemberSignature Language="C#" Value="protected Alica.Reasoner.GSolver.RpropResult RPropLoopSimple (double[] seed);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class Alica.Reasoner.GSolver/RpropResult RPropLoopSimple(float64[] seed) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.Reasoner.GSolver+RpropResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="seed" Type="System.Double[]" />
+      </Parameters>
+      <Docs>
+        <param name="seed">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Runs">
+      <MemberSignature Language="C#" Value="public long Runs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Runs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="seedWithUtilOptimum">
+      <MemberSignature Language="C#" Value="protected bool seedWithUtilOptimum;" />
+      <MemberSignature Language="ILAsm" Value=".field family bool seedWithUtilOptimum" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Solve">
+      <MemberSignature Language="C#" Value="public double[] Solve (AutoDiff.Term equation, AutoDiff.Variable[] args, double[,] limits, out double util);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64[] Solve(class AutoDiff.Term equation, class AutoDiff.Variable[] args, float64[,] limits, float64 util) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="equation" Type="AutoDiff.Term" />
+        <Parameter Name="args" Type="AutoDiff.Variable[]" />
+        <Parameter Name="limits" Type="System.Double[,]" />
+        <Parameter Name="util" Type="System.Double&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="equation">To be added.</param>
+        <param name="args">To be added.</param>
+        <param name="limits">To be added.</param>
+        <param name="util">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Solve">
+      <MemberSignature Language="C#" Value="public double[] Solve (AutoDiff.Term equation, AutoDiff.Variable[] args, double[,] limits, double[][] seeds, double sufficientUtility, out double util);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64[] Solve(class AutoDiff.Term equation, class AutoDiff.Variable[] args, float64[,] limits, float64[][] seeds, float64 sufficientUtility, float64 util) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="equation" Type="AutoDiff.Term" />
+        <Parameter Name="args" Type="AutoDiff.Variable[]" />
+        <Parameter Name="limits" Type="System.Double[,]" />
+        <Parameter Name="seeds" Type="System.Double[][]" />
+        <Parameter Name="sufficientUtility" Type="System.Double" />
+        <Parameter Name="util" Type="System.Double&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="equation">To be added.</param>
+        <param name="args">To be added.</param>
+        <param name="limits">To be added.</param>
+        <param name="seeds">To be added.</param>
+        <param name="sufficientUtility">To be added.</param>
+        <param name="util">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SolveSimple">
+      <MemberSignature Language="C#" Value="public bool SolveSimple (AutoDiff.Term equation, AutoDiff.Variable[] args, double[,] limits);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SolveSimple(class AutoDiff.Term equation, class AutoDiff.Variable[] args, float64[,] limits) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="equation" Type="AutoDiff.Term" />
+        <Parameter Name="args" Type="AutoDiff.Variable[]" />
+        <Parameter Name="limits" Type="System.Double[,]" />
+      </Parameters>
+      <Docs>
+        <param name="equation">To be added.</param>
+        <param name="args">To be added.</param>
+        <param name="limits">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SolveSimple">
+      <MemberSignature Language="C#" Value="public bool SolveSimple (AutoDiff.Term equation, AutoDiff.Variable[] args, double[,] limits, double[][] seeds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SolveSimple(class AutoDiff.Term equation, class AutoDiff.Variable[] args, float64[,] limits, float64[][] seeds) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="equation" Type="AutoDiff.Term" />
+        <Parameter Name="args" Type="AutoDiff.Variable[]" />
+        <Parameter Name="limits" Type="System.Double[,]" />
+        <Parameter Name="seeds" Type="System.Double[][]" />
+      </Parameters>
+      <Docs>
+        <param name="equation">To be added.</param>
+        <param name="args">To be added.</param>
+        <param name="limits">To be added.</param>
+        <param name="seeds">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SolveTest">
+      <MemberSignature Language="C#" Value="public double[] SolveTest (AutoDiff.Term equation, AutoDiff.Variable[] args, double[,] limits);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64[] SolveTest(class AutoDiff.Term equation, class AutoDiff.Variable[] args, float64[,] limits) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="equation" Type="AutoDiff.Term" />
+        <Parameter Name="args" Type="AutoDiff.Variable[]" />
+        <Parameter Name="limits" Type="System.Double[,]" />
+      </Parameters>
+      <Docs>
+        <param name="equation">To be added.</param>
+        <param name="args">To be added.</param>
+        <param name="limits">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SolveTest">
+      <MemberSignature Language="C#" Value="public double[] SolveTest (AutoDiff.Term equation, AutoDiff.Variable[] args, double[,] limits, int maxRuns, out bool found);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64[] SolveTest(class AutoDiff.Term equation, class AutoDiff.Variable[] args, float64[,] limits, int32 maxRuns, bool found) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="equation" Type="AutoDiff.Term" />
+        <Parameter Name="args" Type="AutoDiff.Variable[]" />
+        <Parameter Name="limits" Type="System.Double[,]" />
+        <Parameter Name="maxRuns" Type="System.Int32" />
+        <Parameter Name="found" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="equation">To be added.</param>
+        <param name="args">To be added.</param>
+        <param name="limits">To be added.</param>
+        <param name="maxRuns">To be added.</param>
+        <param name="found">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

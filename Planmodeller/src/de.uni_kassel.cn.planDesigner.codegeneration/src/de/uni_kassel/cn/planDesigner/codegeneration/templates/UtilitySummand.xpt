@@ -1,0 +1,173 @@
+«IMPORT alica»  
+«EXTENSION de::uni_kassel::cn::planDesigner::codegeneration::extensions::Java»
+
+«DEFINE Root FOR UtilityRepository»
+	«EXPAND Class FOREACH utilities»
+«ENDDEFINE»
+
+«DEFINE Class FOR Utility»
+
+	«FILE this.name+"Summand_"+this.id+".cs"»
+		
+		«EXPAND Imports FOR this»
+		
+		namespace CarpeNoctem.Base.BehaviourEngine
+		{
+			public class «this.name»Summand_«this.id» : USummand
+			{
+
+				«EXPAND Declarations FOR this»
+				
+				public «this.name»Summand_«this.id»(double weight, long[] relevantEntryPointIds, string info)
+				{
+					this.relevantEntryPointIds = relevantEntryPointIds;
+					this.weight = weight;
+					this.info = info;
+					
+					this.name = "«this.name»";
+					this.id = «this.id»;
+					
+					this.shwm = BehaviourPlanningEngine.Get().WM.SharedWorldModel;
+					
+					this.field = FootballField.GetInstance();
+				}
+						
+				public override void CacheEvalData ()
+				{
+					//this.playerPositions = new PlayerPositionCollection(this.shwm);
+					WorldModel wm = BehaviourPlanningEngine.Get().WM;
+					this.sb = wm.EgoBallPosition;
+					Position ownPos = wm.OwnPositionCorrected;
+					if (this.sb!=null && ownPos!=null) this.sb = WorldHelper.Ego2Allo(this.sb,ownPos);			
+					else this.sb = null;
+				}
+
+				public override UtilityInterval Eval(IAssignment ass, WorldModel wm)
+				{
+					ui.Min=0.0;
+					
+					if (this.sb == null) 
+					{
+						ui.Max = 0.0;
+						return ui;
+					}
+					
+					if(sb == null) 
+					{
+						ui.Max = 0.0;				
+						return ui;
+					}
+					
+					ui.Max = 1.0;
+					int numAssignedRobots = 0;
+
+					«EXPAND EntryPoints FOR this»
+					
+					ui.Max = ui.Min;
+					
+					«EXPAND UnassignedRobots FOR this»
+
+					
+		//			Console.WriteLine("DistBallRobot: UI is " + retUI.Min + ".." + retUI.Max); // DEBUG OUTPUT
+					ui.Min = Math.Max(0, ui.Min);
+					ui.Max = Math.Max(0, ui.Max);
+					return ui;
+				}
+				
+				«EXPAND ToString FOR this»
+			}
+		}
+	«ENDFILE»
+«ENDDEFINE»
+
+«DEFINE Imports FOR Utility»
+		using System;
+		using System.Collections;
+		using System.Collections.Generic;
+		using CarpeNoctem.Containers;
+«ENDDEFINE»
+
+«DEFINE Declarations FOR Utility»
+#region *** Construction Data ***
+				protected FootballField field;
+#endregion *** Construction Data ***		
+		
+#region *** Evaluation Data ***
+				protected PlayerPositionCollection playerPositions;
+				protected Point2D sb;
+#endregion *** Evalutaion Data ***
+«ENDDEFINE»
+
+«DEFINE ToString FOR Utility»
+				public override string ToString ()
+				{
+					Base.ToString();
+				}
+«ENDDEFINE»
+
+«DEFINE EntryPoints FOR Utility»
+					// We know that there is only ONE relevant entrypoint for this DistSummand!
+					ICollection<int> relevantRobots = ass.EpRobotsMapping.GetValue(this.relevantEntryPoints[0]);
+					Position curPosition;
+					
+					«EXPAND RelevantRobots FOR this»
+«ENDDEFINE»
+
+«DEFINE RelevantRobots FOR Utility»
+					if (relevantRobots is List<int>) 
+					{
+						// For Lists
+						List<int> relevantRobotsList = (List<int>) relevantRobots;
+						for(int i=0; i<relevantRobotsList.Count; ++i)
+						{
+							curPosition = this.shwm.GetRobotDataByID(relevantRobotsList[i]).playerPosition;
+							if (curPosition == null) continue; // This player was not 'positionReceived'
+							«EXPAND UtilityFunction FOR this»
+							numAssignedRobots++;
+						}
+					} 
+					else if (relevantRobots is HashSet<int>) 
+					{
+						// For HashSets (foreach is slow)
+						foreach (int robot in relevantRobots)
+						{
+							curPosition = this.shwm.GetRobotDataByID(robot).playerPosition;
+							if (curPosition == null) continue; // This player was not 'positionReceived'
+							«EXPAND UtilityFunction FOR this»
+							numAssignedRobots++;
+						}
+					} 
+					else 
+					{
+						throw new NotImplementedException("USummand: New datatype in DistBallRobot?");
+					}
+«ENDDEFINE»
+
+«REM» TODO: the modes list should be treated like a list ««ENDREM»
+«DEFINE UtilityFunction FOR	Utility»
+							ui.Min = «EXPAND Mode FOR this.modes.first()»(ui.Max, «this.expression»);
+«ENDDEFINE»
+
+«DEFINE UnassignedRobots FOR Utility»
+					// Calculate the best possible robot for this job (ignoring every other summand...)
+					if(this.relevantEntryPoints[0].MaxCardinality > numAssignedRobots && ass.NumUnAssignedRobots > 0) 
+					{				
+						for(int i=0; i<ass.NumUnAssignedRobots; ++i) 
+						{
+							curPosition = this.shwm.GetRobotDataByID(ass.UnAssignedRobots[i]).playerPosition;
+							if (curPosition == null) continue;
+							
+							ui.Max = «EXPAND Mode FOR this.modes.first()»(ui.Min, «this.expression»);
+						}
+					}
+«ENDDEFINE»
+
+«DEFINE Mode FOR UtilityMode»
+	«IF this.mode == getMaxModeValue()»
+		Math.Max
+	«ELSEIF this.mode == getMinModeValue()»
+		Math.Min
+	«ELSEIF this.mode == getAvgModeValue()»
+	«ELSE»
+	«ENDIF»
+«ENDDEFINE»

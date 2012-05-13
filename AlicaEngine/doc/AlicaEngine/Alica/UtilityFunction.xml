@@ -1,0 +1,575 @@
+<Type Name="UtilityFunction" FullName="Alica.UtilityFunction">
+  <TypeSignature Language="C#" Value="public class UtilityFunction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UtilityFunction extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UtilityFunction (string name, System.Collections.Generic.List&lt;Alica.USummand&gt; utilSummands, double priorityWeight, double similarityWeight, Alica.Plan plan);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Collections.Generic.List`1&lt;class Alica.USummand&gt; utilSummands, float64 priorityWeight, float64 similarityWeight, class Alica.Plan plan) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="utilSummands" Type="System.Collections.Generic.List&lt;Alica.USummand&gt;" />
+        <Parameter Name="priorityWeight" Type="System.Double" />
+        <Parameter Name="similarityWeight" Type="System.Double" />
+        <Parameter Name="plan" Type="Alica.Plan" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <param name="utilSummands">To be added.</param>
+        <param name="priorityWeight">To be added.</param>
+        <param name="similarityWeight">To be added.</param>
+        <param name="plan">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="bpe">
+      <MemberSignature Language="C#" Value="protected Alica.AlicaEngine bpe;" />
+      <MemberSignature Language="ILAsm" Value=".field family class Alica.AlicaEngine bpe" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.AlicaEngine</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheEvalData">
+      <MemberSignature Language="C#" Value="public void CacheEvalData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CacheEvalData() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DIFFERENCETHRESHOLD">
+      <MemberSignature Language="C#" Value="public const double DIFFERENCETHRESHOLD = 0.0001;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 DIFFERENCETHRESHOLD = (0.0001)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>0.0001</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Differentiate">
+      <MemberSignature Language="C#" Value="public virtual Tuple&lt;double[],double&gt; Differentiate (Alica.IAssignment newAss);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Tuple`2&lt;float64[], float64&gt; Differentiate(class Alica.IAssignment newAss) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Tuple&lt;System.Double[],System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newAss" Type="Alica.IAssignment" />
+      </Parameters>
+      <Docs>
+        <param name="newAss">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Eval">
+      <MemberSignature Language="C#" Value="public virtual Alica.UtilityInterval Eval (Alica.IAssignment newAss, Alica.IAssignment oldAss);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype Alica.UtilityInterval Eval(class Alica.IAssignment newAss, class Alica.IAssignment oldAss) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.UtilityInterval</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newAss" Type="Alica.IAssignment" />
+        <Parameter Name="oldAss" Type="Alica.IAssignment" />
+      </Parameters>
+      <Docs>
+        <param name="newAss">To be added.</param>
+        <param name="oldAss">To be added.</param>
+        <summary> Evaluates the utility function according to the priorities of the assigned
+            roles and according to the similarity, if an oldAss is given.
+            ATTENTION PLZ: Return value is only significant with respect to current Utility of oldAss! (SimilarityMeasure)</summary>
+        <returns> The utility interval </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Eval">
+      <MemberSignature Language="C#" Value="public virtual double Eval (Alica.RunningPlan newRP, Alica.RunningPlan oldRP);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float64 Eval(class Alica.RunningPlan newRP, class Alica.RunningPlan oldRP) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newRP" Type="Alica.RunningPlan" />
+        <Parameter Name="oldRP" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="newRP">To be added.</param>
+        <param name="oldRP">To be added.</param>
+        <summary> Evaluates the utility function according to the priorities of the assigned
+            roles and according to the similarity, if an oldRP is given and according to all
+            other utility summands of this utility function. </summary>
+        <returns> The utility </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPriorityResult">
+      <MemberSignature Language="C#" Value="protected Alica.UtilityInterval GetPriorityResult (Alica.IAssignment ass);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype Alica.UtilityInterval GetPriorityResult(class Alica.IAssignment ass) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.UtilityInterval</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ass" Type="Alica.IAssignment" />
+      </Parameters>
+      <Docs>
+        <param name="ass">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSimilarity">
+      <MemberSignature Language="C#" Value="protected Alica.UtilityInterval GetSimilarity (Alica.IAssignment newAss, Alica.IAssignment oldAss);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype Alica.UtilityInterval GetSimilarity(class Alica.IAssignment newAss, class Alica.IAssignment oldAss) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.UtilityInterval</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newAss" Type="Alica.IAssignment" />
+        <Parameter Name="oldAss" Type="Alica.IAssignment" />
+      </Parameters>
+      <Docs>
+        <param name="newAss">To be added.</param>
+        <param name="oldAss">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="getUtilSummands">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;Alica.USummand&gt; getUtilSummands ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.List`1&lt;class Alica.USummand&gt; getUtilSummands() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Alica.USummand&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public void Init ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Init() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary> Initialises the '(Task x Role) -&gt; Priority'-Dictionary and the
+            'Role -&gt; Highest Priority'-Dictionary for each role of the current roleset.</summary>
+        <returns> void </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitDatastructures">
+      <MemberSignature Language="C#" Value="public static void InitDatastructures ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InitDatastructures() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary> Calls Init() for every utiltiyfunction.
+            Is called and the end of AlicaEngine.Init(..), because it
+            needs the currentroleset (circular dependency otherwise). </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="lookupStruct">
+      <MemberSignature Language="C#" Value="protected Alica.TaskRoleStruct lookupStruct;" />
+      <MemberSignature Language="ILAsm" Value=".field family valuetype Alica.TaskRoleStruct lookupStruct" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.TaskRoleStruct</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="name">
+      <MemberSignature Language="C#" Value="protected string name;" />
+      <MemberSignature Language="ILAsm" Value=".field family string name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="plan">
+      <MemberSignature Language="C#" Value="protected Alica.Plan plan;" />
+      <MemberSignature Language="ILAsm" Value=".field family class Alica.Plan plan" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.Plan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Plan">
+      <MemberSignature Language="C#" Value="public Alica.Plan Plan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Alica.Plan Plan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.Plan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PriorityMatrix">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;Alica.TaskRoleStruct,double&gt; PriorityMatrix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;valuetype Alica.TaskRoleStruct, float64&gt; PriorityMatrix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;Alica.TaskRoleStruct,System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="priorityWeight">
+      <MemberSignature Language="C#" Value="protected double priorityWeight;" />
+      <MemberSignature Language="ILAsm" Value=".field family float64 priorityWeight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="priResult">
+      <MemberSignature Language="C#" Value="protected Alica.UtilityInterval priResult;" />
+      <MemberSignature Language="ILAsm" Value=".field family valuetype Alica.UtilityInterval priResult" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.UtilityInterval</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> Calculates the priority result for the specified Assignment</summary>
+        <returns> the priority result </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ra">
+      <MemberSignature Language="C#" Value="protected Alica.IRoleAssignment ra;" />
+      <MemberSignature Language="ILAsm" Value=".field family class Alica.IRoleAssignment ra" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.IRoleAssignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="roleHighestPriorityDic">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.Dictionary&lt;long,double&gt; roleHighestPriorityDic;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Generic.Dictionary`2&lt;int64, float64&gt; roleHighestPriorityDic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.Int64,System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="similarityWeight">
+      <MemberSignature Language="C#" Value="protected double similarityWeight;" />
+      <MemberSignature Language="ILAsm" Value=".field family float64 similarityWeight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="simUI">
+      <MemberSignature Language="C#" Value="protected Alica.UtilityInterval simUI;" />
+      <MemberSignature Language="ILAsm" Value=".field family valuetype Alica.UtilityInterval simUI" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.UtilityInterval</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> Evaluates the similarity of the new Assignment to the old Assignment </summary>
+        <returns> The result of the evaluation </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="taskRolePriorityDic">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.Dictionary&lt;Alica.TaskRoleStruct,double&gt; taskRolePriorityDic;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Generic.Dictionary`2&lt;valuetype Alica.TaskRoleStruct, float64&gt; taskRolePriorityDic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;Alica.TaskRoleStruct,System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateAssignment">
+      <MemberSignature Language="C#" Value="public virtual void UpdateAssignment (Alica.IAssignment newAss, Alica.IAssignment oldAss);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UpdateAssignment(class Alica.IAssignment newAss, class Alica.IAssignment oldAss) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newAss" Type="Alica.IAssignment" />
+        <Parameter Name="oldAss" Type="Alica.IAssignment" />
+      </Parameters>
+      <Docs>
+        <param name="newAss">To be added.</param>
+        <param name="oldAss">To be added.</param>
+        <summary> Updates the utility function according to the priorities of the assigned
+            roles and according to the similarity, if an oldAss is given. </summary>
+        <returns> void </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="utilSummands">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.List&lt;Alica.USummand&gt; utilSummands;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Generic.List`1&lt;class Alica.USummand&gt; utilSummands" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Alica.USummand&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

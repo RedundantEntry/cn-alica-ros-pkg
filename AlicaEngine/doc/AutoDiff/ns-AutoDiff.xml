@@ -1,0 +1,1405 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>/home/hendrik/impera/cn/Alica/AlicaEngine/../../lib/AutoDiff</name>
+    </assembly>
+    <members>
+        <member name="T:AutoDiff.CompiledDifferentiator">
+            <summary>
+            Compiles the terms tree to a more efficient form for differentiation.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.CompiledDifferentiator.#ctor(AutoDiff.Term,AutoDiff.Variable[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutoDiff.CompiledDifferentiator" /> class.
+            </summary>
+            <param name="function">The function.</param>
+            <param name="variables">The variables.</param>
+        </member>
+        <member name="P:AutoDiff.Reification.Condition">
+            <summary>
+            Gets or sets the constraint to reify
+            </summary>
+            <value>
+            The constraint.
+            </value>
+        </member>
+        <member name="P:AutoDiff.Reification.NegatedCondition">
+            <summary>
+            The constraint's negation. Set automatically.
+            </summary>
+            <value>
+            The negated constraint.
+            </value>
+        </member>
+        <member name="P:AutoDiff.Reification.Min">
+            <summary>
+            Gets or sets the minimum.
+            </summary>
+            <value>
+            The value representing a violated constraint.
+            </value>
+        </member>
+        <member name="P:AutoDiff.Reification.Max">
+            <summary>
+            Gets or sets the maximum.
+            </summary>
+            <value>
+            The value representing a satisfied constraint.
+            </value>
+        </member>
+        <member name="M:AutoDiff.Reification.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a term visitor
+            </summary>
+            <param name="visitor">The term visitor to accept</param>
+        </member>
+        <member name="M:AutoDiff.Reification.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.Term">
+            <summary>
+            Base class for all automatically-differentiable terms.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Term.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a term visitor
+            </summary>
+            <param name="visitor">The term visitor to accept</param>
+        </member>
+        <member name="M:AutoDiff.Term.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>The result from the visitor's visit function.</returns>
+        </member>
+        <member name="M:AutoDiff.Term.op_Implicit(System.Double)~AutoDiff.Term">
+            <summary>
+            Converts a floating point constant to a constant term.
+            </summary>
+            <param name="value">The floating point constnat</param>
+            <returns>The resulting term.</returns>
+        </member>
+        <member name="M:AutoDiff.Term.op_Addition(AutoDiff.Term,AutoDiff.Term)">
+            <summary>
+            Constructs a sum of the two given terms.
+            </summary>
+            <param name="left">First term in the sum</param>
+            <param name="right">Second term in the sum</param>
+            <returns>A term representing the sum of <see cref="!:left" /> and <see cref="!:right" />.</returns>
+        </member>
+        <member name="M:AutoDiff.Term.op_Multiply(AutoDiff.Term,AutoDiff.Term)">
+            <summary>
+            Constructs a product term of the two given terms.
+            </summary>
+            <param name="left">The first term in the product</param>
+            <param name="right">The second term in the product</param>
+            <returns>A term representing the product of <see cref="!:left" /> and <see cref="!:right" />.</returns>
+        </member>
+        <member name="M:AutoDiff.Term.op_Subtraction(AutoDiff.Term,AutoDiff.Term)">
+            <summary>
+            Constructs a difference of the two given terms.
+            </summary>
+            <param name="left">The first term in the difference</param>
+            <param name="right">The second term in the difference.</param>
+            <returns>A term representing <paramref name="left" /> - <paramref name="right" />.</returns>
+        </member>
+        <member name="M:AutoDiff.Term.op_UnaryNegation(AutoDiff.Term)">
+            <summary>
+            Constructs a negated term
+            </summary>
+            <param name="term">The term to negate</param>
+            <returns>A term representing <c>-term</c>.</returns>
+        </member>
+        <member name="M:AutoDiff.Term.op_Division(AutoDiff.Term,AutoDiff.Term)">
+            <summary>
+            Constructs a fraction term of the two given terms.
+            </summary>
+            <param name="numerator">The numerator of the fraction. That is, the "top" part.</param>
+            <param name="denominator">The denominator of the fraction. That is, the "bottom" part.</param>
+            <returns>A term representing the fraction <paramref name="numerator" /> over <paramref name="denominator" />.</returns>
+        </member>
+        <member name="T:AutoDiff.TermUtils">
+            <summary>
+            Static methods that operate on terms.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.TermUtils.Compile(AutoDiff.Term,AutoDiff.Variable[])">
+            <summary>
+            Creates a compiled representation of a given term that allows efficient evaluation of the value/gradient.
+            </summary>
+            <param name="term">The term to compile.</param>
+            <param name="variables">The variables contained in the term.</param>
+            <returns>A compiled representation of <paramref name="term" /> that assigns values to variables in the same order
+            as in <paramref name="variables" /></returns>
+            <remarks>
+            The order of the variables in <paramref name="variables" /> is important. Each call to <c>ICompiledTerm.Evaluate</c> or
+            <c>ICompiledTerm.Differentiate</c> receives an array of numbers representing the point of evaluation. The i'th number in this array corresponds
+            to the i'th variable in <c>variables</c>.
+            </remarks>
+        </member>
+        <member name="M:AutoDiff.TermUtils.Evaluate(AutoDiff.Term,AutoDiff.Variable[],System.Double[])">
+            <summary>
+            Evaluates the function represented by a given term at a given point.
+            </summary>
+            <param name="term">The term representing the function to evaluate.</param>
+            <param name="variables">The variables used in <paramref name="term" />.</param>
+            <param name="point">The values assigned to the variables in <paramref name="variables" /></param>
+            <returns>The value of the function represented by <paramref name="term" /> at the point represented by <paramref name="variables" />
+            and <paramref name="point" />.</returns>
+            <remarks>The i'th value in <c>point</c> corresponds to the i'th variable in <c>variables</c>.</remarks>
+        </member>
+        <member name="M:AutoDiff.TermUtils.Differentiate(AutoDiff.Term,AutoDiff.Variable[],System.Double[])">
+            <summary>
+            Computes the gradient of the function represented by a given term at a given point.
+            </summary>
+            <param name="term">The term representing the function to differentiate.</param>
+            <param name="variables">The variables used in <paramref name="term" />.</param>
+            <param name="point">The values assigned to the variables in <paramref name="variables" /></param>
+            <returns>The gradient of the function represented by <paramref name="term" /> at the point represented by <paramref name="variables" />
+            and <paramref name="point" />.</returns>
+            <remarks>The i'th value in <c>point</c> corresponds to the i'th variable in <c>variables</c>. In addition, the i'th value
+            in the resulting array is the partial derivative with respect to the i'th variable in <c>variables</c>.</remarks>
+        </member>
+        <member name="T:AutoDiff.ITermVisitor`1">
+            <summary>
+            A visitor for the terms that has a result from its computations
+            </summary>
+            <typeparam name="TResult">The type of the computation results</typeparam>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Constant)">
+            <summary>
+            Computes a value for a constant term.
+            </summary>
+            <param name="constant">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Zero)">
+            <summary>
+            Computes a value for a zero term.
+            </summary>
+            <param name="zero">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.IntPower)">
+            <summary>
+            Computes a value for a power term.
+            </summary>
+            <param name="intPower">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Product)">
+            <summary>
+            Computes a value for a product term.
+            </summary>
+            <param name="product">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sigmoid)">
+            <summary>
+            Computes a value for a sigmoid term.
+            </summary>
+            <param name="sigmoid">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.LTConstraint)">
+            <summary>
+            Computes a value for a less-than constraint term.
+            </summary>
+            <param name="constraint">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.LTEConstraint)">
+            <summary>
+            Computes a value for a less-than-or-equal constraint term.
+            </summary>
+            <param name="constraint">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Min)">
+            <summary>
+            Computes a value for a min term.
+            </summary>
+            <param name="sigmoid">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Max)">
+            <summary>
+            Computes a value for a max term.
+            </summary>
+            <param name="max">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.And)">
+            <summary>
+            Computes a value for an and term.
+            </summary>
+            <param name="sigmoid">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Or)">
+            <summary>
+            Computes a value for an or term.
+            </summary>
+            <param name="max">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.ConstraintUtility)">
+            <summary>
+            Computes a value for a ConstraintUtility term.
+            </summary>
+            <param name="cu">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sum)">
+            <summary>
+            Computes a value for a sum term.
+            </summary>
+            <param name="sum">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Variable)">
+            <summary>
+            Computes a value for a variable term.
+            </summary>
+            <param name="variable">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Log)">
+            <summary>
+            Computes a value for a logarithm term.
+            </summary>
+            <param name="log">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sin)">
+            <summary>
+            Computes a value for a sine term.
+            </summary>
+            <param name="sin">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Cos)">
+            <summary>
+            Computes a value for a cosine term.
+            </summary>
+            <param name="cos">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Exp)">
+            <summary>
+            Computes a value for an exponential function term.
+            </summary>
+            <param name="exp">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Abs)">
+            <summary>
+            Computes a value for an exponential function term.
+            </summary>
+            <param name="abs">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="T:AutoDiff.LTEConstraint">
+            <summary>
+            Represents a less than constraint function.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.LTEConstraint.#ctor(AutoDiff.Term,AutoDiff.Term,System.Double)">
+            <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.LTConstraint" /> type.
+            </summary>
+            <param name="x">The smaller term</param>
+            <param name="y">The larger term</param>
+            <param name="steepness">The steepness of the sigmoid</param>
+        </member>
+        <member name="P:AutoDiff.LTEConstraint.Left">
+            <summary>
+            Gets the smaller argument of the constraint.
+            </summary>
+        </member>
+        <member name="P:AutoDiff.LTEConstraint.Right">
+            <summary>
+            Gets the larger argument of the constraint.
+            </summary>
+        </member>
+        <member name="P:AutoDiff.LTEConstraint.Steepness">
+            <summary>
+            Gets the sigmoid's steepness.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.LTEConstraint.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a term visitor
+            </summary>
+            <param name="visitor">The term visitor to accept</param>
+        </member>
+        <member name="M:AutoDiff.LTEConstraint.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.Log">
+            <summary>
+            Represents a natural logarithm function
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Log.#ctor(AutoDiff.Term)">
+            <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.Log" /> class.
+            </summary>
+            <param name="arg">The argument of the natural logarithm</param>
+        </member>
+        <member name="P:AutoDiff.Log.Arg">
+            <summary>
+            Gets the natural logarithm argument.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Log.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a terms visitor
+            </summary>
+            <param name="visitor">The term visitor to accept</param>
+        </member>
+        <member name="M:AutoDiff.Log.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.Abs">
+            <summary>
+            Represents an abs function
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Abs.#ctor(AutoDiff.Term)">
+            <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.Abs" /> class.
+            </summary>
+            <param name="arg">The argument of the abs</param>
+        </member>
+        <member name="P:AutoDiff.Abs.Arg">
+            <summary>
+            Gets the natural logarithm argument.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Abs.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a terms visitor
+            </summary>
+            <param name="visitor">The term visitor to accept</param>
+        </member>
+        <member name="M:AutoDiff.Abs.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.Exp">
+            <summary>
+            Represents the exponential function <c>e^x</c></summary>
+        </member>
+        <member name="M:AutoDiff.Exp.#ctor(AutoDiff.Term)">
+            <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.Exp" /> type.
+            </summary>
+            <param name="arg">The exponent of the function.</param>
+        </member>
+        <member name="P:AutoDiff.Exp.Arg">
+            <summary>
+            Gets the exponent term.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Exp.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a term visitor
+            </summary>
+            <param name="visitor">The term visitor to accept</param>
+        </member>
+        <member name="M:AutoDiff.Exp.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.ConstraintUtility">
+            <summary>
+            Represents a constraint utility function.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.ConstraintUtility.#ctor(AutoDiff.Term,AutoDiff.Term)">
+            <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.LTConstraint" /> type.
+            </summary>
+            <param name="constraint">The constraint term</param>
+            <param name="utility">The utility term</param>
+        </member>
+        <member name="P:AutoDiff.ConstraintUtility.Constraint">
+            <summary>
+            Gets the constraint.
+            </summary>
+        </member>
+        <member name="P:AutoDiff.ConstraintUtility.Utility">
+            <summary>
+            Gets the utility.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.ConstraintUtility.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a term visitor
+            </summary>
+            <param name="visitor">The term visitor to accept</param>
+        </member>
+        <member name="M:AutoDiff.ConstraintUtility.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.ITermVisitor">
+            <summary>
+            Visitor for terms that has no result from its computations.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Constant)">
+            <summary>
+            Performs an action for a constant term.
+            </summary>
+            <param name="constant">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Zero)">
+            <summary>
+            Performs an action for a zero term.
+            </summary>
+            <param name="zero">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor.Visit(AutoDiff.IntPower)">
+            <summary>
+            Performs an action for a power term.
+            </summary>
+            <param name="intPower">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Product)">
+            <summary>
+            Performs an action for a product term.
+            </summary>
+            <param name="product">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sigmoid)">
+            <summary>
+            Performs an action for a sigmoid term.
+            </summary>
+            <param name="sigmoid">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor.Visit(AutoDiff.LTConstraint)">
+            <summary>
+            Performs an action for a less-than constraint.
+            </summary>
+            <param name="constraint">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor.Visit(AutoDiff.LTEConstraint)">
+            <summary>
+            Performs an action for a less-than-or-equal constraint.
+            </summary>
+            <param name="constraint">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Min)">
+            <summary>
+            Performs an action for a min term.
+            </summary>
+            <param name="min">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Max)">
+            <summary>
+            Performs an action for a max term.
+            </summary>
+            <param name="max">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor.Visit(AutoDiff.And)">
+            <summary>
+            Performs an action for an and term.
+            </summary>
+            <param name="min">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Or)">
+            <summary>
+            Performs an action for an or term.
+            </summary>
+            <param name="min">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor.Visit(AutoDiff.ConstraintUtility)">
+            <summary>
+            Performs an action for a ConstraintUtility term.
+            </summary>
+            <param name="cu">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sum)">
+            <summary>
+            Performs an action for a sum term.
+            </summary>
+            <param name="sum">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Variable)">
+            <summary>
+            Performs an action for a variable term.
+            </summary>
+            <param name="variable">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Log)">
+            <summary>
+            Performs an action for a logarithm term.
+            </summary>
+            <param name="log">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Sin)">
+            <summary>
+            Performs an action for a sine term.
+            </summary>
+            <param name="sin">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Cos)">
+            <summary>
+            Performs an action for a cosine term.
+            </summary>
+            <param name="cos">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Abs)">
+            <summary>
+            Performs an action for an abs term.
+            </summary>
+            <param name="abs">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="M:AutoDiff.ITermVisitor.Visit(AutoDiff.Exp)">
+            <summary>
+            Performs an action for an exponential function term.
+            </summary>
+            <param name="exp">The input term.</param>
+            <returns>The result of the computation.</returns>
+        </member>
+        <member name="T:AutoDiff.ICompiledTerm">
+            <summary>
+            Represents a term after it has been compiled for efficient evaluation/differentiation.
+            </summary>
+        </member>
+        <member name="P:AutoDiff.ICompiledTerm.Variables">
+            <summary>
+            The collection of variables contained in this compiled term.
+            </summary>
+            <remarks>
+            The order of variables in this collection specifies the meaning of each argument in <see cref="M:AutoDiff.ICompiledTerm.Differentiate(System.Double[])" /> or
+            <see cref="M:AutoDiff.ICompiledTerm.Evaluate(System.Double[])" />. That is, the variable at <c>Variables[i]</c> corresponds to the i-th parameter of <see cref="M:AutoDiff.ICompiledTerm.Differentiate(System.Double[])" />
+            and <see cref="M:AutoDiff.ICompiledTerm.Evaluate(System.Double[])" />.
+            </remarks>
+        </member>
+        <member name="M:AutoDiff.ICompiledTerm.Evaluate(System.Double[])">
+            <summary>
+            Evaluates the compiled term at the given point.
+            </summary>
+            <param name="arg">The point at which to evaluate.</param>
+            <returns>The value of the function represented by the term at the given point.</returns>
+            <remarks>The number at <c>arg[i]</c> is the value assigned to the variable <c>Variables[i]</c>.</remarks>
+        </member>
+        <member name="M:AutoDiff.ICompiledTerm.Differentiate(System.Double[])">
+            <summary>
+            Computes the gradient of the compiled term at the given point.
+            </summary>
+            <param name="arg">The point at which to differentiate.</param>
+            <returns>A tuple, where the first item is the gradient at <paramref name="arg" /> and the second item is
+            the value at <paramref name="arg1" />. That is, the second value is the same as running <see cref="M:AutoDiff.ICompiledTerm.Evaluate(System.Double[])" /> on
+            <paramref name="arg" />.</returns>
+            <remarks>The number at <c>arg[i]</c> is the value assigned to the variable <c>Variables[i]</c>.</remarks>
+        </member>
+        <member name="T:AutoDiff.Sigmoid">
+            <summary>
+            Represents a sigmoidal function.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Sigmoid.#ctor(AutoDiff.Term,AutoDiff.Term,System.Double)">
+            <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.Sigmoid" /> type.
+            </summary>
+            <param name="arg">The argument of the sigmoid</param>
+            <param name="mid">The midpoint of the sigmoid, where its value equals .5</param>
+            <param name="steepness">The steepness of the sigmoid</param>
+        </member>
+        <member name="P:AutoDiff.Sigmoid.Arg">
+            <summary>
+            Gets the Argument of the sigmoid.
+            </summary>
+        </member>
+        <member name="P:AutoDiff.Sigmoid.Mid">
+            <summary>
+            Gets the Midpoint of the sigmoid.
+            </summary>
+        </member>
+        <member name="P:AutoDiff.Sigmoid.Steepness">
+            <summary>
+            Gets the sigmoid's steepness.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Sigmoid.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a term visitor
+            </summary>
+            <param name="visitor">The term visitor to accept</param>
+        </member>
+        <member name="M:AutoDiff.Sigmoid.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.Atan2">
+            <summary>
+            Represents a atan2 function
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Atan2.#ctor(AutoDiff.Term,AutoDiff.Term)">
+            <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.Max" /> type.
+            </summary>
+            <param name="left">The first max term</param>
+            <param name="right">The second max term</param>
+        </member>
+        <member name="P:AutoDiff.Atan2.Left">
+            <summary>
+            Gets the first atan2 term.
+            </summary>
+        </member>
+        <member name="P:AutoDiff.Atan2.Right">
+            <summary>
+            Gets the second atan2 term.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Atan2.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a term visitor
+            </summary>
+            <param name="visitor">The term visitor to accept</param>
+        </member>
+        <member name="M:AutoDiff.Atan2.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.Product">
+            <summary>
+            Represents a product between two terms.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Product.#ctor(AutoDiff.Term,AutoDiff.Term)">
+            <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.Product" /> type.
+            </summary>
+            <param name="left">The first product term</param>
+            <param name="right">The second product term</param>
+        </member>
+        <member name="P:AutoDiff.Product.Left">
+            <summary>
+            Gets the first product term.
+            </summary>
+        </member>
+        <member name="P:AutoDiff.Product.Right">
+            <summary>
+            Gets the second product term.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Product.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a term visitor
+            </summary>
+            <param name="visitor">The term visitor to accept</param>
+        </member>
+        <member name="M:AutoDiff.Product.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.IntPower">
+            <summary>
+            Represents a constant-power function x^n, where n is constant.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.IntPower.#ctor(AutoDiff.Term,System.Double)">
+            <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.IntPower" /> class.
+            </summary>
+            <param name="baseTerm">The base of the power function</param>
+            <param name="exponent">The exponent of the power function</param>
+        </member>
+        <member name="P:AutoDiff.IntPower.Base">
+            <summary>
+            Gets the base term of the power function
+            </summary>
+        </member>
+        <member name="P:AutoDiff.IntPower.Exponent">
+            <summary>
+            Gets the exponent term of the power function.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.IntPower.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a term visitor.
+            </summary>
+            <param name="visitor">The term visitor to accept.</param>
+        </member>
+        <member name="M:AutoDiff.IntPower.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.LTConstraint">
+            <summary>
+            Represents a less than constraint function.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.LTConstraint.#ctor(AutoDiff.Term,AutoDiff.Term,System.Double)">
+            <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.LTConstraint" /> type.
+            </summary>
+            <param name="x">The smaller term</param>
+            <param name="y">The larger term</param>
+            <param name="steepness">The steepness of the sigmoid</param>
+        </member>
+        <member name="P:AutoDiff.LTConstraint.Left">
+            <summary>
+            Gets the smaller argument of the constraint.
+            </summary>
+        </member>
+        <member name="P:AutoDiff.LTConstraint.Right">
+            <summary>
+            Gets the larger argument of the constraint.
+            </summary>
+        </member>
+        <member name="P:AutoDiff.LTConstraint.Steepness">
+            <summary>
+            Gets the sigmoid's steepness.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.LTConstraint.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a term visitor
+            </summary>
+            <param name="visitor">The term visitor to accept</param>
+        </member>
+        <member name="M:AutoDiff.LTConstraint.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.Or">
+            <summary>
+            Represents a sigmoidal function.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Or.#ctor(AutoDiff.Term,AutoDiff.Term)">
+            <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.Min" /> type.
+            </summary>
+            <param name="left">The first min term</param>
+            <param name="right">The second min term</param>
+        </member>
+        <member name="P:AutoDiff.Or.Left">
+            <summary>
+            Gets the first product term.
+            </summary>
+        </member>
+        <member name="P:AutoDiff.Or.Right">
+            <summary>
+            Gets the second product term.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Or.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a term visitor
+            </summary>
+            <param name="visitor">The term visitor to accept</param>
+        </member>
+        <member name="M:AutoDiff.Or.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.Variable">
+            <summary>
+            Represents a variable term. Variable terms are substituted for real values during evaluation and
+            differentiation. For more info see <see cref="!:Evaluator" /> and <see cref="!:Differentiator" /> classes.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Variable.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a term visitor
+            </summary>
+            <param name="visitor">The term visitor to accept.</param>
+        </member>
+        <member name="M:AutoDiff.Variable.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.Sin">
+            <summary>
+            Represents a sin function
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Sin.#ctor(AutoDiff.Term)">
+            <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.Sin" /> class.
+            </summary>
+            <param name="arg">The argument of the sine function</param>
+        </member>
+        <member name="P:AutoDiff.Sin.Arg">
+            <summary>
+            Gets the natural logarithm argument.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Sin.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a terms visitor
+            </summary>
+            <param name="visitor">The term visitor to accept</param>
+        </member>
+        <member name="M:AutoDiff.Sin.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.Max">
+            <summary>
+            Represents a max function as used by the constraint solver.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Max.#ctor(AutoDiff.Term,AutoDiff.Term)">
+            <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.Max" /> type.
+            </summary>
+            <param name="left">The first max term</param>
+            <param name="right">The second max term</param>
+        </member>
+        <member name="P:AutoDiff.Max.Left">
+            <summary>
+            Gets the first product term.
+            </summary>
+        </member>
+        <member name="P:AutoDiff.Max.Right">
+            <summary>
+            Gets the second product term.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Max.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a term visitor
+            </summary>
+            <param name="visitor">The term visitor to accept</param>
+        </member>
+        <member name="M:AutoDiff.Max.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.Constant">
+            <summary>
+            A constant value term
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Constant.#ctor(System.Double)">
+            <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.Constant" /> class
+            </summary>
+            <param name="value">The value of the constant</param>
+        </member>
+        <member name="P:AutoDiff.Constant.Value">
+            <summary>
+            Gets the value of this constant
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Constant.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a term visitor
+            </summary>
+            <param name="visitor">The term visitor to accept</param>
+        </member>
+        <member name="M:AutoDiff.Constant.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.Min">
+            <summary>
+            Represents a min function as used by the constraint solver.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Min.#ctor(AutoDiff.Term,AutoDiff.Term)">
+            <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.Min" /> type.
+            </summary>
+            <param name="left">The first min term</param>
+            <param name="right">The second min term</param>
+        </member>
+        <member name="P:AutoDiff.Min.Left">
+            <summary>
+            Gets the first product term.
+            </summary>
+        </member>
+        <member name="P:AutoDiff.Min.Right">
+            <summary>
+            Gets the second product term.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Min.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a term visitor
+            </summary>
+            <param name="visitor">The term visitor to accept</param>
+        </member>
+        <member name="M:AutoDiff.Min.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.Zero">
+            <summary>
+            A constant zero term. Similar to <see cref="T:AutoDiff.Constant" /> but represents only the value 0.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Zero.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a term visitor
+            </summary>
+            <param name="visitor">The term visitor to accept.</param>
+        </member>
+        <member name="M:AutoDiff.Zero.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.TVec">
+            <summary>
+            A column vector made of terms.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.TVec.#ctor(System.Collections.Generic.IEnumerable{AutoDiff.Term})">
+            <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.TVec" /> class given vector components.
+            </summary>
+            <param name="terms">The vector component terms</param>
+        </member>
+        <member name="M:AutoDiff.TVec.#ctor(AutoDiff.Term[])">
+            <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.TVec" /> class given vector components.
+            </summary>
+            <param name="terms">The vector component terms</param>
+        </member>
+        <member name="M:AutoDiff.TVec.#ctor(AutoDiff.TVec,AutoDiff.Term[])">
+            <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.TVec" /> class using another vector's components.
+            </summary>
+            <param name="first">A vector containing the first vector components to use.</param>
+            <param name="rest">More vector components to add in addition to the components in <paramref name="first" /></param>
+        </member>
+        <member name="P:AutoDiff.TVec.Item(System.Int32)">
+            <summary>
+            Gets a vector component given its zero-based index.
+            </summary>
+            <param name="index">The vector's component index.</param>
+            <returns>The vector component.</returns>
+        </member>
+        <member name="P:AutoDiff.TVec.NormSquared">
+            <summary>
+            Gets a term representing the squared norm of this vector.
+            </summary>
+        </member>
+        <member name="P:AutoDiff.TVec.Normalize">
+            <summary>
+            Gets a term representing the a new vector with length = 1 and the direction of this vector.
+            </summary>
+        </member>
+        <member name="P:AutoDiff.TVec.Dimension">
+            <summary>
+            Gets the dimensions of this vector
+            </summary>
+        </member>
+        <member name="P:AutoDiff.TVec.X">
+            <summary>
+            Gets the first vector component
+            </summary>
+        </member>
+        <member name="P:AutoDiff.TVec.Y">
+            <summary>
+            Gets the second vector component.
+            </summary>
+        </member>
+        <member name="P:AutoDiff.TVec.Z">
+            <summary>
+            Gets the third vector component
+            </summary>
+        </member>
+        <member name="M:AutoDiff.TVec.GetTerms">
+            <summary>
+            Gets an array of all vector components.
+            </summary>
+            <returns>An array of all vector components. Users are free to modify this array. It doesn't point to any
+            internal structures.</returns>
+        </member>
+        <member name="M:AutoDiff.TVec.InnerProduct(AutoDiff.TVec,AutoDiff.TVec)">
+            <summary>
+            Constructs a term representing the inner product of two vectors.
+            </summary>
+            <param name="left">The first vector of the inner product</param>
+            <param name="right">The second vector of the inner product</param>
+            <returns>A term representing the inner product of <paramref name="left" /> and <paramref name="right" />.</returns>
+        </member>
+        <member name="M:AutoDiff.TVec.CrossProduct(AutoDiff.TVec,AutoDiff.TVec)">
+            <summary>
+            Constructs a 3D cross-product vector given two 3D vectors.
+            </summary>
+            <param name="left">The left cross-product term</param>
+            <param name="right">The right cross product term</param>
+            <returns>A vector representing the cross product of <paramref name="left" /> and <paramref name="right" /></returns>
+        </member>
+        <member name="M:AutoDiff.TVec.op_Addition(AutoDiff.TVec,AutoDiff.TVec)">
+            <summary>
+            Constructs a sum of two term vectors.
+            </summary>
+            <param name="left">The first vector in the sum</param>
+            <param name="right">The second vector in the sum</param>
+            <returns>A vector representing the sum of <paramref name="left" /> and <paramref name="right" /></returns>
+        </member>
+        <member name="M:AutoDiff.TVec.op_Subtraction(AutoDiff.TVec,AutoDiff.TVec)">
+            <summary>
+            Constructs a difference of two term vectors,
+            </summary>
+            <param name="left">The first vector in the difference</param>
+            <param name="right">The second vector in the difference.</param>
+            <returns>A vector representing the difference of <paramref name="left" /> and <paramref name="right" /></returns>
+        </member>
+        <member name="M:AutoDiff.TVec.op_UnaryNegation(AutoDiff.TVec)">
+            <summary>
+            Inverts a vector
+            </summary>
+            <param name="vector">The vector to invert</param>
+            <returns>A vector repsesenting the inverse of <paramref name="vector" /></returns>
+        </member>
+        <member name="M:AutoDiff.TVec.op_Multiply(AutoDiff.TVec,AutoDiff.Term)">
+            <summary>
+            Multiplies a vector by a scalar
+            </summary>
+            <param name="vector">The vector</param>
+            <param name="scalar">The scalar</param>
+            <returns>A product of the vector <paramref name="vector" /> and the scalar <paramref name="scalar" />.</returns>
+        </member>
+        <member name="M:AutoDiff.TVec.op_Multiply(AutoDiff.Term,AutoDiff.TVec)">
+            <summary>
+            Multiplies a vector by a scalar
+            </summary>
+            <param name="vector">The vector</param>
+            <param name="scalar">The scalar</param>
+            <returns>A product of the vector <paramref name="vector" /> and the scalar <paramref name="scalar" />.</returns>
+        </member>
+        <member name="M:AutoDiff.TVec.op_Multiply(AutoDiff.TVec,AutoDiff.TVec)">
+            <summary>
+            Constructs a term representing the inner product of two vectors.
+            </summary>
+            <param name="left">The first vector of the inner product</param>
+            <param name="right">The second vector of the inner product</param>
+            <returns>A term representing the inner product of <paramref name="left" /> and <paramref name="right" />.</returns>
+        </member>
+        <member name="T:AutoDiff.And">
+            <summary>
+            Represents a sigmoidal function.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.And.#ctor(AutoDiff.Term,AutoDiff.Term)">
+            <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.Min" /> type.
+            </summary>
+            <param name="left">The first min term</param>
+            <param name="right">The second min term</param>
+        </member>
+        <member name="P:AutoDiff.And.Left">
+            <summary>
+            Gets the first product term.
+            </summary>
+        </member>
+        <member name="P:AutoDiff.And.Right">
+            <summary>
+            Gets the second product term.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.And.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a term visitor
+            </summary>
+            <param name="visitor">The term visitor to accept</param>
+        </member>
+        <member name="M:AutoDiff.And.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.Sum">
+            <summary>
+            Represents a sum of at least two terms.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Sum.#ctor(AutoDiff.Term,AutoDiff.Term,AutoDiff.Term[])">
+            <summary>
+            Constructs an instance of the <see cref="T:AutoDiff.Sum" /> class.
+            </summary>
+            <param name="first">The first term in the sum</param>
+            <param name="second">The second term in the sum</param>
+            <param name="rest">The rest of the terms in the sum.</param>
+        </member>
+        <member name="P:AutoDiff.Sum.Terms">
+            <summary>
+            Gets the terms of this sum.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Sum.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a term visitor
+            </summary>
+            <param name="visitor">The term visitor to accept.</param>
+        </member>
+        <member name="M:AutoDiff.Sum.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.Cos">
+            <summary>
+            Represents a cos function
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Cos.#ctor(AutoDiff.Term)">
+            <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.Cos" /> class.
+            </summary>
+            <param name="arg">The argument of the cosine</param>
+        </member>
+        <member name="P:AutoDiff.Cos.Arg">
+            <summary>
+            Gets the natural logarithm argument.
+            </summary>
+        </member>
+        <member name="M:AutoDiff.Cos.Accept(AutoDiff.ITermVisitor)">
+            <summary>
+            Accepts a terms visitor
+            </summary>
+            <param name="visitor">The term visitor to accept</param>
+        </member>
+        <member name="M:AutoDiff.Cos.Accept``1(AutoDiff.ITermVisitor{``0})">
+            <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+            <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+            <param name="visitor">The visitor to accept</param>
+            <returns>
+            The result from the visitor's visit function.
+            </returns>
+        </member>
+        <member name="T:AutoDiff.TermBuilder">
+            <summary>
+            A collection of static methods to build new terms
+            </summary>
+        </member>
+        <member name="M:AutoDiff.TermBuilder.Constant(System.Double)">
+            <summary>
+            Builds a new constant term.
+            </summary>
+            <param name="value">The constant value</param>
+            <returns>The constant term.</returns>
+        </member>
+        <member name="M:AutoDiff.TermBuilder.Sum(System.Collections.Generic.IEnumerable{AutoDiff.Term})">
+            <summary>
+            Builds a sum of given terms.
+            </summary>
+            <param name="terms">The collection of terms in the sum.</param>
+            <returns>A term representing the sum of the terms in <paramref name="terms" />.</returns>
+        </member>
+        <member name="M:AutoDiff.TermBuilder.Sum(AutoDiff.Term,AutoDiff.Term,AutoDiff.Term[])">
+            <summary>
+            Builds a sum of given terms.
+            </summary>
+            <param name="v1">The first term in the sum</param>
+            <param name="v2">The second term in the sum</param>
+            <param name="rest">The rest of the terms in the sum.</param>
+            <returns>A term representing the sum of <paramref name="v1" />, <paramref name="v2" /> and the terms in <paramref name="rest" />.</returns>
+        </member>
+        <member name="M:AutoDiff.TermBuilder.Product(AutoDiff.Term,AutoDiff.Term,AutoDiff.Term[])">
+            <summary>
+            Builds a product of given terms.
+            </summary>
+            <param name="v1">The first term in the product</param>
+            <param name="v2">The second term in the product</param>
+            <param name="rest">The rest of the terms in the product</param>
+            <returns>A term representing the product of <paramref name="v1" />, <paramref name="v2" /> and the terms in <paramref name="rest" />.</returns>
+        </member>
+        <member name="M:AutoDiff.TermBuilder.Power(AutoDiff.Term,System.Double)">
+            <summary>
+            Builds a power terms given a base and a constant exponent
+            </summary>
+            <param name="t">The power base term</param>
+            <param name="power">The exponent</param>
+            <returns>A term representing <c>t^power</c>.</returns>
+        </member>
+        <member name="M:AutoDiff.TermBuilder.Exp(AutoDiff.Term)">
+            <summary>
+            Builds a term representing the exponential function e^x.
+            </summary>
+            <param name="arg">The function's exponent</param>
+            <returns>A term representing e^arg.</returns>
+        </member>
+        <member name="M:AutoDiff.TermBuilder.Log(AutoDiff.Term)">
+            <summary>
+            Builds a term representing the natural logarithm.
+            </summary>
+            <param name="arg">The natural logarithm's argument.</param>
+            <returns>A term representing the natural logarithm of <paramref name="arg" /></returns>
+        </member>
+        <member name="M:AutoDiff.TermBuilder.Sin(AutoDiff.Term)">
+            <summary>
+            Builds a term representing the sine function.
+            </summary>
+            <param name="arg">The sine argument.</param>
+            <returns>A term representing the sine of <paramref name="arg" /></returns>
+        </member>
+        <member name="M:AutoDiff.TermBuilder.Cos(AutoDiff.Term)">
+            <summary>
+            Builds a term representing the cosine function.
+            </summary>
+            <param name="arg">The cosine argument.</param>
+            <returns>A term representing the cosine of <paramref name="arg" /></returns>
+        </member>
+        <member name="M:AutoDiff.TermBuilder.QuadForm(AutoDiff.Term,AutoDiff.Term,AutoDiff.Term,AutoDiff.Term,AutoDiff.Term,AutoDiff.Term)">
+            <summary>
+            Constructs a 2D quadratic form given the vector components x1, x2 and the matrix coefficients a11, a12, a21, a22.
+            </summary>
+            <param name="x1">First vector component</param>
+            <param name="x2">Second vector component</param>
+            <param name="a11">First row, first column matrix component</param>
+            <param name="a12">First row, second column matrix component</param>
+            <param name="a21">Second row, first column matrix component</param>
+            <param name="a22">Second row, second column matrix component</param>
+            <returns>A term describing the quadratic form</returns>
+        </member>
+    </members>
+</doc>

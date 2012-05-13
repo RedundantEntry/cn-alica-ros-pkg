@@ -1,0 +1,1004 @@
+<html>
+  <head>
+    <title>Alica.RuleBook</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">AlicaEngine</a> : <a href="index.html">Alica Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Alica.RuleBook">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Alica.RuleBook:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Alica.RuleBook:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Alica.RuleBook:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Alica.RuleBook">RuleBook  Class</h1>
+    <p class="Summary" id="T:Alica.RuleBook:Summary">
+            Defines the operational semantics of the used ALICA dialect.
+            </p>
+    <div id="T:Alica.RuleBook:Signature">
+      <h2>Syntax</h2>
+      <div class="Signature">public class  <b>RuleBook</b></div>
+    </div>
+    <div class="Remarks" id="T:Alica.RuleBook:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Alica.RuleBook:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Alica.RuleBook:Docs:Version Information">
+        <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Alica.RuleBook">RuleBook</a>
+                    </b>()</div>
+                </td>
+                <td>
+            Your basic constructor
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Fields</h2>
+        <div class="SectionBox" id="Protected Fields">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.RuleBook.log">log</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Alica/Logger.html">Logger</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.RuleBook.maxConsecutiveChanges">maxConsecutiveChanges</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.RuleBook.ps">ps</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Alica/IPlanSelector.html">IPlanSelector</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.RuleBook.sm">sm</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Alica/ISyncModul.html">ISyncModul</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.RuleBook.to">to</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Alica/ITeamObserver.html">ITeamObserver</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.RuleBook.ChangeOccurred">ChangeOccurred</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.RuleBook.UpdateChange(Alica.PlanChange,Alica.PlanChange)">UpdateChange</a>
+                  </b>(<a href="../Alica/PlanChange.html">PlanChange</a>, <a href="../Alica/PlanChange.html">PlanChange</a>)<nobr> : <a href="../Alica/PlanChange.html">PlanChange</a></nobr><blockquote>
+            Combines to PlanChange flags to one, giving priority to Failures.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.RuleBook.Visit(Alica.RunningPlan)">Visit</a>
+                  </b>(<a href="../Alica/RunningPlan.html">RunningPlan</a>)<nobr> : <a href="../Alica/PlanChange.html">PlanChange</a></nobr><blockquote>
+            Called in every iteration by a RunningPlan to apply rules to it.
+            Will consequetively apply rules until no further changes can be made or
+            <a href="../Alica/RuleBook.html#F:Alica.RuleBook.maxConsecutiveChanges">RuleBook.maxConsecutiveChanges</a> are made. This method also dictates the sequence in which rules are applied.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Methods</h2>
+        <div class="SectionBox" id="Protected Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.RuleBook.AllocationRule(Alica.RunningPlan)">AllocationRule</a>
+                  </b>(<a href="../Alica/RunningPlan.html">RunningPlan</a>)<nobr> : <a href="../Alica/PlanChange.html">PlanChange</a></nobr><blockquote>
+            Allocates agents in the current state within r to sub-plans.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.RuleBook.AuthorityOverrideRule(Alica.RunningPlan)">AuthorityOverrideRule</a>
+                  </b>(<a href="../Alica/RunningPlan.html">RunningPlan</a>)<nobr> : <a href="../Alica/PlanChange.html">PlanChange</a></nobr><blockquote>
+            Adopts an authorative assignment in case the <a href="../Alica/CycleManager.html">Alica.CycleManager</a> of r is in overridden mode.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.RuleBook.DynamicAllocationRule(Alica.RunningPlan)">DynamicAllocationRule</a>
+                  </b>(<a href="../Alica/RunningPlan.html">RunningPlan</a>)<nobr> : <a href="../Alica/PlanChange.html">PlanChange</a></nobr><blockquote>
+            Changes the allocation of r to a better one, if one can be found and the plan is currently allowed to change allocation.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.RuleBook.PlanAbortRule(Alica.RunningPlan)">PlanAbortRule</a>
+                  </b>(<a href="../Alica/RunningPlan.html">RunningPlan</a>)<nobr> : <a href="../Alica/PlanChange.html">PlanChange</a></nobr><blockquote>
+            The abort rule, sets a failure if a failure state is reached, the allocation invalid or the runtimecondition does not hold.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.RuleBook.PlanPropagationRule(Alica.RunningPlan)">PlanPropagationRule</a>
+                  </b>(<a href="../Alica/RunningPlan.html">RunningPlan</a>)<nobr> : <a href="../Alica/PlanChange.html">PlanChange</a></nobr><blockquote>
+            Propagates a failure to the parent in case it couldn't be repaired on this level.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.RuleBook.PlanRedoRule(Alica.RunningPlan)">PlanRedoRule</a>
+                  </b>(<a href="../Alica/RunningPlan.html">RunningPlan</a>)<nobr> : <a href="../Alica/PlanChange.html">PlanChange</a></nobr><blockquote>
+            Tries to repair a plan by moving all robots in the current state to the corresponding initial state.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.RuleBook.PlanReplaceRule(Alica.RunningPlan)">PlanReplaceRule</a>
+                  </b>(<a href="../Alica/RunningPlan.html">RunningPlan</a>)<nobr> : <a href="../Alica/PlanChange.html">PlanChange</a></nobr><blockquote>
+            Tries to repair a failure by removing this plan and triggering a new task allocation.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.RuleBook.SynchTransitionRule(Alica.RunningPlan)">SynchTransitionRule</a>
+                  </b>(<a href="../Alica/RunningPlan.html">RunningPlan</a>)<nobr> : <a href="../Alica/PlanChange.html">PlanChange</a></nobr><blockquote>
+            Moves the agent along a synchronised transition, if the corresponding transition holds and the <a href="javascript:alert(&quot;Documentation not found.&quot;)">.</a>
+            deems the transition as synchronised.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.RuleBook.TopFailRule(Alica.RunningPlan)">TopFailRule</a>
+                  </b>(<a href="../Alica/RunningPlan.html">RunningPlan</a>)<nobr> : <a href="../Alica/PlanChange.html">PlanChange</a></nobr><blockquote>
+            Handles a failure at the top-level plan by resetting everything.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.RuleBook.TransitionRule(Alica.RunningPlan)">TransitionRule</a>
+                  </b>(<a href="../Alica/RunningPlan.html">RunningPlan</a>)<nobr> : <a href="../Alica/PlanChange.html">PlanChange</a></nobr><blockquote>
+            The transition rule, moves an agent along a transition to a next state if the corresponding condition holds,
+            flags the RunningPlan for allocation in the next state.
+            Note, in case multiple transitions are eligble, one is chosen implementation dependent.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Alica.RuleBook:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Alica.RuleBook">RuleBook Constructor</h3>
+        <blockquote id="C:Alica.RuleBook:member">
+          <p class="Summary">
+            Your basic constructor
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>RuleBook</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Alica.RuleBook:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Alica.RuleBook:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.RuleBook.AllocationRule(Alica.RunningPlan)">AllocationRule Method</h3>
+        <blockquote id="M:Alica.RuleBook.AllocationRule(Alica.RunningPlan):member">
+          <p class="Summary">
+            Allocates agents in the current state within r to sub-plans.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/PlanChange.html">PlanChange</a> <b>AllocationRule</b> (<a href="../Alica/RunningPlan.html">RunningPlan</a> r)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.AllocationRule(Alica.RunningPlan):Parameters">
+            <dl>
+              <dt>
+                <i>r</i>
+              </dt>
+              <dd>
+            A <a href="../Alica/RunningPlan.html">Alica.RunningPlan</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.AllocationRule(Alica.RunningPlan):Returns">
+            A <a href="../Alica/PlanChange.html">Alica.PlanChange</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.AllocationRule(Alica.RunningPlan):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.AllocationRule(Alica.RunningPlan):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.RuleBook.AuthorityOverrideRule(Alica.RunningPlan)">AuthorityOverrideRule Method</h3>
+        <blockquote id="M:Alica.RuleBook.AuthorityOverrideRule(Alica.RunningPlan):member">
+          <p class="Summary">
+            Adopts an authorative assignment in case the <a href="../Alica/CycleManager.html">Alica.CycleManager</a> of r is in overridden mode.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/PlanChange.html">PlanChange</a> <b>AuthorityOverrideRule</b> (<a href="../Alica/RunningPlan.html">RunningPlan</a> r)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.AuthorityOverrideRule(Alica.RunningPlan):Parameters">
+            <dl>
+              <dt>
+                <i>r</i>
+              </dt>
+              <dd>
+            A <a href="../Alica/RunningPlan.html">Alica.RunningPlan</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.AuthorityOverrideRule(Alica.RunningPlan):Returns">
+            A <a href="../Alica/PlanChange.html">Alica.PlanChange</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.AuthorityOverrideRule(Alica.RunningPlan):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.AuthorityOverrideRule(Alica.RunningPlan):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.RuleBook.ChangeOccurred">ChangeOccurred Property</h3>
+        <blockquote id="P:Alica.RuleBook.ChangeOccurred:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>ChangeOccurred</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.RuleBook.ChangeOccurred:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.RuleBook.ChangeOccurred:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.RuleBook.ChangeOccurred:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.RuleBook.DynamicAllocationRule(Alica.RunningPlan)">DynamicAllocationRule Method</h3>
+        <blockquote id="M:Alica.RuleBook.DynamicAllocationRule(Alica.RunningPlan):member">
+          <p class="Summary">
+            Changes the allocation of r to a better one, if one can be found and the plan is currently allowed to change allocation.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/PlanChange.html">PlanChange</a> <b>DynamicAllocationRule</b> (<a href="../Alica/RunningPlan.html">RunningPlan</a> r)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.DynamicAllocationRule(Alica.RunningPlan):Parameters">
+            <dl>
+              <dt>
+                <i>r</i>
+              </dt>
+              <dd>
+            A <a href="../Alica/RunningPlan.html">Alica.RunningPlan</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.DynamicAllocationRule(Alica.RunningPlan):Returns">
+            A <a href="../Alica/PlanChange.html">Alica.PlanChange</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.DynamicAllocationRule(Alica.RunningPlan):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.DynamicAllocationRule(Alica.RunningPlan):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.RuleBook.log">log Field</h3>
+        <blockquote id="F:Alica.RuleBook.log:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/Logger.html">Logger</a> <b>log</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.RuleBook.log:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.RuleBook.log:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.RuleBook.maxConsecutiveChanges">maxConsecutiveChanges Field</h3>
+        <blockquote id="F:Alica.RuleBook.maxConsecutiveChanges:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>maxConsecutiveChanges</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.RuleBook.maxConsecutiveChanges:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.RuleBook.maxConsecutiveChanges:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.RuleBook.PlanAbortRule(Alica.RunningPlan)">PlanAbortRule Method</h3>
+        <blockquote id="M:Alica.RuleBook.PlanAbortRule(Alica.RunningPlan):member">
+          <p class="Summary">
+            The abort rule, sets a failure if a failure state is reached, the allocation invalid or the runtimecondition does not hold.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/PlanChange.html">PlanChange</a> <b>PlanAbortRule</b> (<a href="../Alica/RunningPlan.html">RunningPlan</a> r)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.PlanAbortRule(Alica.RunningPlan):Parameters">
+            <dl>
+              <dt>
+                <i>r</i>
+              </dt>
+              <dd>
+            A <a href="../Alica/RunningPlan.html">Alica.RunningPlan</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.PlanAbortRule(Alica.RunningPlan):Returns">
+            A <a href="../Alica/PlanChange.html">Alica.PlanChange</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.PlanAbortRule(Alica.RunningPlan):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.PlanAbortRule(Alica.RunningPlan):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.RuleBook.PlanPropagationRule(Alica.RunningPlan)">PlanPropagationRule Method</h3>
+        <blockquote id="M:Alica.RuleBook.PlanPropagationRule(Alica.RunningPlan):member">
+          <p class="Summary">
+            Propagates a failure to the parent in case it couldn't be repaired on this level.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/PlanChange.html">PlanChange</a> <b>PlanPropagationRule</b> (<a href="../Alica/RunningPlan.html">RunningPlan</a> r)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.PlanPropagationRule(Alica.RunningPlan):Parameters">
+            <dl>
+              <dt>
+                <i>r</i>
+              </dt>
+              <dd>
+            A <a href="../Alica/RunningPlan.html">Alica.RunningPlan</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.PlanPropagationRule(Alica.RunningPlan):Returns">
+            A <a href="../Alica/PlanChange.html">Alica.PlanChange</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.PlanPropagationRule(Alica.RunningPlan):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.PlanPropagationRule(Alica.RunningPlan):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.RuleBook.PlanRedoRule(Alica.RunningPlan)">PlanRedoRule Method</h3>
+        <blockquote id="M:Alica.RuleBook.PlanRedoRule(Alica.RunningPlan):member">
+          <p class="Summary">
+            Tries to repair a plan by moving all robots in the current state to the corresponding initial state.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/PlanChange.html">PlanChange</a> <b>PlanRedoRule</b> (<a href="../Alica/RunningPlan.html">RunningPlan</a> r)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.PlanRedoRule(Alica.RunningPlan):Parameters">
+            <dl>
+              <dt>
+                <i>r</i>
+              </dt>
+              <dd>
+            A <a href="../Alica/RunningPlan.html">Alica.RunningPlan</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.PlanRedoRule(Alica.RunningPlan):Returns">
+            A <a href="../Alica/PlanChange.html">Alica.PlanChange</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.PlanRedoRule(Alica.RunningPlan):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.PlanRedoRule(Alica.RunningPlan):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.RuleBook.PlanReplaceRule(Alica.RunningPlan)">PlanReplaceRule Method</h3>
+        <blockquote id="M:Alica.RuleBook.PlanReplaceRule(Alica.RunningPlan):member">
+          <p class="Summary">
+            Tries to repair a failure by removing this plan and triggering a new task allocation.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/PlanChange.html">PlanChange</a> <b>PlanReplaceRule</b> (<a href="../Alica/RunningPlan.html">RunningPlan</a> r)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.PlanReplaceRule(Alica.RunningPlan):Parameters">
+            <dl>
+              <dt>
+                <i>r</i>
+              </dt>
+              <dd>
+            A <a href="../Alica/RunningPlan.html">Alica.RunningPlan</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.PlanReplaceRule(Alica.RunningPlan):Returns">
+            A <a href="../Alica/PlanChange.html">Alica.PlanChange</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.PlanReplaceRule(Alica.RunningPlan):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.PlanReplaceRule(Alica.RunningPlan):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.RuleBook.ps">ps Field</h3>
+        <blockquote id="F:Alica.RuleBook.ps:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/IPlanSelector.html">IPlanSelector</a> <b>ps</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.RuleBook.ps:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.RuleBook.ps:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.RuleBook.sm">sm Field</h3>
+        <blockquote id="F:Alica.RuleBook.sm:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/ISyncModul.html">ISyncModul</a> <b>sm</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.RuleBook.sm:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.RuleBook.sm:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.RuleBook.SynchTransitionRule(Alica.RunningPlan)">SynchTransitionRule Method</h3>
+        <blockquote id="M:Alica.RuleBook.SynchTransitionRule(Alica.RunningPlan):member">
+          <p class="Summary">
+            Moves the agent along a synchronised transition, if the corresponding transition holds and the <a href="javascript:alert(&quot;Documentation not found.&quot;)">.</a>
+            deems the transition as synchronised.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/PlanChange.html">PlanChange</a> <b>SynchTransitionRule</b> (<a href="../Alica/RunningPlan.html">RunningPlan</a> r)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.SynchTransitionRule(Alica.RunningPlan):Parameters">
+            <dl>
+              <dt>
+                <i>r</i>
+              </dt>
+              <dd>
+            A <a href="../Alica/RunningPlan.html">Alica.RunningPlan</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.SynchTransitionRule(Alica.RunningPlan):Returns">
+            A <a href="../Alica/PlanChange.html">Alica.PlanChange</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.SynchTransitionRule(Alica.RunningPlan):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.SynchTransitionRule(Alica.RunningPlan):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.RuleBook.to">to Field</h3>
+        <blockquote id="F:Alica.RuleBook.to:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/ITeamObserver.html">ITeamObserver</a> <b>to</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.RuleBook.to:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.RuleBook.to:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.RuleBook.TopFailRule(Alica.RunningPlan)">TopFailRule Method</h3>
+        <blockquote id="M:Alica.RuleBook.TopFailRule(Alica.RunningPlan):member">
+          <p class="Summary">
+            Handles a failure at the top-level plan by resetting everything.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/PlanChange.html">PlanChange</a> <b>TopFailRule</b> (<a href="../Alica/RunningPlan.html">RunningPlan</a> r)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.TopFailRule(Alica.RunningPlan):Parameters">
+            <dl>
+              <dt>
+                <i>r</i>
+              </dt>
+              <dd>
+            A <a href="../Alica/RunningPlan.html">Alica.RunningPlan</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.TopFailRule(Alica.RunningPlan):Returns">
+            A <a href="../Alica/PlanChange.html">Alica.PlanChange</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.TopFailRule(Alica.RunningPlan):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.TopFailRule(Alica.RunningPlan):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.RuleBook.TransitionRule(Alica.RunningPlan)">TransitionRule Method</h3>
+        <blockquote id="M:Alica.RuleBook.TransitionRule(Alica.RunningPlan):member">
+          <p class="Summary">
+            The transition rule, moves an agent along a transition to a next state if the corresponding condition holds,
+            flags the RunningPlan for allocation in the next state.
+            Note, in case multiple transitions are eligble, one is chosen implementation dependent.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Alica/PlanChange.html">PlanChange</a> <b>TransitionRule</b> (<a href="../Alica/RunningPlan.html">RunningPlan</a> r)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.TransitionRule(Alica.RunningPlan):Parameters">
+            <dl>
+              <dt>
+                <i>r</i>
+              </dt>
+              <dd>
+            A <a href="../Alica/RunningPlan.html">Alica.RunningPlan</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.TransitionRule(Alica.RunningPlan):Returns">
+            A <a href="../Alica/PlanChange.html">Alica.PlanChange</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.TransitionRule(Alica.RunningPlan):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.TransitionRule(Alica.RunningPlan):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.RuleBook.UpdateChange(Alica.PlanChange,Alica.PlanChange)">UpdateChange Method</h3>
+        <blockquote id="M:Alica.RuleBook.UpdateChange(Alica.PlanChange,Alica.PlanChange):member">
+          <p class="Summary">
+            Combines to PlanChange flags to one, giving priority to Failures.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../Alica/PlanChange.html">PlanChange</a> <b>UpdateChange</b> (<a href="../Alica/PlanChange.html">PlanChange</a> cur, <a href="../Alica/PlanChange.html">PlanChange</a> update)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.UpdateChange(Alica.PlanChange,Alica.PlanChange):Parameters">
+            <dl>
+              <dt>
+                <i>cur</i>
+              </dt>
+              <dd>
+            A <a href="../Alica/PlanChange.html">Alica.PlanChange</a></dd>
+              <dt>
+                <i>update</i>
+              </dt>
+              <dd>
+            A <a href="../Alica/PlanChange.html">Alica.PlanChange</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.UpdateChange(Alica.PlanChange,Alica.PlanChange):Returns">
+            A <a href="../Alica/PlanChange.html">Alica.PlanChange</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.UpdateChange(Alica.PlanChange,Alica.PlanChange):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.UpdateChange(Alica.PlanChange,Alica.PlanChange):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.RuleBook.Visit(Alica.RunningPlan)">Visit Method</h3>
+        <blockquote id="M:Alica.RuleBook.Visit(Alica.RunningPlan):member">
+          <p class="Summary">
+            Called in every iteration by a RunningPlan to apply rules to it.
+            Will consequetively apply rules until no further changes can be made or
+            <a href="../Alica/RuleBook.html#F:Alica.RuleBook.maxConsecutiveChanges">RuleBook.maxConsecutiveChanges</a> are made. This method also dictates the sequence in which rules are applied.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public virtual <a href="../Alica/PlanChange.html">PlanChange</a> <b>Visit</b> (<a href="../Alica/RunningPlan.html">RunningPlan</a> r)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.Visit(Alica.RunningPlan):Parameters">
+            <dl>
+              <dt>
+                <i>r</i>
+              </dt>
+              <dd>
+            A <a href="../Alica/RunningPlan.html">Alica.RunningPlan</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.RuleBook.Visit(Alica.RunningPlan):Returns">
+            A <a href="../Alica/PlanChange.html">Alica.PlanChange</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.Visit(Alica.RunningPlan):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.RuleBook.Visit(Alica.RunningPlan):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+import pml;
+
+int getMaxModeValue() : 
+	JAVA de.uni_kassel.cn.planDesigner.codegeneration.extensions.JavaExtensionHelper.getMaxModeValue()
+;
+
+int getMinModeValue() : 
+	JAVA de.uni_kassel.cn.planDesigner.codegeneration.extensions.JavaExtensionHelper.getMinModeValue()
+;
+
+int getAvgModeValue() : 
+	JAVA de.uni_kassel.cn.planDesigner.codegeneration.extensions.JavaExtensionHelper.getAvgModeValue()
+;
+
+int getDcModeValue() : 
+	JAVA de.uni_kassel.cn.planDesigner.codegeneration.extensions.JavaExtensionHelper.getDcModeValue()
+;

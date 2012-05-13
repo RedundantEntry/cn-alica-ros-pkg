@@ -1,0 +1,350 @@
+<Type Name="ConstraintDescriptor" FullName="Alica.ConstraintDescriptor">
+  <TypeSignature Language="C#" Value="public class ConstraintDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConstraintDescriptor extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Holds all information relevant to a constraint imposed by a <see cref="T:Alica.Condition" />. The information is typically provided by a <see cref="T:Alica.GetConstraint" /> delegate.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConstraintDescriptor (AutoDiff.Variable[] vars, System.Collections.Generic.List&lt;System.Collections.Generic.List&lt;AutoDiff.Term[]&gt;&gt; domVars);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class AutoDiff.Variable[] vars, class System.Collections.Generic.List`1&lt;class System.Collections.Generic.List`1&lt;class AutoDiff.Term[]&gt;&gt; domVars) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="vars" Type="AutoDiff.Variable[]" />
+        <Parameter Name="domVars" Type="System.Collections.Generic.List&lt;System.Collections.Generic.List&lt;AutoDiff.Term[]&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="vars">To be added.</param>
+        <param name="domVars">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AgentsInScope">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Collections.Generic.ICollection&lt;int&gt;&gt; AgentsInScope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.Collections.Generic.ICollection`1&lt;int32&gt;&gt; AgentsInScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Collections.Generic.ICollection&lt;System.Int32&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllRanges">
+      <MemberSignature Language="C#" Value="public double[,] AllRanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64[,] AllRanges() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double[,]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the ranges of all variables involved. Used by <see cref="!:Alica.Reasoner.CGSolver" /> to initialiase a constraint problem for solving.
+            </summary>
+        <returns>
+            A 2-dimensional double array.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllVars">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;AutoDiff.Term&gt; AllVars { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class AutoDiff.Term&gt; AllVars" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;AutoDiff.Term&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            All variables, both static and dynamic
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Constraint">
+      <MemberSignature Language="C#" Value="public AutoDiff.Term Constraint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.Term Constraint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The Constraint function
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DomainRanges">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Collections.Generic.List&lt;double[,]&gt;&gt; DomainRanges { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.Collections.Generic.List`1&lt;float64[,]&gt;&gt; DomainRanges" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Collections.Generic.List&lt;System.Double[,]&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The ranges, i.e., lower and upper bounds for all dynamic domain variables.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DomainVars">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Collections.Generic.List&lt;AutoDiff.Term[]&gt;&gt; DomainVars { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.Collections.Generic.List`1&lt;class AutoDiff.Term[]&gt;&gt; DomainVars" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Collections.Generic.List&lt;AutoDiff.Term[]&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The current instance of the domain quantifiers, each quantifier results in a list of arrays of Variables (or potentially terms).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FixedValue">
+      <MemberSignature Language="C#" Value="public object FixedValue (AutoDiff.Term variable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object FixedValue(class AutoDiff.Term variable) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variable" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="variable">
+            A <see cref="T:AutoDiff.Term" /></param>
+        <summary>
+            The fixed value of a variable. Returns null if the value is not fixed (nonground variable).
+            </summary>
+        <returns>
+            A <see cref="T:System.Object" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFixedValue">
+      <MemberSignature Language="C#" Value="public void SetFixedValue (AutoDiff.Term variable, object val);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFixedValue(class AutoDiff.Term variable, object val) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variable" Type="AutoDiff.Term" />
+        <Parameter Name="val" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="variable">
+            A <see cref="T:AutoDiff.Term" />, the variable the object is bound to.
+            </param>
+        <param name="val">
+            A <see cref="T:System.Object" />, the object bound to the variable.
+            </param>
+        <summary>
+            Set an arbitrary fixed value for a varable, i.e, ground a variable.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetsUtilitySignificanceThreshold">
+      <MemberSignature Language="C#" Value="public bool SetsUtilitySignificanceThreshold { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SetsUtilitySignificanceThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaticRanges">
+      <MemberSignature Language="C#" Value="public double[,] StaticRanges { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64[,] StaticRanges" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double[,]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The ranges, i.e., lower and upper bounds for all static domain variables.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaticVars">
+      <MemberSignature Language="C#" Value="public AutoDiff.Term[] StaticVars { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.Term[] StaticVars" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The static variables used in the constraint and the utility
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Utility">
+      <MemberSignature Language="C#" Value="public AutoDiff.Term Utility { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.Term Utility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The objective function.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UtilitySignificanceThreshold">
+      <MemberSignature Language="C#" Value="public double UtilitySignificanceThreshold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 UtilitySignificanceThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UtilitySufficiencyThreshold">
+      <MemberSignature Language="C#" Value="public double UtilitySufficiencyThreshold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 UtilitySufficiencyThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A value above which the utility is deemed to be sufficient, i.e., close enough to the global optimum.
+            A solver may stop looking for a solution if this value has been reached.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

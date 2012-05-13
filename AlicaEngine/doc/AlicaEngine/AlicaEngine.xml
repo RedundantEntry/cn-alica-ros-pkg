@@ -1,0 +1,2514 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>/home/hendrik/impera/cn/Alica/AlicaEngine/../../lib/AlicaEngine</name>
+    </assembly>
+    <members>
+        <member name="T:Alica.UtilityInterval">
+            <summary>
+            Holds a minimal and a maximal possible utility value. Used internally for searching.
+            </summary>
+        </member>
+        <member name="P:Alica.UtilityInterval.Min">
+            <summary>
+            The minimally achievable utility.
+            </summary>
+        </member>
+        <member name="P:Alica.UtilityInterval.Max">
+            <summary>
+            The maximally achievable utility.
+            </summary>
+        </member>
+        <member name="T:Alica.ITaskAssignment">
+            <summary>
+            Interface for the task allocation algorithm.
+            </summary>
+        </member>
+        <member name="M:Alica.ITaskAssignment.GetNextBestAssignment(Alica.IAssignment)">
+            <summary>
+            Returns the best possible assignment for a plan, taking similarities to the old assignment into account.
+            </summary>
+            <param name="oldAss">
+            The old <see cref="T:Alica.IAssignment" />, possibly null in case of a completely new assignment problem.
+            </param>
+            <returns>
+            The new <see cref="T:Alica.Assignment" /></returns>
+        </member>
+        <member name="T:Alica.BasicBehaviour">
+            <summary>
+            The base class for all behaviours. All Behaviours must inherit from this class.
+            </summary>
+        </member>
+        <member name="P:Alica.BasicBehaviour.Parameters">
+            <summary>
+            The set of static Parameters as defined by the <see cref="T:Alica.BehaviourConfiguration" />.
+            </summary>
+        </member>
+        <member name="P:Alica.BasicBehaviour.Variables">
+            <summary>
+            The set of <see cref="T:Alica.Variable" />s attached to this behaviours as defined by the <see cref="T:Alica.BehaviourConfiguration" />.
+            </summary>
+        </member>
+        <member name="P:Alica.BasicBehaviour.SuccessStatus">
+            <summary>
+            The Success flag. Raised by a behaviour to indicate it reached whatever it ment to reach.
+            </summary>
+        </member>
+        <member name="P:Alica.BasicBehaviour.FailureStatus">
+            <summary>
+            The Failure flag. Raised by a behaviour to indicate it has failed in some way.
+            </summary>
+        </member>
+        <member name="P:Alica.BasicBehaviour.RunningPlan">
+            <summary>
+            The running plan representing this behaviour within the <see cref="T:Alica.PlanBase" />.
+            </summary>
+        </member>
+        <member name="M:Alica.BasicBehaviour.Terminate">
+            <summary>
+            Terminate this behaviour, should only be called if the Engine shuts down. (Called by the <see cref="T:Alica.IBehaviourPool" />).
+            </summary>
+        </member>
+        <member name="M:Alica.BasicBehaviour.Start">
+            <summary>
+            Starts this behaviour, called by the <see cref="T:Alica.IBehaviourPool" />.
+            </summary>
+        </member>
+        <member name="M:Alica.BasicBehaviour.Stop">
+            <summary>
+            Stops this behaviour, called by the <see cref="T:Alica.IBehaviourPool" />.
+            </summary>
+        </member>
+        <member name="M:Alica.BasicBehaviour.VariableIdByName(System.String)">
+            <summary>
+            Access a variable's by its name.
+            </summary>
+            <param name="name">
+            A <see cref="T:System.String" /></param>
+            <returns>
+            A <see cref="T:System.Int64" /></returns>
+        </member>
+        <member name="M:Alica.BasicBehaviour.VariableByName(System.String)">
+            <summary>
+            Access a variable by its name. This is the most common way to access variables during the <see cref="M:Alica.BasicBehaviour.Run(System.Object)" /> method of the behaviour.
+            </summary>
+            <param name="name">
+            A <see cref="T:System.String" /></param>
+            <returns>
+            A <see cref="T:Alica.Variable" /></returns>
+        </member>
+        <member name="M:Alica.BasicBehaviour.Init">
+            <summary>
+            Called by the runloop of the behaviour, wraps <see cref="M:Alica.BasicBehaviour.InitializeParameters" /></summary>
+        </member>
+        <member name="M:Alica.BasicBehaviour.InitializeParameters">
+            <summary>
+            Called whenever a behaviour is started, i.e., when the corresponding state is entered.
+            Override for behaviour specific initialisation
+            </summary>
+        </member>
+        <member name="M:Alica.BasicBehaviour.Run(System.Object)">
+            <summary>
+            The running loop of a behaviour, to be overriden by a specific behaviour
+            </summary>
+            <param name="msg">
+            A <see cref="T:System.Object" />, null is called by a timer, otherwise defined by the callee of the <see cref="T:Alica.EngineTrigger" /></param>
+        </member>
+        <member name="M:Alica.BasicBehaviour.SetTrigger(Alica.EngineTrigger)">
+            <summary>
+            Override this to have <see cref="M:Alica.BasicBehaviour.Run(System.Object)" /> called on specific events.
+            The EngineTrigger can be added to any appropriately typed event. SetTrigger will only be called once.
+            </summary>
+            <param name="e">
+            A <see cref="T:Alica.EngineTrigger" /></param>
+        </member>
+        <member name="M:Alica.BasicBehaviour.GetParentEntryPoint(System.String)">
+            <summary>
+            Can be used to query plan information of the parent plan from within a behaviour.
+            Usually called from within <see cref="M:Alica.BasicBehaviour.InitializeParameters" /></summary>
+            <param name="taskName">
+            A <see cref="T:System.String" /></param>
+            <returns>
+            The <see cref="T:Alica.EntryPoint" /> of the parent plan. Can be used to query for robots (<see cref="M:Alica.BasicBehaviour.RobotsInEntryPoint(Alica.EntryPoint)" />).
+            </returns>
+        </member>
+        <member name="M:Alica.BasicBehaviour.GetHigherEntryPoint(System.String,System.String)">
+            <summary>
+            Similar to <see cref="M:Alica.BasicBehaviour.GetParentEntryPoint(System.String)" />, but queries the plan hierarchy upwards.
+            </summary>
+            <param name="planName">
+            A <see cref="T:System.String" /></param>
+            <param name="taskName">
+            A <see cref="T:System.String" /></param>
+            <returns>
+            The <see cref="T:Alica.EntryPoint" /> of an ancestor plan. Can be used to query for robots (<see cref="M:Alica.BasicBehaviour.RobotsInEntryPointOfHigherPlan(Alica.EntryPoint)" />).
+            </returns>
+        </member>
+        <member name="M:Alica.BasicBehaviour.RobotsInThisState">
+            <summary>
+            Returns the set of robots that are currently inhabiting the state in which this behaviour is executed
+            </summary>
+            <returns>
+            A set containing all ids of robots inhabiting the state in which the current behaviour is executed
+            </returns>
+        </member>
+        <member name="M:Alica.BasicBehaviour.RobotsInState(Alica.State)">
+            <summary>
+            Returns the set of robots that currently inhabit state s in the parent plan.
+            </summary>
+            <param name="s">
+            A <see cref="T:Alica.State" /></param>
+            <returns>
+            A set of robot ids.
+            </returns>
+        </member>
+        <member name="M:Alica.BasicBehaviour.RobotsInThisPlan">
+            <summary>
+            Returns all robots currently working on the parent plan.
+            </summary>
+            <returns>
+            A <see cref="!:List`1" /></returns>
+        </member>
+        <member name="M:Alica.BasicBehaviour.RobotsInThisTask">
+            <summary>
+            Returns all robots currently working on the task this robot is assigned to in the parent plan.
+            </summary>
+            <returns>
+            A <see cref="!:ICollection`1" /></returns>
+        </member>
+        <member name="M:Alica.BasicBehaviour.RobotsInEntryPoint(Alica.EntryPoint)">
+            <summary>
+            </summary>
+            <param name="ep">
+            A <see cref="T:Alica.EntryPoint" /></param>
+            <returns>
+            A <see cref="!:ICollection`1" /></returns>
+        </member>
+        <member name="M:Alica.BasicBehaviour.GetOwnId">
+            <summary>
+            Convenience method to obtain the robot's own id.
+            </summary>
+            <returns>
+            A <see cref="T:System.Int32" /></returns>
+        </member>
+        <member name="T:Alica.USummand">
+            <summary>
+            Abstract super class for domain dependent utility summands.
+            </summary>
+        </member>
+        <member name="P:Alica.USummand.Weight">
+            <value> Weight of this UtilitySummand </value>
+        </member>
+        <member name="M:Alica.USummand.Init">
+            <summary>
+            Searches every needed entrypoint in the hashtable of the xmlparser
+            and stores it in the relevant entrypoint array. This will increase the
+            performance of the evaluation of this utility summand.
+            </summary>
+        </member>
+        <member name="M:Alica.USummand.Eval(Alica.IAssignment)">
+            <summary> Evaluates the utilityfunction summand </summary>
+            <returns> The result of the evaluation </returns>
+        </member>
+        <member name="M:Alica.USummand.CacheEvalData">
+            <summary> Cache every data for the current evaluation, to
+            assure consistancy over the complete current evaluation. </summary>
+        </member>
+        <member name="T:Alica.IAssignment">
+            <summary>
+            An IAssignment describes a potentially partial assignment of robots to <see cref="T:Alica.EntryPoint" />s within a plan.
+            </summary>
+        </member>
+        <member name="P:Alica.IAssignment.UnAssignedRobots">
+            <summary>
+            The ids of all robots available but not yet assigned.
+            </summary>
+        </member>
+        <member name="P:Alica.IAssignment.NumUnAssignedRobots">
+            <summary>
+            The number of robots assigned
+            </summary>
+        </member>
+        <member name="P:Alica.IAssignment.Min">
+            <summary>
+            The minimal utility this assignment can achieve.
+            </summary>
+        </member>
+        <member name="P:Alica.IAssignment.Max">
+            <summary>
+            the maximal utility this assignment can achieve.
+            </summary>
+        </member>
+        <member name="M:Alica.IAssignment.GetEntryPoints">
+            <summary>
+            </summary>
+            <returns>
+            The array of <see cref="T:Alica.EntryPoint" />s relevant to this assignment.
+            </returns>
+        </member>
+        <member name="M:Alica.IAssignment.GetEntryPointCount">
+            <summary>
+            The number of distinct entrypoints
+            </summary>
+            <returns>
+            A <see cref="T:System.Int32" /></returns>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.IAssignment.GetRobotsWorkingAndFinished(Alica.EntryPoint)-->
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.IAssignment.GetUniqueRobotsWorkingAndFinished(Alica.EntryPoint)-->
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.IAssignment.GetRobotsWorkingAndFinished(System.Int64)-->
+        <member name="T:Alica.PlanChange">
+            <summary>
+            Captures the result of a rule application.
+            </summary>
+        </member>
+        <member name="F:Alica.PlanChange.NoChange">
+            <summary>
+            No Change occurred, rule was not applicable
+            </summary>
+        </member>
+        <member name="F:Alica.PlanChange.InternalChange">
+            <summary>
+            Change occurred, but is of no interest to upper level plans
+            </summary>
+        </member>
+        <member name="F:Alica.PlanChange.SuccessChange">
+            <summary>
+            Change occurred and led to a success, upper level can react
+            </summary>
+        </member>
+        <member name="F:Alica.PlanChange.FailChange">
+            <summary>
+            Change occurred and led to a failure, upper level should react
+            </summary>
+        </member>
+        <member name="T:Alica.RunningPlan">
+            <summary>
+            A RunningPlan represents a plan or a behaviour in execution, holding all informaiton relevant at runtime.
+            </summary>
+        </member>
+        <member name="P:Alica.RunningPlan.PlanStartTime">
+            <summary>
+            The (ROS-)timestamp referring to when this plan was started by the local robot.
+            </summary>
+        </member>
+        <member name="P:Alica.RunningPlan.StateStartTime">
+            <summary>
+            The (ROS-)timestamp referring to when the local robot entered the <see cref="P:Alica.RunningPlan.ActiveState" />.
+            </summary>
+        </member>
+        <member name="P:Alica.RunningPlan.Active">
+            <summary>
+            Whether or not this running plan is active or has been removed from the plan tree
+            </summary>
+        </member>
+        <member name="P:Alica.RunningPlan.AvailableRobots">
+            <summary>
+            Returns all robots currently participating in this plan.
+            </summary>
+        </member>
+        <member name="P:Alica.RunningPlan.OwnEntryPoint">
+            <summary>
+            The robot's current EntryPoint. Null if it is idling
+            </summary>
+        </member>
+        <member name="P:Alica.RunningPlan.FailHandlingNeeded">
+            <summary>
+            Indicates whether this plan needs failure handling
+            </summary>
+        </member>
+        <member name="M:Alica.RunningPlan.SetFailedChild(Alica.AbstractPlan)">
+            <summary>
+            Indicate that an AbstractPlan has failed while being a child of this plan.
+            </summary>
+            <param name="child">
+            A <see cref="T:Alica.AbstractPlan" /></param>
+        </member>
+        <member name="M:Alica.RunningPlan.ClearFailedChildren">
+            <summary>
+            Clears the failure history of failed plans.
+            </summary>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.RunningPlan.SetAvailRobots(System.Collections.Generic.List{System.Int32})-->
+        <member name="M:Alica.RunningPlan.Tick(Alica.RuleBook)">
+            <summary>
+            Called once per Engine iteration, performs all neccessary checks and executes rules from the rulebook.
+            </summary>
+            <param name="rules">
+            A <see cref="T:Alica.RuleBook" /></param>
+            <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        </member>
+        <member name="M:Alica.RunningPlan.Accept(Alica.IPlanTreeVisitor)">
+            <summary>
+            General Visitor pattern for the plan graph.
+            </summary>
+            <param name="vis">
+            A <see cref="T:Alica.IPlanTreeVisitor" /></param>
+        </member>
+        <member name="M:Alica.RunningPlan.Deactivate(System.Boolean)">
+            <summary>
+            Deactivate this plan, to be called before the plan is removed from the graph.
+            Ensures that all sub-behaviours are stopped and all constraints are revoked.
+            </summary>
+            <param name="allAreLeaving">
+            Indicates if all robots are leaving the corresponding plan. This will determine wether or not success marks are reset.
+            </param>
+        </member>
+        <member name="M:Alica.RunningPlan.ClearChildren">
+            <summary>
+            Remove all children without passing any command to them.
+            </summary>
+        </member>
+        <member name="M:Alica.RunningPlan.DeactivateChildren(System.Boolean)">
+            <summary>
+            Deactivate all children, causing behaviours to be stopped and constraints to be revoked.
+            </summary>
+            <param name="allAreLeaving">
+            Indicates whether the team is beliefed to be deactivating the corresponding plans as well.
+            </param>
+        </member>
+        <member name="M:Alica.RunningPlan.AnyChildrenStatus(Alica.PlanStatus)">
+            <summary>
+            Tests whether any child has a specific status.
+            </summary>
+            <param name="ps">
+            A <see cref="T:Alica.PlanStatus" /></param>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="M:Alica.RunningPlan.AnyChildrenTaskSuccess">
+            <summary>
+            Tests whether for any child, the robot completed a task
+            </summary>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="M:Alica.RunningPlan.AnyChildrenTaskFailure">
+            <summary>
+            Tests whether for any child, the robot failed a task
+            </summary>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="M:Alica.RunningPlan.AnyChildrenTaskTerminated">
+            <summary>
+            Tests whether for any child, the robot reached a terminal state
+            </summary>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="M:Alica.RunningPlan.MoveState(Alica.State)">
+            <summary>
+            Move this very robot to another state. Performs all neccessary operations, such as updating the assignment.
+            </summary>
+            <param name="nextState">
+            A <see cref="T:Alica.State" /></param>
+        </member>
+        <member name="M:Alica.RunningPlan.Activate">
+            <summary>
+            Activate this plan, called when it is inserted into the plan graph.
+            </summary>
+        </member>
+        <member name="M:Alica.RunningPlan.AdaptAssignment(Alica.RunningPlan)">
+            <summary>
+            Adapt the assignment of this plan to the one supplied. This can also change plan
+            </summary>
+            <param name="newR">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        </member>
+        <member name="F:Alica.UtilityFunction.priResult">
+            <summary> Calculates the priority result for the specified Assignment</summary>
+            <returns> the priority result </returns>
+        </member>
+        <member name="F:Alica.UtilityFunction.simUI">
+            <summary> Evaluates the similarity of the new Assignment to the old Assignment </summary>
+            <returns> The result of the evaluation </returns>
+        </member>
+        <member name="M:Alica.UtilityFunction.Eval(Alica.RunningPlan,Alica.RunningPlan)">
+            <summary> Evaluates the utility function according to the priorities of the assigned
+            roles and according to the similarity, if an oldRP is given and according to all
+            other utility summands of this utility function. </summary>
+            <returns> The utility </returns>
+        </member>
+        <member name="M:Alica.UtilityFunction.Eval(Alica.IAssignment,Alica.IAssignment)">
+            <summary> Evaluates the utility function according to the priorities of the assigned
+            roles and according to the similarity, if an oldAss is given.
+            ATTENTION PLZ: Return value is only significant with respect to current Utility of oldAss! (SimilarityMeasure)</summary>
+            <returns> The utility interval </returns>
+        </member>
+        <member name="M:Alica.UtilityFunction.UpdateAssignment(Alica.IAssignment,Alica.IAssignment)">
+            <summary> Updates the utility function according to the priorities of the assigned
+            roles and according to the similarity, if an oldAss is given. </summary>
+            <returns> void </returns>
+        </member>
+        <member name="M:Alica.UtilityFunction.Init">
+            <summary> Initialises the '(Task x Role) -&gt; Priority'-Dictionary and the
+            'Role -&gt; Highest Priority'-Dictionary for each role of the current roleset.</summary>
+            <returns> void </returns>
+        </member>
+        <member name="M:Alica.UtilityFunction.InitDatastructures">
+            <summary> Calls Init() for every utiltiyfunction.
+            Is called and the end of AlicaEngine.Init(..), because it
+            needs the currentroleset (circular dependency otherwise). </summary>
+        </member>
+        <member name="T:Alica.PlanBase">
+            <summary>
+            A PlanBase holds the internal representation of the plan graph and issues all operations on it.
+            It is the most central object within the ALICA Engine.
+            </summary>
+        </member>
+        <member name="M:Alica.PlanBase.#ctor(Alica.Plan)">
+            <summary>
+            Constructs the PlanBase given a top-level plan to execute
+            </summary>
+            <param name="masterplan">
+            A <see cref="T:Alica.Plan" /></param>
+        </member>
+        <member name="F:Alica.PlanBase.fpEvents">
+            <summary>
+            List of RunningPlans scheduled for out-of-loop evaluation.
+            </summary>
+        </member>
+        <member name="P:Alica.PlanBase.PlanRoot">
+            <summary>
+            Returns the root node of the ALICA plan tree in execution.
+            </summary>
+        </member>
+        <member name="M:Alica.PlanBase.Start">
+            <summary>
+            Starts execution of the plan tree, call once all necessary modules are initialised.
+            </summary>
+        </member>
+        <member name="M:Alica.PlanBase.Run">
+            <summary>
+            The Engine's main loop
+            </summary>
+        </member>
+        <member name="M:Alica.PlanBase.Stop">
+            <summary>
+            Stops the plan base thread.
+            </summary>
+        </member>
+        <member name="M:Alica.PlanBase.SetRuleBook(Alica.RuleBook)">
+            <summary>
+            Set a custom RuleBook to use.
+            </summary>
+            <param name="rb">
+            A <see cref="T:Alica.RuleBook" /></param>
+        </member>
+        <member name="T:Alica.PlanRepository">
+            <summary>
+            The PlanRepository holds the ALICA program, neatly seperated into different Dictionaries.
+            It is especially useful to map element ids back to their object, e.g., when receiving messages referring to plan elements.
+            </summary>
+        </member>
+        <member name="M:Alica.PlanRepository.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="T:Alica.PlanStatus">
+            <summary>
+            Reflects the status of a Running Plan.
+            </summary>
+        </member>
+        <member name="T:Alica.Assignment">
+            <summary>
+            Contains all allocation information for a single plan. This includes the robot-task mapping, robot-state mapping and success information.
+            </summary>
+        </member>
+        <member name="P:Alica.Assignment.Plan">
+            <summary>
+            The Plan this Assignment refers to
+            </summary>
+        </member>
+        <member name="P:Alica.Assignment.Max">
+            <summary>
+            The maximal utility of this assignment, equals <see cref="P:Alica.Assignment.Min" /> since Assignemnts are always complete.
+            </summary>
+        </member>
+        <member name="P:Alica.Assignment.Min">
+            <summary>
+            The minimal utility of this assignment, equals <see cref="P:Alica.Assignment.Max" /> since Assignemnts are always complete.
+            </summary>
+        </member>
+        <member name="P:Alica.Assignment.NumUnAssignedRobots">
+            <summary>
+            returns 0, as assignemts are always complete. (also see <see cref="T:Alica.IAssignment" />)
+            </summary>
+        </member>
+        <member name="P:Alica.Assignment.UnAssignedRobots">
+            <summary>
+            returns null, as no unassigned robot is left.
+            </summary>
+        </member>
+        <member name="P:Alica.Assignment.RobotStateMapping">
+            <summary>
+            The robot-to-state mapping of this assignment.
+            </summary>
+        </member>
+        <member name="P:Alica.Assignment.EpSuccessMapping">
+            <summary>
+            Information about succeeded tasks.
+            </summary>
+        </member>
+        <member name="M:Alica.Assignment.GetEntryPointCount">
+            <summary>
+            NUmber of Entrypoints in this assignment's plan.
+            </summary>
+            <returns>
+            A <see cref="T:System.Int32" /></returns>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.Assignment.GetRobotsWorking(Alica.EntryPoint)-->
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.Assignment.GetRobotsWorking(System.Int64)-->
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.Assignment.GetRobotsWorkingAndFinished(Alica.EntryPoint)-->
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.Assignment.GetRobotsWorkingAndFinished(System.Int64)-->
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.Assignment.GetUniqueRobotsWorkingAndFinished(Alica.EntryPoint)-->
+        <member name="M:Alica.Assignment.GetEntryPoints">
+            <summary>
+            The array of EntryPoints this assignment considers relevant.
+            </summary>
+            <returns>
+            A <see cref="T:Alica.EntryPoint[]" /></returns>
+        </member>
+        <member name="M:Alica.Assignment.IsEntryPointNonEmpty(Alica.EntryPoint)">
+            <summary>
+            Test whether at least one robot is working on a task or succeeded with a task.
+            </summary>
+            <param name="ep">
+            A <see cref="T:Alica.EntryPoint" /> identifiying the task in question.
+            </param>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="M:Alica.Assignment.EntryPointOfRobot(System.Int32)">
+            <summary>
+            Returns the EntryPoint a robot is currently working on. Returns null, if the robot is currently not working on the respective plan.
+            </summary>
+            <param name="robot">
+            A <see cref="T:System.Int32" /></param>
+            <returns>
+            A <see cref="T:Alica.EntryPoint" /></returns>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.Assignment.GetAllRobots-->
+        <member name="M:Alica.Assignment.IsValid">
+            <summary>
+            Tests whether this assignment is valid with respect to the plan's cardinalities.
+            </summary>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="M:Alica.Assignment.IsSuccessfull">
+            <summary>
+            Tests wether all required tasks have been succesfully completed and thus the plan can be considered as successful.
+            </summary>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="T:Alica.ISyncModul">
+            <summary>
+            Handles synchronisations between agents, that is tightly synchronised transitions.
+            </summary>
+        </member>
+        <member name="M:Alica.ISyncModul.Init">
+            <summary>
+            Starts this module.
+            </summary>
+        </member>
+        <member name="M:Alica.ISyncModul.Tick">
+            <summary>
+            Regularly called by the <see cref="T:Alica.PlanBase" />.
+            </summary>
+        </member>
+        <member name="M:Alica.ISyncModul.Close">
+            <summary>
+            Closes the module for good.
+            </summary>
+        </member>
+        <member name="M:Alica.ISyncModul.SetSynchronisation(Alica.Transition,System.Boolean)">
+            <summary>
+            Called by the <see cref="T:Alica.RuleBook" /> to indicate that a synchronisation may happen.
+            </summary>
+            <param name="trans">
+            The <see cref="T:Alica.Transition" /> belonging to a synchronised set.
+            </param>
+            <param name="holds">
+            A <see cref="T:System.Boolean" /> indicating if the condition guarding trans holds.
+            </param>
+        </member>
+        <member name="M:Alica.ISyncModul.FollowSyncTransition(Alica.Transition)">
+            <summary>
+            Indicates that a synchronised transition is to be followed now.
+            If true is returned, the transition must be followed immediately, as the synchronisation is completed with the call of this method.
+            </summary>
+            <param name="trans">
+            A <see cref="T:Alica.Transition" /></param>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="T:Alica.DefaultUtilityFunction">
+            <summary>
+            A default implementation for a plan's utility function. The only occuring summand referrs to the task-role preferences.
+            </summary>
+        </member>
+        <member name="M:Alica.DefaultUtilityFunction.#ctor(Alica.Plan)">
+            <summary>
+            Basic ctor
+            </summary>
+            <param name="plan">
+            The <see cref="T:Alica.Plan" />, this utility function belongs to.
+            </param>
+        </member>
+        <member name="M:Alica.DefaultUtilityFunction.Eval(Alica.RunningPlan,Alica.RunningPlan)">
+            <summary> Evaluates the utility function according to the priorities of the assigned
+            roles and according to the similarity, if an oldRP is given. </summary>
+            <returns> The utility </returns>
+        </member>
+        <member name="M:Alica.DefaultUtilityFunction.Eval(Alica.IAssignment,Alica.IAssignment)">
+            <summary> Evaluates the utility function according to the priorities of the assigned
+            roles and according to the similarity, if an oldRP is given. </summary>
+            <returns> The utility interval </returns>
+        </member>
+        <member name="T:Alica.EngineTrigger">
+            <summary>
+            An engine trigger is a delegate used to call eventDriven <see cref="T:Alica.BasicBehaviour" />s. Events of this type can be used by a BasicBehaviour to manage when it is called.
+            </summary>
+        </member>
+        <member name="T:Alica.IBehaviourPool">
+            <summary>
+            An IBehaviourPool manages the actual behaviours controlling the agent's actuators.
+            </summary>
+        </member>
+        <member name="M:Alica.IBehaviourPool.IsBehaviourAvailable(Alica.Behaviour)">
+            <summary>
+            Indicates whether a class for a specific behaviour was succesfully loaded and is available.
+            </summary>
+            <param name="b">
+            A <see cref="T:Alica.Behaviour" /></param>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="M:Alica.IBehaviourPool.AddBehaviour(Alica.RunningPlan)">
+            <summary>
+            Add a behaviour represented by its RunningPlan to the set of currently active behaviour. Usually called by the <see cref="T:Alica.RunningPlan" />.
+            </summary>
+            <param name="rp">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        </member>
+        <member name="M:Alica.IBehaviourPool.RemoveBehaviour(Alica.RunningPlan)">
+            <summary>
+            Remove a behaviour represented by its RunningPlan from the set of currently active behaviour. Usually called by the <see cref="T:Alica.RunningPlan" />.
+            </summary>
+            <param name="rp">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        </member>
+        <member name="M:Alica.IBehaviourPool.Init">
+            <summary>
+            Initialises this Engine Module
+            </summary>
+        </member>
+        <member name="M:Alica.IBehaviourPool.Stop">
+            <summary>
+            Stops this engine module
+            </summary>
+        </member>
+        <member name="T:Alica.EventListener">
+            <summary>
+            Handles triggering of behaviours.
+            </summary>
+        </member>
+        <member name="M:Alica.EventListener.Start">
+            <summary>
+            Starts execution of the behaviour. Called by the <see cref="T:Alica.BasicBehaviour" />.
+            </summary>
+        </member>
+        <member name="M:Alica.EventListener.Stop">
+            <summary>
+            Stops execution of the behaviour. Called by the <see cref="T:Alica.BasicBehaviour" />.
+            </summary>
+        </member>
+        <member name="M:Alica.EventListener.OnEvent(System.Object)">
+            <summary>
+            Callback called by an <see cref="T:Alica.EngineTrigger" /> event or a timer, triggering the behaviour if it is active.
+            </summary>
+            <param name="o">
+            A <see cref="T:System.Object" /></param>
+        </member>
+        <member name="M:Alica.EventListener.Terminate">
+            <summary>
+            Terminate this listener permanently.
+            </summary>
+        </member>
+        <member name="M:Alica.IPlanSelector.GetBestSimilarAssignment(Alica.RunningPlan)">
+            <summary> Get the best Assignment for this RP with its plan and old
+            Assignment, which is also similar to the old Assignment </summary>
+            <param name="rp">
+            The old <see cref="T:Alica.RunningPlan" /></param>
+            <returns>
+            The new and similar <see cref="T:Alica.Assignment" /></returns>
+        </member>
+        <member name="T:Alica.AlicaEngine">
+            <summary>
+            The main class.
+            </summary>
+        </member>
+        <member name="P:Alica.AlicaEngine.StepEngine">
+            <summary>
+            Set to have the engine's main loop wait on a signal via <see cref="M:Alica.AlicaEngine.MayStep" />.
+            </summary>
+        </member>
+        <member name="P:Alica.AlicaEngine.MaySendMessages">
+            <summary>
+            Switch the engine between normal operation and silent mode, in which no messages other than debugging information are sent out.
+            This is useful for a robot on hot standby.
+            </summary>
+        </member>
+        <member name="P:Alica.AlicaEngine.IsTerminating">
+            <summary>
+            Indicates whether the engine is shutting down.
+            </summary>
+        </member>
+        <member name="P:Alica.AlicaEngine.BP">
+            <summary>
+            Returns the behaviourpool
+            </summary>
+        </member>
+        <member name="P:Alica.AlicaEngine.PS">
+            <summary>
+            Returns the <see cref="T:Alica.PlanSelector" /></summary>
+        </member>
+        <member name="P:Alica.AlicaEngine.PP">
+            <summary>
+            Returns the parser which reads ALICAs XML representation
+            </summary>
+        </member>
+        <member name="P:Alica.AlicaEngine.PR">
+            <summary>
+            Returns the plan repository, which holds the static ALICA program.
+            </summary>
+        </member>
+        <member name="P:Alica.AlicaEngine.TO">
+            <summary>
+            Returns the <see cref="T:Alica.TeamObserver" />, which handles most communication tasks.
+            </summary>
+        </member>
+        <member name="P:Alica.AlicaEngine.Log">
+            <summary>
+            The Logger
+            </summary>
+        </member>
+        <member name="P:Alica.AlicaEngine.CurrentRoleSet">
+            <summary>
+            Returns the RoleSet in use.
+            </summary>
+        </member>
+        <member name="M:Alica.AlicaEngine.MayStep">
+            <summary>
+            Allow the main engine loop to do a step. Only relevant if <see cref="P:Alica.AlicaEngine.StepEngine" /> is set to true.
+            </summary>
+        </member>
+        <member name="M:Alica.AlicaEngine.Get">
+            <summary>
+            Get the singleton engine.
+            </summary>
+            <returns>
+            A <see cref="T:Alica.AlicaEngine" /></returns>
+        </member>
+        <member name="M:Alica.AlicaEngine.GetRobotName">
+            <summary>
+            Gets the robot name, either by access the environment variable "ROBOT", or if that isn't set, the hostname.
+            </summary>
+            <returns>
+            The robot name under which the engine operates, a <see cref="T:System.String" /></returns>
+        </member>
+        <member name="M:Alica.AlicaEngine.Start">
+            <summary>
+            Starts the engine.
+            </summary>
+        </member>
+        <member name="M:Alica.AlicaEngine.Init(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Intialise the engine
+            </summary>
+            <param name="roleSetName">
+            A <see cref="T:System.String" />, the roleset to be used. If empty, a default roleset is looked for
+            </param>
+            <param name="masterPlanName">
+            A <see cref="T:System.String" />, the top-level plan to be used
+            </param>
+            <param name="roleSetDir">
+            A <see cref="T:System.String" />, the directory in which to search for roleSets. If empty, the base role path will be used.
+            </param>
+            <param name="stepEngine">
+            A <see cref="T:System.Boolean" />: whether or not the engine should start in stepped mode (<see cref="M:Alica.AlicaEngine.MayStep" />)
+            </param>
+        </member>
+        <member name="M:Alica.AlicaEngine.Close">
+            <summary>
+            Closes the engine for good.
+            </summary>
+        </member>
+        <member name="M:Alica.AlicaEngine.Abort(System.String)">
+            <summary>
+            Abort execution with a message, called if initialisation fails.
+            </summary>
+            <param name="msg">
+            A <see cref="T:System.String" /></param>
+        </member>
+        <member name="T:Alica.SimplePlanTree">
+            <summary>
+            A SimplePlanTree is a simplified version of the <see cref="T:Alica.RunningPlan" />, usually created from an incoming message. It thus represents the plan graph of another robot.
+            </summary>
+        </member>
+        <member name="P:Alica.SimplePlanTree.Parent">
+            <summary>
+            The parent SimplePlanTree
+            </summary>
+        </member>
+        <member name="P:Alica.SimplePlanTree.State">
+            <summary>
+            The state occupied by the respective robot.
+            </summary>
+        </member>
+        <member name="P:Alica.SimplePlanTree.ReceiveTime">
+            <summary>
+            The (ROS-)timestamp denoting when this tree was received.
+            </summary>
+        </member>
+        <member name="P:Alica.SimplePlanTree.RobotID">
+            <summary>
+            The id of the robot to which this tree refers to
+            </summary>
+        </member>
+        <member name="T:Alica.AbstractExpressions">
+            <summary>
+            The base class of all Expressions, implements staitc helper functions to query the plan base.
+            </summary>
+        </member>
+        <member name="M:Alica.AbstractExpressions.IsTimeOut(System.Int64,System.UInt64)">
+            <summary>
+            Tests whether a given event has passed for an amount of time.
+            </summary>
+            <param name="timeOut">
+            A <see cref="T:System.Int64" /> denoting the time interval in milliseconds.
+            </param>
+            <param name="startTime">
+            A <see cref="T:System.UInt64" /> denoting the time of the event in question, a ros timestamp.
+            </param>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="M:Alica.AbstractExpressions.IsTaskAssigned(System.Int64,Alica.RunningPlan)">
+            <summary>
+            Tests whether a task in rp is assigned to at least one robot.
+            </summary>
+            <param name="taskID">
+            A <see cref="T:System.Int64" />, specifying the task in question.
+            </param>
+            <param name="rp">
+            A <see cref="T:Alica.RunningPlan" />, specifying the plan in question.
+            </param>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="M:Alica.AbstractExpressions.IsRobotInState(System.Int64,Alica.RunningPlan)">
+            <summary>
+            Indicates whether a state is inhabitated by at least one robot.
+            </summary>
+            <param name="stateID">
+            A <see cref="T:System.Int64" />, indicating the state
+            </param>
+            <param name="rp">
+            A <see cref="T:Alica.RunningPlan" />, the plan in which to check.
+            </param>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="M:Alica.AbstractExpressions.IsEntryPointSuccessful(System.Int64,Alica.RunningPlan)">
+            <summary>
+            Returns whether at least one robot has succeeded with the task described by epId in rp.
+            </summary>
+            <param name="epId">
+            A <see cref="T:System.Int64" />, referring to an EntryPoint in rp.
+            </param>
+            <param name="rp">
+            A <see cref="T:Alica.RunningPlan" />, the plan in question.
+            </param>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="T:Alica.AssignmentCollection">
+            <summary>
+            Holds the mapping from <see cref="T:Alica.EntryPoint" />s to robots.
+            </summary>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.AssignmentCollection.#ctor(Alica.EntryPoint[],System.Collections.Generic.ICollection{System.Int32}[])-->
+        <member name="M:Alica.AssignmentCollection.#ctor(System.Int32)">
+            <summary>
+            Construct an empty AssignmentCollection of a specific size
+            </summary>
+            <param name="maxSize">
+            A <see cref="T:System.Int32" /></param>
+        </member>
+        <member name="P:Alica.AssignmentCollection.Count">
+            <summary>
+            The number of <see cref="T:Alica.EntryPoint" />s in this AssignmentCollection.
+            </summary>
+        </member>
+        <member name="P:Alica.AssignmentCollection.EntryPoints">
+            <summary>
+            The EntryPoints referred to
+            </summary>
+        </member>
+        <member name="P:Alica.AssignmentCollection.Robots">
+            <summary>
+            The robots mapped to EntryPoints in this AssignmentCollection.
+            </summary>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.AssignmentCollection.GetRobots(Alica.EntryPoint)-->
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.AssignmentCollection.GetRobotsById(System.Int64)-->
+        <member name="M:Alica.AssignmentCollection.Clear">
+            <summary>
+            Removes all robots from the AssignmentCollection
+            </summary>
+        </member>
+        <member name="T:Alica.SuccessMarks">
+            <summary>
+            Globally holds information about succeeded entrypoints for a specific robot
+            </summary>
+        </member>
+        <member name="M:Alica.SuccessMarks.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.SuccessMarks.#ctor(System.Collections.Generic.List{System.Int64})-->
+        <member name="M:Alica.SuccessMarks.Clear">
+            <summary>
+            Clear all marks
+            </summary>
+        </member>
+        <member name="M:Alica.SuccessMarks.MarkSuccessfull(Alica.AbstractPlan,Alica.EntryPoint)">
+            <summary>
+            Mark an entrypoint within a plan as successfully completed
+            </summary>
+            <param name="p">
+            A <see cref="T:Alica.AbstractPlan" /></param>
+            <param name="e">
+            A <see cref="T:Alica.EntryPoint" /></param>
+        </member>
+        <member name="M:Alica.SuccessMarks.Succeeded(Alica.AbstractPlan,Alica.EntryPoint)">
+            <summary>
+            Check whether an entrypoint in a plan was completed.
+            </summary>
+            <param name="p">
+            A <see cref="T:Alica.AbstractPlan" /></param>
+            <param name="e">
+            A <see cref="T:Alica.EntryPoint" /></param>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="M:Alica.SuccessMarks.Succeeded(System.Int64,System.Int64)">
+            <summary>
+            Check whether an entrypoint in a plan was completed.
+            </summary>
+            <param name="planId">
+            A <see cref="T:System.Int64" /></param>
+            <param name="entryPointId">
+            A <see cref="T:System.Int64" /></param>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.SuccessMarks.SucceededEntryPoints(Alica.AbstractPlan)-->
+        <member name="M:Alica.SuccessMarks.AnyTaskSucceeded(Alica.AbstractPlan)">
+            <summary>
+            Test if at least one task has succeeded within abstract plan p
+            </summary>
+            <param name="p">
+            A <see cref="T:Alica.AbstractPlan" /></param>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.SuccessMarks.ToList-->
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.SuccessMarks.LimitToPlans(System.Collections.Generic.ICollection{Alica.AbstractPlan})-->
+        <member name="M:Alica.SuccessMarks.RemovePlan(Alica.AbstractPlan)">
+            <summary>
+            Remove all marks referring to the specified plan.
+            </summary>
+            <param name="p">
+            A <see cref="T:Alica.AbstractPlan" /></param>
+        </member>
+        <member name="T:Alica.RobotEngineData">
+            <summary>
+            Basic Runtime information relating to a robot within the team
+            </summary>
+        </member>
+        <member name="M:Alica.RobotEngineData.#ctor(Alica.RobotProperties)">
+            <summary>
+            Basic constructor
+            </summary>
+            <param name="r">
+            This robot's <see cref="T:Alica.RobotProperties" /></param>
+        </member>
+        <member name="P:Alica.RobotEngineData.IsActive">
+            <summary>
+            Whether or not the robot is considered active
+            </summary>
+        </member>
+        <member name="P:Alica.RobotEngineData.LastMessageTime">
+            <summary>
+            The timestamp of the last message event from this robot
+            </summary>
+        </member>
+        <member name="P:Alica.RobotEngineData.Properties">
+            <summary>
+            The robot's <see cref="T:Alica.RobotProperties" /></summary>
+        </member>
+        <member name="P:Alica.RobotEngineData.SuccessMarks">
+            <summary>
+            The <see cref="T:Alica.SuccessMarks" /> of the robot, indicating which <see cref="T:Alica.EntryPoint" />s it completed.
+            </summary>
+        </member>
+        <member name="T:Alica.FailurePoint">
+            <summary>
+            A terminal failure state in a plan. Indicates unsuccesful termination.
+            </summary>
+        </member>
+        <member name="M:Alica.FailurePoint.#ctor">
+            <summary>
+            Basic Ctor
+            </summary>
+        </member>
+        <member name="T:Alica.Plan">
+            <summary>
+            An ALICA plan
+            </summary>
+        </member>
+        <member name="T:Alica.Task">
+            <summary>
+            an abstract description of parts of plans to be taken on by a set of robots
+            </summary>
+        </member>
+        <member name="M:Alica.Task.#ctor">
+            <summary>
+            Basic ctor
+            </summary>
+        </member>
+        <member name="M:Alica.Task.#ctor(System.Boolean)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="defaultTask">
+            A <see cref="T:System.Boolean" /></param>
+        </member>
+        <member name="T:Alica.ExitPoint">
+            <summary>
+            A terminal state within a plan. Indicates termination of the corresponding task.
+            </summary>
+        </member>
+        <member name="T:Alica.BehaviourConfiguration">
+            <summary>
+            A Behaviour Configuration encapsulates a set of static parameters and a set of variables for a Behaviour.
+            </summary>
+        </member>
+        <member name="M:Alica.BehaviourConfiguration.#ctor">
+            <summary>
+            Basic ctor
+            </summary>
+        </member>
+        <member name="M:Alica.BehaviourConfiguration.#ctor(System.Int64)">
+            <summary>
+            Constructor with id
+            </summary>
+            <param name="id">
+            A <see cref="T:System.Int64" /></param>
+        </member>
+        <member name="P:Alica.BehaviourConfiguration.Behaviour">
+            <summary>
+            This configuration's Behaviour
+            </summary>
+        </member>
+        <member name="P:Alica.BehaviourConfiguration.Frequency">
+            <summary>
+            The frequency with which this behaviour is called in case it is not <see cref="P:Alica.BehaviourConfiguration.EventDriven" />.
+            </summary>
+        </member>
+        <member name="P:Alica.BehaviourConfiguration.Deferring">
+            <summary>
+            The time in ms to wait before this behaviour is executed for the first time after entering the corresponding state.
+            Has only effect for behaviours not running in EventDriven mode.
+            </summary>
+        </member>
+        <member name="P:Alica.BehaviourConfiguration.EventDriven">
+            <summary>
+            Specifies whether this behaviour is run eventDriven. If it is not event driven, a timer will call it according to <see cref="P:Alica.BehaviourConfiguration.Frequency" /> and <see cref="P:Alica.BehaviourConfiguration.Deferring" />.
+            </summary>
+        </member>
+        <member name="P:Alica.BehaviourConfiguration.Parameters">
+            <summary>
+            The set of static parameters of this behaviour configuration. Usually parsed by <see cref="M:Alica.BasicBehaviour.InitializeParameters" />.
+            </summary>
+        </member>
+        <member name="T:Alica.Behaviour">
+            <summary>
+            Represents a behaviour within the plan tree
+            </summary>
+        </member>
+        <member name="P:Alica.Behaviour.Configurations">
+            <summary>
+            The set of static configurations of this Behaviour
+            </summary>
+        </member>
+        <member name="P:Alica.Behaviour.Implementation">
+            <summary>
+            The actual implementation of this behaviour, a subclass of BasicBehaviour
+            </summary>
+        </member>
+        <member name="T:Alica.AbstractPlan">
+            <summary>
+            Super class of plans, plantypes and behaviourconfigurations.
+            </summary>
+        </member>
+        <member name="P:Alica.AbstractPlan.RuntimeCondition">
+            <summary>
+            This plan's runtime condition.
+            </summary>
+        </member>
+        <member name="P:Alica.AbstractPlan.PreCondition">
+            <summary>
+            This plan's precondition
+            </summary>
+        </member>
+        <member name="P:Alica.AbstractPlan.MasterPlan">
+            <summary>
+            Whether this plan is marked as a Masterplan.
+            </summary>
+        </member>
+        <member name="P:Alica.AbstractPlan.UtilityFunction">
+            <summary>
+            This plan's Utility function
+            </summary>
+        </member>
+        <member name="P:Alica.AbstractPlan.UtilityThreshold">
+            <summary>
+            The utility threshold, the higher, the less likely dynamic changes are.
+            </summary>
+        </member>
+        <member name="M:Alica.AbstractPlan.ContainsVar(Alica.Variable)">
+            <summary>
+            Tests whether a given variable belongs to this plan.
+            </summary>
+            <param name="v">
+            A <see cref="T:Alica.Variable" /></param>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="T:Alica.Characteristic">
+            <summary>
+            A characteristic encapsulates a <see cref="T:Alica.Capability" /> and a <see cref="T:Alica.CapValue" />.
+            </summary>
+        </member>
+        <member name="P:Alica.Characteristic.Weight">
+            <summary>
+            The weight, used for role allocation.
+            </summary>
+        </member>
+        <member name="T:Alica.PreCondition">
+            <summary>
+            A precondition guards a <see cref="T:Alica.Plan" /> or a <see cref="T:Alica.Transition" />.
+            </summary>
+        </member>
+        <member name="T:Alica.Transition">
+            <summary>
+            Connects two <see cref="T:Alica.State" />s in a <see cref="T:Alica.Plan" /></summary>
+        </member>
+        <member name="M:Alica.Transition.#ctor">
+            <summary>
+            Basic ctor
+            </summary>
+        </member>
+        <member name="P:Alica.Transition.SyncTransition">
+            <summary>
+            The SyncTransition this transition belongs to. Null if it does not belong to any.
+            </summary>
+        </member>
+        <member name="P:Alica.Transition.PreCondition">
+            <summary>
+            The condition guarding this transition.
+            </summary>
+        </member>
+        <member name="P:Alica.Transition.InState">
+            <summary>
+            The state from which this transition leads away.
+            </summary>
+        </member>
+        <member name="P:Alica.Transition.OutState">
+            <summary>
+            The state this transition leads to.
+            </summary>
+        </member>
+        <member name="T:Alica.CapabilityDefinitionSet">
+            <summary>
+            A capability definition set holds all defined capabilities.
+            </summary>
+        </member>
+        <member name="T:Alica.Capability">
+            <summary>
+            A capability is used to match agents to roles.
+            </summary>
+        </member>
+        <member name="P:Alica.Capability.CapValues">
+            <summary>
+            Gets the List of possible values for this capability
+            </summary>
+            <value>
+            The cap values.
+            </value>
+        </member>
+        <member name="M:Alica.Capability.SimilarityValue(Alica.CapValue,Alica.CapValue)">
+            <summary>
+            Computes the similarity between two capability values.
+            </summary>
+            <returns>
+            The value, ranges between 0 and 1.
+            </returns>
+            <param name="roleVal">
+            Role value.
+            </param>
+            <param name="robotVal">
+            Robot value.
+            </param>
+        </member>
+        <member name="T:Alica.CapValue">
+            <summary>
+            A value for a <see cref="T:Alica.Capability" />.
+            </summary>
+        </member>
+        <member name="T:Alica.GetConstraint">
+            <summary>
+            The delegate type used to attach constraints to plans.
+            </summary>
+        </member>
+        <member name="T:Alica.Evaluate">
+            <summary>
+            The delegate type used to attach conditions to plans.
+            </summary>
+        </member>
+        <member name="T:Alica.Condition">
+            <summary>
+            A condition encapsulates expressions and constraint specific to a planelement, e.g., a transition, or a plan.
+            </summary>
+        </member>
+        <member name="P:Alica.Condition.AbstractPlan">
+            <summary>
+            The Abstract Plan in which this condition occurs.
+            </summary>
+        </member>
+        <member name="P:Alica.Condition.Vars">
+            <summary>
+            The static variables used in the constraint of this condition.
+            </summary>
+        </member>
+        <member name="P:Alica.Condition.Quantifiers">
+            <summary>
+            The quantifiers used in the constraint of this condition.
+            </summary>
+        </member>
+        <member name="T:Alica.ForallAgents">
+            <summary>
+            A quantifier associated with agents, i.e., the domain identifiers of this quantifier refer to properties of an agent
+            </summary>
+        </member>
+        <member name="M:Alica.ForallAgents.#ctor(System.Int64)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="id">
+            A <see cref="T:System.Int64" /></param>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.ForallAgents.GetSortedTerms(Alica.RunningPlan,System.Collections.Generic.ICollection{System.Int32}@)-->
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.ForallAgents.GetSortedVariables(Alica.RunningPlan,System.Collections.Generic.ICollection{System.Int32}@)-->
+        <member name="T:Alica.Quantifier">
+            <summary>
+            A quantifier encapsulates a set of <see cref="T:Alica.Variable" />s, belonging to a domain artifact, scoped under a PlanElement
+            </summary>
+        </member>
+        <member name="M:Alica.Quantifier.#ctor(System.Int64)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="id">
+            A <see cref="T:System.Int64" /></param>
+        </member>
+        <member name="P:Alica.Quantifier.ScopeIsEntryPoint">
+            <summary>
+            Indicates that the scope of this quantifier is an <see cref="T:Alica.EntryPoint" /></summary>
+        </member>
+        <member name="P:Alica.Quantifier.ScopeIsPlan">
+            <summary>
+            Indicates that the scope of this quantifier is a <see cref="T:Alica.Plan" /></summary>
+        </member>
+        <member name="P:Alica.Quantifier.ScopeIsState">
+            <summary>
+            Indicates that the scope of this quantifier is an <see cref="T:Alica.State" /></summary>
+        </member>
+        <member name="P:Alica.Quantifier.DomainIdentifiers">
+            <summary>
+            The list of strings idendtifying specific domain elements.
+            </summary>
+        </member>
+        <member name="M:Alica.Quantifier.SetScope(Alica.PlanElement)">
+            <summary>
+            Set the scope of this quantifier, called by the <see cref="T:Alica.ModelFactory" /></summary>
+            <param name="pe">
+            A <see cref="T:Alica.PlanElement" /></param>
+        </member>
+        <member name="M:Alica.Quantifier.GetScopedState">
+            <summary>
+            Returns the scope of this quantifier, returns null, if the scope is not a state.
+            </summary>
+            <returns>
+            A <see cref="T:Alica.State" /></returns>
+        </member>
+        <member name="M:Alica.Quantifier.GetScopedEntryPoint">
+            <summary>
+            Returns the scope of this quantifier, returns null, if the scope is not an EntryPoint.
+            </summary>
+            <returns>
+            A <see cref="T:Alica.EntryPoint" /></returns>
+        </member>
+        <member name="M:Alica.Quantifier.GetScopedPlan">
+            <summary>
+            Returns the scope of this quantifier, returns null, if the scope is not a Plan.
+            </summary>
+            <returns>
+            A <see cref="T:Alica.Plan" /></returns>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.Quantifier.GetSortedVariables(Alica.RunningPlan,System.Collections.Generic.ICollection{System.Int32}@)-->
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.Quantifier.GetSortedTerms(Alica.RunningPlan,System.Collections.Generic.ICollection{System.Int32}@)-->
+        <member name="T:Alica.RoleUsage">
+            <summary>
+            RoleUsage contains a role with it's priorty.
+            </summary>
+        </member>
+        <member name="T:Alica.Variable">
+            <summary>
+            A variable is constraint by conditions, feasible values can be queried using a <see cref="T:Alica.ConstraintQuery" />.
+            </summary>
+        </member>
+        <member name="T:Alica.EntryPoint">
+            <summary>
+            An EntryPoint is used to identify the initial state of a task within a plan.
+            It also holds cardinalities and any information specific to this (task,plan) tuple.
+            </summary>
+        </member>
+        <member name="M:Alica.EntryPoint.#ctor">
+            <summary>
+            Basic ctor
+            </summary>
+        </member>
+        <member name="F:Alica.EntryPoint.IDLEID">
+            <summary>
+            A value encoding the do-nothing task used in loosely coupled task allocation.
+            </summary>
+        </member>
+        <member name="P:Alica.EntryPoint.Task">
+            <summary>
+            The task of this entrypoint.
+            </summary>
+        </member>
+        <member name="P:Alica.EntryPoint.State">
+            <summary>
+            The initial state of this entrypoint's task.
+            </summary>
+        </member>
+        <member name="P:Alica.EntryPoint.InPlan">
+            <summary>
+            The plan to which this entrypoint belongs.
+            </summary>
+        </member>
+        <member name="P:Alica.EntryPoint.MaxCardinality">
+            <summary>
+            The maximum amount of agents allowed to execute this entrypoint's task within <see cref="P:Alica.EntryPoint.InPlan" />.
+            </summary>
+        </member>
+        <member name="P:Alica.EntryPoint.MinCardinality">
+            <summary>
+            The minimum amount of agents required to execute this entrypoint's task within <see cref="P:Alica.EntryPoint.InPlan" />.
+            </summary>
+        </member>
+        <member name="P:Alica.EntryPoint.SuccessRequired">
+            <summary>
+            whether or not a success of this task is required for <see cref="P:Alica.EntryPoint.InPlan" /> to be successful. Otherwise, this task is optional.
+            </summary>
+        </member>
+        <member name="P:Alica.EntryPoint.ReachableStates">
+            <summary>
+            The set of states reachable from the initial state.
+            </summary>
+        </member>
+        <member name="M:Alica.EntryPoint.CompareTo(Alica.EntryPoint)">
+            <summary> Little helper to sort an entrypoint array. </summary>
+        </member>
+        <member name="T:Alica.PlanElement">
+            <summary>
+            Base class of all model elements
+            </summary>
+        </member>
+        <member name="M:Alica.PlanElement.#ctor">
+            <summary>
+            Basic ctor
+            </summary>
+        </member>
+        <member name="P:Alica.PlanElement.Id">
+            <summary>
+            This element's unique id
+            </summary>
+        </member>
+        <member name="P:Alica.PlanElement.Name">
+            <summary>
+            This element's descriptive name.
+            </summary>
+        </member>
+        <member name="T:Alica.SuccessPoint">
+            <summary>
+            A terminal state, encoding the succesful termination of a task.
+            </summary>
+        </member>
+        <member name="M:Alica.SuccessPoint.#ctor">
+            <summary>
+            Basic Ctor
+            </summary>
+        </member>
+        <member name="T:Alica.State">
+            <summary>
+            A State is a plan element inhabitable by agents, which contains sub-plans, sub-plantypes, and behaviours.
+            </summary>
+        </member>
+        <member name="M:Alica.State.#ctor">
+            <summary>
+            Basic Ctor
+            </summary>
+        </member>
+        <member name="M:Alica.State.#ctor(System.Int64)">
+            <summary>
+            Constructor which accepts a unique id.
+            </summary>
+            <param name="id">
+            A <see cref="T:System.Int64" /></param>
+        </member>
+        <member name="P:Alica.State.Plans">
+            <summary>
+            The list of <see cref="T:Alica.AbstractPlan" />s ment to be executed in the context of this state.
+            </summary>
+        </member>
+        <member name="P:Alica.State.Parametrisation">
+            <summary>
+            The list of <see cref="T:Alica.Parametrisation" />s, which bind variables of sub-plans to variables in this state's plan.
+            </summary>
+        </member>
+        <member name="P:Alica.State.InTransitions">
+            <summary>
+            The list of <see cref="T:Alica.Transition" />s leading to this state.
+            </summary>
+        </member>
+        <member name="P:Alica.State.OutTransitions">
+            <summary>
+            The list of <see cref="T:Alica.Transition" />s going from this stae to another one.
+            </summary>
+        </member>
+        <member name="P:Alica.State.IsTerminal">
+            <summary>
+            whether or not this is a terminal state.
+            </summary>
+        </member>
+        <member name="P:Alica.State.IsFailureState">
+            <summary>
+            whether or not this is a <see cref="T:Alica.FailurePoint" />, used to avoid casting and type checking during runtime.
+            </summary>
+        </member>
+        <member name="P:Alica.State.IsSuccessState">
+            <summary>
+            whether or not this is a <see cref="T:Alica.SuccessPoint" />, used to avoid casting and type checking during runtime.
+            </summary>
+        </member>
+        <member name="P:Alica.State.InPlan">
+            <summary>
+            The plan containing this state.
+            </summary>
+        </member>
+        <member name="T:Alica.ConstraintDescriptor">
+            <summary>
+            Holds all information relevant to a constraint imposed by a <see cref="T:Alica.Condition" />. The information is typically provided by a <see cref="T:Alica.GetConstraint" /> delegate.
+            </summary>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.ConstraintDescriptor.#ctor(AutoDiff.Variable[],System.Collections.Generic.List{System.Collections.Generic.List{AutoDiff.Term[]}})-->
+        <member name="P:Alica.ConstraintDescriptor.Constraint">
+            <summary>
+            The Constraint function
+            </summary>
+        </member>
+        <member name="P:Alica.ConstraintDescriptor.Utility">
+            <summary>
+            The objective function.
+            </summary>
+        </member>
+        <member name="P:Alica.ConstraintDescriptor.UtilitySufficiencyThreshold">
+            <summary>
+            A value above which the utility is deemed to be sufficient, i.e., close enough to the global optimum.
+            A solver may stop looking for a solution if this value has been reached.
+            </summary>
+        </member>
+        <member name="P:Alica.ConstraintDescriptor.StaticVars">
+            <summary>
+            The static variables used in the constraint and the utility
+            </summary>
+        </member>
+        <member name="P:Alica.ConstraintDescriptor.DomainVars">
+            <summary>
+            The current instance of the domain quantifiers, each quantifier results in a list of arrays of Variables (or potentially terms).
+            </summary>
+        </member>
+        <member name="P:Alica.ConstraintDescriptor.AllVars">
+            <summary>
+            All variables, both static and dynamic
+            </summary>
+        </member>
+        <member name="P:Alica.ConstraintDescriptor.DomainRanges">
+            <summary>
+            The ranges, i.e., lower and upper bounds for all dynamic domain variables.
+            </summary>
+        </member>
+        <member name="P:Alica.ConstraintDescriptor.StaticRanges">
+            <summary>
+            The ranges, i.e., lower and upper bounds for all static domain variables.
+            </summary>
+        </member>
+        <member name="M:Alica.ConstraintDescriptor.SetFixedValue(AutoDiff.Term,System.Object)">
+            <summary>
+            Set an arbitrary fixed value for a varable, i.e, ground a variable.
+            </summary>
+            <param name="variable">
+            A <see cref="T:AutoDiff.Term" />, the variable the object is bound to.
+            </param>
+            <param name="val">
+            A <see cref="T:System.Object" />, the object bound to the variable.
+            </param>
+        </member>
+        <member name="M:Alica.ConstraintDescriptor.FixedValue(AutoDiff.Term)">
+            <summary>
+            The fixed value of a variable. Returns null if the value is not fixed (nonground variable).
+            </summary>
+            <param name="variable">
+            A <see cref="T:AutoDiff.Term" /></param>
+            <returns>
+            A <see cref="T:System.Object" /></returns>
+        </member>
+        <member name="M:Alica.ConstraintDescriptor.AllRanges">
+            <summary>
+            Returns the ranges of all variables involved. Used by <see cref="!:Alica.Reasoner.CGSolver" /> to initialiase a constraint problem for solving.
+            </summary>
+            <returns>
+            A 2-dimensional double array.
+            </returns>
+        </member>
+        <member name="T:Alica.ConstraintBuilder">
+            <summary>
+            A static helper class, providing simple factory methods for domain-independent constraints.
+            </summary>
+        </member>
+        <member name="M:Alica.ConstraintBuilder.Distance(AutoDiff.TVec,AutoDiff.TVec)">
+            <summary>
+            Returns the euclidean distance between two n-dimenasional vectors.
+            </summary>
+            <param name="t1">
+            A <see cref="T:AutoDiff.TVec" /></param>
+            <param name="t2">
+            A <see cref="T:AutoDiff.TVec" /></param>
+            <returns>
+            A <see cref="T:AutoDiff.Term" /></returns>
+        </member>
+        <member name="M:Alica.ConstraintBuilder.DistanceSqr(AutoDiff.TVec,AutoDiff.TVec)">
+            <summary>
+            Returns the square of the euclidean distance between two n-dimensional vectors.
+            </summary>
+            <param name="t1">
+            A <see cref="T:AutoDiff.TVec" /></param>
+            <param name="t2">
+            A <see cref="T:AutoDiff.TVec" /></param>
+            <returns>
+            A <see cref="T:AutoDiff.Term" /></returns>
+        </member>
+        <member name="M:Alica.ConstraintBuilder.Rotate(AutoDiff.TVec,System.Double)">
+            <summary>
+            Rotates vec by alpha
+            </summary>
+            <param name="vec">
+            A <see cref="T:AutoDiff.TVec" /></param>
+            <param name="alpha">
+            A <see cref="T:System.Double" /></param>
+            <returns>
+            A <see cref="T:AutoDiff.TVec" /></returns>
+        </member>
+        <member name="M:Alica.ConstraintBuilder.InCoordsOf(AutoDiff.TVec,AutoDiff.TVec)">
+            <summary>
+            Returns point in the coordinate system defined by vec and its rectangular.
+            </summary>
+            <param name="point">
+            A two-dimensional <see cref="T:AutoDiff.TVec" /></param>
+            <param name="vec">
+            A two-dimensional <see cref="T:AutoDiff.TVec" /></param>
+            <returns>
+            A two-dimensional <see cref="T:AutoDiff.TVec" /></returns>
+        </member>
+        <member name="M:Alica.ConstraintBuilder.LeftOf(AutoDiff.TVec,AutoDiff.TVec)">
+            <summary>
+            Two dimensional geometry:
+            Returns if toCheck is left of vec.
+            </summary>
+            <param name="vec">
+            A <see cref="T:AutoDiff.TVec" /></param>
+            <param name="toCheck">
+            A <see cref="T:AutoDiff.TVec" /></param>
+            <returns>
+            A <see cref="T:AutoDiff.Term" /></returns>
+        </member>
+        <member name="M:Alica.ConstraintBuilder.RightOf(AutoDiff.TVec,AutoDiff.TVec)">
+            <summary>
+            Two dimensional geometry:
+            Returns if toCheck is right of vec.
+            </summary>
+            <param name="vec">
+            A <see cref="T:AutoDiff.TVec" /></param>
+            <param name="toCheck">
+            A <see cref="T:AutoDiff.TVec" /></param>
+            <returns>
+            A <see cref="T:AutoDiff.Term" /></returns>
+        </member>
+        <member name="M:Alica.ConstraintBuilder.Equals(AutoDiff.TVec,AutoDiff.TVec,System.Double)">
+            <summary>
+            Returns wether the distance between two n-dimensional vectors is less than tolerance.
+            </summary>
+            <param name="t1">
+            A <see cref="T:AutoDiff.TVec" /></param>
+            <param name="t2">
+            A <see cref="T:AutoDiff.TVec" /></param>
+            <param name="tolerance">
+            A <see cref="T:System.Double" /></param>
+            <returns>
+            A <see cref="T:AutoDiff.Term" /></returns>
+        </member>
+        <member name="M:Alica.ConstraintBuilder.ConstraintApply(AutoDiff.Term,AutoDiff.Term)">
+            <summary>
+            Combines a constraint and a utility. This is usually only used by the <see cref="!:CGSolver" />.
+            Use if you need to circumvent CGSolver and work diectly with <see cref="!:GSolver" />.
+            </summary>
+            <param name="constraint">
+            A <see cref="T:AutoDiff.Term" /></param>
+            <param name="utility">
+            A <see cref="T:AutoDiff.Term" /></param>
+            <returns>
+            A <see cref="T:AutoDiff.Term" /></returns>
+        </member>
+        <member name="T:Alica.ConstraintHelper">
+            <summary>
+            The Constraint Helper offers methods to query for variables for valid values and test if solutions exists
+            </summary>
+        </member>
+        <member name="P:Alica.ConstraintHelper.Solver">
+            <summary>
+            Returns the constraint solver used
+            </summary>
+        </member>
+        <member name="M:Alica.ConstraintHelper.Init(Alica.IConstraintSolver)">
+            <summary>
+            Init the ConstraintHelper, called once during Initialisation
+            </summary>
+            <param name="thesolver">
+            A <see cref="T:Alica.IConstraintSolver" /></param>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="T:Alica.ConstraintStore">
+            <summary>
+            Holds information about active constraints in the corresponding <see cref="T:Alica.RunningPlan" /></summary>
+        </member>
+        <member name="M:Alica.ConstraintStore.#ctor(Alica.RunningPlan)">
+            <summary>
+            Default constructor
+            </summary>
+            <param name="rp">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        </member>
+        <member name="M:Alica.ConstraintStore.Clear">
+            <summary>
+            Clear store, revoking all constraints
+            </summary>
+        </member>
+        <member name="M:Alica.ConstraintStore.AddCondition(Alica.Condition)">
+            <summary>
+            Add a condition to the store.
+            </summary>
+            <param name="con">
+            A <see cref="T:Alica.Condition" /></param>
+        </member>
+        <member name="M:Alica.ConstraintStore.RemoveCondition(Alica.Condition)">
+            <summary>
+            Revoke a specific condition from the constraint store
+            </summary>
+            <param name="con">
+            A <see cref="T:Alica.Condition" /></param>
+        </member>
+        <member name="M:Alica.ConstraintStore.AcceptQuery(Alica.ConstraintQuery)">
+            <summary>
+            Called by the <see cref="T:Alica.ConstraintQuery" /> to obtain all relevant calls.
+            </summary>
+            <param name="query">
+            A <see cref="T:Alica.ConstraintQuery" /></param>
+        </member>
+        <member name="T:Alica.ConstraintQuery">
+            <summary>
+            Encapsulates specific queries to constraint variable, usually used by behaviours.
+            </summary>
+        </member>
+        <member name="M:Alica.ConstraintQuery.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="T:Alica.ConstraintQuery.UniqueVarStore">
+            <summary>
+            Internal class to deal with bindings in states and plantypes
+            </summary>
+        </member>
+        <member name="M:Alica.ConstraintQuery.AddVariable(Alica.Variable)">
+            <summary>
+            Add the static variable v to the query.
+            </summary>
+            <param name="v">
+            A <see cref="T:Alica.Variable" /></param>
+        </member>
+        <member name="M:Alica.ConstraintQuery.AddVariable(System.Int32,System.String)">
+            <summary>
+            Add the robot specific variable identifie by ident to the query.
+            </summary>
+            <param name="robot">
+            A <see cref="T:System.Int32" /></param>
+            <param name="ident">
+            A <see cref="T:System.String" /></param>
+        </member>
+        <member name="M:Alica.ConstraintQuery.ClearDomainVariables">
+            <summary>
+            Remove all added domain (i.e., robot specific) variables from the query.
+            </summary>
+        </member>
+        <member name="M:Alica.ConstraintQuery.ClearStaticVariables">
+            <summary>
+            Remove all static variables from the query.
+            </summary>
+        </member>
+        <member name="M:Alica.ConstraintQuery.ExistsSolution(Alica.RunningPlan)">
+            <summary>
+            Check whether a solution can be calculated. Keep in mind, the used solver might be incomplete.
+            </summary>
+            <param name="rp">
+            A <see cref="T:Alica.RunningPlan" /></param>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.ConstraintQuery.GetSolution(Alica.RunningPlan,System.Collections.Generic.List{System.Double}@)-->
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.ConstraintQuery.GetSolution(Alica.RunningPlan,System.Collections.Generic.List{System.Object}@)-->
+        <member name="T:Alica.PlanParser">
+            <summary>
+            The default parser, parsing the XML encoding of an ALICA plan-tree
+            </summary>
+        </member>
+        <member name="M:Alica.PlanParser.#ctor(Alica.PlanRepository)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="rep">
+            A <see cref="T:Alica.PlanRepository" />, in which parsed elements are stored.
+            </param>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.PlanParser.GetParsedElements-->
+        <member name="M:Alica.PlanParser.ParsePlanTree(System.String)">
+            <summary>
+            Parses a plan tree
+            </summary>
+            <param name="masterplan">
+            The name of the top-level plan, a <see cref="T:System.String" /></param>
+            <returns>
+            The top-level <see cref="T:Alica.Plan" />.
+            </returns>
+        </member>
+        <member name="M:Alica.PlanParser.ParseAllPlans">
+            <summary>
+            Parse all plans available.
+            </summary>
+        </member>
+        <member name="M:Alica.PlanParser.ParseRoleSet(System.String,System.String)">
+            <summary>
+            Parse a roleset
+            </summary>
+            <param name="roleSetName">
+            The name of the roleset to parse, a <see cref="T:System.String" />. May be empty, in which case a default roleset is looked for.
+            </param>
+            <param name="roleSetDir">
+            The relative directory in which to search for a roleset, a <see cref="T:System.String" /></param>
+            <returns>
+            The parsed <see cref="T:Alica.RoleSet" /></returns>
+        </member>
+        <member name="T:Alica.PlanWriter">
+            <summary>
+            The PlanWriter can be used to store generated plans.
+            </summary>
+        </member>
+        <member name="P:Alica.PlanWriter.Directory">
+            <summary>
+            Gets or sets the directory to save to.
+            </summary>
+            <value>
+            The directory.
+            </value>
+        </member>
+        <member name="P:Alica.PlanWriter.PlansToSave">
+            <summary>
+            Gets or sets the plans to save.
+            </summary>
+            <value>
+            The plans to save.
+            </value>
+        </member>
+        <member name="M:Alica.PlanWriter.SaveAllPlans">
+            <summary>
+            Save all plans in the repository.
+            </summary>
+        </member>
+        <member name="M:Alica.PlanWriter.SaveCollected">
+            <summary>
+            Saves all plans added to <see cref="P:Alica.PlanWriter.PlansToSave" />.
+            </summary>
+        </member>
+        <member name="M:Alica.PlanWriter.SaveSinglePlan(Alica.Plan)">
+            <summary>
+            Saves a single plan.
+            </summary>
+            <param name="p">
+            The plan to save.
+            </param>
+        </member>
+        <member name="T:Alica.ModelFactory">
+            <summary>
+            Constructs Model elements, i.e., objects inheriting from <see cref="T:Alica.PlanElement" /> given their XML representation.
+            </summary>
+        </member>
+        <member name="M:Alica.ModelFactory.#ctor(Alica.PlanParser,Alica.PlanRepository)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="p">
+            The <see cref="T:Alica.PlanParser" /> handling the plan and role files.
+            </param>
+            <param name="rep">
+            The <see cref="T:Alica.PlanRepository" /> holding all plan elements. Elements will be added to it.
+            </param>
+        </member>
+        <member name="M:Alica.ModelFactory.ComputeReachabilities">
+            <summary>
+            Computes the sets of reachable states for all entrypoints created.
+            This speeds up some calculations during run-time.
+            </summary>
+        </member>
+        <member name="T:Alica.ExpressionHandler">
+            <summary>
+            The Expressionhandler attaches expressions and constraints to plans during start-up of the engine.
+            </summary>
+        </member>
+        <member name="M:Alica.ExpressionHandler.#ctor">
+            <summary>
+            Constructor, loads the assembly containing expressions and constraints.
+            </summary>
+        </member>
+        <member name="M:Alica.ExpressionHandler.AttachAll">
+            <summary>
+            Attaches expressions and constraints to the plans. Called by the <see cref="T:Alica.AlicaEngine" /> during start up.
+            </summary>
+        </member>
+        <member name="M:Alica.ExpressionHandler.DummyConstraint(Alica.ConstraintDescriptor,Alica.RunningPlan)">
+            <summary>
+            Dummy Constraint builder in case none was found in the assembly.
+            </summary>
+            <param name="vars">
+            A <see cref="!:AD.Variable" /></param>
+            <param name="rp">
+            A <see cref="T:Alica.RunningPlan" /></param>
+            <returns>
+            A <see cref="T:Alica.ConstraintDescriptor" /></returns>
+        </member>
+        <member name="T:Alica.RuleBook">
+            <summary>
+            Defines the operational semantics of the used ALICA dialect.
+            </summary>
+        </member>
+        <member name="M:Alica.RuleBook.#ctor">
+            <summary>
+            Your basic constructor
+            </summary>
+        </member>
+        <member name="M:Alica.RuleBook.InitialisationRule(Alica.Plan)">
+            <summary>
+            Implementation of the Init Rule
+            </summary>
+            <param name="masterPlan">
+            A <see cref="T:Alica.Plan" /></param>
+            <returns>
+            The <see cref="T:Alica.RunningPlan" /> constructed from the given plan.
+            </returns>
+        </member>
+        <member name="M:Alica.RuleBook.Visit(Alica.RunningPlan)">
+            <summary>
+            Called in every iteration by a RunningPlan to apply rules to it.
+            Will consequetively apply rules until no further changes can be made or
+            <see cref="F:Alica.RuleBook.maxConsecutiveChanges" /> are made. This method also dictates the sequence in which rules are applied.
+            </summary>
+            <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+            <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        </member>
+        <member name="M:Alica.RuleBook.PlanAbortRule(Alica.RunningPlan)">
+            <summary>
+            The abort rule, sets a failure if a failure state is reached, the allocation invalid or the runtimecondition does not hold.
+            </summary>
+            <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+            <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        </member>
+        <member name="M:Alica.RuleBook.TransitionRule(Alica.RunningPlan)">
+            <summary>
+            The transition rule, moves an agent along a transition to a next state if the corresponding condition holds,
+            flags the RunningPlan for allocation in the next state.
+            Note, in case multiple transitions are eligble, one is chosen implementation dependent.
+            </summary>
+            <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+            <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        </member>
+        <member name="M:Alica.RuleBook.SynchTransitionRule(Alica.RunningPlan)">
+            <summary>
+            Moves the agent along a synchronised transition, if the corresponding transition holds and the <see cref="!:SynchModul" />
+            deems the transition as synchronised.
+            </summary>
+            <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+            <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        </member>
+        <member name="M:Alica.RuleBook.PlanPropagationRule(Alica.RunningPlan)">
+            <summary>
+            Propagates a failure to the parent in case it couldn't be repaired on this level.
+            </summary>
+            <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+            <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        </member>
+        <member name="M:Alica.RuleBook.PlanReplaceRule(Alica.RunningPlan)">
+            <summary>
+            Tries to repair a failure by removing this plan and triggering a new task allocation.
+            </summary>
+            <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+            <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        </member>
+        <member name="M:Alica.RuleBook.PlanRedoRule(Alica.RunningPlan)">
+            <summary>
+            Tries to repair a plan by moving all robots in the current state to the corresponding initial state.
+            </summary>
+            <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+            <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        </member>
+        <member name="M:Alica.RuleBook.TopFailRule(Alica.RunningPlan)">
+            <summary>
+            Handles a failure at the top-level plan by resetting everything.
+            </summary>
+            <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+            <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        </member>
+        <member name="M:Alica.RuleBook.AuthorityOverrideRule(Alica.RunningPlan)">
+            <summary>
+            Adopts an authorative assignment in case the <see cref="T:Alica.CycleManager" /> of r is in overridden mode.
+            </summary>
+            <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+            <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        </member>
+        <member name="M:Alica.RuleBook.DynamicAllocationRule(Alica.RunningPlan)">
+            <summary>
+            Changes the allocation of r to a better one, if one can be found and the plan is currently allowed to change allocation.
+            </summary>
+            <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+            <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        </member>
+        <member name="M:Alica.RuleBook.AllocationRule(Alica.RunningPlan)">
+            <summary>
+            Allocates agents in the current state within r to sub-plans.
+            </summary>
+            <param name="r">
+            A <see cref="T:Alica.RunningPlan" /></param>
+            <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        </member>
+        <member name="M:Alica.RuleBook.UpdateChange(Alica.PlanChange,Alica.PlanChange)">
+            <summary>
+            Combines to PlanChange flags to one, giving priority to Failures.
+            </summary>
+            <param name="cur">
+            A <see cref="T:Alica.PlanChange" /></param>
+            <param name="update">
+            A <see cref="T:Alica.PlanChange" /></param>
+            <returns>
+            A <see cref="T:Alica.PlanChange" /></returns>
+        </member>
+        <member name="M:Alica.PartialAssignment.AddIfAlreadyAssigned(Alica.SimplePlanTree,System.Int32)">
+            <summary>
+            If the robot has already assigned itself, this method updates the partial assignment accordingly.
+            </summary>
+            <param name="spt">
+            A <see cref="T:Alica.SimplePlanTree" /></param>
+            <param name="robot">
+            A <see cref="T:System.Int32" /></param>
+        </member>
+        <member name="M:Alica.PartialAssignment.AssignRobot(System.Int32,System.Int32)">
+            <summary> Assigns the robot into the datastructures according to the given entrypoint. </summary>
+            <returns> True, when it was possible to assign the robot. False, otherwise. </returns>
+            <summary> Assigns the robot into the datastructures according to the given index. </summary>
+            <returns> True, when it was possible to assign the robot. False, otherwise. </returns>
+        </member>
+        <member name="M:Alica.PartialAssignment.IsGoal">
+            <summary> Checks if this PartialAssignment is a complete Assignment. </summary>
+            <returns> True, if it is, false otherwise. </returns>
+        </member>
+        <member name="M:Alica.PartialAssignment.CompareTo(Alica.PartialAssignment)">
+            <summary> Compares this PartialAssignment with another one. </summary>
+            <returns>
+            0 if it is the same object or they have the same utility, assignment and plan id
+            1 if the other PartialAssignment has a higher utility, or plan id
+            -1 if this PartialAssignment has a higher utility, or plan id
+            Difference between Hashcodes, if they have the same utility and plan id
+            </returns>
+        </member>
+        <member name="M:Alica.PartialAssignment.GetHashCode">
+            <summary> Calculates a HashCode, which depends on the assignments and the plan. </summary>
+            <returns> A HashCode, which should be robot independent. </returns>
+        </member>
+        <member name="M:Alica.PartialAssignment.Pow(System.Int32,System.Int32)">
+            <summary>
+            little helper to calculate the y-th power of x with integers
+            </summary>
+        </member>
+        <member name="T:Alica.PlanSelector">
+            <summary>
+            Implements the task allocation algorithm
+            </summary>
+        </member>
+        <member name="M:Alica.PlanSelector.#ctor">
+            <summary>
+            Basic ctor
+            </summary>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.PlanSelector.GetPlansForState(Alica.RunningPlan,System.Collections.Generic.LinkedList{Alica.AbstractPlan},System.Collections.Generic.ICollection{System.Int32})-->
+        <member name="M:Alica.PlanSelector.GetBestSimilarAssignment(Alica.RunningPlan)">
+            <summary> Edits data from the old running plan to call the method CreateRunningPlan appropriatly. </summary>
+        </member>
+        <member name="M:Alica.PlanSelector.GetBestSimilarAssignment(Alica.RunningPlan,System.Collections.Generic.ICollection{System.Int32})">
+            <summary> Edits data from the old running plan to call the method CreateRunningPlan appropriatly. </summary>
+        </member>
+        <member name="T:Alica.TaskAssignment">
+            <summary>
+            Represents an instance of an assignment problem for one plan or a plantype.
+            All parameters, which are static for this problem, are stored here.
+            </summary>
+        </member>
+        <member name="M:Alica.TaskAssignment.#ctor(System.Collections.Generic.LinkedList{Alica.Plan},System.Collections.Generic.ICollection{System.Int32},System.Boolean)">
+            <summary> Constructor of a new TaskAssignment </summary>
+            <param name="plan">
+                <see cref="T:Alica.Plan" /> to build an assignment for
+            </param>
+            <param name="robotIds">
+                <see cref="!:HashSet`1" /> with robots to build an assignment for
+            </param>
+            <param name="preassignOtherRobots">
+            A <see cref="T:System.Boolean" /></param>
+        </member>
+        <member name="M:Alica.TaskAssignment.AddAlreadyAssignedRobots(Alica.PartialAssignment,System.Collections.Generic.Dictionary{System.Int32,Alica.SimplePlanTree})">
+            <summary> If any robot has already assigned itself, this method updates the partial assignment accordingly.</summary>
+            <returns> True if any robot has already assigned itself, false otherwise. </returns>
+        </member>
+        <member name="M:Alica.TaskAssignment.GetNextBestAssignment(Alica.IAssignment)">
+            <summary> Gets the Assignment with next best utility </summary>
+            <returns> An Assignment for the plan </returns>
+        </member>
+        <member name="T:Alica.Logger">
+            <summary>
+            The Plan Logger will write a log file according to the settings in the Alica.conf file.
+            </summary>
+        </member>
+        <member name="M:Alica.Logger.EventOccurred(System.String)">
+            <summary>
+            Notify the logger that an event occurred which changed the plan tree.
+            </summary>
+            <param name="e">
+            A <see cref="T:System.String" /> denoting the event
+            </param>
+        </member>
+        <member name="M:Alica.Logger.IterationStarts">
+            <summary>
+            Notify the logger of a new iteration, called by the <see cref="T:Alica.PlanBase" /></summary>
+        </member>
+        <member name="M:Alica.Logger.IterationEnds(Alica.RunningPlan)">
+            <summary>
+            Notify that the current iteration is finished, triggering the looger to write an entry if an event occurred in the current iteration.
+            Called by the <see cref="T:Alica.PlanBase" />.
+            </summary>
+            <param name="root">
+            The root <see cref="T:Alica.RunningPlan" /> of the plan base.
+            </param>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.Logger.CreateHumanReadablePlanTree(System.Collections.Generic.IList{System.Int64})-->
+        <member name="M:Alica.Logger.Close">
+            <summary>
+            Closes the logger.
+            </summary>
+        </member>
+        <member name="T:Alica.AuthorityManager">
+            <summary>
+            Manages communication wrt. conflict resolution.
+            </summary>
+        </member>
+        <member name="M:Alica.AuthorityManager.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Alica.AuthorityManager.Init">
+            <summary>
+            Initialises this engine module
+            </summary>
+        </member>
+        <member name="M:Alica.AuthorityManager.Close">
+            <summary>
+            Closes this engine module
+            </summary>
+        </member>
+        <member name="M:Alica.AuthorityManager.HandleIncomingAuthorityMessage(RosCS.AlicaEngine.AllocationAuthorityInfo)">
+            <summary>
+            Message Handler
+            </summary>
+            <param name="aai">
+            A <see cref="T:RosCS.AlicaEngine.AllocationAuthorityInfo" /></param>
+        </member>
+        <member name="M:Alica.AuthorityManager.Tick(Alica.RunningPlan)">
+            <summary>
+            Cyclic tick function, called by the plan base every iteration
+            </summary>
+            <param name="root">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        </member>
+        <member name="M:Alica.AuthorityManager.SendAllocation(Alica.RunningPlan)">
+            <summary>
+            Sends an AllocationAuthorityInfo message containing the assignment of rp
+            </summary>
+            <param name="rp">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        </member>
+        <member name="T:Alica.AllocationDifference">
+            <summary>
+            A representation of the difference between two allocations
+            </summary>
+        </member>
+        <member name="T:Alica.AllocationDifference.Reason">
+            <summary>
+            Denoting the reason for an allocation switch
+            </summary>
+        </member>
+        <member name="M:Alica.AllocationDifference.IsEmpty">
+            <summary>
+            Returns whether the difference is empty, i.e., the corresponding allocations are the same
+            </summary>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="M:Alica.AllocationDifference.Reset">
+            <summary>
+            Reset this difference to the empty difference
+            </summary>
+        </member>
+        <member name="M:Alica.AllocationDifference.ApplyDifference(Alica.AllocationDifference)">
+            <summary>
+            Apply another difference to this one resulting in the composition of both
+            </summary>
+            <param name="other">
+            A <see cref="T:Alica.AllocationDifference" /></param>
+        </member>
+        <member name="T:Alica.CycleManager">
+            <summary>
+            Responsibile for detecting cycles in assignment updates and reactions to these
+            </summary>
+        </member>
+        <member name="M:Alica.CycleManager.#ctor(Alica.RunningPlan)">
+            <summary>
+            Construct a cyclemanager for a <see cref="T:Alica.RunningPlan" /></summary>
+            <param name="p">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        </member>
+        <member name="M:Alica.CycleManager.SetNewAllocDiff(Alica.RunningPlan,Alica.AllocationDifference)">
+            <summary>
+            Notifiy the CycleManager of a new AllocationDifference
+            </summary>
+            <param name="curP">
+            The <see cref="T:Alica.RunningPlan" /> of this CycleManager, in case it has changed.
+            </param>
+            <param name="aldif">
+            The new <see cref="T:Alica.AllocationDifference" /></param>
+        </member>
+        <member name="M:Alica.CycleManager.SetNewAllocDiff(Alica.RunningPlan,Alica.Assignment,Alica.Assignment,Alica.AllocationDifference.Reason)">
+            <summary>
+            Notifiy the CycleManager of a change in the assignment
+            </summary>
+            <param name="curP">
+            The <see cref="T:Alica.RunningPlan" /> of this CycleManager, in case it has changed.
+            </param>
+            <param name="oldAss">
+            The former <see cref="T:Alica.Assignment" /></param>
+            <param name="newAss">
+            The new <see cref="T:Alica.Assignment" /></param>
+            <param name="reas">
+            The <see cref="T:Alica.AllocationDifference.Reason" /> for this change.
+            </param>
+        </member>
+        <member name="M:Alica.CycleManager.Update">
+            <summary>
+            Called once per engine iteration by the corresponding <see cref="T:Alica.RunningPlan" />.
+            Checks whether a state change is needed.
+            </summary>
+        </member>
+        <member name="M:Alica.CycleManager.HandleAuthorityInfo(RosCS.AlicaEngine.AllocationAuthorityInfo)">
+            <summary>
+            Message Handler
+            </summary>
+            <param name="aai">
+            A <see cref="T:RosCS.AlicaEngine.AllocationAuthorityInfo" /></param>
+        </member>
+        <member name="M:Alica.CycleManager.MayDoUtilityCheck">
+            <summary>
+            Indicates wether authority allows the assignment of this plan to be changed.
+            </summary>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="M:Alica.CycleManager.NeedsSending">
+            <summary>
+            Indicates whether an AllocationAuthorityInfo message should be send.
+            </summary>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="M:Alica.CycleManager.Sent">
+            <summary>
+            Indicate to the manager that a corresponding message has been sent.
+            </summary>
+        </member>
+        <member name="M:Alica.CycleManager.IsOverridden">
+            <summary>
+            Indicates whether an authorative allocation is present
+            </summary>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="M:Alica.CycleManager.HaveAuthority">
+            <summary>
+            Indicates whether the local agent currently holds authority over the plan.
+            </summary>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="M:Alica.CycleManager.SetAssignment(Alica.RunningPlan)">
+            <summary>
+            Apply the authorative assignment to the <see cref="T:Alica.RunningPlan" /></summary>
+            <param name="rp">
+            A <see cref="T:Alica.RunningPlan" /></param>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="T:Alica.BehaviourPool">
+            <summary>
+            Loads behaviours from the specified assembly and manages the context of behaviours started.
+            </summary>
+        </member>
+        <member name="M:Alica.BehaviourPool.#ctor">
+            <summary>
+            Basic Ctor
+            </summary>
+        </member>
+        <member name="M:Alica.BehaviourPool.AddBehaviour(Alica.RunningPlan)">
+            <summary>
+            Adds a Behaviour to the set of currently executed behaviours
+            </summary>
+            <param name="rp">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        </member>
+        <member name="M:Alica.BehaviourPool.RemoveBehaviour(Alica.RunningPlan)">
+            <summary>
+            Removes a behaviour out of the pool and disables its thread
+            </summary>
+            <param name="rp">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        </member>
+        <member name="M:Alica.BehaviourPool.IsBehaviourAvailable(Alica.Behaviour)">
+            <summary>
+            Tests if a behaviour was found in the assembly.
+            </summary>
+            <param name="name">
+            A <see cref="T:System.String" /></param>
+            <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        </member>
+        <member name="M:Alica.BehaviourPool.Init">
+            <summary>
+            Initialise the behaviourpool, called by <see cref="T:Alica.AlicaEngine" /></summary>
+        </member>
+        <member name="M:Alica.BehaviourPool.LoadTypesFromFile">
+            <summary>
+            Loads all behaviour classes from the assembly
+            </summary>
+        </member>
+        <member name="M:Alica.BehaviourPool.GenerateBasicBehaviourFromType(System.Type)">
+            <summary>
+            Returns a BasicBehaviour instance out of a given type
+            </summary>
+            <param name="t">
+            A <see cref="T:System.Type" /></param>
+            <returns>
+            A <see cref="T:Alica.BasicBehaviour" /></returns>
+        </member>
+        <member name="M:Alica.BehaviourPool.Stop">
+            <summary>
+            Stop the behaviour pool for good, will terminate all behaviours.
+            </summary>
+        </member>
+        <member name="F:Alica.RoleAssignment.sortedRobots">
+            Sorted roles according to utility values of a robot</member>
+        <member name="F:Alica.RoleAssignment.ownRole">
+            <summary>
+            Current Robot's role.
+            </summary>
+        </member>
+        <member name="F:Alica.RoleAssignment.ownRobotProperties">
+            <summary>
+            Current Robot's Properties.
+            </summary>
+        </member>
+        <member name="M:Alica.RoleAssignment.RoleUtilities">
+            <summary>
+            Assign roles according to capability and role priority list
+            </summary>
+            <exception cref="T:System.Exception">
+            Represents errors that occur during application execution.
+            </exception>
+        </member>
+        <member name="M:Alica.RoleAssignment.MapRoleToRobot(Alica.RolePriority)">
+            <summary>
+            Maps the role to robot according to priority list and utility value.
+            </summary>
+            <param name="rp">
+            Rp.
+            </param>
+        </member>
+        <member name="T:Alica.TeamObserver">
+            <summary>
+            The TeamObserver manages communication with the team. Thus it sends and receives PlanTreeInfo messages.
+            Specialised Modules may communicate through other means.
+            </summary>
+        </member>
+        <member name="M:Alica.TeamObserver.GetOwnId">
+            <summary>
+            Returns this robot's own unique id.
+            </summary>
+            <returns>
+            A <see cref="T:System.Int32" /></returns>
+        </member>
+        <member name="M:Alica.TeamObserver.GetRobotById(System.Int32)">
+            <summary>
+            Access engine data of a robot by its id. Returns null if none found.
+            </summary>
+            <param name="id">
+            A <see cref="T:System.Int32" /></param>
+            <returns>
+            A <see cref="T:Alica.RobotEngineData" /></returns>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.TeamObserver.GetAvailableRobots-->
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.TeamObserver.GetAvailableRobotProperties-->
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.TeamObserver.GetAvailableRobotIds-->
+        <member name="M:Alica.TeamObserver.TeamSize">
+            <summary>
+            The current size of the team.
+            </summary>
+            <returns>
+            A <see cref="T:System.Int32" /></returns>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.TeamObserver.DoBroadcast(System.Collections.Generic.List{System.Int64})-->
+        <member name="M:Alica.TeamObserver.CleanOwnSuccessMarks(Alica.RunningPlan)">
+            <summary>
+            Removes any successmarks left by this robot in plans no longer inhabited by any agent.
+            </summary>
+            <param name="root">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        </member>
+        <!--FIXME: Invalid documentation markup was found for member M:Alica.TeamObserver.SptFromMessage(System.Int32,System.Collections.Generic.List{System.Int64})-->
+        <member name="M:Alica.TeamObserver.SuccessesInPlan(Alica.Plan)">
+            <summary>
+            Returns the number of successes the team knows about in the given plan.
+            </summary>
+            <param name="p">
+            A <see cref="T:Alica.Plan" /></param>
+            <returns>
+            A <see cref="T:System.Int32" /></returns>
+        </member>
+        <member name="M:Alica.TeamObserver.NotifyTeamLeftPlan(Alica.AbstractPlan)">
+            <summary>
+            Notify the TeamObserver that the team has left a plan. This will reset any successmarks left.
+            </summary>
+            <param name="p">
+            The <see cref="T:Alica.AbstractPlan" /> left by the team.
+            </param>
+        </member>
+        <member name="M:Alica.TeamObserver.NotifyILeftPlan(Alica.AbstractPlan)">
+            <summary>
+            Notify the TeamObserver that this robot has left a plan. This will reset any successmarks left, if no other robot is beliefed to be left in the plan.
+            </summary>
+            <param name="p">
+            The <see cref="T:Alica.AbstractPlan" /> left by the robot
+            </param>
+        </member>
+        <member name="M:Alica.TeamObserver.IgnoreRobot(System.Int32)">
+            <summary>
+            Ignore all messages received by a robot.
+            </summary>
+            <param name="rid">
+            A <see cref="T:System.Int32" /> identifying the robot to ignore.
+            </param>
+        </member>
+    </members>
+</doc>

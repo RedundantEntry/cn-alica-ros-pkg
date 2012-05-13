@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.uni_kassel.cn.alica/src"
+    modelPluginID="de.uni_kassel.cn.alica" modelName="Alica" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>alica.ecore</foreignModel>
+  <genPackages prefix="Alica" disposableProviderFactory="true" ecorePackage="alica.ecore#/">
+    <genClasses ecoreClass="alica.ecore#//Transition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//Transition/msg"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alica.ecore#//Transition/preCondition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alica.ecore#//Transition/inPoint"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alica.ecore#//Transition/outPoint"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="alica.ecore#//Condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//Condition/conditionString"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference alica.ecore#//Condition/abstractPlan"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//PreCondition"/>
+    <genClasses ecoreClass="alica.ecore#//SyncTransition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alica.ecore#//SyncTransition/inSync"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="alica.ecore#//ConnectionPoint">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alica.ecore#//ConnectionPoint/inTransition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alica.ecore#//ConnectionPoint/outTransition"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="alica.ecore#//IConnectable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alica.ecore#//IConnectable/entryPoints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alica.ecore#//IConnectable/exitPoints"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//EntryPoint">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alica.ecore#//EntryPoint/task"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference alica.ecore#//EntryPoint/connectable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//EntryPoint/minCardinality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//EntryPoint/maxCardinality"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="alica.ecore#//ExitPoint">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alica.ecore#//ExitPoint/result"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference alica.ecore#//ExitPoint/connectable"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//SuccessPoint"/>
+    <genClasses ecoreClass="alica.ecore#//FailurePoint"/>
+    <genClasses image="false" ecoreClass="alica.ecore#//AbstractPlan">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alica.ecore#//AbstractPlan/rating"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alica.ecore#//AbstractPlan/conditions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alica.ecore#//AbstractPlan/utilities"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//Behaviour">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alica.ecore#//Behaviour/configurations"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//State">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alica.ecore#//State/plans"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference alica.ecore#//State/inPlan"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//Plan">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//Plan/priority"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alica.ecore#//Plan/states"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alica.ecore#//Plan/transitions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//Plan/minCardinality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//Plan/maxCardinality"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alica.ecore#//Plan/syncTransitions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//Plan/masterPlan"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//Plan/utilityFunction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//Plan/utilityThreshold"/>
+      <genOperations ecoreOperation="alica.ecore#//Plan/calculateCardinalities"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//Utility">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//Utility/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//Utility/value"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//PlanType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alica.ecore#//PlanType/plans"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//Rating"/>
+    <genClasses ecoreClass="alica.ecore#//Result"/>
+    <genClasses ecoreClass="alica.ecore#//RuntimeCondition"/>
+    <genClasses image="false" ecoreClass="alica.ecore#//PlanElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//PlanElement/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//PlanElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//PlanElement/comment"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//Task">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//Task/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alica.ecore#//Task/entryPoint"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//EStringToEStringMapEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//EStringToEStringMapEntry/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//EStringToEStringMapEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//BehaviourConfiguration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alica.ecore#//BehaviourConfiguration/parameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//BehaviourConfiguration/receiveRemoteCommand"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//BehaviourConfiguration/deferring"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//BehaviourConfiguration/frequency"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//BehaviourConfiguration/visionTriggered"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference alica.ecore#//BehaviourConfiguration/behaviour"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//Role">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alica.ecore#//Role/characteristics"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//RoleSet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//RoleSet/usableWithPlanID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//RoleSet/default"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alica.ecore#//RoleSet/mappings"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//ELongToDoubleMapEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//ELongToDoubleMapEntry/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//ELongToDoubleMapEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//RoleDefinitionSet">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alica.ecore#//RoleDefinitionSet/roles"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//RoleTaskMapping">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alica.ecore#//RoleTaskMapping/taskPriorities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alica.ecore#//RoleTaskMapping/role"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//Characteristic">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//Characteristic/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//Characteristic/value"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//TaskGraph">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alica.ecore#//TaskGraph/nodes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alica.ecore#//TaskGraph/edges"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//Edge">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alica.ecore#//Edge/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alica.ecore#//Edge/to"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//TaskWrapper">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alica.ecore#//TaskWrapper/task"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alica.ecore#//TaskWrapper/mappings"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//InternalRoleTaskMapping">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alica.ecore#//InternalRoleTaskMapping/role"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alica.ecore#//InternalRoleTaskMapping/priority"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//Node">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alica.ecore#//Node/inEdge"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alica.ecore#//Node/outEdge"/>
+    </genClasses>
+    <genClasses ecoreClass="alica.ecore#//TaskRepository">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alica.ecore#//TaskRepository/tasks"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alica.ecore#//TaskRepository/defaultTask"/>
+      <genOperations ecoreOperation="alica.ecore#//TaskRepository/createDefaultTask"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

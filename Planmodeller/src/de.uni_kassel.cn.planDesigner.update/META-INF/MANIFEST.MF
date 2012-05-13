@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Plan Designer Update Plug-in
+Bundle-SymbolicName: de.uni_kassel.cn.planDesigner.update;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: de.uni_kassel.cn.plandesigner.update.UpdateActivator
+Bundle-Vendor: Andreas Scharf
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.update.core;bundle-version="3.2.200"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: de.uni_kassel.cn.plandesigner.update

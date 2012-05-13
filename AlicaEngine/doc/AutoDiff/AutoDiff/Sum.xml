@@ -1,0 +1,194 @@
+<Type Name="Sum" FullName="AutoDiff.Sum">
+  <TypeSignature Language="C#" Value="public class Sum : AutoDiff.Term" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit Sum extends AutoDiff.Term" />
+  <AssemblyInfo>
+    <AssemblyName>AutoDiff</AssemblyName>
+    <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>AutoDiff.Term</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Sum: {Terms.Count}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents a sum of at least two terms.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Sum (AutoDiff.Term first, AutoDiff.Term second, AutoDiff.Term[] rest);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class AutoDiff.Term first, class AutoDiff.Term second, class AutoDiff.Term[] rest) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="first" Type="AutoDiff.Term" />
+        <Parameter Name="second" Type="AutoDiff.Term" />
+        <Parameter Name="rest" Type="AutoDiff.Term[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="first">The first term in the sum</param>
+        <param name="second">The second term in the sum</param>
+        <param name="rest">The rest of the terms in the sum.</param>
+        <summary>
+            Constructs an instance of the <see cref="T:AutoDiff.Sum" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="public override void Accept (AutoDiff.ITermVisitor visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Accept(class AutoDiff.ITermVisitor visitor) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visitor" Type="AutoDiff.ITermVisitor" />
+      </Parameters>
+      <Docs>
+        <param name="visitor">The term visitor to accept.</param>
+        <summary>
+            Accepts a term visitor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Accept&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public override TResult Accept&lt;TResult&gt; (AutoDiff.ITermVisitor&lt;TResult&gt; visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!TResult Accept&lt;TResult&gt;(class AutoDiff.ITermVisitor`1&lt;!!TResult&gt; visitor) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="visitor" Type="AutoDiff.ITermVisitor&lt;TResult&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+        <param name="visitor">The visitor to accept</param>
+        <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+        <returns>
+            The result from the visitor's visit function.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AggregateConstants">
+      <MemberSignature Language="C#" Value="public override AutoDiff.Term AggregateConstants ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class AutoDiff.Term AggregateConstants() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Derivative">
+      <MemberSignature Language="C#" Value="public override AutoDiff.Term Derivative (AutoDiff.Variable v);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class AutoDiff.Term Derivative(class AutoDiff.Variable v) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v" Type="AutoDiff.Variable" />
+      </Parameters>
+      <Docs>
+        <param name="v">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Terms">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;AutoDiff.Term&gt; Terms { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class AutoDiff.Term&gt; Terms" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;AutoDiff.Term&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the terms of this sum.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

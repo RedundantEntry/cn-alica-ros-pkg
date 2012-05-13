@@ -1,0 +1,1082 @@
+<html>
+  <head>
+    <title>AutoDiff.ITermVisitor&lt;TResult&gt;</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">AutoDiff</a> : <a href="index.html">AutoDiff Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:AutoDiff.ITermVisitor`1">Overview</a>
+      </p>
+      <p>
+        <a href="#T:AutoDiff.ITermVisitor`1:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:AutoDiff.ITermVisitor`1:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:AutoDiff.ITermVisitor`1:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:AutoDiff.ITermVisitor`1">ITermVisitor&lt;TResult&gt; Generic Interface</h1>
+    <p class="Summary" id="T:AutoDiff.ITermVisitor`1:Summary">
+            A visitor for the terms that has a result from its computations
+            </p>
+    <div id="T:AutoDiff.ITermVisitor`1:Signature">
+      <h2>Syntax</h2>
+      <div class="Signature">public interface  <b>ITermVisitor&lt;TResult&gt;</b></div>
+    </div>
+    <div class="Remarks" id="T:AutoDiff.ITermVisitor`1:Docs">
+      <h4 class="Subsection">Type Parameters</h4>
+      <blockquote class="SubsectionBox" id="T:AutoDiff.ITermVisitor`1:Docs:Type Parameters">
+        <dl>
+          <dt>
+            <i>TResult</i>
+          </dt>
+          <dd>The type of the computation results</dd>
+        </dl>
+      </blockquote>
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:AutoDiff.ITermVisitor`1:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:AutoDiff.ITermVisitor`1:Docs:Version Information">
+        <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Abs)">Visit</a>
+                  </b>(<a href="../AutoDiff/Abs.html">Abs</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote>
+            Computes a value for an exponential function term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.And)">Visit</a>
+                  </b>(<a href="../AutoDiff/And.html">And</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote>
+            Computes a value for an and term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Atan2)">Visit</a>
+                  </b>(<a href="../AutoDiff/Atan2.html">Atan2</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Constant)">Visit</a>
+                  </b>(<a href="../AutoDiff/Constant.html">Constant</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote>
+            Computes a value for a constant term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.ConstraintUtility)">Visit</a>
+                  </b>(<a href="../AutoDiff/ConstraintUtility.html">ConstraintUtility</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote>
+            Computes a value for a ConstraintUtility term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Cos)">Visit</a>
+                  </b>(<a href="../AutoDiff/Cos.html">Cos</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote>
+            Computes a value for a cosine term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Exp)">Visit</a>
+                  </b>(<a href="../AutoDiff/Exp.html">Exp</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote>
+            Computes a value for an exponential function term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.IntPower)">Visit</a>
+                  </b>(<a href="../AutoDiff/IntPower.html">IntPower</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote>
+            Computes a value for a power term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Log)">Visit</a>
+                  </b>(<a href="../AutoDiff/Log.html">Log</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote>
+            Computes a value for a logarithm term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.LTConstraint)">Visit</a>
+                  </b>(<a href="../AutoDiff/LTConstraint.html">LTConstraint</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote>
+            Computes a value for a less-than constraint term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.LTEConstraint)">Visit</a>
+                  </b>(<a href="../AutoDiff/LTEConstraint.html">LTEConstraint</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote>
+            Computes a value for a less-than-or-equal constraint term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Max)">Visit</a>
+                  </b>(<a href="../AutoDiff/Max.html">Max</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote>
+            Computes a value for a max term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Min)">Visit</a>
+                  </b>(<a href="../AutoDiff/Min.html">Min</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote>
+            Computes a value for a min term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Or)">Visit</a>
+                  </b>(<a href="../AutoDiff/Or.html">Or</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote>
+            Computes a value for an or term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Product)">Visit</a>
+                  </b>(<a href="../AutoDiff/Product.html">Product</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote>
+            Computes a value for a product term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Reification)">Visit</a>
+                  </b>(<a href="../AutoDiff/Reification.html">Reification</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sigmoid)">Visit</a>
+                  </b>(<a href="../AutoDiff/Sigmoid.html">Sigmoid</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote>
+            Computes a value for a sigmoid term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sin)">Visit</a>
+                  </b>(<a href="../AutoDiff/Sin.html">Sin</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote>
+            Computes a value for a sine term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sum)">Visit</a>
+                  </b>(<a href="../AutoDiff/Sum.html">Sum</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote>
+            Computes a value for a sum term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Variable)">Visit</a>
+                  </b>(<a href="../AutoDiff/Variable.html">Variable</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote>
+            Computes a value for a variable term.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Zero)">Visit</a>
+                  </b>(<a href="../AutoDiff/Zero.html">Zero</a>)<nobr> : <i title="The type of the computation results">TResult</i></nobr><blockquote>
+            Computes a value for a zero term.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:AutoDiff.ITermVisitor`1:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Abs)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Abs):member">
+          <p class="Summary">
+            Computes a value for an exponential function term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/Abs.html">Abs</a> abs)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Abs):Parameters">
+            <dl>
+              <dt>
+                <i>abs</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Abs):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Abs):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Abs):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.And)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.And):member">
+          <p class="Summary">
+            Computes a value for an and term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/And.html">And</a> and)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.And):Parameters">
+            <dl>
+              <dt>
+                <i>and</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.And):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.And):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.And):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Atan2)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Atan2):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/Atan2.html">Atan2</a> atan2)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Atan2):Parameters">
+            <dl>
+              <dt>
+                <i>atan2</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Atan2):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Atan2):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Atan2):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Constant)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Constant):member">
+          <p class="Summary">
+            Computes a value for a constant term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/Constant.html">Constant</a> constant)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Constant):Parameters">
+            <dl>
+              <dt>
+                <i>constant</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Constant):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Constant):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Constant):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.ConstraintUtility)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.ConstraintUtility):member">
+          <p class="Summary">
+            Computes a value for a ConstraintUtility term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/ConstraintUtility.html">ConstraintUtility</a> cu)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.ConstraintUtility):Parameters">
+            <dl>
+              <dt>
+                <i>cu</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.ConstraintUtility):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.ConstraintUtility):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.ConstraintUtility):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Cos)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Cos):member">
+          <p class="Summary">
+            Computes a value for a cosine term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/Cos.html">Cos</a> cos)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Cos):Parameters">
+            <dl>
+              <dt>
+                <i>cos</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Cos):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Cos):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Cos):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Exp)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Exp):member">
+          <p class="Summary">
+            Computes a value for an exponential function term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/Exp.html">Exp</a> exp)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Exp):Parameters">
+            <dl>
+              <dt>
+                <i>exp</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Exp):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Exp):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Exp):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.IntPower)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.IntPower):member">
+          <p class="Summary">
+            Computes a value for a power term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/IntPower.html">IntPower</a> intPower)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.IntPower):Parameters">
+            <dl>
+              <dt>
+                <i>intPower</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.IntPower):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.IntPower):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.IntPower):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Log)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Log):member">
+          <p class="Summary">
+            Computes a value for a logarithm term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/Log.html">Log</a> log)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Log):Parameters">
+            <dl>
+              <dt>
+                <i>log</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Log):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Log):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Log):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.LTConstraint)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.LTConstraint):member">
+          <p class="Summary">
+            Computes a value for a less-than constraint term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/LTConstraint.html">LTConstraint</a> constraint)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.LTConstraint):Parameters">
+            <dl>
+              <dt>
+                <i>constraint</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.LTConstraint):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.LTConstraint):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.LTConstraint):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.LTEConstraint)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.LTEConstraint):member">
+          <p class="Summary">
+            Computes a value for a less-than-or-equal constraint term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/LTEConstraint.html">LTEConstraint</a> constraint)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.LTEConstraint):Parameters">
+            <dl>
+              <dt>
+                <i>constraint</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.LTEConstraint):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.LTEConstraint):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.LTEConstraint):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Max)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Max):member">
+          <p class="Summary">
+            Computes a value for a max term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/Max.html">Max</a> max)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Max):Parameters">
+            <dl>
+              <dt>
+                <i>max</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Max):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Max):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Max):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Min)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Min):member">
+          <p class="Summary">
+            Computes a value for a min term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/Min.html">Min</a> min)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Min):Parameters">
+            <dl>
+              <dt>
+                <i>min</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Min):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Min):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Min):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Or)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Or):member">
+          <p class="Summary">
+            Computes a value for an or term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/Or.html">Or</a> or)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Or):Parameters">
+            <dl>
+              <dt>
+                <i>or</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Or):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Or):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Or):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Product)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Product):member">
+          <p class="Summary">
+            Computes a value for a product term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/Product.html">Product</a> product)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Product):Parameters">
+            <dl>
+              <dt>
+                <i>product</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Product):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Product):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Product):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Reification)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Reification):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/Reification.html">Reification</a> r)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Reification):Parameters">
+            <dl>
+              <dt>
+                <i>r</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Reification):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Reification):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Reification):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sigmoid)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sigmoid):member">
+          <p class="Summary">
+            Computes a value for a sigmoid term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/Sigmoid.html">Sigmoid</a> sigmoid)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sigmoid):Parameters">
+            <dl>
+              <dt>
+                <i>sigmoid</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sigmoid):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sigmoid):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sigmoid):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sin)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sin):member">
+          <p class="Summary">
+            Computes a value for a sine term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/Sin.html">Sin</a> sin)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sin):Parameters">
+            <dl>
+              <dt>
+                <i>sin</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sin):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sin):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sin):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sum)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sum):member">
+          <p class="Summary">
+            Computes a value for a sum term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/Sum.html">Sum</a> sum)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sum):Parameters">
+            <dl>
+              <dt>
+                <i>sum</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sum):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sum):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Sum):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Variable)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Variable):member">
+          <p class="Summary">
+            Computes a value for a variable term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/Variable.html">Variable</a> variable)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Variable):Parameters">
+            <dl>
+              <dt>
+                <i>variable</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Variable):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Variable):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Variable):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Zero)">Visit Method</h3>
+        <blockquote id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Zero):member">
+          <p class="Summary">
+            Computes a value for a zero term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <i title="The type of the computation results">TResult</i> <b>Visit</b> (<a href="../AutoDiff/Zero.html">Zero</a> zero)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Zero):Parameters">
+            <dl>
+              <dt>
+                <i>zero</i>
+              </dt>
+              <dd>The input term.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Zero):Returns">The result of the computation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Zero):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.ITermVisitor`1.Visit(AutoDiff.Zero):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

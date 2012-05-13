@@ -1,0 +1,140 @@
+<Type Name="ConstraintStore" FullName="Alica.ConstraintStore">
+  <TypeSignature Language="C#" Value="public class ConstraintStore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConstraintStore extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Holds information about active constraints in the corresponding <see cref="T:Alica.RunningPlan" /></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConstraintStore (Alica.RunningPlan rp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Alica.RunningPlan rp) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rp" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="rp">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        <summary>
+            Default constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptQuery">
+      <MemberSignature Language="C#" Value="public void AcceptQuery (Alica.ConstraintQuery query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AcceptQuery(class Alica.ConstraintQuery query) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="Alica.ConstraintQuery" />
+      </Parameters>
+      <Docs>
+        <param name="query">
+            A <see cref="T:Alica.ConstraintQuery" /></param>
+        <summary>
+            Called by the <see cref="T:Alica.ConstraintQuery" /> to obtain all relevant calls.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCondition">
+      <MemberSignature Language="C#" Value="public void AddCondition (Alica.Condition con);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddCondition(class Alica.Condition con) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="con" Type="Alica.Condition" />
+      </Parameters>
+      <Docs>
+        <param name="con">
+            A <see cref="T:Alica.Condition" /></param>
+        <summary>
+            Add a condition to the store.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Clear store, revoking all constraints
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCondition">
+      <MemberSignature Language="C#" Value="public void RemoveCondition (Alica.Condition con);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveCondition(class Alica.Condition con) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="con" Type="Alica.Condition" />
+      </Parameters>
+      <Docs>
+        <param name="con">
+            A <see cref="T:Alica.Condition" /></param>
+        <summary>
+            Revoke a specific condition from the constraint store
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

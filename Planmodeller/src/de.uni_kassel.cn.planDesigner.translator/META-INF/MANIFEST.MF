@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Translator
+Bundle-SymbolicName: de.uni_kassel.cn.planDesigner.utility.translator;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: lib/antlr-3.1.1.jar,
+ .
+Bundle-Vendor: Carpe Noctem
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: de.uni_kassel.cn.planDesigner.translator,
+ de.uni_kassel.cn.planDesigner.translator.parser.antlr
+Require-Bundle: de.uni_kassel.cn.planDesigner.utility.parser;bundle-version="1.0.0"

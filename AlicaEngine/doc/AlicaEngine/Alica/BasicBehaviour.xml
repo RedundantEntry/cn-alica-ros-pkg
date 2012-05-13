@@ -1,0 +1,633 @@
+<Type Name="BasicBehaviour" FullName="Alica.BasicBehaviour">
+  <TypeSignature Language="C#" Value="public abstract class BasicBehaviour" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BasicBehaviour extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The base class for all behaviours. All Behaviours must inherit from this class.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BasicBehaviour (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DueTime">
+      <MemberSignature Language="C#" Value="public int DueTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DueTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FailureStatus">
+      <MemberSignature Language="C#" Value="public bool FailureStatus { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FailureStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The Failure flag. Raised by a behaviour to indicate it has failed in some way.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHigherEntryPoint">
+      <MemberSignature Language="C#" Value="protected Alica.EntryPoint GetHigherEntryPoint (string planName, string taskName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class Alica.EntryPoint GetHigherEntryPoint(string planName, string taskName) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.EntryPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="planName" Type="System.String" />
+        <Parameter Name="taskName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="planName">
+            A <see cref="T:System.String" /></param>
+        <param name="taskName">
+            A <see cref="T:System.String" /></param>
+        <summary>
+            Similar to <see cref="M:Alica.BasicBehaviour.GetParentEntryPoint(System.String)" />, but queries the plan hierarchy upwards.
+            </summary>
+        <returns>
+            The <see cref="T:Alica.EntryPoint" /> of an ancestor plan. Can be used to query for robots (<see cref="M:Alica.BasicBehaviour.RobotsInEntryPointOfHigherPlan(Alica.EntryPoint)" />).
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOwnId">
+      <MemberSignature Language="C#" Value="protected int GetOwnId ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance int32 GetOwnId() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Convenience method to obtain the robot's own id.
+            </summary>
+        <returns>
+            A <see cref="T:System.Int32" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentEntryPoint">
+      <MemberSignature Language="C#" Value="protected Alica.EntryPoint GetParentEntryPoint (string taskName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class Alica.EntryPoint GetParentEntryPoint(string taskName) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.EntryPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="taskName">
+            A <see cref="T:System.String" /></param>
+        <summary>
+            Can be used to query plan information of the parent plan from within a behaviour.
+            Usually called from within <see cref="M:Alica.BasicBehaviour.InitializeParameters" /></summary>
+        <returns>
+            The <see cref="T:Alica.EntryPoint" /> of the parent plan. Can be used to query for robots (<see cref="M:Alica.BasicBehaviour.RobotsInEntryPoint(Alica.EntryPoint)" />).
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeParameters">
+      <MemberSignature Language="C#" Value="protected virtual void InitializeParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InitializeParameters() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Called whenever a behaviour is started, i.e., when the corresponding state is entered.
+            Override for behaviour specific initialisation
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageObj">
+      <MemberSignature Language="C#" Value="public object MessageObj { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object MessageObj" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="name">
+      <MemberSignature Language="C#" Value="protected string name;" />
+      <MemberSignature Language="ILAsm" Value=".field family string name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="parameters">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.Dictionary&lt;string,string&gt; parameters;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Generic.Dictionary`2&lt;string, string&gt; parameters" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,string&gt; Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, string&gt; Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The set of static Parameters as defined by the <see cref="T:Alica.BehaviourConfiguration" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Period">
+      <MemberSignature Language="C#" Value="public int Period { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Period" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RobotsInEntryPoint">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.ICollection&lt;int&gt; RobotsInEntryPoint (Alica.EntryPoint ep);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Collections.Generic.ICollection`1&lt;int32&gt; RobotsInEntryPoint(class Alica.EntryPoint ep) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ep" Type="Alica.EntryPoint" />
+      </Parameters>
+      <Docs>
+        <param name="ep">
+            A <see cref="T:Alica.EntryPoint" /></param>
+        <summary />
+        <returns>
+            A <see cref="!:ICollection`1" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RobotsInEntryPointOfHigherPlan">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.ICollection&lt;int&gt; RobotsInEntryPointOfHigherPlan (Alica.EntryPoint ep);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Collections.Generic.ICollection`1&lt;int32&gt; RobotsInEntryPointOfHigherPlan(class Alica.EntryPoint ep) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ep" Type="Alica.EntryPoint" />
+      </Parameters>
+      <Docs>
+        <param name="ep">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RobotsInState">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.HashSet&lt;int&gt; RobotsInState (Alica.State s);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Collections.Generic.HashSet`1&lt;int32&gt; RobotsInState(class Alica.State s) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.HashSet&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="Alica.State" />
+      </Parameters>
+      <Docs>
+        <param name="s">
+            A <see cref="T:Alica.State" /></param>
+        <summary>
+            Returns the set of robots that currently inhabit state s in the parent plan.
+            </summary>
+        <returns>
+            A set of robot ids.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RobotsInThisPlan">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.List&lt;int&gt; RobotsInThisPlan ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Collections.Generic.List`1&lt;int32&gt; RobotsInThisPlan() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns all robots currently working on the parent plan.
+            </summary>
+        <returns>
+            A <see cref="!:List`1" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RobotsInThisState">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.HashSet&lt;int&gt; RobotsInThisState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Collections.Generic.HashSet`1&lt;int32&gt; RobotsInThisState() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.HashSet&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the set of robots that are currently inhabiting the state in which this behaviour is executed
+            </summary>
+        <returns>
+            A set containing all ids of robots inhabiting the state in which the current behaviour is executed
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RobotsInThisTask">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.ICollection&lt;int&gt; RobotsInThisTask ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Collections.Generic.ICollection`1&lt;int32&gt; RobotsInThisTask() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns all robots currently working on the task this robot is assigned to in the parent plan.
+            </summary>
+        <returns>
+            A <see cref="!:ICollection`1" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public abstract void Run (object msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Run(object msg) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="msg">
+            A <see cref="T:System.Object" />, null is called by a timer, otherwise defined by the callee of the <see cref="T:Alica.EngineTrigger" /></param>
+        <summary>
+            The running loop of a behaviour, to be overriden by a specific behaviour
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunningPlan">
+      <MemberSignature Language="C#" Value="public Alica.RunningPlan RunningPlan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Alica.RunningPlan RunningPlan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.RunningPlan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The running plan representing this behaviour within the <see cref="T:Alica.PlanBase" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTrigger">
+      <MemberSignature Language="C#" Value="public virtual void SetTrigger (Alica.EngineTrigger e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetTrigger(class Alica.EngineTrigger e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="Alica.EngineTrigger" />
+      </Parameters>
+      <Docs>
+        <param name="e">
+            A <see cref="T:Alica.EngineTrigger" /></param>
+        <summary>
+            Override this to have <see cref="M:Alica.BasicBehaviour.Run(System.Object)" /> called on specific events.
+            The EngineTrigger can be added to any appropriately typed event. SetTrigger will only be called once.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Signaler">
+      <MemberSignature Language="C#" Value="public System.Threading.AutoResetEvent Signaler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.AutoResetEvent Signaler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.AutoResetEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuccessStatus">
+      <MemberSignature Language="C#" Value="public bool SuccessStatus { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SuccessStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The Success flag. Raised by a behaviour to indicate it reached whatever it ment to reach.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VariableByName">
+      <MemberSignature Language="C#" Value="public Alica.Variable VariableByName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Alica.Variable VariableByName(string name) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.Variable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+            A <see cref="T:System.String" /></param>
+        <summary>
+            Access a variable by its name. This is the most common way to access variables during the <see cref="M:Alica.BasicBehaviour.Run(System.Object)" /> method of the behaviour.
+            </summary>
+        <returns>
+            A <see cref="T:Alica.Variable" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VariableIdByName">
+      <MemberSignature Language="C#" Value="public long VariableIdByName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 VariableIdByName(string name) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+            A <see cref="T:System.String" /></param>
+        <summary>
+            Access a variable's by its name.
+            </summary>
+        <returns>
+            A <see cref="T:System.Int64" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Variables">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedList&lt;Alica.Variable&gt; Variables { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.LinkedList`1&lt;class Alica.Variable&gt; Variables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.LinkedList&lt;Alica.Variable&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The set of <see cref="T:Alica.Variable" />s attached to this behaviours as defined by the <see cref="T:Alica.BehaviourConfiguration" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

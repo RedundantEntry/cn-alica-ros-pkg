@@ -1,0 +1,97 @@
+<Type Name="IConstraintSolver" FullName="Alica.IConstraintSolver">
+  <TypeSignature Language="C#" Value="public interface IConstraintSolver" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IConstraintSolver" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExistsSolution">
+      <MemberSignature Language="C#" Value="public bool ExistsSolution (System.Collections.Generic.List&lt;Alica.Variable&gt; vars, System.Collections.Generic.List&lt;Alica.ConstraintDescriptor&gt; calls);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ExistsSolution(class System.Collections.Generic.List`1&lt;class Alica.Variable&gt; vars, class System.Collections.Generic.List`1&lt;class Alica.ConstraintDescriptor&gt; calls) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vars" Type="System.Collections.Generic.List&lt;Alica.Variable&gt;" />
+        <Parameter Name="calls" Type="System.Collections.Generic.List&lt;Alica.ConstraintDescriptor&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="vars">To be added.</param>
+        <param name="calls">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSolution">
+      <MemberSignature Language="C#" Value="public bool GetSolution (System.Collections.Generic.List&lt;Alica.Variable&gt; vars, System.Collections.Generic.List&lt;Alica.ConstraintDescriptor&gt; calls, out double[] results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetSolution(class System.Collections.Generic.List`1&lt;class Alica.Variable&gt; vars, class System.Collections.Generic.List`1&lt;class Alica.ConstraintDescriptor&gt; calls, float64[] results) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vars" Type="System.Collections.Generic.List&lt;Alica.Variable&gt;" />
+        <Parameter Name="calls" Type="System.Collections.Generic.List&lt;Alica.ConstraintDescriptor&gt;" />
+        <Parameter Name="results" Type="System.Double[]&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="vars">To be added.</param>
+        <param name="calls">To be added.</param>
+        <param name="results">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSolution">
+      <MemberSignature Language="C#" Value="public bool GetSolution (System.Collections.Generic.List&lt;Alica.Variable&gt; vars, System.Collections.Generic.List&lt;Alica.ConstraintDescriptor&gt; calls, out object[] results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetSolution(class System.Collections.Generic.List`1&lt;class Alica.Variable&gt; vars, class System.Collections.Generic.List`1&lt;class Alica.ConstraintDescriptor&gt; calls, object[] results) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vars" Type="System.Collections.Generic.List&lt;Alica.Variable&gt;" />
+        <Parameter Name="calls" Type="System.Collections.Generic.List&lt;Alica.ConstraintDescriptor&gt;" />
+        <Parameter Name="results" Type="System.Object[]&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="vars">To be added.</param>
+        <param name="calls">To be added.</param>
+        <param name="results">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

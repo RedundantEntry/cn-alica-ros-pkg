@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Export-Package: de.uni_kassel.cn.planDesigner.ui,de.uni_kassel.cn.plan
+ Designer.ui.adapter,de.uni_kassel.cn.planDesigner.ui.commands,de.uni_
+ kassel.cn.planDesigner.ui.edit,de.uni_kassel.cn.planDesigner.ui.edito
+ rs,de.uni_kassel.cn.planDesigner.ui.parts,de.uni_kassel.cn.planDesign
+ er.ui.properties,de.uni_kassel.cn.planDesigner.ui.uiextensionmodel,de
+ .uni_kassel.cn.planDesigner.ui.uiextensionmodel.impl,de.uni_kassel.cn
+ .planDesigner.ui.uiextensionmodel.provider,de.uni_kassel.cn.planDesig
+ ner.ui.uiextensionmodel.util,de.uni_kassel.cn.planDesigner.ui.util
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: planmodellerUI.jar
+Bundle-Name: Plan Designer UI
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: org.eclipse.gef,org.eclipse.ui.ide,org.eclipse.ui.view
+ s.properties.tabbed;bundle-version="[3.4.0,3.6.0]",org.eclipse.emf.tr
+ ansaction.ui;bundle-version="1.2.0",org.eclipse.emf.workspace;bundle-
+ version="1.2.0",org.eclipse.emf.workspace.ui;bundle-version="1.2.0",o
+ rg.eclipse.emf.ecore.xmi;bundle-version="2.4.0",org.eclipse.ltk.core.
+ refactoring;bundle-version="3.4.0",org.eclipse.ui.navigator;bundle-ve
+ rsion="3.3.100",org.eclipse.ui.navigator.resources;bundle-version="3.
+ 3.100",org.eclipse.zest.core;bundle-version="1.0.0",org.eclipse.zest.
+ layouts;bundle-version="1.0.0",de.uni_kassel.cn.planDesigner.edit;bun
+ dle-version="1.0.0",de.uni_kassel.cn.planDesigner.utility.translator;
+ bundle-version="1.0.0",org.eclipse.ui.workbench.texteditor;bundle-ver
+ sion="3.4.1",org.eclipse.core.runtime,org.eclipse.ui,org.eclipse.jfac
+ e.text,org.eclipse.ui.editors
+Bundle-Vendor: Carpe Noctem
+Bundle-Version: 1.0.0.201205131302
+Bundle-ManifestVersion: 2
+Bundle-Activator: de.uni_kassel.cn.planDesigner.ui.PlanDesignerActivat
+ or
+Bundle-SymbolicName: de.uni_kassel.cn.planDesigner.ui;singleton:=true
+
+

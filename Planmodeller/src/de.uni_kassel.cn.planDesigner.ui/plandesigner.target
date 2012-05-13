@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.5"?>
+
+<target name="plandesigner">
+<locations>
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
+<unit id="org.eclipse.platform.ide" version="3.6.2.M20110210-1200"/>
+<unit id="org.eclipse.equinox.executable.feature.group" version="3.4.2.R36x_v20110125-7N7K7bF8zk1BAKMh0iz0t94miBLY"/>
+<unit id="org.eclipse.pde.feature.group" version="3.6.2.r362_v20110203-7b7mFL2FET3dhHalh1iNZtL"/>
+<unit id="org.eclipse.rcp.sdk.id" version="3.6.0.M20110210-1200"/>
+<unit id="org.eclipse.emf.ecoretools.sdk.feature.group" version="0.10.0.v20100615-1639"/>
+<unit id="org.eclipse.emf.sdk.feature.group" version="2.6.1.v20100914-1218"/>
+<unit id="org.eclipse.emf.transaction.sdk.feature.group" version="1.4.0.v20100428-2315-777N-9AZP-D1aQtjUklrYl0eU20D"/>
+<unit id="org.eclipse.emf.validation.sdk.feature.group" version="1.4.0.v20100428-2315-67J-96SGR35WNqZRZfmQnghI6uFA"/>
+<unit id="org.eclipse.gef.sdk.feature.group" version="3.6.2.v20110128-0100-7G7R77A5WNcHQDbhX8JWOYLOSeRJ"/>
+<unit id="org.eclipse.zest.sdk.feature.group" version="1.2.0.v20100519-2050-67918COKNHAKQZIHNTdWQTdUL7UM"/>
+<unit id="org.eclipse.emf.mwe2.language.sdk.feature.group" version="1.0.2.v201102151014"/>
+<unit id="org.eclipse.emf.mwe2.runtime.sdk.feature.group" version="1.0.2.v201102150556"/>
+<unit id="org.eclipse.emf.mwe.sdk.feature.group" version="1.0.2.v201102150556"/>
+<unit id="org.eclipse.xpand.sdk.feature.group" version="1.0.1.v201008251147"/>
+<repository location="http://download.eclipse.org/releases/helios/201102250900"/>
+</location>
+<location path="${project_loc}/target" type="Directory"/>
+</locations>
+</target>

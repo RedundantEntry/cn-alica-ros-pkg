@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Plan Designer Codegeneration
+Bundle-SymbolicName: de.uni_kassel.cn.planDesigner.codegeneration;singleton:=true
+Bundle-Version: 1.0.1.qualifier
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: org.eclipse.ui;bundle-version="3.4.0",
+ org.openarchitectureware.core.emftools;bundle-version="4.3.0",
+ org.openarchitectureware.core.expressions;bundle-version="4.3.0",
+ org.openarchitectureware.core.workflow;bundle-version="4.3.0",
+ org.openarchitectureware.core.xpand2;bundle-version="4.3.0",
+ org.openarchitectureware.util.stdlib;bundle-version="4.3.0",
+ org.apache.commons.logging;bundle-version="1.0.4",
+ org.antlr.runtime;bundle-version="3.0.0",
+ org.apache.commons.cli;bundle-version="1.0.0",
+ org.eclipse.emf.ecore;bundle-version="2.4.0",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.4.0",
+ org.eclipse.core.resources;bundle-version="3.4.0",
+ org.eclipse.core.runtime;bundle-version="3.4.0",
+ de.uni_kassel.cn.alica;bundle-version="1.0.0",
+ de.uni_kassel.cn.planDesigner.ui;bundle-version="1.0.0",
+ org.eclipse.gef;bundle-version="3.4.1",
+ org.eclipse.jface.text;bundle-version="3.6.1"
+Bundle-Vendor: Carpe Noctem
+Bundle-ClassPath: libs/ini4j-0.4.0.jar,
+ .
+Bundle-Activator: de.uni_kassel.cn.planDesigner.codegeneration.CodeGenActivator
+Bundle-ActivationPolicy: lazy

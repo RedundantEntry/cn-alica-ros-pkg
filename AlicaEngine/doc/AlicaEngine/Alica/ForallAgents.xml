@@ -1,0 +1,95 @@
+<Type Name="ForallAgents" FullName="Alica.ForallAgents">
+  <TypeSignature Language="C#" Value="public class ForallAgents : Alica.Quantifier" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ForallAgents extends Alica.Quantifier" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Alica.Quantifier</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A quantifier associated with agents, i.e., the domain identifiers of this quantifier refer to properties of an agent
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ForallAgents (long id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 id) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="id">
+            A <see cref="T:System.Int64" /></param>
+        <summary>
+            Constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSortedTerms">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.List&lt;AutoDiff.Term[]&gt; GetSortedTerms (Alica.RunningPlan p, out System.Collections.Generic.ICollection&lt;int&gt; robots);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.List`1&lt;class AutoDiff.Term[]&gt; GetSortedTerms(class Alica.RunningPlan p, class System.Collections.Generic.ICollection`1&lt;int32&gt; robots) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;AutoDiff.Term[]&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p" Type="Alica.RunningPlan" />
+        <Parameter Name="robots" Type="System.Collections.Generic.ICollection&lt;System.Int32&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="p">To be added.</param>
+        <param name="robots">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSortedVariables">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.List&lt;Alica.Variable[]&gt; GetSortedVariables (Alica.RunningPlan p, out System.Collections.Generic.ICollection&lt;int&gt; robots);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.List`1&lt;class Alica.Variable[]&gt; GetSortedVariables(class Alica.RunningPlan p, class System.Collections.Generic.ICollection`1&lt;int32&gt; robots) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Alica.Variable[]&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p" Type="Alica.RunningPlan" />
+        <Parameter Name="robots" Type="System.Collections.Generic.ICollection&lt;System.Int32&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="p">To be added.</param>
+        <param name="robots">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

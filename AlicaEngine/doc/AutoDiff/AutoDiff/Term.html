@@ -1,0 +1,1564 @@
+<html>
+  <head>
+    <title>AutoDiff.Term</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">AutoDiff</a> : <a href="index.html">AutoDiff Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:AutoDiff.Term">Overview</a>
+      </p>
+      <p>
+        <a href="#T:AutoDiff.Term:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:AutoDiff.Term:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:AutoDiff.Term:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:AutoDiff.Term">Term  Class</h1>
+    <p class="Summary" id="T:AutoDiff.Term:Summary">
+            Base class for all automatically-differentiable terms.
+            </p>
+    <div id="T:AutoDiff.Term:Signature">
+      <h2>Syntax</h2>
+      <div class="Signature">public abstract class  <b>Term</b></div>
+    </div>
+    <div class="Remarks" id="T:AutoDiff.Term:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:AutoDiff.Term:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:AutoDiff.Term:Docs:Version Information">
+        <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Protected Constructors</h2>
+        <div class="SectionBox" id="Protected Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:AutoDiff.Term">Term</a>
+                    </b>()</div>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Fields</h2>
+        <div class="SectionBox" id="Public Fields">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:AutoDiff.Term.andop">andop</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../AutoDiff/Term+AndType.html">Term.AndType</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:AutoDiff.Term.constraint_steepness">constraint_steepness</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static readonly </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:AutoDiff.Term.Epsilon">Epsilon</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static readonly </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:AutoDiff.Term.False">False</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../AutoDiff/Term.html">Term</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:AutoDiff.Term.Max">Max</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:AutoDiff.Term.Min">Min</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:AutoDiff.Term.orop">orop</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../AutoDiff/Term+OrType.html">Term.OrType</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static readonly </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:AutoDiff.Term.True">True</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../AutoDiff/Term.html">Term</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:AutoDiff.Term.ConstraintSteepness">ConstraintSteepness</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.Term.Accept(AutoDiff.ITermVisitor)">Accept</a>
+                  </b>(<a href="../AutoDiff/ITermVisitor.html">ITermVisitor</a>)<blockquote>
+            Accepts a term visitor
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.Term.Accept``1(AutoDiff.ITermVisitor{``0})">Accept&lt;TResult&gt;</a>
+                  </b>(<a href="../AutoDiff/ITermVisitor`1.html">ITermVisitor&lt;TResult&gt;</a>)<nobr> : <i title="The type of the result from the visitor's function">TResult</i></nobr><blockquote>
+            Accepts a term visitor with a generic result
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.Term.AggregateConstants">AggregateConstants</a>
+                  </b>()<nobr> : <a href="../AutoDiff/Term.html">Term</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.Term.Derivative(AutoDiff.Variable)">Derivative</a>
+                  </b>(<a href="../AutoDiff/Variable.html">Variable</a>)<nobr> : <a href="../AutoDiff/Term.html">Term</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.Term.Negate">Negate</a>
+                  </b>()<nobr> : <a href="../AutoDiff/Term.html">Term</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.Term.SetAnd(AutoDiff.Term.AndType)">SetAnd</a>
+                  </b>(<a href="../AutoDiff/Term+AndType.html">Term.AndType</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:AutoDiff.Term.SetOr(AutoDiff.Term.OrType)">SetOr</a>
+                  </b>(<a href="../AutoDiff/Term+OrType.html">Term.OrType</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Operators</h2>
+        <div class="SectionBox" id="Public Operators">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:AutoDiff.Term.op_Addition(AutoDiff.Term,AutoDiff.Term)">Addition</a>
+                  </b>(<a href="../AutoDiff/Term.html">Term</a>, <a href="../AutoDiff/Term.html">Term</a>)</td>
+                <td>
+            Constructs a sum of the two given terms.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:AutoDiff.Term.op_BitwiseAnd(AutoDiff.Term,AutoDiff.Term)">BitwiseAnd</a>
+                  </b>(<a href="../AutoDiff/Term.html">Term</a>, <a href="../AutoDiff/Term.html">Term</a>)</td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:AutoDiff.Term.op_BitwiseOr(AutoDiff.Term,AutoDiff.Term)">BitwiseOr</a>
+                  </b>(<a href="../AutoDiff/Term.html">Term</a>, <a href="../AutoDiff/Term.html">Term</a>)</td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:AutoDiff.Term.op_Division(AutoDiff.Term,AutoDiff.Term)">Division</a>
+                  </b>(<a href="../AutoDiff/Term.html">Term</a>, <a href="../AutoDiff/Term.html">Term</a>)</td>
+                <td>
+            Constructs a fraction term of the two given terms.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:AutoDiff.Term.op_ExclusiveOr(AutoDiff.Term,AutoDiff.Term)">ExclusiveOr</a>
+                  </b>(<a href="../AutoDiff/Term.html">Term</a>, <a href="../AutoDiff/Term.html">Term</a>)</td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:AutoDiff.Term.op_GreaterThan(AutoDiff.Term,AutoDiff.Term)">GreaterThan</a>
+                  </b>(<a href="../AutoDiff/Term.html">Term</a>, <a href="../AutoDiff/Term.html">Term</a>)</td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:AutoDiff.Term.op_GreaterThanOrEqual(AutoDiff.Term,AutoDiff.Term)">GreaterThanOrEqual</a>
+                  </b>(<a href="../AutoDiff/Term.html">Term</a>, <a href="../AutoDiff/Term.html">Term</a>)</td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:AutoDiff.Term.op_LessThan(AutoDiff.Term,AutoDiff.Term)">LessThan</a>
+                  </b>(<a href="../AutoDiff/Term.html">Term</a>, <a href="../AutoDiff/Term.html">Term</a>)</td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:AutoDiff.Term.op_LessThanOrEqual(AutoDiff.Term,AutoDiff.Term)">LessThanOrEqual</a>
+                  </b>(<a href="../AutoDiff/Term.html">Term</a>, <a href="../AutoDiff/Term.html">Term</a>)</td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:AutoDiff.Term.op_LogicalNot(AutoDiff.Term)">LogicalNot</a>
+                  </b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:AutoDiff.Term.op_Modulus(AutoDiff.Term,AutoDiff.Term)">Modulus</a>
+                  </b>(<a href="../AutoDiff/Term.html">Term</a>, <a href="../AutoDiff/Term.html">Term</a>)</td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:AutoDiff.Term.op_Multiply(AutoDiff.Term,AutoDiff.Term)">Multiply</a>
+                  </b>(<a href="../AutoDiff/Term.html">Term</a>, <a href="../AutoDiff/Term.html">Term</a>)</td>
+                <td>
+            Constructs a product term of the two given terms.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:AutoDiff.Term.op_Subtraction(AutoDiff.Term,AutoDiff.Term)">Subtraction</a>
+                  </b>(<a href="../AutoDiff/Term.html">Term</a>, <a href="../AutoDiff/Term.html">Term</a>)</td>
+                <td>
+            Constructs a difference of the two given terms.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:AutoDiff.Term.op_UnaryNegation(AutoDiff.Term)">UnaryNegation</a>
+                  </b>
+                </td>
+                <td>
+            Constructs a negated term
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:AutoDiff.Term.op_Implicit(System.Double)~AutoDiff.Term">Conversion to AutoDiff.Term</a>
+                  </b>(Implicit)</td>
+                <td>
+            Converts a floating point constant to a constant term.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Extension Methods</h2>
+        <div class="SectionBox" id="Extension Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../AutoDiff/TermUtils.html#M:AutoDiff.TermUtils.Compile(AutoDiff.Term,AutoDiff.Variable[])">Compile</a>
+                  </b>(<i>this</i> <a href="../AutoDiff/Term.html">Term</a>, <b>params</b> <a href="../AutoDiff/Variable.html">Variable</a>[])<nobr> : <a href="../AutoDiff/ICompiledTerm.html">ICompiledTerm</a></nobr><blockquote>
+            Creates a compiled representation of a given term that allows efficient evaluation of the value/gradient.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../AutoDiff/TermUtils.html#M:AutoDiff.TermUtils.Differentiate(AutoDiff.Term,AutoDiff.Variable[],System.Double[])">Differentiate</a>
+                  </b>(<i>this</i> <a href="../AutoDiff/Term.html">Term</a>, <a href="../AutoDiff/Variable.html">Variable</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>[])<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>[]</nobr><blockquote>
+            Computes the gradient of the function represented by a given term at a given point.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../AutoDiff/TermUtils.html#M:AutoDiff.TermUtils.Evaluate(AutoDiff.Term,AutoDiff.Variable[],System.Double[])">Evaluate</a>
+                  </b>(<i>this</i> <a href="../AutoDiff/Term.html">Term</a>, <a href="../AutoDiff/Variable.html">Variable</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>[])<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a></nobr><blockquote>
+            Evaluates the function represented by a given term at a given point.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:AutoDiff.Term:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:AutoDiff.Term">Term Constructor</h3>
+        <blockquote id="C:AutoDiff.Term:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected  <b>Term</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:AutoDiff.Term:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:AutoDiff.Term:Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.Accept(AutoDiff.ITermVisitor)">Accept Method</h3>
+        <blockquote id="M:AutoDiff.Term.Accept(AutoDiff.ITermVisitor):member">
+          <p class="Summary">
+            Accepts a term visitor
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Accept</b> (<a href="../AutoDiff/ITermVisitor.html">ITermVisitor</a> visitor)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.Accept(AutoDiff.ITermVisitor):Parameters">
+            <dl>
+              <dt>
+                <i>visitor</i>
+              </dt>
+              <dd>The term visitor to accept</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.Accept(AutoDiff.ITermVisitor):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.Accept(AutoDiff.ITermVisitor):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.Accept``1(AutoDiff.ITermVisitor{``0})">Accept&lt;TResult&gt; Generic Method</h3>
+        <blockquote id="M:AutoDiff.Term.Accept``1(AutoDiff.ITermVisitor{``0}):member">
+          <p class="Summary">
+            Accepts a term visitor with a generic result
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <i title="The type of the result from the visitor's function">TResult</i> <b>Accept&lt;TResult&gt;</b> (<a href="../AutoDiff/ITermVisitor`1.html">ITermVisitor&lt;TResult&gt;</a> visitor)</div>
+          <h4 class="Subsection">Type Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.Accept``1(AutoDiff.ITermVisitor{``0}):Type Parameters">
+            <dl>
+              <dt>
+                <i>TResult</i>
+              </dt>
+              <dd>The type of the result from the visitor's function</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.Accept``1(AutoDiff.ITermVisitor{``0}):Parameters">
+            <dl>
+              <dt>
+                <i>visitor</i>
+              </dt>
+              <dd>The visitor to accept</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.Accept``1(AutoDiff.ITermVisitor{``0}):Returns">The result from the visitor's visit function.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.Accept``1(AutoDiff.ITermVisitor{``0}):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.Accept``1(AutoDiff.ITermVisitor{``0}):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.AggregateConstants">AggregateConstants Method</h3>
+        <blockquote id="M:AutoDiff.Term.AggregateConstants:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="../AutoDiff/Term.html">Term</a> <b>AggregateConstants</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.AggregateConstants:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.AggregateConstants:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.AggregateConstants:Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:AutoDiff.Term.andop">andop Field</h3>
+        <blockquote id="F:AutoDiff.Term.andop:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../AutoDiff/Term+AndType.html">Term.AndType</a> <b>andop</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:AutoDiff.Term.andop:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:AutoDiff.Term.andop:Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:AutoDiff.Term.constraint_steepness">constraint_steepness Field</h3>
+        <blockquote id="F:AutoDiff.Term.constraint_steepness:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>constraint_steepness</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:AutoDiff.Term.constraint_steepness:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:AutoDiff.Term.constraint_steepness:Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:AutoDiff.Term.ConstraintSteepness">ConstraintSteepness Property</h3>
+        <blockquote id="P:AutoDiff.Term.ConstraintSteepness:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>ConstraintSteepness</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:AutoDiff.Term.ConstraintSteepness:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:AutoDiff.Term.ConstraintSteepness:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:AutoDiff.Term.ConstraintSteepness:Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.Derivative(AutoDiff.Variable)">Derivative Method</h3>
+        <blockquote id="M:AutoDiff.Term.Derivative(AutoDiff.Variable):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="../AutoDiff/Term.html">Term</a> <b>Derivative</b> (<a href="../AutoDiff/Variable.html">Variable</a> v)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.Derivative(AutoDiff.Variable):Parameters">
+            <dl>
+              <dt>
+                <i>v</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.Derivative(AutoDiff.Variable):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.Derivative(AutoDiff.Variable):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.Derivative(AutoDiff.Variable):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:AutoDiff.Term.Epsilon">Epsilon Field</h3>
+        <blockquote id="F:AutoDiff.Term.Epsilon:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static readonly <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>Epsilon</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:AutoDiff.Term.Epsilon:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:AutoDiff.Term.Epsilon:Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:AutoDiff.Term.False">False Field</h3>
+        <blockquote id="F:AutoDiff.Term.False:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static readonly <a href="../AutoDiff/Term.html">Term</a> <b>False</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:AutoDiff.Term.False:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:AutoDiff.Term.False:Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:AutoDiff.Term.Max">Max Field</h3>
+        <blockquote id="F:AutoDiff.Term.Max:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>Max</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:AutoDiff.Term.Max:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:AutoDiff.Term.Max:Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:AutoDiff.Term.Min">Min Field</h3>
+        <blockquote id="F:AutoDiff.Term.Min:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>Min</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:AutoDiff.Term.Min:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:AutoDiff.Term.Min:Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.Negate">Negate Method</h3>
+        <blockquote id="M:AutoDiff.Term.Negate:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public virtual <a href="../AutoDiff/Term.html">Term</a> <b>Negate</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.Negate:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.Negate:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.Negate:Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.op_Addition(AutoDiff.Term,AutoDiff.Term)">op_Addition Method</h3>
+        <blockquote id="M:AutoDiff.Term.op_Addition(AutoDiff.Term,AutoDiff.Term):member">
+          <p class="Summary">
+            Constructs a sum of the two given terms.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../AutoDiff/Term.html">Term</a> operator+ (<a href="../AutoDiff/Term.html">Term</a> left, <a href="../AutoDiff/Term.html">Term</a> right)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_Addition(AutoDiff.Term,AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>left</i>
+              </dt>
+              <dd>First term in the sum</dd>
+              <dt>
+                <i>right</i>
+              </dt>
+              <dd>Second term in the sum</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_Addition(AutoDiff.Term,AutoDiff.Term):Returns">A term representing the sum of <a href="javascript:alert(&quot;Documentation not found.&quot;)">.</a> and <a href="javascript:alert(&quot;Documentation not found.&quot;)">.</a>.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_Addition(AutoDiff.Term,AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_Addition(AutoDiff.Term,AutoDiff.Term):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.op_BitwiseAnd(AutoDiff.Term,AutoDiff.Term)">op_BitwiseAnd Method</h3>
+        <blockquote id="M:AutoDiff.Term.op_BitwiseAnd(AutoDiff.Term,AutoDiff.Term):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../AutoDiff/Term.html">Term</a> operator&amp; (<a href="../AutoDiff/Term.html">Term</a> t1, <a href="../AutoDiff/Term.html">Term</a> t2)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_BitwiseAnd(AutoDiff.Term,AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>t1</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>t2</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_BitwiseAnd(AutoDiff.Term,AutoDiff.Term):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_BitwiseAnd(AutoDiff.Term,AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_BitwiseAnd(AutoDiff.Term,AutoDiff.Term):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.op_BitwiseOr(AutoDiff.Term,AutoDiff.Term)">op_BitwiseOr Method</h3>
+        <blockquote id="M:AutoDiff.Term.op_BitwiseOr(AutoDiff.Term,AutoDiff.Term):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../AutoDiff/Term.html">Term</a> operator| (<a href="../AutoDiff/Term.html">Term</a> t1, <a href="../AutoDiff/Term.html">Term</a> t2)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_BitwiseOr(AutoDiff.Term,AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>t1</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>t2</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_BitwiseOr(AutoDiff.Term,AutoDiff.Term):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_BitwiseOr(AutoDiff.Term,AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_BitwiseOr(AutoDiff.Term,AutoDiff.Term):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.op_Division(AutoDiff.Term,AutoDiff.Term)">op_Division Method</h3>
+        <blockquote id="M:AutoDiff.Term.op_Division(AutoDiff.Term,AutoDiff.Term):member">
+          <p class="Summary">
+            Constructs a fraction term of the two given terms.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../AutoDiff/Term.html">Term</a> operator/ (<a href="../AutoDiff/Term.html">Term</a> numerator, <a href="../AutoDiff/Term.html">Term</a> denominator)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_Division(AutoDiff.Term,AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>numerator</i>
+              </dt>
+              <dd>The numerator of the fraction. That is, the "top" part.</dd>
+              <dt>
+                <i>denominator</i>
+              </dt>
+              <dd>The denominator of the fraction. That is, the "bottom" part.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_Division(AutoDiff.Term,AutoDiff.Term):Returns">A term representing the fraction <i>numerator</i> over <i>denominator</i>.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_Division(AutoDiff.Term,AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_Division(AutoDiff.Term,AutoDiff.Term):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.op_ExclusiveOr(AutoDiff.Term,AutoDiff.Term)">op_ExclusiveOr Method</h3>
+        <blockquote id="M:AutoDiff.Term.op_ExclusiveOr(AutoDiff.Term,AutoDiff.Term):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../AutoDiff/Term.html">Term</a> operator^ (<a href="../AutoDiff/Term.html">Term</a> t1, <a href="../AutoDiff/Term.html">Term</a> t2)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_ExclusiveOr(AutoDiff.Term,AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>t1</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>t2</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_ExclusiveOr(AutoDiff.Term,AutoDiff.Term):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_ExclusiveOr(AutoDiff.Term,AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_ExclusiveOr(AutoDiff.Term,AutoDiff.Term):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.op_GreaterThan(AutoDiff.Term,AutoDiff.Term)">op_GreaterThan Method</h3>
+        <blockquote id="M:AutoDiff.Term.op_GreaterThan(AutoDiff.Term,AutoDiff.Term):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../AutoDiff/Term.html">Term</a> operator&gt; (<a href="../AutoDiff/Term.html">Term</a> t1, <a href="../AutoDiff/Term.html">Term</a> t2)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_GreaterThan(AutoDiff.Term,AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>t1</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>t2</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_GreaterThan(AutoDiff.Term,AutoDiff.Term):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_GreaterThan(AutoDiff.Term,AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_GreaterThan(AutoDiff.Term,AutoDiff.Term):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.op_GreaterThanOrEqual(AutoDiff.Term,AutoDiff.Term)">op_GreaterThanOrEqual Method</h3>
+        <blockquote id="M:AutoDiff.Term.op_GreaterThanOrEqual(AutoDiff.Term,AutoDiff.Term):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../AutoDiff/Term.html">Term</a> operator&gt;= (<a href="../AutoDiff/Term.html">Term</a> t1, <a href="../AutoDiff/Term.html">Term</a> t2)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_GreaterThanOrEqual(AutoDiff.Term,AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>t1</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>t2</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_GreaterThanOrEqual(AutoDiff.Term,AutoDiff.Term):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_GreaterThanOrEqual(AutoDiff.Term,AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_GreaterThanOrEqual(AutoDiff.Term,AutoDiff.Term):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.op_Implicit(System.Double)~AutoDiff.Term">Conversion Method</h3>
+        <blockquote id="M:AutoDiff.Term.op_Implicit(System.Double)~AutoDiff.Term:member">
+          <p class="Summary">
+            Converts a floating point constant to a constant term.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static implicit operator <a href="../AutoDiff/Term.html">Term</a> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> value)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_Implicit(System.Double)~AutoDiff.Term:Parameters">
+            <dl>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>The floating point constnat</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_Implicit(System.Double)~AutoDiff.Term:Returns">The resulting term.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_Implicit(System.Double)~AutoDiff.Term:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_Implicit(System.Double)~AutoDiff.Term:Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.op_LessThan(AutoDiff.Term,AutoDiff.Term)">op_LessThan Method</h3>
+        <blockquote id="M:AutoDiff.Term.op_LessThan(AutoDiff.Term,AutoDiff.Term):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../AutoDiff/Term.html">Term</a> operator&lt; (<a href="../AutoDiff/Term.html">Term</a> t1, <a href="../AutoDiff/Term.html">Term</a> t2)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_LessThan(AutoDiff.Term,AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>t1</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>t2</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_LessThan(AutoDiff.Term,AutoDiff.Term):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_LessThan(AutoDiff.Term,AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_LessThan(AutoDiff.Term,AutoDiff.Term):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.op_LessThanOrEqual(AutoDiff.Term,AutoDiff.Term)">op_LessThanOrEqual Method</h3>
+        <blockquote id="M:AutoDiff.Term.op_LessThanOrEqual(AutoDiff.Term,AutoDiff.Term):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../AutoDiff/Term.html">Term</a> operator&lt;= (<a href="../AutoDiff/Term.html">Term</a> t1, <a href="../AutoDiff/Term.html">Term</a> t2)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_LessThanOrEqual(AutoDiff.Term,AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>t1</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>t2</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_LessThanOrEqual(AutoDiff.Term,AutoDiff.Term):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_LessThanOrEqual(AutoDiff.Term,AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_LessThanOrEqual(AutoDiff.Term,AutoDiff.Term):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.op_LogicalNot(AutoDiff.Term)">op_LogicalNot Method</h3>
+        <blockquote id="M:AutoDiff.Term.op_LogicalNot(AutoDiff.Term):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../AutoDiff/Term.html">Term</a> operator! (<a href="../AutoDiff/Term.html">Term</a> t)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_LogicalNot(AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>t</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_LogicalNot(AutoDiff.Term):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_LogicalNot(AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_LogicalNot(AutoDiff.Term):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.op_Modulus(AutoDiff.Term,AutoDiff.Term)">op_Modulus Method</h3>
+        <blockquote id="M:AutoDiff.Term.op_Modulus(AutoDiff.Term,AutoDiff.Term):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../AutoDiff/Term.html">Term</a> operator% (<a href="../AutoDiff/Term.html">Term</a> t1, <a href="../AutoDiff/Term.html">Term</a> t2)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_Modulus(AutoDiff.Term,AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>t1</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>t2</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_Modulus(AutoDiff.Term,AutoDiff.Term):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_Modulus(AutoDiff.Term,AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_Modulus(AutoDiff.Term,AutoDiff.Term):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.op_Multiply(AutoDiff.Term,AutoDiff.Term)">op_Multiply Method</h3>
+        <blockquote id="M:AutoDiff.Term.op_Multiply(AutoDiff.Term,AutoDiff.Term):member">
+          <p class="Summary">
+            Constructs a product term of the two given terms.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../AutoDiff/Term.html">Term</a> operator* (<a href="../AutoDiff/Term.html">Term</a> left, <a href="../AutoDiff/Term.html">Term</a> right)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_Multiply(AutoDiff.Term,AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>left</i>
+              </dt>
+              <dd>The first term in the product</dd>
+              <dt>
+                <i>right</i>
+              </dt>
+              <dd>The second term in the product</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_Multiply(AutoDiff.Term,AutoDiff.Term):Returns">A term representing the product of <a href="javascript:alert(&quot;Documentation not found.&quot;)">.</a> and <a href="javascript:alert(&quot;Documentation not found.&quot;)">.</a>.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_Multiply(AutoDiff.Term,AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_Multiply(AutoDiff.Term,AutoDiff.Term):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.op_Subtraction(AutoDiff.Term,AutoDiff.Term)">op_Subtraction Method</h3>
+        <blockquote id="M:AutoDiff.Term.op_Subtraction(AutoDiff.Term,AutoDiff.Term):member">
+          <p class="Summary">
+            Constructs a difference of the two given terms.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../AutoDiff/Term.html">Term</a> operator- (<a href="../AutoDiff/Term.html">Term</a> left, <a href="../AutoDiff/Term.html">Term</a> right)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_Subtraction(AutoDiff.Term,AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>left</i>
+              </dt>
+              <dd>The first term in the difference</dd>
+              <dt>
+                <i>right</i>
+              </dt>
+              <dd>The second term in the difference.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_Subtraction(AutoDiff.Term,AutoDiff.Term):Returns">A term representing <i>left</i> - <i>right</i>.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_Subtraction(AutoDiff.Term,AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_Subtraction(AutoDiff.Term,AutoDiff.Term):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.op_UnaryNegation(AutoDiff.Term)">op_UnaryNegation Method</h3>
+        <blockquote id="M:AutoDiff.Term.op_UnaryNegation(AutoDiff.Term):member">
+          <p class="Summary">
+            Constructs a negated term
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../AutoDiff/Term.html">Term</a> operator- (<a href="../AutoDiff/Term.html">Term</a> term)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_UnaryNegation(AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>term</i>
+              </dt>
+              <dd>The term to negate</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.op_UnaryNegation(AutoDiff.Term):Returns">A term representing <tt>-term</tt>.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_UnaryNegation(AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.op_UnaryNegation(AutoDiff.Term):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:AutoDiff.Term.orop">orop Field</h3>
+        <blockquote id="F:AutoDiff.Term.orop:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../AutoDiff/Term+OrType.html">Term.OrType</a> <b>orop</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:AutoDiff.Term.orop:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:AutoDiff.Term.orop:Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.SetAnd(AutoDiff.Term.AndType)">SetAnd Method</h3>
+        <blockquote id="M:AutoDiff.Term.SetAnd(AutoDiff.Term.AndType):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetAnd</b> (<a href="../AutoDiff/Term+AndType.html">Term.AndType</a> a)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.SetAnd(AutoDiff.Term.AndType):Parameters">
+            <dl>
+              <dt>
+                <i>a</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.SetAnd(AutoDiff.Term.AndType):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.SetAnd(AutoDiff.Term.AndType):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:AutoDiff.Term.SetOr(AutoDiff.Term.OrType)">SetOr Method</h3>
+        <blockquote id="M:AutoDiff.Term.SetOr(AutoDiff.Term.OrType):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetOr</b> (<a href="../AutoDiff/Term+OrType.html">Term.OrType</a> o)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:AutoDiff.Term.SetOr(AutoDiff.Term.OrType):Parameters">
+            <dl>
+              <dt>
+                <i>o</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.SetOr(AutoDiff.Term.OrType):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:AutoDiff.Term.SetOr(AutoDiff.Term.OrType):Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:AutoDiff.Term.True">True Field</h3>
+        <blockquote id="F:AutoDiff.Term.True:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static readonly <a href="../AutoDiff/Term.html">Term</a> <b>True</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:AutoDiff.Term.True:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:AutoDiff.Term.True:Version Information">
+            <b>Namespace: </b>AutoDiff<br /><b>Assembly: </b>AutoDiff (in AutoDiff.dll)<br /><b>Assembly Versions: </b>0.3.4514.21140</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

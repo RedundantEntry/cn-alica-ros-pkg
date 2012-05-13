@@ -1,0 +1,105 @@
+«IMPORT alica»  
+«EXTENSION de::uni_kassel::cn::planDesigner::codegeneration::extensions::util»
+
+«DEFINE Root FOR Plan»
+«FILE name + ".pl"»
+%Plan: «this.name» («this.id»)
+	«EXPAND description»	
+	«EXPAND abstractPlanChecking»
+	«EXPAND doExpandStates»			
+«ENDFILE»
+«ENDDEFINE»
+
+«DEFINE BehaviourConfiguration FOR BehaviourConfiguration»
+«FILE behaviour.name + id + "Behaviour.pl"»
+	%BehaviourConfiguration: «this.name» «this.id»
+	«EXPAND abstractPlanChecking»				
+«ENDFILE»
+«ENDDEFINE»
+
+«DEFINE description FOR Plan»
+/*		
+* Tasks: «FOREACH entryPoints AS planEntryPoint»
+* - «planEntryPoint.task.name» («planEntryPoint.task.id»)«ENDFOREACH»
+*
+* States:«FOREACH states AS state»
+* - «state.name» («state.id»)«ENDFOREACH»
+*
+* Vars:«FOREACH vars AS var»				
+* - «var.name» («var.id») «ENDFOREACH»
+*/
+«ENDDEFINE»
+
+
+«DEFINE stateCheckingMethods(State s) FOR Plan»
+
+«FOREACH s.outTransitions AS t»
+/*		
+* Transition(s): «FOREACH ep.outTransition AS transition»
+* - Name: «transition.name»
+* - ConditionString: «transition.preCondition.conditionString» «ENDFOREACH»
+*
+* Plans in State: «FOREACH s.plans AS plan»				
+* - Plan - (Name): «plan.name», (PlanID): «plan.id» «ENDFOREACH»
+*/
+constraintType(«FOREACH ep.outTransition AS t»«t.preCondition.id»,«t.preCondition.vars.name»«ENDFOREACH») :-
+«PROTECT CSTART '/*' CEND '*/' ID "tpl"+ep.id »
+	«FOREACH ep.outTransition AS t»«FOREACH t.preCondition.vars AS var»«var.name» = real, «ENDFOREACH»«ENDFOREACH»
+	true
+«ENDPROTECT»			    
+.
+constraintCall(«FOREACH ep.outTransition AS t»«t.preCondition.id»,«t.preCondition.vars.name»«ENDFOREACH», Costs):-					
+
+«PROTECT CSTART '/*' CEND '*/' ID "pl"+ep.id »
+	Costs = 0					
+«ENDPROTECT»			
+.
+	«ENDFOREACH»	
+«ENDDEFINE»
+
+«DEFINE doExpandStates FOR Plan»
+	«FOREACH states AS state»
+		«EXPAND stateCheckingMethods(state)»
+	«ENDFOREACH»
+«ENDDEFINE»
+
+«DEFINE planCheckingMethods FOR AbstractPlan»
+	«FOREACH runtimeConditions() AS rc»
+%RuntimeCondition - (Name): «rc.name»
+%(ConditionString): «rc.conditionString» 			  
+constraintType(«rc.id»,«rc.vars.name») :-
+«PROTECT CSTART '/*' CEND '*/' ID "tpl"+rc.id »
+	«FOREACH rc.vars AS var»«var.name» = real, «ENDFOREACH»
+	true
+«ENDPROTECT»			    
+.
+
+constraintCall(«rc.id»,«rc.vars.name»,Costs):-
+
+«PROTECT CSTART '/*' CEND '*/' ID "pl"+rc.id »
+	Costs = 0
+«ENDPROTECT»			    
+.				
+	«ENDFOREACH»
+	«FOREACH preConditions() AS pc»
+%PreCondition - (Name): «pc.name»
+%(ConditionString): «pc.conditionString» 
+constraintType(«pc.id»,«pc.vars.name») :-
+«PROTECT CSTART '/*' CEND '*/' ID "tpl"+pc.id »
+	«FOREACH pc.vars AS var»«var.name» = real, «ENDFOREACH»
+	true
+«ENDPROTECT»			    
+.
+constraintCall(«pc.id»,«pc.vars.name»,Costs):-
+
+«PROTECT CSTART '/*' CEND '*/' ID "pl"+pc.id »
+	Costs = 0
+«ENDPROTECT»			    
+.					
+	«ENDFOREACH»
+«ENDDEFINE»
+
+
+«DEFINE abstractPlanChecking FOR AbstractPlan»			
+		«EXPAND planCheckingMethods»				
+«ENDDEFINE»

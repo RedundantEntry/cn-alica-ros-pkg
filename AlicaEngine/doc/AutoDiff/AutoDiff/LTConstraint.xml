@@ -1,0 +1,252 @@
+<Type Name="LTConstraint" FullName="AutoDiff.LTConstraint">
+  <TypeSignature Language="C#" Value="public class LTConstraint : AutoDiff.Term" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit LTConstraint extends AutoDiff.Term" />
+  <AssemblyInfo>
+    <AssemblyName>AutoDiff</AssemblyName>
+    <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>AutoDiff.Term</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a less than constraint function.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LTConstraint (AutoDiff.Term x, AutoDiff.Term y, double steepness);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class AutoDiff.Term x, class AutoDiff.Term y, float64 steepness) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="AutoDiff.Term" />
+        <Parameter Name="y" Type="AutoDiff.Term" />
+        <Parameter Name="steepness" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">The smaller term</param>
+        <param name="y">The larger term</param>
+        <param name="steepness">The steepness of the sigmoid</param>
+        <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.LTConstraint" /> type.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="public override void Accept (AutoDiff.ITermVisitor visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Accept(class AutoDiff.ITermVisitor visitor) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visitor" Type="AutoDiff.ITermVisitor" />
+      </Parameters>
+      <Docs>
+        <param name="visitor">The term visitor to accept</param>
+        <summary>
+            Accepts a term visitor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Accept&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public override TResult Accept&lt;TResult&gt; (AutoDiff.ITermVisitor&lt;TResult&gt; visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!TResult Accept&lt;TResult&gt;(class AutoDiff.ITermVisitor`1&lt;!!TResult&gt; visitor) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="visitor" Type="AutoDiff.ITermVisitor&lt;TResult&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">The type of the result from the visitor's function</typeparam>
+        <param name="visitor">The visitor to accept</param>
+        <summary>
+            Accepts a term visitor with a generic result
+            </summary>
+        <returns>
+            The result from the visitor's visit function.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AggregateConstants">
+      <MemberSignature Language="C#" Value="public override AutoDiff.Term AggregateConstants ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class AutoDiff.Term AggregateConstants() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Derivative">
+      <MemberSignature Language="C#" Value="public override AutoDiff.Term Derivative (AutoDiff.Variable v);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class AutoDiff.Term Derivative(class AutoDiff.Variable v) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v" Type="AutoDiff.Variable" />
+      </Parameters>
+      <Docs>
+        <param name="v">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="public AutoDiff.Term Left { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.Term Left" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the smaller argument of the constraint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Negate">
+      <MemberSignature Language="C#" Value="public override AutoDiff.Term Negate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class AutoDiff.Term Negate() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NegatedForm">
+      <MemberSignature Language="C#" Value="public AutoDiff.Term NegatedForm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.Term NegatedForm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public AutoDiff.Term Right { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.Term Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the larger argument of the constraint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Steepness">
+      <MemberSignature Language="C#" Value="public double Steepness { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Steepness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the sigmoid's steepness.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

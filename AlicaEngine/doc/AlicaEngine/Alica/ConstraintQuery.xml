@@ -1,0 +1,213 @@
+<Type Name="ConstraintQuery" FullName="Alica.ConstraintQuery">
+  <TypeSignature Language="C#" Value="public class ConstraintQuery" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConstraintQuery extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Encapsulates specific queries to constraint variable, usually used by behaviours.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConstraintQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Default constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddVariable">
+      <MemberSignature Language="C#" Value="public void AddVariable (Alica.Variable v);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddVariable(class Alica.Variable v) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v" Type="Alica.Variable" />
+      </Parameters>
+      <Docs>
+        <param name="v">
+            A <see cref="T:Alica.Variable" /></param>
+        <summary>
+            Add the static variable v to the query.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddVariable">
+      <MemberSignature Language="C#" Value="public void AddVariable (int robot, string ident);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddVariable(int32 robot, string ident) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="robot" Type="System.Int32" />
+        <Parameter Name="ident" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="robot">
+            A <see cref="T:System.Int32" /></param>
+        <param name="ident">
+            A <see cref="T:System.String" /></param>
+        <summary>
+            Add the robot specific variable identifie by ident to the query.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearDomainVariables">
+      <MemberSignature Language="C#" Value="public void ClearDomainVariables ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearDomainVariables() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Remove all added domain (i.e., robot specific) variables from the query.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearStaticVariables">
+      <MemberSignature Language="C#" Value="public void ClearStaticVariables ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearStaticVariables() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Remove all static variables from the query.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExistsSolution">
+      <MemberSignature Language="C#" Value="public bool ExistsSolution (Alica.RunningPlan rp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ExistsSolution(class Alica.RunningPlan rp) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rp" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="rp">
+            A <see cref="T:Alica.RunningPlan" /></param>
+        <summary>
+            Check whether a solution can be calculated. Keep in mind, the used solver might be incomplete.
+            </summary>
+        <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSolution">
+      <MemberSignature Language="C#" Value="public bool GetSolution (Alica.RunningPlan rp, out System.Collections.Generic.List&lt;double&gt; result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetSolution(class Alica.RunningPlan rp, class System.Collections.Generic.List`1&lt;float64&gt; result) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rp" Type="Alica.RunningPlan" />
+        <Parameter Name="result" Type="System.Collections.Generic.List&lt;System.Double&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="rp">To be added.</param>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSolution">
+      <MemberSignature Language="C#" Value="public bool GetSolution (Alica.RunningPlan rp, out System.Collections.Generic.List&lt;object&gt; result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetSolution(class Alica.RunningPlan rp, class System.Collections.Generic.List`1&lt;object&gt; result) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rp" Type="Alica.RunningPlan" />
+        <Parameter Name="result" Type="System.Collections.Generic.List&lt;System.Object&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="rp">To be added.</param>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

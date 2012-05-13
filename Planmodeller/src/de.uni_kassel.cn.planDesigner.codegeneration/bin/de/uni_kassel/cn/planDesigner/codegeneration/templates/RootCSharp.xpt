@@ -1,0 +1,243 @@
+«IMPORT alica»  
+«EXTENSION de::uni_kassel::cn::planDesigner::codegeneration::extensions::util»
+
+«DEFINE Root FOR Plan»
+
+	«FILE name + ".cs"»
+	
+		using System;
+		using System.Collections.Generic;
+		
+		namespace CarpeNoctem.Base.BehaviourEngine.Validators
+		{	
+			//Plan:«this.name»
+			«EXPAND abstractPlanChecking»
+			«EXPAND doExpandStates»			
+		}
+	«ENDFILE»
+
+«ENDDEFINE»
+
+«DEFINE BehaviourConfiguration FOR BehaviourConfiguration»
+
+	«FILE behaviour.name + id + "Behaviour.cs"»
+	
+		using System;
+		using System.Collections.Generic;
+		
+		namespace CarpeNoctem.Base.BehaviourEngine.Validators
+		{	
+			//BehaviourConfiguration:«this.name»
+			«EXPAND abstractPlanChecking»				
+		}
+	«ENDFILE»
+
+«ENDDEFINE»
+
+«DEFINE abstractPlanChecking FOR AbstractPlan»			
+			public class P«this.id» : AbstractExpressionValidator, IPlanExpressionValidator
+			{	
+				«EXPAND evalRuntimeConditions»
+				«EXPAND evalPreConditions»				
+				«EXPAND evalEntryPointPreConditions»
+				«EXPAND planEntryPointPCCheckingMethods»				
+				«EXPAND planCheckingMethods»
+				«EXPAND utilityFunctionMethod»
+			}
+«ENDDEFINE»
+
+«DEFINE utilityFunctionMethod FOR AbstractPlan»
+				/* generated comment
+					«EXPAND utilFuncEntryPoints FOREACH entryPoints»
+				*/
+				public UtilityFunction GetUtilityFunction(Plan plan)
+				{   
+					«PROTECT CSTART '/*' CEND '*/' ID this.id »
+					«computeUtilityReturnValue(this)»
+					«ENDPROTECT»					
+				}
+«ENDDEFINE»
+
+«DEFINE utilFuncEntryPoints FOR EntryPoint»
+	Task: «this.task.name»  -> EntryPoint-ID: «this.id»
+«ENDDEFINE»
+
+«DEFINE evalEntryPointPreConditions FOR AbstractPlan»				
+				public List<EntryPoint> EvaluateEntryPointPreConditions(RunningPlan rp, WorldModel wm)
+				{
+					List<EntryPoint> eps = new List<EntryPoint>();					
+									
+					if(rp.Plan == null)
+					{
+					      Console.Error.WriteLine("EntryPointPreConditionValidator of Plan: «this.name»: RunningPlan does not have a plan");
+									
+					     //silent failure
+					     return eps;
+					}	
+					«EXPAND planEntryPointPCChecking»	
+					return eps;				
+				}
+«ENDDEFINE»
+
+«DEFINE planEntryPointPCChecking FOR AbstractPlan»
+		«FOREACH entryPoints AS ep»
+					if(!F«ep.id»(rp, wm))
+					{
+						eps.Add((EntryPoint)rp.Plan.EntryPoints[«ep.id»]);
+					}	
+		«ENDFOREACH»
+«ENDDEFINE»
+
+«DEFINE planEntryPointPCCheckingMethods FOR AbstractPlan»
+		«FOREACH entryPoints AS ep»
+				// Entrypoint-Task: «ep.task.description», EntryPoint-Condition: «FOREACH ep.outTransition AS transition» «transition.printPCString()» «ENDFOREACH» 
+				protected bool F«ep.id»(RunningPlan rp, WorldModel wm)
+				{
+		    		 «PROTECT CSTART '/*' CEND '*/' ID ep.id »
+						return true;
+					«ENDPROTECT»
+				}	
+		«ENDFOREACH»
+«ENDDEFINE»
+
+«DEFINE evalRuntimeConditions FOR AbstractPlan»
+				public LinkedList<RuntimeCondition> EvaluateRuntimeCondition(RunningPlan rp, WorldModel wm)
+				{
+					LinkedList<RuntimeCondition> rcs = new LinkedList<RuntimeCondition>();					
+					
+					 if(rp.Plan == null)
+					 {
+					      Console.Error.WriteLine("RuntimeConditionValidator of Plan: «this.name»: RunningPlan does not have a plan");
+					
+					     //silent failure
+					     return rcs;
+					 }					 
+					«EXPAND rcChecking»					
+					return rcs;
+				}
+«ENDDEFINE»
+
+«DEFINE evalPreConditions FOR AbstractPlan»
+				public LinkedList<PreCondition> EvaluatePreCondition(RunningPlan rp, WorldModel wm)
+				{
+					LinkedList<PreCondition> pcs = new LinkedList<PreCondition>();					
+							
+							 if(rp.Plan == null)
+							 {
+							      Console.Error.WriteLine("PreConditionValidator of Plan: «this.name»: RunningPlan does not have a plan");
+							
+							     //silent failure
+							     return pcs;
+							 }
+					«EXPAND pcChecking»
+					return pcs;
+				}
+«ENDDEFINE»
+
+«DEFINE rcChecking FOR AbstractPlan»
+	«FOREACH runtimeConditions() AS rc»
+					if( ! F«rc.id»(rp, wm))
+					{
+					  rcs.AddLast((RuntimeCondition) rp.Plan.Conditions[«rc.id»] );
+					}
+	«ENDFOREACH»
+«ENDDEFINE»
+
+«DEFINE pcChecking FOR AbstractPlan»
+	«FOREACH preConditions() AS pc»
+					if(!F«pc.id»(rp, wm))
+					{
+						pcs.AddLast((PreCondition)rp.Plan.Conditions[«pc.id»]);
+					}					
+	«ENDFOREACH»
+«ENDDEFINE»
+
+«DEFINE doExpandStates FOR Plan»
+	«FOREACH states AS state»
+		«EXPAND stateChecking(state)»
+		«EXPAND BehaviourConfiguration FOREACH collectBehaviours(state)»
+	«ENDFOREACH»
+«ENDDEFINE»
+
+«DEFINE stateChecking(State s) FOR Plan»
+			//State: «s.name» in Plan: «this.name»
+			public class S«s.id» : AbstractExpressionValidator, IStateExpressionValidator
+			{
+				public LinkedList<ExitPoint> EvaluateTransitions(State s, RunningPlan rp, Dictionary<long, PlanStatus> plans, WorldModel wm, Dictionary<int, SimplePlanTree> teamPlanTrees)
+				{			
+					LinkedList<ExitPoint> eps = new LinkedList<ExitPoint>();
+					
+					«EXPAND epChecking(s)»
+								
+					return eps;
+				}		
+				«EXPAND stateCheckingMethods(s)»		
+			}	
+«ENDDEFINE»
+
+«DEFINE epChecking(State s) FOR Plan»
+	«FOREACH s.exitPoints AS ep»
+					if(F«ep.id»(s, rp, plans, wm, teamPlanTrees))
+					{
+						eps.AddLast((ExitPoint)s.ExitPoints[«ep.id»]);
+					}
+	«ENDFOREACH»
+«ENDDEFINE»
+
+«DEFINE stateCheckingMethods(State s) FOR Plan»
+	«FOREACH s.exitPoints AS ep»
+			   /* «REM»Aufgrund des fehlenden beautyfiers sieht die Formatierung des templates hier bescheiden aus ;)«ENDREM»		
+				* Transition(s): «FOREACH ep.outTransition AS transition»
+				*   - Name: «transition.name», ConditionString: «transition.preCondition.conditionString» «ENDFOREACH»
+				*
+				* Plans in State: «FOREACH s.plans AS plan»				
+				*   - Plan - (Name): «plan.name», (PlanID): «plan.id» «ENDFOREACH»
+				*
+				* Tasks: «FOREACH s.inPlan.entryPoints AS planEntryPoint»
+				*   - «planEntryPoint.task.name» («planEntryPoint.task.id»)«ENDFOREACH»
+				*
+				* States:«FOREACH s.inPlan.states AS state»
+				*   - «state.name» («state.id»)«ENDFOREACH»
+				*
+				* Vars:«FOREACH ep.outTransition AS t»«FOREACH t.preCondition.vars AS var»				
+				*	- «var.name» («var.id») «ENDFOREACH»«ENDFOREACH»
+				*/
+				protected bool F«ep.id»(State s, RunningPlan rp, Dictionary<long, PlanStatus> plans, WorldModel wm, Dictionary<int, SimplePlanTree> teamPlanTrees)
+				{	
+					«PROTECT CSTART '/*' CEND '*/' ID ep.id »
+						--> "Transition(s): «FOREACH ep.outTransition AS transition» «transition.id» , «ENDFOREACH» not implemented";
+						// return false
+					«ENDPROTECT»	
+					
+				}
+	«ENDFOREACH»	
+«ENDDEFINE»
+
+«DEFINE planCheckingMethods FOR AbstractPlan»
+	«FOREACH runtimeConditions() AS rc»
+			  //Check of RuntimeCondition - (Name): «rc.name», (ConditionString): «rc.conditionString» 
+			  /*
+			  * Available Vars:«FOREACH rc.vars AS var»
+			  *	- «var.name» («var.id»)«ENDFOREACH»
+			  */
+			  protected bool F«rc.id»(RunningPlan rp, WorldModel wm)
+			  {
+			 	 «PROTECT CSTART '/*' CEND '*/' ID rc.id »
+					return true;
+				 «ENDPROTECT»			    
+			  }				
+	«ENDFOREACH»
+	«FOREACH preConditions() AS pc»
+			  //Check of PreCondition - (Name): «pc.name», (ConditionString): «pc.conditionString» 
+			  /*
+			  * Available Vars:«FOREACH pc.vars AS var»
+			  *	- «var.name» («var.id»)«ENDFOREACH»
+			  */
+			  protected bool F«pc.id»(RunningPlan rp, WorldModel wm)
+			  {
+			 	 «PROTECT CSTART '/*' CEND '*/' ID pc.id »
+					return true;
+				 «ENDPROTECT»			    
+			  }				
+	«ENDFOREACH»
+«ENDDEFINE»

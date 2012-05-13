@@ -1,0 +1,445 @@
+<Type Name="TVec" FullName="AutoDiff.TVec">
+  <TypeSignature Language="C#" Value="public class TVec" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TVec extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>AutoDiff</AssemblyName>
+    <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A column vector made of terms.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TVec (AutoDiff.Term[] terms);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class AutoDiff.Term[] terms) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="terms" Type="AutoDiff.Term[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="terms">The vector component terms</param>
+        <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.TVec" /> class given vector components.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TVec (System.Collections.Generic.IEnumerable&lt;AutoDiff.Term&gt; terms);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class AutoDiff.Term&gt; terms) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="terms" Type="System.Collections.Generic.IEnumerable&lt;AutoDiff.Term&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="terms">The vector component terms</param>
+        <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.TVec" /> class given vector components.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TVec (AutoDiff.TVec first, AutoDiff.Term[] rest);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class AutoDiff.TVec first, class AutoDiff.Term[] rest) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="first" Type="AutoDiff.TVec" />
+        <Parameter Name="rest" Type="AutoDiff.Term[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="first">A vector containing the first vector components to use.</param>
+        <param name="rest">More vector components to add in addition to the components in <paramref name="first" /></param>
+        <summary>
+            Constructs a new instance of the <see cref="T:AutoDiff.TVec" /> class using another vector's components.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CrossProduct">
+      <MemberSignature Language="C#" Value="public static AutoDiff.TVec CrossProduct (AutoDiff.TVec left, AutoDiff.TVec right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.TVec CrossProduct(class AutoDiff.TVec left, class AutoDiff.TVec right) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.TVec</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="AutoDiff.TVec" />
+        <Parameter Name="right" Type="AutoDiff.TVec" />
+      </Parameters>
+      <Docs>
+        <param name="left">The left cross-product term</param>
+        <param name="right">The right cross product term</param>
+        <summary>
+            Constructs a 3D cross-product vector given two 3D vectors.
+            </summary>
+        <returns>A vector representing the cross product of <paramref name="left" /> and <paramref name="right" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dimension">
+      <MemberSignature Language="C#" Value="public int Dimension { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Dimension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the dimensions of this vector
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTerms">
+      <MemberSignature Language="C#" Value="public AutoDiff.Term[] GetTerms ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class AutoDiff.Term[] GetTerms() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets an array of all vector components.
+            </summary>
+        <returns>An array of all vector components. Users are free to modify this array. It doesn't point to any
+            internal structures.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerProduct">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term InnerProduct (AutoDiff.TVec left, AutoDiff.TVec right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term InnerProduct(class AutoDiff.TVec left, class AutoDiff.TVec right) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="AutoDiff.TVec" />
+        <Parameter Name="right" Type="AutoDiff.TVec" />
+      </Parameters>
+      <Docs>
+        <param name="left">The first vector of the inner product</param>
+        <param name="right">The second vector of the inner product</param>
+        <summary>
+            Constructs a term representing the inner product of two vectors.
+            </summary>
+        <returns>A term representing the inner product of <paramref name="left" /> and <paramref name="right" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public AutoDiff.Term this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.Term Item(int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">The vector's component index.</param>
+        <summary>
+            Gets a vector component given its zero-based index.
+            </summary>
+        <value>The vector component.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Normalize">
+      <MemberSignature Language="C#" Value="public AutoDiff.TVec Normalize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.TVec Normalize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.TVec</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a term representing the a new vector with length = 1 and the direction of this vector.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NormSquared">
+      <MemberSignature Language="C#" Value="public AutoDiff.Term NormSquared { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.Term NormSquared" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a term representing the squared norm of this vector.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Addition">
+      <MemberSignature Language="C#" Value="public static AutoDiff.TVec op_Addition (AutoDiff.TVec left, AutoDiff.TVec right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.TVec op_Addition(class AutoDiff.TVec left, class AutoDiff.TVec right) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.TVec</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="AutoDiff.TVec" />
+        <Parameter Name="right" Type="AutoDiff.TVec" />
+      </Parameters>
+      <Docs>
+        <param name="left">The first vector in the sum</param>
+        <param name="right">The second vector in the sum</param>
+        <summary>
+            Constructs a sum of two term vectors.
+            </summary>
+        <returns>A vector representing the sum of <paramref name="left" /> and <paramref name="right" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Multiply">
+      <MemberSignature Language="C#" Value="public static AutoDiff.TVec op_Multiply (AutoDiff.Term scalar, AutoDiff.TVec vector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.TVec op_Multiply(class AutoDiff.Term scalar, class AutoDiff.TVec vector) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.TVec</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scalar" Type="AutoDiff.Term" />
+        <Parameter Name="vector" Type="AutoDiff.TVec" />
+      </Parameters>
+      <Docs>
+        <param name="scalar">The scalar</param>
+        <param name="vector">The vector</param>
+        <summary>
+            Multiplies a vector by a scalar
+            </summary>
+        <returns>A product of the vector <paramref name="vector" /> and the scalar <paramref name="scalar" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Multiply">
+      <MemberSignature Language="C#" Value="public static AutoDiff.TVec op_Multiply (AutoDiff.TVec vector, AutoDiff.Term scalar);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.TVec op_Multiply(class AutoDiff.TVec vector, class AutoDiff.Term scalar) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.TVec</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vector" Type="AutoDiff.TVec" />
+        <Parameter Name="scalar" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="vector">The vector</param>
+        <param name="scalar">The scalar</param>
+        <summary>
+            Multiplies a vector by a scalar
+            </summary>
+        <returns>A product of the vector <paramref name="vector" /> and the scalar <paramref name="scalar" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Multiply">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term op_Multiply (AutoDiff.TVec left, AutoDiff.TVec right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.Term op_Multiply(class AutoDiff.TVec left, class AutoDiff.TVec right) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="AutoDiff.TVec" />
+        <Parameter Name="right" Type="AutoDiff.TVec" />
+      </Parameters>
+      <Docs>
+        <param name="left">The first vector of the inner product</param>
+        <param name="right">The second vector of the inner product</param>
+        <summary>
+            Constructs a term representing the inner product of two vectors.
+            </summary>
+        <returns>A term representing the inner product of <paramref name="left" /> and <paramref name="right" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Subtraction">
+      <MemberSignature Language="C#" Value="public static AutoDiff.TVec op_Subtraction (AutoDiff.TVec left, AutoDiff.TVec right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.TVec op_Subtraction(class AutoDiff.TVec left, class AutoDiff.TVec right) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.TVec</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="AutoDiff.TVec" />
+        <Parameter Name="right" Type="AutoDiff.TVec" />
+      </Parameters>
+      <Docs>
+        <param name="left">The first vector in the difference</param>
+        <param name="right">The second vector in the difference.</param>
+        <summary>
+            Constructs a difference of two term vectors,
+            </summary>
+        <returns>A vector representing the difference of <paramref name="left" /> and <paramref name="right" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_UnaryNegation">
+      <MemberSignature Language="C#" Value="public static AutoDiff.TVec op_UnaryNegation (AutoDiff.TVec vector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.TVec op_UnaryNegation(class AutoDiff.TVec vector) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.TVec</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vector" Type="AutoDiff.TVec" />
+      </Parameters>
+      <Docs>
+        <param name="vector">The vector to invert</param>
+        <summary>
+            Inverts a vector
+            </summary>
+        <returns>A vector repsesenting the inverse of <paramref name="vector" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public AutoDiff.Term X { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.Term X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the first vector component
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public AutoDiff.Term Y { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.Term Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the second vector component.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Z">
+      <MemberSignature Language="C#" Value="public AutoDiff.Term Z { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.Term Z" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the third vector component
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

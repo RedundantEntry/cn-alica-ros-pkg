@@ -1,0 +1,22 @@
+#Sun May 13 13:03:01 CEST 2012
+repositories/file\:_home_hendrik_workspace_stuff_test_linux.gtk.x86_PlanDesigner_p2_org.eclipse.equinox.p2.core_cache/name=download cache
+repositories/file\:_home_hendrik_workspace_stuff_test_linux.gtk.x86_PlanDesigner/uri=file\:/home/hendrik/workspace/stuff/test/linux.gtk.x86/PlanDesigner/
+repositories/file\:_home_hendrik_workspace_stuff_test_linux.gtk.x86_PlanDesigner_p2_org.eclipse.equinox.p2.core_cache/version=1.0.0
+repositories/file\:_home_hendrik_workspace_stuff_test_linux.gtk.x86_PlanDesigner/enabled=true
+repositories/http\:__carpenoctem.das-lab.net_~plandesigner_update_site.xml/isSystem=false
+repositories/file\:_home_hendrik_workspace_stuff_test_linux.gtk.x86_PlanDesigner/type=org.eclipse.equinox.p2.artifact.repository.simpleRepository
+repositories/file\:_home_hendrik_workspace_stuff_test_linux.gtk.x86_PlanDesigner/provider=
+repositories/file\:_home_hendrik_workspace_stuff_test_linux.gtk.x86_PlanDesigner_p2_org.eclipse.equinox.p2.core_cache/type=org.eclipse.equinox.p2.artifact.repository.simpleRepository
+repositories/file\:_home_hendrik_workspace_stuff_test_linux.gtk.x86_PlanDesigner/isSystem=true
+eclipse.preferences.version=1
+repositories/file\:_home_hendrik_workspace_stuff_test_linux.gtk.x86_PlanDesigner_p2_org.eclipse.equinox.p2.core_cache/isSystem=true
+repositories/http\:__carpenoctem.das-lab.net_~plandesigner_update_site.xml/uri=http\://carpenoctem.das-lab.net/~plandesigner/update/site.xml
+repositories/file\:_home_hendrik_workspace_stuff_test_linux.gtk.x86_PlanDesigner_p2_org.eclipse.equinox.p2.core_cache/suffix=artifacts.xml
+repositories/http\:__carpenoctem.das-lab.net_~plandesigner_update_site.xml/enabled=false
+repositories/file\:_home_hendrik_workspace_stuff_test_linux.gtk.x86_PlanDesigner_p2_org.eclipse.equinox.p2.core_cache/uri=file\:/home/hendrik/workspace/stuff/test/linux.gtk.x86/PlanDesigner/p2/org.eclipse.equinox.p2.core/cache/
+repositories/file\:_home_hendrik_workspace_stuff_test_linux.gtk.x86_PlanDesigner_p2_org.eclipse.equinox.p2.core_cache/provider=
+repositories/file\:_home_hendrik_workspace_stuff_test_linux.gtk.x86_PlanDesigner/description=
+repositories/file\:_home_hendrik_workspace_stuff_test_linux.gtk.x86_PlanDesigner_p2_org.eclipse.equinox.p2.core_cache/enabled=true
+repositories/file\:_home_hendrik_workspace_stuff_test_linux.gtk.x86_PlanDesigner/version=1
+repositories/file\:_home_hendrik_workspace_stuff_test_linux.gtk.x86_PlanDesigner_p2_org.eclipse.equinox.p2.core_cache/description=
+repositories/file\:_home_hendrik_workspace_stuff_test_linux.gtk.x86_PlanDesigner/name=Bundle pool

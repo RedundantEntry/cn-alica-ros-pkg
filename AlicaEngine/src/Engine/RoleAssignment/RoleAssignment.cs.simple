@@ -1,0 +1,146 @@
+using System;
+using System.Collections.Generic;
+
+namespace Alica
+{		
+	// DummyRoleAssignment
+	public class RoleAssignment : IRoleAssignment
+	{
+		protected bool updateRoles = false;
+		
+		// Dictionary<ROBOT, ROLE>
+		private Dictionary<int, Role> robotRoleMapping;
+		
+		// Static Dictionary(<ID, Role>) of existing roles
+		//private Dictionary<long, Role> roles;
+		
+		private List<RobotProperties> availableRobots;
+
+
+		private Role ownRole;
+
+		
+		private RobotProperties ownRobotProperties;
+
+		public RoleAssignment()
+		{
+			this.robotRoleMapping = new Dictionary<int,Role>();
+			
+			this.availableRobots  = new List<RobotProperties>();			
+		}
+		
+#region *** Methods ***
+		
+		public void Init()
+		{
+			AlicaEngine.Get().TO.OnTeamChangeEvent += Update;			
+						
+			this.ownRobotProperties = AlicaEngine.Get().TO.GetOwnRobotProperties();
+			
+			CalculateRoles();			
+		}		
+		
+		protected void Update()	{
+			updateRoles = true;			
+		}
+		
+		protected void CalculateRoles()
+		{
+			RoleSet rs = AlicaEngine.Get().CurrentRoleSet;			
+			if(rs == null)
+			{
+				throw new Exception("RA: The current Roleset is null!");
+			}
+			
+			this.availableRobots = AlicaEngine.Get().TO.GetAvailableRobotProperties();
+			
+			// DEBUG OUTPUT
+			Console.WriteLine("RA: Available robots: ");
+			foreach(RobotProperties aRobot in this.availableRobots)
+			{
+				Console.Write("{0} ",aRobot.Id);
+			}
+			Console.WriteLine();
+			
+			foreach (RoleTaskMapping rtm in rs.RoleTaskMappings)
+			{
+				//Console.WriteLine("RA: RoleTaskMapping: " + rtm.Id);
+				foreach (RobotProperties rps in availableRobots)
+				{
+					//Console.WriteLine("\tDefaultRole of: "+ rps.Name +" is " + rps.DefaultRole);
+					if(rtm.Role.Name.Equals(rps.DefaultRole))// If role from roleset == default role of robot 
+					{
+						if(robotRoleMapping.ContainsKey(rps.Id))
+						{
+							robotRoleMapping[rps.Id] = rtm.Role;							
+						}
+						else
+						{							   
+							robotRoleMapping.Add(rps.Id, rtm.Role);
+						}
+						
+						if(ownRobotProperties.Id == rps.Id)
+						{							
+							ownRole = rtm.Role;
+						}
+					}
+				}
+			}
+			if (ownRole == null) AlicaEngine.Get().Abort("RA: Cannot find own role!");
+			
+		}
+		
+		
+		public Role GetRole(int robotId) {
+			// If DirtyFlag (updateRoles) is set, we have to recalculate the roles
+			if(this.updateRoles) {
+				this.CalculateRoles();
+				this.updateRoles = false;
+			}
+			
+			Role r = null;
+			if (this.robotRoleMapping.TryGetValue(robotId, out r))
+			{
+				return r;
+			}
+			else
+			{
+				throw new Exception("RA: There is no role assigned for robot " + robotId);				
+			}
+		}
+#endregion *** Methods ***
+		
+#region *** Properties ***		
+		public Role OwnRole {
+			get
+			{								
+				if(this.updateRoles)
+				{
+					this.CalculateRoles();
+					this.updateRoles = false;
+				}
+				return this.ownRole;
+			}
+			//set{ this.ownRole = value; }
+		}
+		public void Tick() {
+				if(this.updateRoles) {
+					this.CalculateRoles();
+					this.updateRoles = false;
+				}
+		}
+		public Dictionary<int, Role> RobotRoleMapping {
+			get
+			{
+				if(this.updateRoles)
+				{
+					this.CalculateRoles();
+					this.updateRoles = false;
+				}
+				return this.robotRoleMapping;
+			}
+		}
+#endregion *** Properties ***
+	}//end RoleAssignment
+}
+

@@ -1,0 +1,48 @@
+<Type Name="ITaskAssignment" FullName="Alica.ITaskAssignment">
+  <TypeSignature Language="C#" Value="public interface ITaskAssignment" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITaskAssignment" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Interface for the task allocation algorithm.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetNextBestAssignment">
+      <MemberSignature Language="C#" Value="public Alica.Assignment GetNextBestAssignment (Alica.IAssignment oldAss);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Alica.Assignment GetNextBestAssignment(class Alica.IAssignment oldAss) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.Assignment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldAss" Type="Alica.IAssignment" />
+      </Parameters>
+      <Docs>
+        <param name="oldAss">
+            The old <see cref="T:Alica.IAssignment" />, possibly null in case of a completely new assignment problem.
+            </param>
+        <summary>
+            Returns the best possible assignment for a plan, taking similarities to the old assignment into account.
+            </summary>
+        <returns>
+            The new <see cref="T:Alica.Assignment" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

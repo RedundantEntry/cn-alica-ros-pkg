@@ -1,0 +1,25 @@
+<Overview>
+  <Assemblies>
+    <Assembly Name="CGSolver" Version="0.0.0.0">
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Assembly>
+  </Assemblies>
+  <Remarks>To be added.</Remarks>
+  <Copyright>To be added.</Copyright>
+  <Types>
+    <Namespace Name="Alica.Reasoner">
+      <Type Name="CGSolver" Kind="Class" />
+      <Type Name="Clause" Kind="Class" />
+      <Type Name="FormulaTransform" Kind="Class" />
+      <Type Name="GSolver" Kind="Class" />
+      <Type Name="Literal" Kind="Class" />
+      <Type Name="QGSolver" Kind="Class" />
+      <Type Name="ResultStore" Kind="Class" />
+    </Namespace>
+  </Types>
+  <Title>CGSolver</Title>
+</Overview>

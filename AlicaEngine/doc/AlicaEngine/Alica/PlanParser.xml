@@ -1,0 +1,150 @@
+<Type Name="PlanParser" FullName="Alica.PlanParser">
+  <TypeSignature Language="C#" Value="public class PlanParser : Alica.IPlanParser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PlanParser extends System.Object implements class Alica.IPlanParser" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Alica.IPlanParser</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            The default parser, parsing the XML encoding of an ALICA plan-tree
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PlanParser (Alica.PlanRepository rep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Alica.PlanRepository rep) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rep" Type="Alica.PlanRepository" />
+      </Parameters>
+      <Docs>
+        <param name="rep">
+            A <see cref="T:Alica.PlanRepository" />, in which parsed elements are stored.
+            </param>
+        <summary>
+            Ctor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParsedElements">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;long,Alica.PlanElement&gt; GetParsedElements ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.Dictionary`2&lt;int64, class Alica.PlanElement&gt; GetParsedElements() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.Int64,Alica.PlanElement&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseAllPlans">
+      <MemberSignature Language="C#" Value="public void ParseAllPlans ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ParseAllPlans() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Parse all plans available.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParsePlanTree">
+      <MemberSignature Language="C#" Value="public Alica.Plan ParsePlanTree (string masterplan);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Alica.Plan ParsePlanTree(string masterplan) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.Plan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="masterplan" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="masterplan">
+            The name of the top-level plan, a <see cref="T:System.String" /></param>
+        <summary>
+            Parses a plan tree
+            </summary>
+        <returns>
+            The top-level <see cref="T:Alica.Plan" />.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseRoleSet">
+      <MemberSignature Language="C#" Value="public Alica.RoleSet ParseRoleSet (string roleSetName, string roleSetDir);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Alica.RoleSet ParseRoleSet(string roleSetName, string roleSetDir) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.RoleSet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleSetName" Type="System.String" />
+        <Parameter Name="roleSetDir" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleSetName">
+            The name of the roleset to parse, a <see cref="T:System.String" />. May be empty, in which case a default roleset is looked for.
+            </param>
+        <param name="roleSetDir">
+            The relative directory in which to search for a roleset, a <see cref="T:System.String" /></param>
+        <summary>
+            Parse a roleset
+            </summary>
+        <returns>
+            The parsed <see cref="T:Alica.RoleSet" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

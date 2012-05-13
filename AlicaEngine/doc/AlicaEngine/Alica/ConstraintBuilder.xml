@@ -1,0 +1,593 @@
+<Type Name="ConstraintBuilder" FullName="Alica.ConstraintBuilder">
+  <TypeSignature Language="C#" Value="public static class ConstraintBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ConstraintBuilder extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A static helper class, providing simple factory methods for domain-independent constraints.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="And">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term And (AutoDiff.Term t1, AutoDiff.Term t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term And(class AutoDiff.Term t1, class AutoDiff.Term t2) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="AutoDiff.Term" />
+        <Parameter Name="t2" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="t1">To be added.</param>
+        <param name="t2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConstraintApply">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term ConstraintApply (AutoDiff.Term constraint, AutoDiff.Term utility);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term ConstraintApply(class AutoDiff.Term constraint, class AutoDiff.Term utility) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="AutoDiff.Term" />
+        <Parameter Name="utility" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">
+            A <see cref="T:AutoDiff.Term" /></param>
+        <param name="utility">
+            A <see cref="T:AutoDiff.Term" /></param>
+        <summary>
+            Combines a constraint and a utility. This is usually only used by the <see cref="!:CGSolver" />.
+            Use if you need to circumvent CGSolver and work diectly with <see cref="!:GSolver" />.
+            </summary>
+        <returns>
+            A <see cref="T:AutoDiff.Term" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Distance">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term Distance (AutoDiff.TVec t1, AutoDiff.TVec t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Distance(class AutoDiff.TVec t1, class AutoDiff.TVec t2) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="AutoDiff.TVec" />
+        <Parameter Name="t2" Type="AutoDiff.TVec" />
+      </Parameters>
+      <Docs>
+        <param name="t1">
+            A <see cref="T:AutoDiff.TVec" /></param>
+        <param name="t2">
+            A <see cref="T:AutoDiff.TVec" /></param>
+        <summary>
+            Returns the euclidean distance between two n-dimenasional vectors.
+            </summary>
+        <returns>
+            A <see cref="T:AutoDiff.Term" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistanceSqr">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term DistanceSqr (AutoDiff.TVec t1, AutoDiff.TVec t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term DistanceSqr(class AutoDiff.TVec t1, class AutoDiff.TVec t2) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="AutoDiff.TVec" />
+        <Parameter Name="t2" Type="AutoDiff.TVec" />
+      </Parameters>
+      <Docs>
+        <param name="t1">
+            A <see cref="T:AutoDiff.TVec" /></param>
+        <param name="t2">
+            A <see cref="T:AutoDiff.TVec" /></param>
+        <summary>
+            Returns the square of the euclidean distance between two n-dimensional vectors.
+            </summary>
+        <returns>
+            A <see cref="T:AutoDiff.Term" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term Equals (AutoDiff.Term t1, AutoDiff.Term t2, AutoDiff.Term tolerance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Equals(class AutoDiff.Term t1, class AutoDiff.Term t2, class AutoDiff.Term tolerance) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="AutoDiff.Term" />
+        <Parameter Name="t2" Type="AutoDiff.Term" />
+        <Parameter Name="tolerance" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="t1">To be added.</param>
+        <param name="t2">To be added.</param>
+        <param name="tolerance">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term Equals (AutoDiff.TVec t1, AutoDiff.TVec t2, double tolerance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Equals(class AutoDiff.TVec t1, class AutoDiff.TVec t2, float64 tolerance) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="AutoDiff.TVec" />
+        <Parameter Name="t2" Type="AutoDiff.TVec" />
+        <Parameter Name="tolerance" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="t1">
+            A <see cref="T:AutoDiff.TVec" /></param>
+        <param name="t2">
+            A <see cref="T:AutoDiff.TVec" /></param>
+        <param name="tolerance">
+            A <see cref="T:System.Double" /></param>
+        <summary>
+            Returns wether the distance between two n-dimensional vectors is less than tolerance.
+            </summary>
+        <returns>
+            A <see cref="T:AutoDiff.Term" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equiv">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term Equiv (AutoDiff.Term a, AutoDiff.Term b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Equiv(class AutoDiff.Term a, class AutoDiff.Term b) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="AutoDiff.Term" />
+        <Parameter Name="b" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="a">To be added.</param>
+        <param name="b">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="False">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term False;" />
+      <MemberSignature Language="ILAsm" Value=".field public static class AutoDiff.Term False" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IfThen">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term IfThen (AutoDiff.Term tif, AutoDiff.Term tthen);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term IfThen(class AutoDiff.Term tif, class AutoDiff.Term tthen) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tif" Type="AutoDiff.Term" />
+        <Parameter Name="tthen" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="tif">To be added.</param>
+        <param name="tthen">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IfThenElse">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term IfThenElse (AutoDiff.Term tif, AutoDiff.Term tthen, AutoDiff.Term telse);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term IfThenElse(class AutoDiff.Term tif, class AutoDiff.Term tthen, class AutoDiff.Term telse) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tif" Type="AutoDiff.Term" />
+        <Parameter Name="tthen" Type="AutoDiff.Term" />
+        <Parameter Name="telse" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="tif">To be added.</param>
+        <param name="tthen">To be added.</param>
+        <param name="telse">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InCoordsOf">
+      <MemberSignature Language="C#" Value="public static AutoDiff.TVec InCoordsOf (AutoDiff.TVec point, AutoDiff.TVec vec);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.TVec InCoordsOf(class AutoDiff.TVec point, class AutoDiff.TVec vec) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.TVec</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="AutoDiff.TVec" />
+        <Parameter Name="vec" Type="AutoDiff.TVec" />
+      </Parameters>
+      <Docs>
+        <param name="point">
+            A two-dimensional <see cref="T:AutoDiff.TVec" /></param>
+        <param name="vec">
+            A two-dimensional <see cref="T:AutoDiff.TVec" /></param>
+        <summary>
+            Returns point in the coordinate system defined by vec and its rectangular.
+            </summary>
+        <returns>
+            A two-dimensional <see cref="T:AutoDiff.TVec" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftOf">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term LeftOf (AutoDiff.TVec vec, AutoDiff.TVec toCheck);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term LeftOf(class AutoDiff.TVec vec, class AutoDiff.TVec toCheck) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vec" Type="AutoDiff.TVec" />
+        <Parameter Name="toCheck" Type="AutoDiff.TVec" />
+      </Parameters>
+      <Docs>
+        <param name="vec">
+            A <see cref="T:AutoDiff.TVec" /></param>
+        <param name="toCheck">
+            A <see cref="T:AutoDiff.TVec" /></param>
+        <summary>
+            Two dimensional geometry:
+            Returns if toCheck is left of vec.
+            </summary>
+        <returns>
+            A <see cref="T:AutoDiff.Term" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Not">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term Not (AutoDiff.Term t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Not(class AutoDiff.Term t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="t">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Or">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term Or (AutoDiff.Term t1, AutoDiff.Term t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Or(class AutoDiff.Term t1, class AutoDiff.Term t2) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="AutoDiff.Term" />
+        <Parameter Name="t2" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="t1">To be added.</param>
+        <param name="t2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectVectorOntoX">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term ProjectVectorOntoX (AutoDiff.TVec origin, AutoDiff.TVec dir, AutoDiff.Term x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term ProjectVectorOntoX(class AutoDiff.TVec origin, class AutoDiff.TVec dir, class AutoDiff.Term x) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="origin" Type="AutoDiff.TVec" />
+        <Parameter Name="dir" Type="AutoDiff.TVec" />
+        <Parameter Name="x" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="origin">To be added.</param>
+        <param name="dir">To be added.</param>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightOf">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term RightOf (AutoDiff.TVec vec, AutoDiff.TVec toCheck);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term RightOf(class AutoDiff.TVec vec, class AutoDiff.TVec toCheck) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vec" Type="AutoDiff.TVec" />
+        <Parameter Name="toCheck" Type="AutoDiff.TVec" />
+      </Parameters>
+      <Docs>
+        <param name="vec">
+            A <see cref="T:AutoDiff.TVec" /></param>
+        <param name="toCheck">
+            A <see cref="T:AutoDiff.TVec" /></param>
+        <summary>
+            Two dimensional geometry:
+            Returns if toCheck is right of vec.
+            </summary>
+        <returns>
+            A <see cref="T:AutoDiff.Term" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rotate">
+      <MemberSignature Language="C#" Value="public static AutoDiff.TVec Rotate (AutoDiff.TVec vec, double alpha);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.TVec Rotate(class AutoDiff.TVec vec, float64 alpha) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.TVec</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vec" Type="AutoDiff.TVec" />
+        <Parameter Name="alpha" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="vec">
+            A <see cref="T:AutoDiff.TVec" /></param>
+        <param name="alpha">
+            A <see cref="T:System.Double" /></param>
+        <summary>
+            Rotates vec by alpha
+            </summary>
+        <returns>
+            A <see cref="T:AutoDiff.TVec" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSteepness">
+      <MemberSignature Language="C#" Value="public static void SetSteepness (double s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetSteepness(float64 s) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Steepness is irrelevant for the current solver.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="s">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SteepnessDefault">
+      <MemberSignature Language="C#" Value="public const double SteepnessDefault = 0.01;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 SteepnessDefault = (0.01)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>0.01</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SteepnessSteep">
+      <MemberSignature Language="C#" Value="public const double SteepnessSteep = 10;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 SteepnessSteep = (10)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>10</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SteepnessWide">
+      <MemberSignature Language="C#" Value="public const double SteepnessWide = 0.005;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 SteepnessWide = (0.005)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>0.005</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="True">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term True;" />
+      <MemberSignature Language="ILAsm" Value=".field public static class AutoDiff.Term True" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

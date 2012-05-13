@@ -1,0 +1,12 @@
+<stack>
+  <description brief="Alica">Alica</description>
+  <author>Maintained by hendrik</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/cn-alica-ros-pkg</url>
+  <depend stack="cn-roscs-ros-pkg" /> <!-- roscs -->
+  <depend stack="cn-util-ros-pkg" /> <!-- Castor -->
+  <depend stack="ros" />
+  <depend stack="ros_comm" /> <!-- roscpp -->
+
+</stack>

@@ -1,0 +1,110 @@
+<Type Name="TermUtils" FullName="AutoDiff.TermUtils">
+  <TypeSignature Language="C#" Value="public static class TermUtils" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit TermUtils extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>AutoDiff</AssemblyName>
+    <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Static methods that operate on terms.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Compile">
+      <MemberSignature Language="C#" Value="public static AutoDiff.ICompiledTerm Compile (this AutoDiff.Term term, AutoDiff.Variable[] variables);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.ICompiledTerm Compile(class AutoDiff.Term term, class AutoDiff.Variable[] variables) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.ICompiledTerm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="term" Type="AutoDiff.Term" RefType="this" />
+        <Parameter Name="variables" Type="AutoDiff.Variable[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="term">The term to compile.</param>
+        <param name="variables">The variables contained in the term.</param>
+        <summary>
+            Creates a compiled representation of a given term that allows efficient evaluation of the value/gradient.
+            </summary>
+        <returns>A compiled representation of <paramref name="term" /> that assigns values to variables in the same order
+            as in <paramref name="variables" /></returns>
+        <remarks>
+            The order of the variables in <paramref name="variables" /> is important. Each call to <c>ICompiledTerm.Evaluate</c> or
+            <c>ICompiledTerm.Differentiate</c> receives an array of numbers representing the point of evaluation. The i'th number in this array corresponds
+            to the i'th variable in <c>variables</c>.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Differentiate">
+      <MemberSignature Language="C#" Value="public static double[] Differentiate (this AutoDiff.Term term, AutoDiff.Variable[] variables, double[] point);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64[] Differentiate(class AutoDiff.Term term, class AutoDiff.Variable[] variables, float64[] point) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="term" Type="AutoDiff.Term" RefType="this" />
+        <Parameter Name="variables" Type="AutoDiff.Variable[]" />
+        <Parameter Name="point" Type="System.Double[]" />
+      </Parameters>
+      <Docs>
+        <param name="term">The term representing the function to differentiate.</param>
+        <param name="variables">The variables used in <paramref name="term" />.</param>
+        <param name="point">The values assigned to the variables in <paramref name="variables" /></param>
+        <summary>
+            Computes the gradient of the function represented by a given term at a given point.
+            </summary>
+        <returns>The gradient of the function represented by <paramref name="term" /> at the point represented by <paramref name="variables" />
+            and <paramref name="point" />.</returns>
+        <remarks>The i'th value in <c>point</c> corresponds to the i'th variable in <c>variables</c>. In addition, the i'th value
+            in the resulting array is the partial derivative with respect to the i'th variable in <c>variables</c>.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evaluate">
+      <MemberSignature Language="C#" Value="public static double Evaluate (this AutoDiff.Term term, AutoDiff.Variable[] variables, double[] point);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 Evaluate(class AutoDiff.Term term, class AutoDiff.Variable[] variables, float64[] point) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="term" Type="AutoDiff.Term" RefType="this" />
+        <Parameter Name="variables" Type="AutoDiff.Variable[]" />
+        <Parameter Name="point" Type="System.Double[]" />
+      </Parameters>
+      <Docs>
+        <param name="term">The term representing the function to evaluate.</param>
+        <param name="variables">The variables used in <paramref name="term" />.</param>
+        <param name="point">The values assigned to the variables in <paramref name="variables" /></param>
+        <summary>
+            Evaluates the function represented by a given term at a given point.
+            </summary>
+        <returns>The value of the function represented by <paramref name="term" /> at the point represented by <paramref name="variables" />
+            and <paramref name="point" />.</returns>
+        <remarks>The i'th value in <c>point</c> corresponds to the i'th variable in <c>variables</c>.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

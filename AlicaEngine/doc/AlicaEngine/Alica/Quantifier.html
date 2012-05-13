@@ -1,0 +1,736 @@
+<html>
+  <head>
+    <title>Alica.Quantifier</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">AlicaEngine</a> : <a href="index.html">Alica Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Alica.Quantifier">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Alica.Quantifier:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Alica.Quantifier:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Alica.Quantifier:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Alica.Quantifier">Quantifier  Class</h1>
+    <p class="Summary" id="T:Alica.Quantifier:Summary">
+            A quantifier encapsulates a set of <a href="../Alica/Variable.html">Alica.Variable</a>s, belonging to a domain artifact, scoped under a PlanElement
+            </p>
+    <div id="T:Alica.Quantifier:Signature">
+      <h2>Syntax</h2>
+      <div class="Signature">public abstract class  <b>Quantifier</b> : <a href="../Alica/PlanElement.html">PlanElement</a></div>
+    </div>
+    <div class="Remarks" id="T:Alica.Quantifier:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Alica.Quantifier:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Alica.Quantifier:Docs:Version Information">
+        <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../Alica/PlanElement.html">PlanElement</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Alica.Quantifier(System.Int64)">Quantifier</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>)</div>
+                </td>
+                <td>
+            Constructor
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../Alica/PlanElement.html#P:Alica.PlanElement.Comment">Comment</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../Alica/PlanElement.html">PlanElement</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.Quantifier.DomainIdentifiers">DomainIdentifiers</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;string&gt;</a>
+                  </i>. 
+            The list of strings idendtifying specific domain elements.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../Alica/PlanElement.html#P:Alica.PlanElement.Id">Id</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>
+                  </i>. 
+            This element's unique id
+             (<i>Inherited from <a href="../Alica/PlanElement.html">PlanElement</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../Alica/PlanElement.html#P:Alica.PlanElement.Name">Name</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            This element's descriptive name.
+             (<i>Inherited from <a href="../Alica/PlanElement.html">PlanElement</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.Quantifier.ScopeIsEntryPoint">ScopeIsEntryPoint</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Indicates that the scope of this quantifier is an <a href="../Alica/EntryPoint.html">Alica.EntryPoint</a></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.Quantifier.ScopeIsPlan">ScopeIsPlan</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Indicates that the scope of this quantifier is a <a href="../Alica/Plan.html">Alica.Plan</a></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Alica.Quantifier.ScopeIsState">ScopeIsState</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Indicates that the scope of this quantifier is an <a href="../Alica/State.html">Alica.State</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.Quantifier.GetScope">GetScope</a>
+                  </b>()<nobr> : <a href="../Alica/PlanElement.html">PlanElement</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.Quantifier.GetScopedEntryPoint">GetScopedEntryPoint</a>
+                  </b>()<nobr> : <a href="../Alica/EntryPoint.html">EntryPoint</a></nobr><blockquote>
+            Returns the scope of this quantifier, returns null, if the scope is not an EntryPoint.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.Quantifier.GetScopedPlan">GetScopedPlan</a>
+                  </b>()<nobr> : <a href="../Alica/Plan.html">Plan</a></nobr><blockquote>
+            Returns the scope of this quantifier, returns null, if the scope is not a Plan.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.Quantifier.GetScopedState">GetScopedState</a>
+                  </b>()<nobr> : <a href="../Alica/State.html">State</a></nobr><blockquote>
+            Returns the scope of this quantifier, returns null, if the scope is not a state.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.Quantifier.GetSortedTerms(Alica.RunningPlan,System.Collections.Generic.ICollection{System.Int32}@)">GetSortedTerms</a>
+                  </b>(<a href="../Alica/RunningPlan.html">RunningPlan</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.ICollection`1">ICollection&lt;int&gt;</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;AutoDiff.Term[]&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.Quantifier.GetSortedVariables(Alica.RunningPlan,System.Collections.Generic.ICollection{System.Int32}@)">GetSortedVariables</a>
+                  </b>(<a href="../Alica/RunningPlan.html">RunningPlan</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.ICollection`1">ICollection&lt;int&gt;</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;Variable[]&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.Quantifier.SetScope(Alica.PlanElement)">SetScope</a>
+                  </b>(<a href="../Alica/PlanElement.html">PlanElement</a>)<blockquote>
+            Set the scope of this quantifier, called by the <a href="../Alica/ModelFactory.html">Alica.ModelFactory</a></blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Alica.Quantifier:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Alica.Quantifier(System.Int64)">Quantifier Constructor</h3>
+        <blockquote id="C:Alica.Quantifier(System.Int64):member">
+          <p class="Summary">
+            Constructor
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>Quantifier</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> id)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Alica.Quantifier(System.Int64):Parameters">
+            <dl>
+              <dt>
+                <i>id</i>
+              </dt>
+              <dd>
+            A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a></dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Alica.Quantifier(System.Int64):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Alica.Quantifier(System.Int64):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.Quantifier.DomainIdentifiers">DomainIdentifiers Property</h3>
+        <blockquote id="P:Alica.Quantifier.DomainIdentifiers:member">
+          <p class="Summary">
+            The list of strings idendtifying specific domain elements.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;string&gt;</a> <b>DomainIdentifiers</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.Quantifier.DomainIdentifiers:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.Quantifier.DomainIdentifiers:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.Quantifier.DomainIdentifiers:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.Quantifier.GetScope">GetScope Method</h3>
+        <blockquote id="M:Alica.Quantifier.GetScope:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../Alica/PlanElement.html">PlanElement</a> <b>GetScope</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.Quantifier.GetScope:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.Quantifier.GetScope:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.Quantifier.GetScope:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.Quantifier.GetScopedEntryPoint">GetScopedEntryPoint Method</h3>
+        <blockquote id="M:Alica.Quantifier.GetScopedEntryPoint:member">
+          <p class="Summary">
+            Returns the scope of this quantifier, returns null, if the scope is not an EntryPoint.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../Alica/EntryPoint.html">EntryPoint</a> <b>GetScopedEntryPoint</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.Quantifier.GetScopedEntryPoint:Returns">
+            A <a href="../Alica/EntryPoint.html">Alica.EntryPoint</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.Quantifier.GetScopedEntryPoint:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.Quantifier.GetScopedEntryPoint:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.Quantifier.GetScopedPlan">GetScopedPlan Method</h3>
+        <blockquote id="M:Alica.Quantifier.GetScopedPlan:member">
+          <p class="Summary">
+            Returns the scope of this quantifier, returns null, if the scope is not a Plan.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../Alica/Plan.html">Plan</a> <b>GetScopedPlan</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.Quantifier.GetScopedPlan:Returns">
+            A <a href="../Alica/Plan.html">Alica.Plan</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.Quantifier.GetScopedPlan:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.Quantifier.GetScopedPlan:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.Quantifier.GetScopedState">GetScopedState Method</h3>
+        <blockquote id="M:Alica.Quantifier.GetScopedState:member">
+          <p class="Summary">
+            Returns the scope of this quantifier, returns null, if the scope is not a state.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../Alica/State.html">State</a> <b>GetScopedState</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.Quantifier.GetScopedState:Returns">
+            A <a href="../Alica/State.html">Alica.State</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.Quantifier.GetScopedState:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.Quantifier.GetScopedState:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.Quantifier.GetSortedTerms(Alica.RunningPlan,System.Collections.Generic.ICollection{System.Int32}@)">GetSortedTerms Method</h3>
+        <blockquote id="M:Alica.Quantifier.GetSortedTerms(Alica.RunningPlan,System.Collections.Generic.ICollection{System.Int32}@):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;AutoDiff.Term[]&gt;</a> <b>GetSortedTerms</b> (<a href="../Alica/RunningPlan.html">RunningPlan</a> p, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.ICollection`1">ICollection&lt;int&gt;</a> agentsInScope)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.Quantifier.GetSortedTerms(Alica.RunningPlan,System.Collections.Generic.ICollection{System.Int32}@):Parameters">
+            <dl>
+              <dt>
+                <i>p</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>agentsInScope</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.Quantifier.GetSortedTerms(Alica.RunningPlan,System.Collections.Generic.ICollection{System.Int32}@):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.Quantifier.GetSortedTerms(Alica.RunningPlan,System.Collections.Generic.ICollection{System.Int32}@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.Quantifier.GetSortedTerms(Alica.RunningPlan,System.Collections.Generic.ICollection{System.Int32}@):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.Quantifier.GetSortedVariables(Alica.RunningPlan,System.Collections.Generic.ICollection{System.Int32}@)">GetSortedVariables Method</h3>
+        <blockquote id="M:Alica.Quantifier.GetSortedVariables(Alica.RunningPlan,System.Collections.Generic.ICollection{System.Int32}@):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;Variable[]&gt;</a> <b>GetSortedVariables</b> (<a href="../Alica/RunningPlan.html">RunningPlan</a> p, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.ICollection`1">ICollection&lt;int&gt;</a> agentsInScope)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.Quantifier.GetSortedVariables(Alica.RunningPlan,System.Collections.Generic.ICollection{System.Int32}@):Parameters">
+            <dl>
+              <dt>
+                <i>p</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>agentsInScope</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.Quantifier.GetSortedVariables(Alica.RunningPlan,System.Collections.Generic.ICollection{System.Int32}@):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.Quantifier.GetSortedVariables(Alica.RunningPlan,System.Collections.Generic.ICollection{System.Int32}@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.Quantifier.GetSortedVariables(Alica.RunningPlan,System.Collections.Generic.ICollection{System.Int32}@):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.Quantifier.ScopeIsEntryPoint">ScopeIsEntryPoint Property</h3>
+        <blockquote id="P:Alica.Quantifier.ScopeIsEntryPoint:member">
+          <p class="Summary">
+            Indicates that the scope of this quantifier is an <a href="../Alica/EntryPoint.html">Alica.EntryPoint</a></p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>ScopeIsEntryPoint</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.Quantifier.ScopeIsEntryPoint:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.Quantifier.ScopeIsEntryPoint:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.Quantifier.ScopeIsEntryPoint:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.Quantifier.ScopeIsPlan">ScopeIsPlan Property</h3>
+        <blockquote id="P:Alica.Quantifier.ScopeIsPlan:member">
+          <p class="Summary">
+            Indicates that the scope of this quantifier is a <a href="../Alica/Plan.html">Alica.Plan</a></p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>ScopeIsPlan</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.Quantifier.ScopeIsPlan:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.Quantifier.ScopeIsPlan:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.Quantifier.ScopeIsPlan:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Alica.Quantifier.ScopeIsState">ScopeIsState Property</h3>
+        <blockquote id="P:Alica.Quantifier.ScopeIsState:member">
+          <p class="Summary">
+            Indicates that the scope of this quantifier is an <a href="../Alica/State.html">Alica.State</a></p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>ScopeIsState</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Alica.Quantifier.ScopeIsState:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Alica.Quantifier.ScopeIsState:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Alica.Quantifier.ScopeIsState:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.Quantifier.SetScope(Alica.PlanElement)">SetScope Method</h3>
+        <blockquote id="M:Alica.Quantifier.SetScope(Alica.PlanElement):member">
+          <p class="Summary">
+            Set the scope of this quantifier, called by the <a href="../Alica/ModelFactory.html">Alica.ModelFactory</a></p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetScope</b> (<a href="../Alica/PlanElement.html">PlanElement</a> pe)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.Quantifier.SetScope(Alica.PlanElement):Parameters">
+            <dl>
+              <dt>
+                <i>pe</i>
+              </dt>
+              <dd>
+            A <a href="../Alica/PlanElement.html">Alica.PlanElement</a></dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.Quantifier.SetScope(Alica.PlanElement):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.Quantifier.SetScope(Alica.PlanElement):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

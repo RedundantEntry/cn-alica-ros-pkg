@@ -1,0 +1,304 @@
+<Type Name="SuccessMarks" FullName="Alica.SuccessMarks">
+  <TypeSignature Language="C#" Value="public class SuccessMarks" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SuccessMarks extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Globally holds information about succeeded entrypoints for a specific robot
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SuccessMarks ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Default Constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SuccessMarks (System.Collections.Generic.List&lt;long&gt; epIds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.List`1&lt;int64&gt; epIds) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="epIds" Type="System.Collections.Generic.List&lt;System.Int64&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="epIds">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnyTaskSucceeded">
+      <MemberSignature Language="C#" Value="public bool AnyTaskSucceeded (Alica.AbstractPlan p);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool AnyTaskSucceeded(class Alica.AbstractPlan p) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p" Type="Alica.AbstractPlan" />
+      </Parameters>
+      <Docs>
+        <param name="p">
+            A <see cref="T:Alica.AbstractPlan" /></param>
+        <summary>
+            Test if at least one task has succeeded within abstract plan p
+            </summary>
+        <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Clear all marks
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LimitToPlans">
+      <MemberSignature Language="C#" Value="public void LimitToPlans (System.Collections.Generic.ICollection&lt;Alica.AbstractPlan&gt; active);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LimitToPlans(class System.Collections.Generic.ICollection`1&lt;class Alica.AbstractPlan&gt; active) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="active" Type="System.Collections.Generic.ICollection&lt;Alica.AbstractPlan&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="active">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkSuccessfull">
+      <MemberSignature Language="C#" Value="public void MarkSuccessfull (Alica.AbstractPlan p, Alica.EntryPoint e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MarkSuccessfull(class Alica.AbstractPlan p, class Alica.EntryPoint e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p" Type="Alica.AbstractPlan" />
+        <Parameter Name="e" Type="Alica.EntryPoint" />
+      </Parameters>
+      <Docs>
+        <param name="p">
+            A <see cref="T:Alica.AbstractPlan" /></param>
+        <param name="e">
+            A <see cref="T:Alica.EntryPoint" /></param>
+        <summary>
+            Mark an entrypoint within a plan as successfully completed
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePlan">
+      <MemberSignature Language="C#" Value="public void RemovePlan (Alica.AbstractPlan p);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemovePlan(class Alica.AbstractPlan p) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p" Type="Alica.AbstractPlan" />
+      </Parameters>
+      <Docs>
+        <param name="p">
+            A <see cref="T:Alica.AbstractPlan" /></param>
+        <summary>
+            Remove all marks referring to the specified plan.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Succeeded">
+      <MemberSignature Language="C#" Value="public bool Succeeded (Alica.AbstractPlan p, Alica.EntryPoint e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Succeeded(class Alica.AbstractPlan p, class Alica.EntryPoint e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p" Type="Alica.AbstractPlan" />
+        <Parameter Name="e" Type="Alica.EntryPoint" />
+      </Parameters>
+      <Docs>
+        <param name="p">
+            A <see cref="T:Alica.AbstractPlan" /></param>
+        <param name="e">
+            A <see cref="T:Alica.EntryPoint" /></param>
+        <summary>
+            Check whether an entrypoint in a plan was completed.
+            </summary>
+        <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Succeeded">
+      <MemberSignature Language="C#" Value="public bool Succeeded (long planId, long entryPointId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Succeeded(int64 planId, int64 entryPointId) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="planId" Type="System.Int64" />
+        <Parameter Name="entryPointId" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="planId">
+            A <see cref="T:System.Int64" /></param>
+        <param name="entryPointId">
+            A <see cref="T:System.Int64" /></param>
+        <summary>
+            Check whether an entrypoint in a plan was completed.
+            </summary>
+        <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SucceededEntryPoints">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;Alica.EntryPoint&gt; SucceededEntryPoints (Alica.AbstractPlan p);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.List`1&lt;class Alica.EntryPoint&gt; SucceededEntryPoints(class Alica.AbstractPlan p) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Alica.EntryPoint&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p" Type="Alica.AbstractPlan" />
+      </Parameters>
+      <Docs>
+        <param name="p">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="successMarks">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.Dictionary&lt;Alica.AbstractPlan,System.Collections.Generic.List&lt;Alica.EntryPoint&gt;&gt; successMarks;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Generic.Dictionary`2&lt;class Alica.AbstractPlan, class System.Collections.Generic.List`1&lt;class Alica.EntryPoint&gt;&gt; successMarks" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;Alica.AbstractPlan,System.Collections.Generic.List&lt;Alica.EntryPoint&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToList">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;long&gt; ToList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.List`1&lt;int64&gt; ToList() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Int64&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,145 @@
+«IMPORT alica»  
+«EXTENSION de::uni_kassel::cn::planDesigner::codegeneration::extensions::util»
+«DEFINE Root FOR PlanningProblem»«ENDDEFINE»
+«DEFINE Root FOR Plan»
+
+	«FILE name + ".cs"-»
+		using System;
+		using System.Collections.Generic;
+		using Alica;
+		
+		«PROTECT CSTART '/*' CEND '*/' ID "eph"+this.id-»
+			//Add additional using directives here
+		«ENDPROTECT-»
+		
+		namespace Alica.Validators
+		{	
+			//Plan:«this.name»
+			public partial class Expressions : AbstractExpressions {
+			«EXPAND abstractPlanChecking»
+			«EXPAND doExpandStates»		
+			}	
+		}
+	«ENDFILE»
+
+«ENDDEFINE»
+
+«DEFINE BehaviourConfiguration FOR BehaviourConfiguration»
+
+	«FILE behaviour.name + id + "Behaviour.cs"-»	
+using System;
+using System.Collections.Generic;
+using Alica;
+«PROTECT CSTART '/*' CEND '*/' ID "eph"+this.id-»
+	//Add additional using directives here
+«ENDPROTECT»
+		
+namespace Alica.Validators
+{	
+	//BehaviourConfiguration:«this.name»
+	public partial class Expressions : AbstractExpressions {
+		«EXPAND abstractPlanChecking»	
+	}			
+}
+	«ENDFILE»
+
+«ENDDEFINE»
+«DEFINE abstractPlanChecking FOR BehaviourConfiguration»«ENDDEFINE»
+«DEFINE abstractPlanChecking FOR PlanType»«ENDDEFINE»
+«DEFINE abstractPlanChecking FOR Plan»							
+				«EXPAND planCheckingMethods»
+				«EXPAND utilityFunctionMethod»
+«ENDDEFINE»
+
+«DEFINE utilityFunctionMethod FOR Plan»
+				/* generated comment
+					«EXPAND utilFuncEntryPoints FOREACH entryPoints»
+				*/
+				public static UtilityFunction GetUtilityFunction«this.id»(Plan plan)
+				{   
+					«PROTECT CSTART '/*' CEND '*/' ID this.id »
+					«computeUtilityReturnValue(this)»
+					«ENDPROTECT»					
+				}
+«ENDDEFINE»
+
+«DEFINE utilFuncEntryPoints FOR EntryPoint»
+	Task: «this.task.name»  -> EntryPoint-ID: «this.id»
+«ENDDEFINE»
+
+
+
+«DEFINE doExpandStates FOR Plan»
+	«FOREACH states AS state»
+		«EXPAND stateChecking(state)»
+		«EXPAND BehaviourConfiguration FOREACH collectBehaviours(state)»
+	«ENDFOREACH»
+«ENDDEFINE»
+
+«DEFINE stateChecking(State s) FOR Plan»
+			//State: «s.name» in Plan: «this.name»
+			«EXPAND stateCheckingMethods(s)»			
+«ENDDEFINE»
+
+
+«DEFINE stateCheckingMethods(State s) FOR Plan»
+	«REM»Aufgrund des fehlenden beautyfiers sieht die Formatierung des templates hier bescheiden aus ;)«ENDREM»
+	«FOREACH s.outTransitions AS transition»
+			/*		
+			* Transition:
+			*   - Name: «transition.name», ConditionString: «transition.preCondition.conditionString»
+			*
+			* Plans in State: «FOREACH s.plans AS plan»				
+			*   - Plan - (Name): «plan.name», (PlanID): «plan.id» «ENDFOREACH»
+			*
+			* Tasks: «FOREACH s.inPlan.entryPoints AS planEntryPoint»
+			*   - «planEntryPoint.task.name» («planEntryPoint.task.id») (Entrypoint: «planEntryPoint.id»)«ENDFOREACH»
+			*
+			* States:«FOREACH s.inPlan.states AS state»
+			*   - «state.name» («state.id»)«ENDFOREACH»
+			*
+			* Vars:«FOREACH transition.preCondition.vars AS var»				
+			*	- «var.name» («var.id») «ENDFOREACH»
+			*/
+			public static bool F«transition.id»(RunningPlan rp)
+			{	
+				«PROTECT CSTART '/*' CEND '*/' ID transition.id »
+					//WorldModel wm = WorldModel.Get();
+					--> "Transition: «transition.id»  not implemented";
+					// return false;
+				«ENDPROTECT»	
+				
+			}
+	«ENDFOREACH»
+«ENDDEFINE»
+
+«DEFINE planCheckingMethods FOR AbstractPlan»
+	«FOREACH runtimeConditions() AS rc»
+			  //Check of RuntimeCondition - (Name): «rc.name», (ConditionString): «rc.conditionString» 
+			  /*
+			  * Available Vars:«FOREACH rc.vars AS var»
+			  *	- «var.name» («var.id»)«ENDFOREACH»
+			  */
+			  public static bool F«rc.id»(RunningPlan rp)
+			  {
+			 	 «PROTECT CSTART '/*' CEND '*/' ID rc.id »
+			 	 	//WorldModel wm = WorldModel.Get();
+					return true;
+				 «ENDPROTECT»			    
+			  }				
+	«ENDFOREACH»
+	«FOREACH preConditions() AS pc»
+			  //Check of PreCondition - (Name): «pc.name», (ConditionString): «pc.conditionString» 
+			  /*
+			  * Available Vars:«FOREACH pc.vars AS var»
+			  *	- «var.name» («var.id»)«ENDFOREACH»
+			  */
+			  public static bool F«pc.id»(RunningPlan rp)
+			  {
+			 	 «PROTECT CSTART '/*' CEND '*/' ID pc.id »
+			 	 	//WorldModel wm = WorldModel.Get();
+					return true;
+				 «ENDPROTECT»			    
+			  }				
+	«ENDFOREACH»
+«ENDDEFINE»

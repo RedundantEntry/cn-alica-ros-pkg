@@ -1,0 +1,114 @@
+«IMPORT alica»  
+«EXTENSION de::uni_kassel::cn::planDesigner::codegeneration::extensions::util»
+
+«DEFINE Root FOR Plan»
+
+	«FILE name + "Costs.cs"»
+	
+		using System;
+		using System.Collections.Generic;
+		using AD = AutoDiff;
+		
+		namespace CarpeNoctem.Base.BehaviourEngine.Validators
+		{	
+			public partial class CostFunctions{ //«this.id» {
+			//Plan:«this.name»
+			«EXPAND abstractPlanChecking»
+			«EXPAND doExpandStates»			
+			}
+		}
+	«ENDFILE»
+
+«ENDDEFINE»
+«DEFINE BehaviourConfiguration FOR BehaviourConfiguration»
+«FILE behaviour.name + id + "BehaviourCost.cs"»
+		using System;
+		using System.Collections.Generic;
+		using AD = AutoDiff;
+		
+		namespace CarpeNoctem.Base.BehaviourEngine.Validators
+		{	
+			public partial class CostFunctions{ //«this.id» {
+
+			%BehaviourConfiguration: «this.name» «this.id»
+			«EXPAND abstractPlanChecking»
+			}
+		}				
+«ENDFILE»
+«ENDDEFINE»
+
+«DEFINE description FOR Plan»
+/*		
+* Tasks: «FOREACH entryPoints AS planEntryPoint»
+* - «planEntryPoint.task.name» («planEntryPoint.task.id»)«ENDFOREACH»
+*
+* States:«FOREACH states AS state»
+* - «state.name» («state.id»)«ENDFOREACH»
+*
+* Vars:«FOREACH vars AS var»				
+* - «var.name» («var.id») «ENDFOREACH»
+*/
+«ENDDEFINE»
+
+
+«DEFINE stateCheckingMethods(State s) FOR Plan»
+
+«FOREACH s.exitPoints AS ep»
+/*		
+* Transition(s): «FOREACH ep.outTransition AS transition»
+* - Name: «transition.name»
+* - ConditionString: «transition.preCondition.conditionString» «ENDFOREACH»
+*
+* Plans in State: «FOREACH s.plans AS plan»				
+* - Plan - (Name): «plan.name», (PlanID): «plan.id» «ENDFOREACH»
+* Variables: «FOREACH ep.outTransition AS t»«t.preCondition.vars.name»«ENDFOREACH»
+*/
+public static AD.Term GetCostFunction«FOREACH ep.outTransition AS t»«t.preCondition.id»«ENDFOREACH»(AD.Variable[] vars, WorldModel wm) { //RunningPlan rp, Dictionary<long, PlanStatus> plans, WorldModel wm, Dictionary<int, SimplePlanTree> teamPlanTrees) {					
+
+«PROTECT CSTART '/*' CEND '*/' ID "costs"+ep.id »
+	return 0;					
+«ENDPROTECT»			
+}
+«ENDFOREACH»	
+«ENDDEFINE»
+
+«DEFINE doExpandStates FOR Plan»
+	«FOREACH states AS state»
+		«EXPAND stateCheckingMethods(state)»
+	«ENDFOREACH»
+«ENDDEFINE»
+
+«DEFINE planCheckingMethods FOR AbstractPlan»
+	«FOREACH runtimeConditions() AS rc»
+/*
+* RuntimeCondition - (Name): «rc.name»
+* (ConditionString): «rc.conditionString»
+* Variables: «rc.vars.name»
+*/ 			  
+
+public static AD.Term GetCostFunction«rc.id»(AD.Variable[] vars, WorldModel wm) { // RunningPlan rp, Dictionary<long, PlanStatus> plans, WorldModel wm, Dictionary<int, SimplePlanTree> teamPlanTrees) {
+
+«PROTECT CSTART '/*' CEND '*/' ID "costs"+rc.id »
+	return 0;
+«ENDPROTECT»			    
+}				
+	«ENDFOREACH»
+	«FOREACH preConditions() AS pc»
+/*
+* PreCondition - (Name): «pc.name»
+* (ConditionString): «pc.conditionString»
+* Variables: «pc.vars.name» 
+*/
+public static AD.Term GetCostFunction«pc.id»(AD.Variable[] vars, WorldModel wm) { //, RunningPlan rp, Dictionary<long, PlanStatus> plans, WorldModel wm, Dictionary<int, SimplePlanTree> teamPlanTrees) {
+
+«PROTECT CSTART '/*' CEND '*/' ID "costs"+pc.id »
+	return 0;
+«ENDPROTECT»			    
+}					
+	«ENDFOREACH»
+«ENDDEFINE»
+
+
+«DEFINE abstractPlanChecking FOR AbstractPlan»			
+		«EXPAND planCheckingMethods»				
+«ENDDEFINE»

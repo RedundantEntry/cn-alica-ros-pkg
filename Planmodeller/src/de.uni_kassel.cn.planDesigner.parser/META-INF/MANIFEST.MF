@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Parser Plug-in
+Bundle-SymbolicName: de.uni_kassel.cn.planDesigner.utility.parser;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Carpe Noctem
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: org.eclipse.ui;bundle-version="3.4.1",
+ org.eclipse.core.runtime;bundle-version="3.4.0"
+Export-Package: de.uni_kassel.cn.planDesigner.parser
+Bundle-ClassPath: lib/ini4j-0.4.0.jar,
+ .
+Bundle-Activator: de.uni_kassel.cn.planDesigner.parser.ParserActivator
+Bundle-ActivationPolicy: lazy

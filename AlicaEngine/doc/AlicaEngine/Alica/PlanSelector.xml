@@ -1,0 +1,120 @@
+<Type Name="PlanSelector" FullName="Alica.PlanSelector">
+  <TypeSignature Language="C#" Value="public class PlanSelector : Alica.IPlanSelector" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PlanSelector extends System.Object implements class Alica.IPlanSelector" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Alica.IPlanSelector</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Implements the task allocation algorithm
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PlanSelector ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Basic ctor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBestSimilarAssignment">
+      <MemberSignature Language="C#" Value="public Alica.RunningPlan GetBestSimilarAssignment (Alica.RunningPlan oldRp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Alica.RunningPlan GetBestSimilarAssignment(class Alica.RunningPlan oldRp) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.RunningPlan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldRp" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="oldRp">To be added.</param>
+        <summary> Edits data from the old running plan to call the method CreateRunningPlan appropriatly. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBestSimilarAssignment">
+      <MemberSignature Language="C#" Value="public Alica.RunningPlan GetBestSimilarAssignment (Alica.RunningPlan oldRp, System.Collections.Generic.ICollection&lt;int&gt; robots);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Alica.RunningPlan GetBestSimilarAssignment(class Alica.RunningPlan oldRp, class System.Collections.Generic.ICollection`1&lt;int32&gt; robots) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.RunningPlan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldRp" Type="Alica.RunningPlan" />
+        <Parameter Name="robots" Type="System.Collections.Generic.ICollection&lt;System.Int32&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="oldRp">To be added.</param>
+        <param name="robots">To be added.</param>
+        <summary> Edits data from the old running plan to call the method CreateRunningPlan appropriatly. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPlansForState">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedList&lt;Alica.RunningPlan&gt; GetPlansForState (Alica.RunningPlan parent, System.Collections.Generic.LinkedList&lt;Alica.AbstractPlan&gt; plans, System.Collections.Generic.ICollection&lt;int&gt; robots);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.LinkedList`1&lt;class Alica.RunningPlan&gt; GetPlansForState(class Alica.RunningPlan parent, class System.Collections.Generic.LinkedList`1&lt;class Alica.AbstractPlan&gt; plans, class System.Collections.Generic.ICollection`1&lt;int32&gt; robots) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.LinkedList&lt;Alica.RunningPlan&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="Alica.RunningPlan" />
+        <Parameter Name="plans" Type="System.Collections.Generic.LinkedList&lt;Alica.AbstractPlan&gt;" />
+        <Parameter Name="robots" Type="System.Collections.Generic.ICollection&lt;System.Int32&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="parent">To be added.</param>
+        <param name="plans">To be added.</param>
+        <param name="robots">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

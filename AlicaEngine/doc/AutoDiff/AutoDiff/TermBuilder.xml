@@ -1,0 +1,444 @@
+<Type Name="TermBuilder" FullName="AutoDiff.TermBuilder">
+  <TypeSignature Language="C#" Value="public static class TermBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit TermBuilder extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>AutoDiff</AssemblyName>
+    <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A collection of static methods to build new terms
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BoundedRectangle">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term BoundedRectangle (AutoDiff.TVec arg, AutoDiff.TVec leftLower, AutoDiff.TVec rightUpper, double steepness);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term BoundedRectangle(class AutoDiff.TVec arg, class AutoDiff.TVec leftLower, class AutoDiff.TVec rightUpper, float64 steepness) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg" Type="AutoDiff.TVec" />
+        <Parameter Name="leftLower" Type="AutoDiff.TVec" />
+        <Parameter Name="rightUpper" Type="AutoDiff.TVec" />
+        <Parameter Name="steepness" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="arg">To be added.</param>
+        <param name="leftLower">To be added.</param>
+        <param name="rightUpper">To be added.</param>
+        <param name="steepness">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BoundedValue">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term BoundedValue (AutoDiff.Term arg, AutoDiff.Term leftBound, AutoDiff.Term rightBound, double steepness);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term BoundedValue(class AutoDiff.Term arg, class AutoDiff.Term leftBound, class AutoDiff.Term rightBound, float64 steepness) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg" Type="AutoDiff.Term" />
+        <Parameter Name="leftBound" Type="AutoDiff.Term" />
+        <Parameter Name="rightBound" Type="AutoDiff.Term" />
+        <Parameter Name="steepness" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="arg">To be added.</param>
+        <param name="leftBound">To be added.</param>
+        <param name="rightBound">To be added.</param>
+        <param name="steepness">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Constant">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term Constant (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Constant(float64 value) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">The constant value</param>
+        <summary>
+            Builds a new constant term.
+            </summary>
+        <returns>The constant term.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cos">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term Cos (AutoDiff.Term arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Cos(class AutoDiff.Term arg) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="arg">The cosine argument.</param>
+        <summary>
+            Builds a term representing the cosine function.
+            </summary>
+        <returns>A term representing the cosine of <paramref name="arg" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EuclidianDistance">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term EuclidianDistance (AutoDiff.TVec one, AutoDiff.TVec two);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term EuclidianDistance(class AutoDiff.TVec one, class AutoDiff.TVec two) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="one" Type="AutoDiff.TVec" />
+        <Parameter Name="two" Type="AutoDiff.TVec" />
+      </Parameters>
+      <Docs>
+        <param name="one">To be added.</param>
+        <param name="two">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EuclidianDistanceSqr">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term EuclidianDistanceSqr (AutoDiff.TVec one, AutoDiff.TVec two);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term EuclidianDistanceSqr(class AutoDiff.TVec one, class AutoDiff.TVec two) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="one" Type="AutoDiff.TVec" />
+        <Parameter Name="two" Type="AutoDiff.TVec" />
+      </Parameters>
+      <Docs>
+        <param name="one">To be added.</param>
+        <param name="two">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exp">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term Exp (AutoDiff.Term arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Exp(class AutoDiff.Term arg) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="arg">The function's exponent</param>
+        <summary>
+            Builds a term representing the exponential function e^x.
+            </summary>
+        <returns>A term representing e^arg.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Gaussian">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term Gaussian (AutoDiff.TVec args, AutoDiff.TVec mean, double variance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Gaussian(class AutoDiff.TVec args, class AutoDiff.TVec mean, float64 variance) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="AutoDiff.TVec" />
+        <Parameter Name="mean" Type="AutoDiff.TVec" />
+        <Parameter Name="variance" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="args">To be added.</param>
+        <param name="mean">To be added.</param>
+        <param name="variance">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Log">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term Log (AutoDiff.Term arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Log(class AutoDiff.Term arg) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="arg">The natural logarithm's argument.</param>
+        <summary>
+            Builds a term representing the natural logarithm.
+            </summary>
+        <returns>A term representing the natural logarithm of <paramref name="arg" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NormalDistribution">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term NormalDistribution (AutoDiff.TVec args, AutoDiff.TVec mean, double variance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term NormalDistribution(class AutoDiff.TVec args, class AutoDiff.TVec mean, float64 variance) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="AutoDiff.TVec" />
+        <Parameter Name="mean" Type="AutoDiff.TVec" />
+        <Parameter Name="variance" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="args">To be added.</param>
+        <param name="mean">To be added.</param>
+        <param name="variance">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Power">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term Power (AutoDiff.Term t, double power);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Power(class AutoDiff.Term t, float64 power) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t" Type="AutoDiff.Term" />
+        <Parameter Name="power" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="t">The power base term</param>
+        <param name="power">The exponent</param>
+        <summary>
+            Builds a power terms given a base and a constant exponent
+            </summary>
+        <returns>A term representing <c>t^power</c>.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Product">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term Product (AutoDiff.Term v1, AutoDiff.Term v2, AutoDiff.Term[] rest);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Product(class AutoDiff.Term v1, class AutoDiff.Term v2, class AutoDiff.Term[] rest) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v1" Type="AutoDiff.Term" />
+        <Parameter Name="v2" Type="AutoDiff.Term" />
+        <Parameter Name="rest" Type="AutoDiff.Term[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="v1">The first term in the product</param>
+        <param name="v2">The second term in the product</param>
+        <param name="rest">The rest of the terms in the product</param>
+        <summary>
+            Builds a product of given terms.
+            </summary>
+        <returns>A term representing the product of <paramref name="v1" />, <paramref name="v2" /> and the terms in <paramref name="rest" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QuadForm">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term QuadForm (AutoDiff.Term x1, AutoDiff.Term x2, AutoDiff.Term a11, AutoDiff.Term a12, AutoDiff.Term a21, AutoDiff.Term a22);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term QuadForm(class AutoDiff.Term x1, class AutoDiff.Term x2, class AutoDiff.Term a11, class AutoDiff.Term a12, class AutoDiff.Term a21, class AutoDiff.Term a22) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x1" Type="AutoDiff.Term" />
+        <Parameter Name="x2" Type="AutoDiff.Term" />
+        <Parameter Name="a11" Type="AutoDiff.Term" />
+        <Parameter Name="a12" Type="AutoDiff.Term" />
+        <Parameter Name="a21" Type="AutoDiff.Term" />
+        <Parameter Name="a22" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="x1">First vector component</param>
+        <param name="x2">Second vector component</param>
+        <param name="a11">First row, first column matrix component</param>
+        <param name="a12">First row, second column matrix component</param>
+        <param name="a21">Second row, first column matrix component</param>
+        <param name="a22">Second row, second column matrix component</param>
+        <summary>
+            Constructs a 2D quadratic form given the vector components x1, x2 and the matrix coefficients a11, a12, a21, a22.
+            </summary>
+        <returns>A term describing the quadratic form</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sigmoid">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term Sigmoid (AutoDiff.Term arg, AutoDiff.Term upperBound, AutoDiff.Term lowerBound, AutoDiff.Term mid, double steepness);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Sigmoid(class AutoDiff.Term arg, class AutoDiff.Term upperBound, class AutoDiff.Term lowerBound, class AutoDiff.Term mid, float64 steepness) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg" Type="AutoDiff.Term" />
+        <Parameter Name="upperBound" Type="AutoDiff.Term" />
+        <Parameter Name="lowerBound" Type="AutoDiff.Term" />
+        <Parameter Name="mid" Type="AutoDiff.Term" />
+        <Parameter Name="steepness" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="arg">To be added.</param>
+        <param name="upperBound">To be added.</param>
+        <param name="lowerBound">To be added.</param>
+        <param name="mid">To be added.</param>
+        <param name="steepness">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sin">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Term Sin (AutoDiff.Term arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Sin(class AutoDiff.Term arg) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Term</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg" Type="AutoDiff.Term" />
+      </Parameters>
+      <Docs>
+        <param name="arg">The sine argument.</param>
+        <summary>
+            Builds a term representing the sine function.
+            </summary>
+        <returns>A term representing the sine of <paramref name="arg" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sum">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Sum Sum (System.Collections.Generic.IEnumerable&lt;AutoDiff.Term&gt; terms);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Sum Sum(class System.Collections.Generic.IEnumerable`1&lt;class AutoDiff.Term&gt; terms) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Sum</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="terms" Type="System.Collections.Generic.IEnumerable&lt;AutoDiff.Term&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="terms">The collection of terms in the sum.</param>
+        <summary>
+            Builds a sum of given terms.
+            </summary>
+        <returns>A term representing the sum of the terms in <paramref name="terms" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sum">
+      <MemberSignature Language="C#" Value="public static AutoDiff.Sum Sum (AutoDiff.Term v1, AutoDiff.Term v2, AutoDiff.Term[] rest);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Sum Sum(class AutoDiff.Term v1, class AutoDiff.Term v2, class AutoDiff.Term[] rest) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>AutoDiff.Sum</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v1" Type="AutoDiff.Term" />
+        <Parameter Name="v2" Type="AutoDiff.Term" />
+        <Parameter Name="rest" Type="AutoDiff.Term[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="v1">The first term in the sum</param>
+        <param name="v2">The second term in the sum</param>
+        <param name="rest">The rest of the terms in the sum.</param>
+        <summary>
+            Builds a sum of given terms.
+            </summary>
+        <returns>A term representing the sum of <paramref name="v1" />, <paramref name="v2" /> and the terms in <paramref name="rest" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

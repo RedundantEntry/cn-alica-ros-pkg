@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ALICA DSL
+Bundle-SymbolicName: de.uni_kassel.cn.alica;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: Carpe Noctem
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: de.uni_kassel.cn.alica,
+ de.uni_kassel.cn.alica.impl,
+ de.uni_kassel.cn.alica.util
+Require-Bundle: org.eclipse.emf.ecore.xmi;bundle-version="2.4.0"
+Bundle-ActivationPolicy: lazy

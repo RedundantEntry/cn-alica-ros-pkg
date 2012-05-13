@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="de.uni_kassel.cn.planDesigner.update.updateActionSet"
+            label="Update Management">
+         <action
+               class="de.uni_kassel.cn.plandesigner.update.UpdateAction"
+               id="de.uni_kassel.cn.planDesigner.update.updateAction"
+               label="Update"
+               menubarPath="help/update"
+               style="push"
+               tooltip="Update Plan Designer">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="de.uni_kassel.cn.planDesigner.ui.pmleditorPerspective">
+         <actionSet
+               id="de.uni_kassel.cn.planDesigner.update.updateActionSet">
+         </actionSet>
+      </perspectiveExtension>
+   </extension>
+
+</plugin>

@@ -1,0 +1,289 @@
+<Type Name="Quantifier" FullName="Alica.Quantifier">
+  <TypeSignature Language="C#" Value="public abstract class Quantifier : Alica.PlanElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Quantifier extends Alica.PlanElement" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Alica.PlanElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A quantifier encapsulates a set of <see cref="T:Alica.Variable" />s, belonging to a domain artifact, scoped under a PlanElement
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Quantifier (long id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 id) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="id">
+            A <see cref="T:System.Int64" /></param>
+        <summary>
+            Constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DomainIdentifiers">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;string&gt; DomainIdentifiers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;string&gt; DomainIdentifiers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of strings idendtifying specific domain elements.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScope">
+      <MemberSignature Language="C#" Value="public Alica.PlanElement GetScope ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Alica.PlanElement GetScope() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.PlanElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScopedEntryPoint">
+      <MemberSignature Language="C#" Value="public Alica.EntryPoint GetScopedEntryPoint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Alica.EntryPoint GetScopedEntryPoint() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.EntryPoint</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the scope of this quantifier, returns null, if the scope is not an EntryPoint.
+            </summary>
+        <returns>
+            A <see cref="T:Alica.EntryPoint" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScopedPlan">
+      <MemberSignature Language="C#" Value="public Alica.Plan GetScopedPlan ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Alica.Plan GetScopedPlan() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.Plan</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the scope of this quantifier, returns null, if the scope is not a Plan.
+            </summary>
+        <returns>
+            A <see cref="T:Alica.Plan" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScopedState">
+      <MemberSignature Language="C#" Value="public Alica.State GetScopedState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Alica.State GetScopedState() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.State</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the scope of this quantifier, returns null, if the scope is not a state.
+            </summary>
+        <returns>
+            A <see cref="T:Alica.State" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSortedTerms">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.List&lt;AutoDiff.Term[]&gt; GetSortedTerms (Alica.RunningPlan p, out System.Collections.Generic.ICollection&lt;int&gt; agentsInScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.List`1&lt;class AutoDiff.Term[]&gt; GetSortedTerms(class Alica.RunningPlan p, class System.Collections.Generic.ICollection`1&lt;int32&gt; agentsInScope) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;AutoDiff.Term[]&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p" Type="Alica.RunningPlan" />
+        <Parameter Name="agentsInScope" Type="System.Collections.Generic.ICollection&lt;System.Int32&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="p">To be added.</param>
+        <param name="agentsInScope">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSortedVariables">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.List&lt;Alica.Variable[]&gt; GetSortedVariables (Alica.RunningPlan p, out System.Collections.Generic.ICollection&lt;int&gt; agentsInScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.List`1&lt;class Alica.Variable[]&gt; GetSortedVariables(class Alica.RunningPlan p, class System.Collections.Generic.ICollection`1&lt;int32&gt; agentsInScope) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Alica.Variable[]&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p" Type="Alica.RunningPlan" />
+        <Parameter Name="agentsInScope" Type="System.Collections.Generic.ICollection&lt;System.Int32&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="p">To be added.</param>
+        <param name="agentsInScope">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScopeIsEntryPoint">
+      <MemberSignature Language="C#" Value="public bool ScopeIsEntryPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ScopeIsEntryPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates that the scope of this quantifier is an <see cref="T:Alica.EntryPoint" /></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScopeIsPlan">
+      <MemberSignature Language="C#" Value="public bool ScopeIsPlan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ScopeIsPlan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates that the scope of this quantifier is a <see cref="T:Alica.Plan" /></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScopeIsState">
+      <MemberSignature Language="C#" Value="public bool ScopeIsState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ScopeIsState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates that the scope of this quantifier is an <see cref="T:Alica.State" /></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetScope">
+      <MemberSignature Language="C#" Value="public void SetScope (Alica.PlanElement pe);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetScope(class Alica.PlanElement pe) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pe" Type="Alica.PlanElement" />
+      </Parameters>
+      <Docs>
+        <param name="pe">
+            A <see cref="T:Alica.PlanElement" /></param>
+        <summary>
+            Set the scope of this quantifier, called by the <see cref="T:Alica.ModelFactory" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

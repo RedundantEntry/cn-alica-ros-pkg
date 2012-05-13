@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="de.uni_kassel.cn.planDesigner.ui"
+            class="de.uni_kassel.cn.planDesigner.utility.ui.UtilityView"
+            icon="icons/utility16x16.png"
+            id="de.uni_kassel.cn.planDesigner.utility.ui.UtilityView"
+            name="Utility"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         name="Utility Handlers"
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="de.uni_kassel.cn.planDesigner.utility.handler.AddUtilityHandler"
+            commandId="de.uni_kassel.cn.planDesigner.utility.addUtilityCommand">
+         <activeWhen>
+            <count
+                  value="*">
+            </count>
+         </activeWhen>
+      </handler>
+      <handler
+            class="de.uni_kassel.cn.planDesigner.utility.handler.RemoveUtilityReferenceHandler"
+            commandId="de.uni_kassel.cn.planDesigner.utility.removeUtilityReferenceCommand">
+         <activeWhen>
+            <count
+                  value="+">
+            </count>
+         </activeWhen>
+      </handler>
+      <handler
+            class="de.uni_kassel.cn.planDesigner.utility.handler.AddModeExpressionHandler"
+            commandId="de.uni_kassel.cn.planDesigner.utility.addModeExpressionCommand">
+         <activeWhen>
+            <count
+                  value="+">
+            </count>
+         </activeWhen>
+      </handler>
+      <handler
+            class="de.uni_kassel.cn.planDesigner.utility.handler.RemoveModeExpressionHandler"
+            commandId="de.uni_kassel.cn.planDesigner.utility.removeModeExpressionCommand">
+         <activeWhen>
+            <count
+                  value="+">
+            </count>
+         </activeWhen>
+      </handler>
+      <handler
+            class="de.uni_kassel.cn.planDesigner.utility.handler.PurgeUtilityHandler"
+            commandId="de.uni_kassel.cn.planDesigner.utility.purgeUtilityCommand">
+         <activeWhen>
+            <count
+                  value="*">
+            </count>
+         </activeWhen>
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="de.uni_kassel.cn.planDesigner.utility.handler.AddUtilityHandler"
+            description="%command.description.addUtility"
+            id="de.uni_kassel.cn.planDesigner.utility.addUtilityCommand"
+            name="%command.name.addUtility">
+         <commandParameter
+               id="de.uni_kassel.cn.planDesigner.utility.ui.addUtilityCommandParameterID"
+               name="ID"
+               optional="true">
+         </commandParameter>
+      </command>
+      <command
+            defaultHandler="de.uni_kassel.cn.planDesigner.utility.handler.RemoveUtilityReferenceHandler"
+            description="%command.description.removeUtility"
+            id="de.uni_kassel.cn.planDesigner.utility.removeUtilityReferenceCommand"
+            name="%command.name.removeUtility">
+      </command>
+      <command
+            defaultHandler="de.uni_kassel.cn.planDesigner.utility.handler.AddModeHandler"
+            description="Adds a mode to the list"
+            id="de.uni_kassel.cn.planDesigner.utility.addModeCommand"
+            name="Add Mode">
+      </command>
+      <command
+            defaultHandler="de.uni_kassel.cn.planDesigner.utility.handler.RemoveModeHandler"
+            description="Removes this mode from the list"
+            id="de.uni_kassel.cn.planDesigner.utility.removeModeCommand"
+            name="Remove Mode">
+      </command>
+      <command
+            defaultHandler="de.uni_kassel.cn.planDesigner.utility.handler.AddModeExpressionHandler"
+            description="Adds a Mode Expression to the mode"
+            id="de.uni_kassel.cn.planDesigner.utility.addModeExpressionCommand"
+            name="Add Mode Expression">
+      </command>
+      <command
+            defaultHandler="de.uni_kassel.cn.planDesigner.utility.handler.RemoveModeExpressionHandler"
+            description="Removes a Mode Expression from the Mode"
+            id="de.uni_kassel.cn.planDesigner.utility.removeModeExpressionCommand"
+            name="Remove Mode Expression">
+      </command>
+      <command
+            defaultHandler="de.uni_kassel.cn.planDesigner.utility.handler.PurgeUtilityHandler"
+            description="Removes the selected Utility from the Repository and all Plans"
+            id="de.uni_kassel.cn.planDesigner.utility.purgeUtilityCommand"
+            name="Purge Utility">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:de.uni_kassel.cn.planDesigner.utilitiesContextMenu">
+         <command
+               commandId="de.uni_kassel.cn.planDesigner.utility.addUtilityCommand"
+               icon="icons/utility+16x16.png"
+               label="%command.tooltip.addUtility"
+               style="push"
+               tooltip="%command.tooltip.addUtility">
+            <visibleWhen
+                  checkEnabled="true">
+            </visibleWhen>
+         </command>
+         <menu
+               icon="icons/utility+16x16.png"
+               label="Add Utility from Repository">
+            <dynamic
+                  class="de.uni_kassel.cn.planDesigner.utility.handler.UtilityRepositoryContributionItem"
+                  id="de.uni_kassel.cn.planDesigner.utility.ui.utilityDynamic">
+            </dynamic>
+         </menu>
+         <command
+               commandId="de.uni_kassel.cn.planDesigner.utility.removeUtilityReferenceCommand"
+               icon="icons/utility-16x16.png"
+               label="%command.label.removeUtility"
+               style="push"
+               tooltip="%command.tooltip.removeUtility">
+            <visibleWhen
+                  checkEnabled="true">
+            </visibleWhen>
+         </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="popup:de.uni_kassel.cn.planDesigner.utilitiesModeExpressionContextMenu">
+         <command
+               commandId="de.uni_kassel.cn.planDesigner.utility.addModeCommand"
+               label="Add Mode"
+               style="push"
+               tooltip="Adds a mode to the list">
+         </command>
+         <command
+               commandId="de.uni_kassel.cn.planDesigner.utility.removeModeCommand"
+               label="Remove Mode"
+               style="push"
+               tooltip="Removes this mode from the list">
+         </command>
+         <separator
+               name="de.uni_kassel.cn.planDesigner.utility.separator1"
+               visible="true">
+         </separator>
+         <command
+               commandId="de.uni_kassel.cn.planDesigner.utility.addModeExpressionCommand"
+               label="Add Mode Expression"
+               style="push"
+               tooltip="Adds a Mode Expression to the mode">
+         </command>
+         <command
+               commandId="de.uni_kassel.cn.planDesigner.utility.removeModeExpressionCommand"
+               label="Remove Mode Expression"
+               style="push"
+               tooltip="Removes a Mode Expression from the mode">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="de.uni_kassel.cn.planDesigner.utility.ui.editor.UtilityEditor"
+            default="false"
+            extensions=".repo"
+            icon="icons/utility16x16.png"
+            id="de.uni_kassel.cn.planDesigner.utility.ui.utilityEditor"
+            name="Utility Editor">
+      </editor>
+   </extension>
+
+</plugin>

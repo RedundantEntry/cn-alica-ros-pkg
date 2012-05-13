@@ -1,0 +1,479 @@
+<Type Name="ITermVisitor&lt;TResult&gt;" FullName="AutoDiff.ITermVisitor&lt;TResult&gt;">
+  <TypeSignature Language="C#" Value="public interface ITermVisitor&lt;TResult&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITermVisitor`1&lt;TResult&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>AutoDiff</AssemblyName>
+    <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TResult" />
+  </TypeParameters>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TResult">The type of the computation results</typeparam>
+    <summary>
+            A visitor for the terms that has a result from its computations
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.Abs abs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.Abs abs) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="abs" Type="AutoDiff.Abs" />
+      </Parameters>
+      <Docs>
+        <param name="abs">The input term.</param>
+        <summary>
+            Computes a value for an exponential function term.
+            </summary>
+        <returns>The result of the computation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.And and);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.And and) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="and" Type="AutoDiff.And" />
+      </Parameters>
+      <Docs>
+        <param name="and">To be added.</param>
+        <summary>
+            Computes a value for an and term.
+            </summary>
+        <returns>The result of the computation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.Atan2 atan2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.Atan2 atan2) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="atan2" Type="AutoDiff.Atan2" />
+      </Parameters>
+      <Docs>
+        <param name="atan2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.Constant constant);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.Constant constant) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constant" Type="AutoDiff.Constant" />
+      </Parameters>
+      <Docs>
+        <param name="constant">The input term.</param>
+        <summary>
+            Computes a value for a constant term.
+            </summary>
+        <returns>The result of the computation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.ConstraintUtility cu);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.ConstraintUtility cu) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cu" Type="AutoDiff.ConstraintUtility" />
+      </Parameters>
+      <Docs>
+        <param name="cu">The input term.</param>
+        <summary>
+            Computes a value for a ConstraintUtility term.
+            </summary>
+        <returns>The result of the computation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.Cos cos);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.Cos cos) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cos" Type="AutoDiff.Cos" />
+      </Parameters>
+      <Docs>
+        <param name="cos">The input term.</param>
+        <summary>
+            Computes a value for a cosine term.
+            </summary>
+        <returns>The result of the computation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.Exp exp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.Exp exp) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exp" Type="AutoDiff.Exp" />
+      </Parameters>
+      <Docs>
+        <param name="exp">The input term.</param>
+        <summary>
+            Computes a value for an exponential function term.
+            </summary>
+        <returns>The result of the computation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.IntPower intPower);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.IntPower intPower) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="intPower" Type="AutoDiff.IntPower" />
+      </Parameters>
+      <Docs>
+        <param name="intPower">The input term.</param>
+        <summary>
+            Computes a value for a power term.
+            </summary>
+        <returns>The result of the computation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.Log log);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.Log log) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="log" Type="AutoDiff.Log" />
+      </Parameters>
+      <Docs>
+        <param name="log">The input term.</param>
+        <summary>
+            Computes a value for a logarithm term.
+            </summary>
+        <returns>The result of the computation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.LTConstraint constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.LTConstraint constraint) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="AutoDiff.LTConstraint" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">The input term.</param>
+        <summary>
+            Computes a value for a less-than constraint term.
+            </summary>
+        <returns>The result of the computation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.LTEConstraint constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.LTEConstraint constraint) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="AutoDiff.LTEConstraint" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">The input term.</param>
+        <summary>
+            Computes a value for a less-than-or-equal constraint term.
+            </summary>
+        <returns>The result of the computation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.Max max);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.Max max) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="max" Type="AutoDiff.Max" />
+      </Parameters>
+      <Docs>
+        <param name="max">The input term.</param>
+        <summary>
+            Computes a value for a max term.
+            </summary>
+        <returns>The result of the computation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.Min min);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.Min min) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="min" Type="AutoDiff.Min" />
+      </Parameters>
+      <Docs>
+        <param name="min">To be added.</param>
+        <summary>
+            Computes a value for a min term.
+            </summary>
+        <returns>The result of the computation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.Or or);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.Or or) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="or" Type="AutoDiff.Or" />
+      </Parameters>
+      <Docs>
+        <param name="or">To be added.</param>
+        <summary>
+            Computes a value for an or term.
+            </summary>
+        <returns>The result of the computation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.Product product);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.Product product) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="product" Type="AutoDiff.Product" />
+      </Parameters>
+      <Docs>
+        <param name="product">The input term.</param>
+        <summary>
+            Computes a value for a product term.
+            </summary>
+        <returns>The result of the computation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.Reification r);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.Reification r) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r" Type="AutoDiff.Reification" />
+      </Parameters>
+      <Docs>
+        <param name="r">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.Sigmoid sigmoid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.Sigmoid sigmoid) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sigmoid" Type="AutoDiff.Sigmoid" />
+      </Parameters>
+      <Docs>
+        <param name="sigmoid">The input term.</param>
+        <summary>
+            Computes a value for a sigmoid term.
+            </summary>
+        <returns>The result of the computation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.Sin sin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.Sin sin) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sin" Type="AutoDiff.Sin" />
+      </Parameters>
+      <Docs>
+        <param name="sin">The input term.</param>
+        <summary>
+            Computes a value for a sine term.
+            </summary>
+        <returns>The result of the computation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.Sum sum);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.Sum sum) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sum" Type="AutoDiff.Sum" />
+      </Parameters>
+      <Docs>
+        <param name="sum">The input term.</param>
+        <summary>
+            Computes a value for a sum term.
+            </summary>
+        <returns>The result of the computation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.Variable variable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.Variable variable) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variable" Type="AutoDiff.Variable" />
+      </Parameters>
+      <Docs>
+        <param name="variable">The input term.</param>
+        <summary>
+            Computes a value for a variable term.
+            </summary>
+        <returns>The result of the computation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public TResult Visit (AutoDiff.Zero zero);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class AutoDiff.Zero zero) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="zero" Type="AutoDiff.Zero" />
+      </Parameters>
+      <Docs>
+        <param name="zero">The input term.</param>
+        <summary>
+            Computes a value for a zero term.
+            </summary>
+        <returns>The result of the computation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,167 @@
+<Type Name="AbstractExpressions" FullName="Alica.AbstractExpressions">
+  <TypeSignature Language="C#" Value="public abstract class AbstractExpressions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AbstractExpressions extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The base class of all Expressions, implements staitc helper functions to query the plan base.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AbstractExpressions ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEntryPointSuccessful">
+      <MemberSignature Language="C#" Value="public static bool IsEntryPointSuccessful (long epId, Alica.RunningPlan rp);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsEntryPointSuccessful(int64 epId, class Alica.RunningPlan rp) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="epId" Type="System.Int64" />
+        <Parameter Name="rp" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="epId">
+            A <see cref="T:System.Int64" />, referring to an EntryPoint in rp.
+            </param>
+        <param name="rp">
+            A <see cref="T:Alica.RunningPlan" />, the plan in question.
+            </param>
+        <summary>
+            Returns whether at least one robot has succeeded with the task described by epId in rp.
+            </summary>
+        <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRobotInState">
+      <MemberSignature Language="C#" Value="public static bool IsRobotInState (long stateID, Alica.RunningPlan rp);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsRobotInState(int64 stateID, class Alica.RunningPlan rp) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stateID" Type="System.Int64" />
+        <Parameter Name="rp" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="stateID">
+            A <see cref="T:System.Int64" />, indicating the state
+            </param>
+        <param name="rp">
+            A <see cref="T:Alica.RunningPlan" />, the plan in which to check.
+            </param>
+        <summary>
+            Indicates whether a state is inhabitated by at least one robot.
+            </summary>
+        <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTaskAssigned">
+      <MemberSignature Language="C#" Value="public static bool IsTaskAssigned (long taskID, Alica.RunningPlan rp);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsTaskAssigned(int64 taskID, class Alica.RunningPlan rp) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskID" Type="System.Int64" />
+        <Parameter Name="rp" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="taskID">
+            A <see cref="T:System.Int64" />, specifying the task in question.
+            </param>
+        <param name="rp">
+            A <see cref="T:Alica.RunningPlan" />, specifying the plan in question.
+            </param>
+        <summary>
+            Tests whether a task in rp is assigned to at least one robot.
+            </summary>
+        <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTimeOut">
+      <MemberSignature Language="C#" Value="public static bool IsTimeOut (long timeOut, ulong startTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsTimeOut(int64 timeOut, unsigned int64 startTime) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeOut" Type="System.Int64" />
+        <Parameter Name="startTime" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="timeOut">
+            A <see cref="T:System.Int64" /> denoting the time interval in milliseconds.
+            </param>
+        <param name="startTime">
+            A <see cref="T:System.UInt64" /> denoting the time of the event in question, a ros timestamp.
+            </param>
+        <summary>
+            Tests whether a given event has passed for an amount of time.
+            </summary>
+        <returns>
+            A <see cref="T:System.Boolean" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

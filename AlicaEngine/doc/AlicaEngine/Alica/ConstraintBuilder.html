@@ -1,0 +1,1198 @@
+<html>
+  <head>
+    <title>Alica.ConstraintBuilder</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">AlicaEngine</a> : <a href="index.html">Alica Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Alica.ConstraintBuilder">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Alica.ConstraintBuilder:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Alica.ConstraintBuilder:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Alica.ConstraintBuilder:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Alica.ConstraintBuilder">ConstraintBuilder  Class</h1>
+    <p class="Summary" id="T:Alica.ConstraintBuilder:Summary">
+            A static helper class, providing simple factory methods for domain-independent constraints.
+            </p>
+    <div id="T:Alica.ConstraintBuilder:Signature">
+      <h2>Syntax</h2>
+      <div class="Signature">public static class  <b>ConstraintBuilder</b></div>
+    </div>
+    <div class="Remarks" id="T:Alica.ConstraintBuilder:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Alica.ConstraintBuilder:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Alica.ConstraintBuilder:Docs:Version Information">
+        <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Public Fields</h2>
+        <div class="SectionBox" id="Public Fields">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.ConstraintBuilder.False">False</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.ConstraintBuilder.SteepnessDefault">SteepnessDefault</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>
+                  </i> (0.01). <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.ConstraintBuilder.SteepnessSteep">SteepnessSteep</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>
+                  </i> (10). <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.ConstraintBuilder.SteepnessWide">SteepnessWide</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>
+                  </i> (0.005). <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Alica.ConstraintBuilder.True">True</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.ConstraintBuilder.And(AutoDiff.Term,AutoDiff.Term)">And</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.ConstraintBuilder.ConstraintApply(AutoDiff.Term,AutoDiff.Term)">ConstraintApply</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></nobr><blockquote>
+            Combines a constraint and a utility. This is usually only used by the <a href="javascript:alert(&quot;Documentation not found.&quot;)">.</a>.
+            Use if you need to circumvent CGSolver and work diectly with <a href="javascript:alert(&quot;Documentation not found.&quot;)">.</a>.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.ConstraintBuilder.Distance(AutoDiff.TVec,AutoDiff.TVec)">Distance</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></nobr><blockquote>
+            Returns the euclidean distance between two n-dimenasional vectors.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.ConstraintBuilder.DistanceSqr(AutoDiff.TVec,AutoDiff.TVec)">DistanceSqr</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></nobr><blockquote>
+            Returns the square of the euclidean distance between two n-dimensional vectors.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.ConstraintBuilder.Equals(AutoDiff.Term,AutoDiff.Term,AutoDiff.Term)">Equals</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.ConstraintBuilder.Equals(AutoDiff.TVec,AutoDiff.TVec,System.Double)">Equals</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></nobr><blockquote>
+            Returns wether the distance between two n-dimensional vectors is less than tolerance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.ConstraintBuilder.Equiv(AutoDiff.Term,AutoDiff.Term)">Equiv</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.ConstraintBuilder.IfThen(AutoDiff.Term,AutoDiff.Term)">IfThen</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.ConstraintBuilder.IfThenElse(AutoDiff.Term,AutoDiff.Term,AutoDiff.Term)">IfThenElse</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.ConstraintBuilder.InCoordsOf(AutoDiff.TVec,AutoDiff.TVec)">InCoordsOf</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a></nobr><blockquote>
+            Returns point in the coordinate system defined by vec and its rectangular.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.ConstraintBuilder.LeftOf(AutoDiff.TVec,AutoDiff.TVec)">LeftOf</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></nobr><blockquote>
+            Two dimensional geometry:
+            Returns if toCheck is left of vec.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.ConstraintBuilder.Not(AutoDiff.Term)">Not</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.ConstraintBuilder.Or(AutoDiff.Term,AutoDiff.Term)">Or</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.ConstraintBuilder.ProjectVectorOntoX(AutoDiff.TVec,AutoDiff.TVec,AutoDiff.Term)">ProjectVectorOntoX</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.ConstraintBuilder.RightOf(AutoDiff.TVec,AutoDiff.TVec)">RightOf</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></nobr><blockquote>
+            Two dimensional geometry:
+            Returns if toCheck is right of vec.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.ConstraintBuilder.Rotate(AutoDiff.TVec,System.Double)">Rotate</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a></nobr><blockquote>
+            Rotates vec by alpha
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Alica.ConstraintBuilder.SetSteepness(System.Double)">SetSteepness</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Alica.ConstraintBuilder:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="M:Alica.ConstraintBuilder.And(AutoDiff.Term,AutoDiff.Term)">And Method</h3>
+        <blockquote id="M:Alica.ConstraintBuilder.And(AutoDiff.Term,AutoDiff.Term):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> <b>And</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> t1, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> t2)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.And(AutoDiff.Term,AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>t1</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>t2</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.And(AutoDiff.Term,AutoDiff.Term):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.And(AutoDiff.Term,AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.And(AutoDiff.Term,AutoDiff.Term):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.ConstraintBuilder.ConstraintApply(AutoDiff.Term,AutoDiff.Term)">ConstraintApply Method</h3>
+        <blockquote id="M:Alica.ConstraintBuilder.ConstraintApply(AutoDiff.Term,AutoDiff.Term):member">
+          <p class="Summary">
+            Combines a constraint and a utility. This is usually only used by the <a href="javascript:alert(&quot;Documentation not found.&quot;)">.</a>.
+            Use if you need to circumvent CGSolver and work diectly with <a href="javascript:alert(&quot;Documentation not found.&quot;)">.</a>.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> <b>ConstraintApply</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> constraint, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> utility)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.ConstraintApply(AutoDiff.Term,AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>constraint</i>
+              </dt>
+              <dd>
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></dd>
+              <dt>
+                <i>utility</i>
+              </dt>
+              <dd>
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.ConstraintApply(AutoDiff.Term,AutoDiff.Term):Returns">
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.ConstraintApply(AutoDiff.Term,AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.ConstraintApply(AutoDiff.Term,AutoDiff.Term):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.ConstraintBuilder.Distance(AutoDiff.TVec,AutoDiff.TVec)">Distance Method</h3>
+        <blockquote id="M:Alica.ConstraintBuilder.Distance(AutoDiff.TVec,AutoDiff.TVec):member">
+          <p class="Summary">
+            Returns the euclidean distance between two n-dimenasional vectors.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> <b>Distance</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a> t1, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a> t2)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.Distance(AutoDiff.TVec,AutoDiff.TVec):Parameters">
+            <dl>
+              <dt>
+                <i>t1</i>
+              </dt>
+              <dd>
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a></dd>
+              <dt>
+                <i>t2</i>
+              </dt>
+              <dd>
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.Distance(AutoDiff.TVec,AutoDiff.TVec):Returns">
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.Distance(AutoDiff.TVec,AutoDiff.TVec):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.Distance(AutoDiff.TVec,AutoDiff.TVec):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.ConstraintBuilder.DistanceSqr(AutoDiff.TVec,AutoDiff.TVec)">DistanceSqr Method</h3>
+        <blockquote id="M:Alica.ConstraintBuilder.DistanceSqr(AutoDiff.TVec,AutoDiff.TVec):member">
+          <p class="Summary">
+            Returns the square of the euclidean distance between two n-dimensional vectors.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> <b>DistanceSqr</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a> t1, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a> t2)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.DistanceSqr(AutoDiff.TVec,AutoDiff.TVec):Parameters">
+            <dl>
+              <dt>
+                <i>t1</i>
+              </dt>
+              <dd>
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a></dd>
+              <dt>
+                <i>t2</i>
+              </dt>
+              <dd>
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.DistanceSqr(AutoDiff.TVec,AutoDiff.TVec):Returns">
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.DistanceSqr(AutoDiff.TVec,AutoDiff.TVec):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.DistanceSqr(AutoDiff.TVec,AutoDiff.TVec):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.ConstraintBuilder.Equals(AutoDiff.Term,AutoDiff.Term,AutoDiff.Term)">Equals Method</h3>
+        <blockquote id="M:Alica.ConstraintBuilder.Equals(AutoDiff.Term,AutoDiff.Term,AutoDiff.Term):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> <b>Equals</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> t1, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> t2, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> tolerance)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.Equals(AutoDiff.Term,AutoDiff.Term,AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>t1</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>t2</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>tolerance</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.Equals(AutoDiff.Term,AutoDiff.Term,AutoDiff.Term):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.Equals(AutoDiff.Term,AutoDiff.Term,AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.Equals(AutoDiff.Term,AutoDiff.Term,AutoDiff.Term):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.ConstraintBuilder.Equals(AutoDiff.TVec,AutoDiff.TVec,System.Double)">Equals Method</h3>
+        <blockquote id="M:Alica.ConstraintBuilder.Equals(AutoDiff.TVec,AutoDiff.TVec,System.Double):member">
+          <p class="Summary">
+            Returns wether the distance between two n-dimensional vectors is less than tolerance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> <b>Equals</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a> t1, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a> t2, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> tolerance)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.Equals(AutoDiff.TVec,AutoDiff.TVec,System.Double):Parameters">
+            <dl>
+              <dt>
+                <i>t1</i>
+              </dt>
+              <dd>
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a></dd>
+              <dt>
+                <i>t2</i>
+              </dt>
+              <dd>
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a></dd>
+              <dt>
+                <i>tolerance</i>
+              </dt>
+              <dd>
+            A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.Equals(AutoDiff.TVec,AutoDiff.TVec,System.Double):Returns">
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.Equals(AutoDiff.TVec,AutoDiff.TVec,System.Double):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.Equals(AutoDiff.TVec,AutoDiff.TVec,System.Double):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.ConstraintBuilder.Equiv(AutoDiff.Term,AutoDiff.Term)">Equiv Method</h3>
+        <blockquote id="M:Alica.ConstraintBuilder.Equiv(AutoDiff.Term,AutoDiff.Term):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> <b>Equiv</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> a, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> b)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.Equiv(AutoDiff.Term,AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>a</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>b</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.Equiv(AutoDiff.Term,AutoDiff.Term):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.Equiv(AutoDiff.Term,AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.Equiv(AutoDiff.Term,AutoDiff.Term):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.ConstraintBuilder.False">False Field</h3>
+        <blockquote id="F:Alica.ConstraintBuilder.False:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> <b>False</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.ConstraintBuilder.False:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.ConstraintBuilder.False:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.ConstraintBuilder.IfThen(AutoDiff.Term,AutoDiff.Term)">IfThen Method</h3>
+        <blockquote id="M:Alica.ConstraintBuilder.IfThen(AutoDiff.Term,AutoDiff.Term):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> <b>IfThen</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> tif, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> tthen)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.IfThen(AutoDiff.Term,AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>tif</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>tthen</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.IfThen(AutoDiff.Term,AutoDiff.Term):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.IfThen(AutoDiff.Term,AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.IfThen(AutoDiff.Term,AutoDiff.Term):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.ConstraintBuilder.IfThenElse(AutoDiff.Term,AutoDiff.Term,AutoDiff.Term)">IfThenElse Method</h3>
+        <blockquote id="M:Alica.ConstraintBuilder.IfThenElse(AutoDiff.Term,AutoDiff.Term,AutoDiff.Term):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> <b>IfThenElse</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> tif, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> tthen, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> telse)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.IfThenElse(AutoDiff.Term,AutoDiff.Term,AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>tif</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>tthen</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>telse</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.IfThenElse(AutoDiff.Term,AutoDiff.Term,AutoDiff.Term):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.IfThenElse(AutoDiff.Term,AutoDiff.Term,AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.IfThenElse(AutoDiff.Term,AutoDiff.Term,AutoDiff.Term):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.ConstraintBuilder.InCoordsOf(AutoDiff.TVec,AutoDiff.TVec)">InCoordsOf Method</h3>
+        <blockquote id="M:Alica.ConstraintBuilder.InCoordsOf(AutoDiff.TVec,AutoDiff.TVec):member">
+          <p class="Summary">
+            Returns point in the coordinate system defined by vec and its rectangular.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a> <b>InCoordsOf</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a> point, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a> vec)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.InCoordsOf(AutoDiff.TVec,AutoDiff.TVec):Parameters">
+            <dl>
+              <dt>
+                <i>point</i>
+              </dt>
+              <dd>
+            A two-dimensional <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a></dd>
+              <dt>
+                <i>vec</i>
+              </dt>
+              <dd>
+            A two-dimensional <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.InCoordsOf(AutoDiff.TVec,AutoDiff.TVec):Returns">
+            A two-dimensional <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.InCoordsOf(AutoDiff.TVec,AutoDiff.TVec):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.InCoordsOf(AutoDiff.TVec,AutoDiff.TVec):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.ConstraintBuilder.LeftOf(AutoDiff.TVec,AutoDiff.TVec)">LeftOf Method</h3>
+        <blockquote id="M:Alica.ConstraintBuilder.LeftOf(AutoDiff.TVec,AutoDiff.TVec):member">
+          <p class="Summary">
+            Two dimensional geometry:
+            Returns if toCheck is left of vec.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> <b>LeftOf</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a> vec, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a> toCheck)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.LeftOf(AutoDiff.TVec,AutoDiff.TVec):Parameters">
+            <dl>
+              <dt>
+                <i>vec</i>
+              </dt>
+              <dd>
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a></dd>
+              <dt>
+                <i>toCheck</i>
+              </dt>
+              <dd>
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.LeftOf(AutoDiff.TVec,AutoDiff.TVec):Returns">
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.LeftOf(AutoDiff.TVec,AutoDiff.TVec):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.LeftOf(AutoDiff.TVec,AutoDiff.TVec):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.ConstraintBuilder.Not(AutoDiff.Term)">Not Method</h3>
+        <blockquote id="M:Alica.ConstraintBuilder.Not(AutoDiff.Term):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> <b>Not</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> t)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.Not(AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>t</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.Not(AutoDiff.Term):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.Not(AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.Not(AutoDiff.Term):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.ConstraintBuilder.Or(AutoDiff.Term,AutoDiff.Term)">Or Method</h3>
+        <blockquote id="M:Alica.ConstraintBuilder.Or(AutoDiff.Term,AutoDiff.Term):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> <b>Or</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> t1, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> t2)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.Or(AutoDiff.Term,AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>t1</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>t2</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.Or(AutoDiff.Term,AutoDiff.Term):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.Or(AutoDiff.Term,AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.Or(AutoDiff.Term,AutoDiff.Term):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.ConstraintBuilder.ProjectVectorOntoX(AutoDiff.TVec,AutoDiff.TVec,AutoDiff.Term)">ProjectVectorOntoX Method</h3>
+        <blockquote id="M:Alica.ConstraintBuilder.ProjectVectorOntoX(AutoDiff.TVec,AutoDiff.TVec,AutoDiff.Term):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> <b>ProjectVectorOntoX</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a> origin, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a> dir, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> x)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.ProjectVectorOntoX(AutoDiff.TVec,AutoDiff.TVec,AutoDiff.Term):Parameters">
+            <dl>
+              <dt>
+                <i>origin</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>dir</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>x</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.ProjectVectorOntoX(AutoDiff.TVec,AutoDiff.TVec,AutoDiff.Term):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.ProjectVectorOntoX(AutoDiff.TVec,AutoDiff.TVec,AutoDiff.Term):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.ProjectVectorOntoX(AutoDiff.TVec,AutoDiff.TVec,AutoDiff.Term):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.ConstraintBuilder.RightOf(AutoDiff.TVec,AutoDiff.TVec)">RightOf Method</h3>
+        <blockquote id="M:Alica.ConstraintBuilder.RightOf(AutoDiff.TVec,AutoDiff.TVec):member">
+          <p class="Summary">
+            Two dimensional geometry:
+            Returns if toCheck is right of vec.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> <b>RightOf</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a> vec, <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a> toCheck)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.RightOf(AutoDiff.TVec,AutoDiff.TVec):Parameters">
+            <dl>
+              <dt>
+                <i>vec</i>
+              </dt>
+              <dd>
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a></dd>
+              <dt>
+                <i>toCheck</i>
+              </dt>
+              <dd>
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.RightOf(AutoDiff.TVec,AutoDiff.TVec):Returns">
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.RightOf(AutoDiff.TVec,AutoDiff.TVec):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.RightOf(AutoDiff.TVec,AutoDiff.TVec):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.ConstraintBuilder.Rotate(AutoDiff.TVec,System.Double)">Rotate Method</h3>
+        <blockquote id="M:Alica.ConstraintBuilder.Rotate(AutoDiff.TVec,System.Double):member">
+          <p class="Summary">
+            Rotates vec by alpha
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a> <b>Rotate</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a> vec, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> alpha)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.Rotate(AutoDiff.TVec,System.Double):Parameters">
+            <dl>
+              <dt>
+                <i>vec</i>
+              </dt>
+              <dd>
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a></dd>
+              <dt>
+                <i>alpha</i>
+              </dt>
+              <dd>
+            A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.Rotate(AutoDiff.TVec,System.Double):Returns">
+            A <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.TVec</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.Rotate(AutoDiff.TVec,System.Double):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.Rotate(AutoDiff.TVec,System.Double):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Alica.ConstraintBuilder.SetSteepness(System.Double)">SetSteepness Method</h3>
+        <blockquote id="M:Alica.ConstraintBuilder.SetSteepness(System.Double):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">[System.Obsolete("Steepness is irrelevant for the current solver.")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetSteepness</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> s)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Alica.ConstraintBuilder.SetSteepness(System.Double):Parameters">
+            <dl>
+              <dt>
+                <i>s</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.SetSteepness(System.Double):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Alica.ConstraintBuilder.SetSteepness(System.Double):Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.ConstraintBuilder.SteepnessDefault">SteepnessDefault Field</h3>
+        <blockquote id="F:Alica.ConstraintBuilder.SteepnessDefault:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <p>
+            <b>Value: </b>0.01</p>
+          <h2>Syntax</h2>
+          <div class="Signature">public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>SteepnessDefault</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.ConstraintBuilder.SteepnessDefault:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.ConstraintBuilder.SteepnessDefault:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.ConstraintBuilder.SteepnessSteep">SteepnessSteep Field</h3>
+        <blockquote id="F:Alica.ConstraintBuilder.SteepnessSteep:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <p>
+            <b>Value: </b>10</p>
+          <h2>Syntax</h2>
+          <div class="Signature">public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>SteepnessSteep</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.ConstraintBuilder.SteepnessSteep:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.ConstraintBuilder.SteepnessSteep:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.ConstraintBuilder.SteepnessWide">SteepnessWide Field</h3>
+        <blockquote id="F:Alica.ConstraintBuilder.SteepnessWide:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <p>
+            <b>Value: </b>0.005</p>
+          <h2>Syntax</h2>
+          <div class="Signature">public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>SteepnessWide</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.ConstraintBuilder.SteepnessWide:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.ConstraintBuilder.SteepnessWide:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Alica.ConstraintBuilder.True">True Field</h3>
+        <blockquote id="F:Alica.ConstraintBuilder.True:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="javascript:alert(&quot;Documentation not found.&quot;)">AutoDiff.Term</a> <b>True</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Alica.ConstraintBuilder.True:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Alica.ConstraintBuilder.True:Version Information">
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4514.21141, 0.9.4514.22820, 0.9.4514.22905, 0.9.4514.23556</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

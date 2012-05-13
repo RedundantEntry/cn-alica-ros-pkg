@@ -1,0 +1,15 @@
+import alica;
+
+runtimeConditions(AbstractPlan this) : conditions.typeSelect(RuntimeCondition);
+
+preConditions(AbstractPlan this) : conditions.typeSelect(PreCondition);
+
+posConditions(AbstractPlan this) : conditions.typeSelect(Result);
+
+collectBehaviours(State this) : plans.typeSelect(BehaviourConfiguration);
+
+String evalLebtCondition(PreCondition pre): if pre.conditionString.toLowerCase().contains("start") then "LebtCommand.RSTART" else "LebtCommand.RSTOP";
+
+String printPCString(Transition this) : if preCondition == null then "No PreCondition defined" else preCondition.conditionString;
+
+String computeUtilityReturnValue(AbstractPlan this) : if Plan.isInstance(this) then "return new DefaultUtilityFunction(plan);" else "return null;"; 

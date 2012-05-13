@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config transient="false" date="1336907002755">
+	<site enabled="true" updateable="true" policy="USER-EXCLUDE" url="platform:/base/">
+		<feature id="de.uni_kassel.cn.planDesigner.oaw.feature" plugin-identifier="de.uni_kassel.cn.planDesigner.ui" url="features/de.uni_kassel.cn.planDesigner.oaw.feature_4.3.0.201205131302/" version="4.3.0.201205131302">
+		</feature>
+		<feature id="de.uni_kassel.cn.planDesigner.core.feature" plugin-identifier="de.uni_kassel.cn.planDesigner.ui" url="features/de.uni_kassel.cn.planDesigner.core.feature_1.0.0.201205131302/" version="1.0.0.201205131302">
+		</feature>
+		<feature id="de.uni_kassel.cn.planDesigner.zest.feature" plugin-identifier="de.uni_kassel.cn.planDesigner.ui" url="features/de.uni_kassel.cn.planDesigner.zest.feature_3.4.0.201205131302/" version="3.4.0.201205131302">
+		</feature>
+		<feature id="de.uni_kassel.cn.planDesigner.utility.feature" url="features/de.uni_kassel.cn.planDesigner.utility.feature_1.0.0/" version="1.0.0">
+		</feature>
+		<feature id="de.uni_kassel.cn.planDesigner.platform.feature" plugin-identifier="de.uni_kassel.cn.planDesigner.ui" url="features/de.uni_kassel.cn.planDesigner.platform.feature_1.0.1.201205131302/" version="1.0.1.201205131302">
+		</feature>
+		<feature id="de.uni_kassel.cn.planDesigner.validation.feature" url="features/de.uni_kassel.cn.planDesigner.validation.feature_1.0.0.201205131302/" version="1.0.0.201205131302">
+		</feature>
+		<feature id="de.uni_kassel.cn.planDesigner.gef.feature" plugin-identifier="de.uni_kassel.cn.planDesigner.ui" url="features/de.uni_kassel.cn.planDesigner.gef.feature_3.4.0.201205131302/" version="3.4.0.201205131302">
+		</feature>
+		<feature id="de.uni_kassel.cn.planDesigner.emf.feature" plugin-identifier="de.uni_kassel.cn.planDesigner.ui" url="features/de.uni_kassel.cn.planDesigner.emf.feature_2.4.1.201205131302/" version="2.4.1.201205131302">
+		</feature>
+	</site>
+</config>

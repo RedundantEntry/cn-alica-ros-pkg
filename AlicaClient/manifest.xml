@@ -1,0 +1,18 @@
+<package>
+  <description brief="AlicaClient">
+
+     AlicaClient
+
+  </description>
+  <author>hendrik</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/AlicaClient</url>  
+  <depend package="roscs" />
+  <depend package="roscpp" />
+  <depend package="Castor"/> 
+  <depend package="AlicaEngine"/> 
+  <rosdep name="gtk-sharp"/>
+</package>
+
+

@@ -1,0 +1,97 @@
+<Type Name="ICompiledTerm" FullName="AutoDiff.ICompiledTerm">
+  <TypeSignature Language="C#" Value="public interface ICompiledTerm" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICompiledTerm" />
+  <AssemblyInfo>
+    <AssemblyName>AutoDiff</AssemblyName>
+    <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a term after it has been compiled for efficient evaluation/differentiation.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Differentiate">
+      <MemberSignature Language="C#" Value="public Tuple&lt;double[],double&gt; Differentiate (double[] arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Tuple`2&lt;float64[], float64&gt; Differentiate(float64[] arg) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Tuple&lt;System.Double[],System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg" Type="System.Double[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="arg">The point at which to differentiate.</param>
+        <summary>
+            Computes the gradient of the compiled term at the given point.
+            </summary>
+        <returns>A tuple, where the first item is the gradient at <paramref name="arg" /> and the second item is
+            the value at <paramref name="arg1" />. That is, the second value is the same as running <see cref="M:AutoDiff.ICompiledTerm.Evaluate(System.Double[])" /> on
+            <paramref name="arg" />.</returns>
+        <remarks>The number at <c>arg[i]</c> is the value assigned to the variable <c>Variables[i]</c>.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evaluate">
+      <MemberSignature Language="C#" Value="public double Evaluate (double[] arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float64 Evaluate(float64[] arg) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg" Type="System.Double[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="arg">The point at which to evaluate.</param>
+        <summary>
+            Evaluates the compiled term at the given point.
+            </summary>
+        <returns>The value of the function represented by the term at the given point.</returns>
+        <remarks>The number at <c>arg[i]</c> is the value assigned to the variable <c>Variables[i]</c>.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Variables">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;AutoDiff.Variable&gt; Variables { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class AutoDiff.Variable&gt; Variables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;AutoDiff.Variable&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The collection of variables contained in this compiled term.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The order of variables in this collection specifies the meaning of each argument in <see cref="M:AutoDiff.ICompiledTerm.Differentiate(System.Double[])" /> or
+            <see cref="M:AutoDiff.ICompiledTerm.Evaluate(System.Double[])" />. That is, the variable at <c>Variables[i]</c> corresponds to the i-th parameter of <see cref="M:AutoDiff.ICompiledTerm.Differentiate(System.Double[])" />
+            and <see cref="M:AutoDiff.ICompiledTerm.Evaluate(System.Double[])" />.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

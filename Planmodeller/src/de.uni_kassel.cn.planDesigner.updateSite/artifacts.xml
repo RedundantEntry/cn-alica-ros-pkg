@@ -1,0 +1,1021 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository class='org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository' version='1.0.0'?>
+<repository name='file:/C:/Dokumente und Einstellungen/Zenobios/BehaviourEngine/de.uni_kassel.ascharf.planDesigner.updateSite/ - artifacts' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
+  <properties size='2'>
+    <property name='p2.compressed' value='false'/>
+    <property name='p2.timestamp' value='1231428327578'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='146'>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.edit' version='1.0.0.200810281757'>
+      <properties size='3'>
+        <property name='artifact.size' value='110095'/>
+        <property name='download.size' value='110095'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.edit' version='1.0.0.200810280052'>
+      <properties size='3'>
+        <property name='artifact.size' value='109940'/>
+        <property name='download.size' value='109940'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.commons.cli' version='1.0.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='29836'/>
+        <property name='download.size' value='29836'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.ui' version='1.0.0.200810010005'>
+      <properties size='3'>
+        <property name='artifact.size' value='603299'/>
+        <property name='download.size' value='603299'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml' version='1.0.0.200810010017'>
+      <properties size='3'>
+        <property name='artifact.size' value='124456'/>
+        <property name='download.size' value='124456'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml' version='1.0.0.200811061535'>
+      <properties size='3'>
+        <property name='artifact.size' value='154941'/>
+        <property name='download.size' value='154941'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.uni_kassel.cn.alica' version='1.0.0.200901081624'>
+      <properties size='3'>
+        <property name='artifact.size' value='158817'/>
+        <property name='download.size' value='158817'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.ui' version='1.0.0.200810281756'>
+      <properties size='3'>
+        <property name='artifact.size' value='992642'/>
+        <property name='download.size' value='992642'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.compare' version='3.4.0.I20080604'>
+      <properties size='3'>
+        <property name='artifact.size' value='690151'/>
+        <property name='download.size' value='690151'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.update' version='1.0.0.200810281756'>
+      <properties size='3'>
+        <property name='artifact.size' value='13167'/>
+        <property name='download.size' value='13167'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.common' version='3.4.0.v20080421-2006'>
+      <properties size='3'>
+        <property name='artifact.size' value='94649'/>
+        <property name='download.size' value='94649'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml' version='1.0.0.200810270114'>
+      <properties size='3'>
+        <property name='artifact.size' value='154276'/>
+        <property name='download.size' value='154276'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.ui' version='1.0.0.200810292354'>
+      <properties size='3'>
+        <property name='artifact.size' value='992657'/>
+        <property name='download.size' value='992657'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.views' version='3.3.0.I20080509-2000'>
+      <properties size='3'>
+        <property name='artifact.size' value='79449'/>
+        <property name='download.size' value='79449'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.codegeneration' version='1.0.0.200810281756'>
+      <properties size='3'>
+        <property name='artifact.size' value='13179'/>
+        <property name='download.size' value='13179'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml' version='1.0.0.200810281756'>
+      <properties size='3'>
+        <property name='artifact.size' value='154919'/>
+        <property name='download.size' value='154919'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='de.unikassel.ascharf.planDesigner.core.feature' version='1.0.0.200810010017'>
+      <properties size='2'>
+        <property name='artifact.size' value='1202'/>
+        <property name='download.size' value='1202'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.codegeneration' version='1.0.0.200810292354'>
+      <properties size='3'>
+        <property name='artifact.size' value='13234'/>
+        <property name='download.size' value='13234'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.filebuffers' version='3.4.0.v20080603-2000'>
+      <properties size='3'>
+        <property name='artifact.size' value='112005'/>
+        <property name='download.size' value='112005'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.uni_kassel.cn.planDesigner.edit' version='1.0.0.200812161929'>
+      <properties size='3'>
+        <property name='artifact.size' value='124847'/>
+        <property name='download.size' value='124847'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.codegeneration' version='1.0.0.200811061535'>
+      <properties size='3'>
+        <property name='artifact.size' value='13234'/>
+        <property name='download.size' value='13234'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.uni_kassel.cn.planDesigner.ui' version='1.0.0.200812161926'>
+      <properties size='3'>
+        <property name='artifact.size' value='1060513'/>
+        <property name='download.size' value='1060513'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.net' version='1.1.0.I20080604'>
+      <properties size='3'>
+        <property name='artifact.size' value='55332'/>
+        <property name='download.size' value='55332'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.workbench.texteditor' version='3.4.0.v20080603-2000'>
+      <properties size='3'>
+        <property name='artifact.size' value='573817'/>
+        <property name='download.size' value='573817'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.edit' version='1.0.0.200810292354'>
+      <properties size='3'>
+        <property name='artifact.size' value='110095'/>
+        <property name='download.size' value='110095'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.commands' version='3.4.0.I20080509-2000'>
+      <properties size='3'>
+        <property name='artifact.size' value='105794'/>
+        <property name='download.size' value='105794'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.antlr.runtime' version='3.0.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='82704'/>
+        <property name='download.size' value='82704'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.uni_kassel.cn.planDesigner.update' version='1.0.0.200812161926'>
+      <properties size='3'>
+        <property name='artifact.size' value='13033'/>
+        <property name='download.size' value='13033'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.ui' version='1.0.0.200811061535'>
+      <properties size='3'>
+        <property name='artifact.size' value='992632'/>
+        <property name='download.size' value='992632'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.update' version='1.0.0.200811061535'>
+      <properties size='3'>
+        <property name='artifact.size' value='13167'/>
+        <property name='download.size' value='13167'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.jface.text' version='3.4.0.v20080603-2000'>
+      <properties size='3'>
+        <property name='artifact.size' value='944887'/>
+        <property name='download.size' value='944887'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.uni_kassel.cn.planDesigner.update' version='1.0.0.200812161923'>
+      <properties size='3'>
+        <property name='artifact.size' value='13034'/>
+        <property name='download.size' value='13034'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.ui' version='1.0.0.200810280052'>
+      <properties size='3'>
+        <property name='artifact.size' value='992618'/>
+        <property name='download.size' value='992618'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.update' version='1.0.0.200810010012'>
+      <properties size='3'>
+        <property name='artifact.size' value='13164'/>
+        <property name='download.size' value='13164'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.codegeneration' version='1.0.0.200810270114'>
+      <properties size='3'>
+        <property name='artifact.size' value='13178'/>
+        <property name='download.size' value='13178'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ltk.ui.refactoring' version='3.4.1.r341_v20080716-0800'>
+      <properties size='3'>
+        <property name='artifact.size' value='454562'/>
+        <property name='download.size' value='454562'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.jface' version='3.4.1.M20080827-2000'>
+      <properties size='3'>
+        <property name='artifact.size' value='1040433'/>
+        <property name='download.size' value='1040433'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.databinding' version='1.1.1.M20080827-0800b'>
+      <properties size='3'>
+        <property name='artifact.size' value='347799'/>
+        <property name='download.size' value='347799'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.zest.layouts' version='1.0.0.v20080226'>
+      <properties size='3'>
+        <property name='artifact.size' value='126582'/>
+        <property name='download.size' value='126582'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ltk.core.refactoring' version='3.4.0.v20080603-2000'>
+      <properties size='3'>
+        <property name='artifact.size' value='319067'/>
+        <property name='download.size' value='319067'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.navigator' version='3.3.100.I20080606-1300'>
+      <properties size='3'>
+        <property name='artifact.size' value='318730'/>
+        <property name='download.size' value='318730'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.rcp' version='3.4.0.v20080507'>
+      <properties size='3'>
+        <property name='artifact.size' value='12865'/>
+        <property name='download.size' value='12865'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.codegeneration' version='1.0.0.200810010017'>
+      <properties size='3'>
+        <property name='artifact.size' value='12881'/>
+        <property name='download.size' value='12881'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.log4j' version='1.2.13.v200806030600'>
+      <properties size='3'>
+        <property name='artifact.size' value='387870'/>
+        <property name='download.size' value='387870'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.registry' version='3.4.0.v20080516-0950'>
+      <properties size='3'>
+        <property name='artifact.size' value='172936'/>
+        <property name='download.size' value='172936'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.text' version='3.4.0.v20080605-1800'>
+      <properties size='3'>
+        <property name='artifact.size' value='244646'/>
+        <property name='download.size' value='244646'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.resources.win32.x86' version='3.4.0.v20071204'>
+      <properties size='3'>
+        <property name='artifact.size' value='15749'/>
+        <property name='download.size' value='15749'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.simpleconfigurator' version='1.0.0.v20080604'>
+      <properties size='3'>
+        <property name='artifact.size' value='34113'/>
+        <property name='download.size' value='34113'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.update' version='1.0.0.200810010005'>
+      <properties size='3'>
+        <property name='artifact.size' value='13165'/>
+        <property name='download.size' value='13165'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.edit' version='1.0.0.200810281756'>
+      <properties size='3'>
+        <property name='artifact.size' value='110095'/>
+        <property name='download.size' value='110095'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.jdt.core' version='3.4.2.v_883_R34x'>
+      <properties size='3'>
+        <property name='artifact.size' value='4366956'/>
+        <property name='download.size' value='4366956'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='de.uni_kassel.cn.planDesigner.core.feature' version='1.0.0.200812161929'>
+      <properties size='2'>
+        <property name='artifact.size' value='1208'/>
+        <property name='download.size' value='1208'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml' version='1.0.0.200810010005'>
+      <properties size='3'>
+        <property name='artifact.size' value='124457'/>
+        <property name='download.size' value='124457'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.ui' version='1.0.0.200810010012'>
+      <properties size='3'>
+        <property name='artifact.size' value='603245'/>
+        <property name='download.size' value='603245'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='de.uni_kassel.cn.planDesigner.core.feature' version='1.0.0.200812161926'>
+      <properties size='2'>
+        <property name='artifact.size' value='1208'/>
+        <property name='download.size' value='1208'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='de.uni_kassel.ascharf.planDesigner.zest.feature' version='3.4.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='836'/>
+        <property name='download.size' value='836'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.uni_kassel.cn.planDesigner.codegeneration' version='1.0.0.200812161929'>
+      <properties size='3'>
+        <property name='artifact.size' value='58743'/>
+        <property name='download.size' value='58743'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.uni_kassel.cn.planDesigner.edit' version='1.0.0.200812161926'>
+      <properties size='3'>
+        <property name='artifact.size' value='124847'/>
+        <property name='download.size' value='124847'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.update.core.win32' version='3.2.100.v20080107'>
+      <properties size='3'>
+        <property name='artifact.size' value='85075'/>
+        <property name='download.size' value='85075'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.edit' version='1.0.0.200811061535'>
+      <properties size='3'>
+        <property name='artifact.size' value='110095'/>
+        <property name='download.size' value='110095'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='de.uni_kassel.cn.planDesigner.core.feature' version='1.0.0.200812161923'>
+      <properties size='2'>
+        <property name='artifact.size' value='1208'/>
+        <property name='download.size' value='1208'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.edit' version='1.0.0.200810010017'>
+      <properties size='3'>
+        <property name='artifact.size' value='81133'/>
+        <property name='download.size' value='81133'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.edit' version='1.0.0.200810270114'>
+      <properties size='3'>
+        <property name='artifact.size' value='109939'/>
+        <property name='download.size' value='109939'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.edit' version='1.0.0.200810010012'>
+      <properties size='3'>
+        <property name='artifact.size' value='81133'/>
+        <property name='download.size' value='81133'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.app' version='1.1.0.v20080421-2006'>
+      <properties size='3'>
+        <property name='artifact.size' value='79866'/>
+        <property name='download.size' value='79866'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.update.configurator' version='3.2.201.R34x_v20080819'>
+      <properties size='3'>
+        <property name='artifact.size' value='97995'/>
+        <property name='download.size' value='97995'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.ui' version='1.0.0.200810281757'>
+      <properties size='3'>
+        <property name='artifact.size' value='992582'/>
+        <property name='download.size' value='992582'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='de.unikassel.ascharf.planDesigner.core.feature' version='1.0.0.200810270114'>
+      <properties size='2'>
+        <property name='artifact.size' value='1204'/>
+        <property name='download.size' value='1204'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.uni_kassel.cn.planDesigner.edit' version='1.0.0.200812161923'>
+      <properties size='3'>
+        <property name='artifact.size' value='124847'/>
+        <property name='download.size' value='124847'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.editors' version='3.4.0.v20080603-2000'>
+      <properties size='3'>
+        <property name='artifact.size' value='549393'/>
+        <property name='download.size' value='549393'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.update' version='1.0.0.200810270114'>
+      <properties size='3'>
+        <property name='artifact.size' value='13167'/>
+        <property name='download.size' value='13167'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.filesystem' version='1.2.0.v20080604-1400'>
+      <properties size='3'>
+        <property name='artifact.size' value='44111'/>
+        <property name='download.size' value='44111'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.uni_kassel.cn.planDesigner.codegeneration' version='1.0.0.200901081624'>
+      <properties size='3'>
+        <property name='artifact.size' value='58742'/>
+        <property name='download.size' value='58742'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml' version='1.0.0.200809302352'>
+      <properties size='3'>
+        <property name='artifact.size' value='124458'/>
+        <property name='download.size' value='124458'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.preferences' version='3.2.201.R34x_v20080709'>
+      <properties size='3'>
+        <property name='artifact.size' value='104280'/>
+        <property name='download.size' value='104280'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.forms' version='3.3.101.v20080708_34x'>
+      <properties size='3'>
+        <property name='artifact.size' value='298053'/>
+        <property name='download.size' value='298053'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='de.uni_kassel.cn.planDesigner.core.feature' version='1.0.0.200901081624'>
+      <properties size='2'>
+        <property name='artifact.size' value='1208'/>
+        <property name='download.size' value='1208'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.update' version='1.0.0.200810281757'>
+      <properties size='3'>
+        <property name='artifact.size' value='13168'/>
+        <property name='download.size' value='13168'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml' version='1.0.0.200810010012'>
+      <properties size='3'>
+        <property name='artifact.size' value='124455'/>
+        <property name='download.size' value='124455'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml' version='1.0.0.200810280052'>
+      <properties size='3'>
+        <property name='artifact.size' value='154275'/>
+        <property name='download.size' value='154275'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.zest.core' version='1.0.0.v20080115'>
+      <properties size='3'>
+        <property name='artifact.size' value='140599'/>
+        <property name='download.size' value='140599'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='de.unikassel.ascharf.planDesigner.core.feature' version='1.0.0.200811061535'>
+      <properties size='2'>
+        <property name='artifact.size' value='1204'/>
+        <property name='download.size' value='1204'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.team.ui' version='3.4.0.I20080604'>
+      <properties size='3'>
+        <property name='artifact.size' value='1288296'/>
+        <property name='download.size' value='1288296'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='de.unikassel.ascharf.planDesigner.core.feature' version='1.0.0.200810280052'>
+      <properties size='2'>
+        <property name='artifact.size' value='1204'/>
+        <property name='download.size' value='1204'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.uni_kassel.cn.alica' version='1.0.0.200812161926'>
+      <properties size='3'>
+        <property name='artifact.size' value='146898'/>
+        <property name='download.size' value='146898'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.codegeneration' version='1.0.0.200810281757'>
+      <properties size='3'>
+        <property name='artifact.size' value='13180'/>
+        <property name='download.size' value='13180'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='de.unikassel.ascharf.planDesigner.core.feature' version='1.0.0.200809302352'>
+      <properties size='2'>
+        <property name='artifact.size' value='1204'/>
+        <property name='download.size' value='1204'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.edit' version='1.0.0.200809302352'>
+      <properties size='3'>
+        <property name='artifact.size' value='81136'/>
+        <property name='download.size' value='81136'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.uni_kassel.cn.alica' version='1.0.0.200812161929'>
+      <properties size='3'>
+        <property name='artifact.size' value='146899'/>
+        <property name='download.size' value='146899'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.resources.compatibility' version='3.4.0.v20080604-1400'>
+      <properties size='3'>
+        <property name='artifact.size' value='120997'/>
+        <property name='download.size' value='120997'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='de.unikassel.ascharf.planDesigner.core.feature' version='1.0.0.200810010005'>
+      <properties size='2'>
+        <property name='artifact.size' value='1203'/>
+        <property name='download.size' value='1203'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.commons.logging' version='1.0.4.v20080605-1930'>
+      <properties size='3'>
+        <property name='artifact.size' value='43919'/>
+        <property name='download.size' value='43919'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='de.unikassel.ascharf.planDesigner.core.feature' version='1.0.0.200810281756'>
+      <properties size='2'>
+        <property name='artifact.size' value='1205'/>
+        <property name='download.size' value='1205'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.ant' version='1.7.0.v200803061910'>
+      <properties size='3'>
+        <property name='artifact.size' value='1977226'/>
+        <property name='download.size' value='1977226'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.contenttype' version='3.3.0.v20080604-1400'>
+      <properties size='3'>
+        <property name='artifact.size' value='86969'/>
+        <property name='download.size' value='86969'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.uni_kassel.cn.planDesigner.ui' version='1.0.0.200812161923'>
+      <properties size='3'>
+        <property name='artifact.size' value='1060501'/>
+        <property name='download.size' value='1060501'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.team.core' version='3.4.1.r34x_20080827'>
+      <properties size='3'>
+        <property name='artifact.size' value='384098'/>
+        <property name='download.size' value='384098'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.codegeneration' version='1.0.0.200810280052'>
+      <properties size='3'>
+        <property name='artifact.size' value='13178'/>
+        <property name='download.size' value='13178'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.ui' version='1.0.0.200809302352'>
+      <properties size='3'>
+        <property name='artifact.size' value='603315'/>
+        <property name='download.size' value='603315'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.views.properties.tabbed' version='3.4.0.I20080527-2000'>
+      <properties size='3'>
+        <property name='artifact.size' value='100172'/>
+        <property name='download.size' value='100172'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.runtime' version='3.4.0.v20080512'>
+      <properties size='3'>
+        <property name='artifact.size' value='69019'/>
+        <property name='download.size' value='69019'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.workbench' version='3.4.0.I20080606-1300'>
+      <properties size='3'>
+        <property name='artifact.size' value='3922844'/>
+        <property name='download.size' value='3922844'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.codegeneration' version='1.0.0.200810010005'>
+      <properties size='3'>
+        <property name='artifact.size' value='12881'/>
+        <property name='download.size' value='12881'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.uni_kassel.cn.planDesigner.update' version='1.0.0.200812161929'>
+      <properties size='3'>
+        <property name='artifact.size' value='13034'/>
+        <property name='download.size' value='13034'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.uni_kassel.cn.planDesigner.ui' version='1.0.0.200901081624'>
+      <properties size='3'>
+        <property name='artifact.size' value='1063779'/>
+        <property name='download.size' value='1063779'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml' version='1.0.0.200810292354'>
+      <properties size='3'>
+        <property name='artifact.size' value='154920'/>
+        <property name='download.size' value='154920'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.jface.databinding' version='1.2.1.M20080827-0800a'>
+      <properties size='3'>
+        <property name='artifact.size' value='196505'/>
+        <property name='download.size' value='196505'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.swt' version='3.4.1.v3449c'>
+      <properties size='3'>
+        <property name='artifact.size' value='15807'/>
+        <property name='download.size' value='15807'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.navigator.resources' version='3.3.101.M20080910-0800'>
+      <properties size='3'>
+        <property name='artifact.size' value='115744'/>
+        <property name='download.size' value='115744'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='de.unikassel.ascharf.planDesigner.core.feature' version='1.0.0.200810281757'>
+      <properties size='2'>
+        <property name='artifact.size' value='1204'/>
+        <property name='download.size' value='1204'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.net.win32.x86' version='1.0.0.I20080521'>
+      <properties size='3'>
+        <property name='artifact.size' value='28448'/>
+        <property name='download.size' value='28448'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.uni_kassel.cn.planDesigner.edit' version='1.0.0.200901081624'>
+      <properties size='3'>
+        <property name='artifact.size' value='124877'/>
+        <property name='download.size' value='124877'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.security' version='1.0.1.R34x_v20080721'>
+      <properties size='3'>
+        <property name='artifact.size' value='104720'/>
+        <property name='download.size' value='104720'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.security.win32.x86' version='1.0.0.v20080529-1600'>
+      <properties size='3'>
+        <property name='artifact.size' value='21776'/>
+        <property name='download.size' value='21776'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.uni_kassel.cn.planDesigner.update' version='1.0.0.200901081624'>
+      <properties size='3'>
+        <property name='artifact.size' value='13034'/>
+        <property name='download.size' value='13034'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.codegeneration' version='1.0.0.200810010012'>
+      <properties size='3'>
+        <property name='artifact.size' value='12879'/>
+        <property name='download.size' value='12879'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.edit' version='1.0.0.200810010005'>
+      <properties size='3'>
+        <property name='artifact.size' value='81134'/>
+        <property name='download.size' value='81134'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.update.core' version='3.2.200.v20080515'>
+      <properties size='3'>
+        <property name='artifact.size' value='605152'/>
+        <property name='download.size' value='605152'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.uni_kassel.cn.alica' version='1.0.0.200812161923'>
+      <properties size='3'>
+        <property name='artifact.size' value='146899'/>
+        <property name='download.size' value='146899'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.ui' version='1.0.0.200810270114'>
+      <properties size='3'>
+        <property name='artifact.size' value='992372'/>
+        <property name='download.size' value='992372'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.update' version='1.0.0.200810280052'>
+      <properties size='3'>
+        <property name='artifact.size' value='13167'/>
+        <property name='download.size' value='13167'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.update' version='1.0.0.200810010017'>
+      <properties size='3'>
+        <property name='artifact.size' value='13164'/>
+        <property name='download.size' value='13164'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml' version='1.0.0.200810281757'>
+      <properties size='3'>
+        <property name='artifact.size' value='154919'/>
+        <property name='download.size' value='154919'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.resources' version='3.4.1.R34x_v20080902'>
+      <properties size='3'>
+        <property name='artifact.size' value='699908'/>
+        <property name='download.size' value='699908'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.win32' version='3.2.100.v20080408-0800'>
+      <properties size='3'>
+        <property name='artifact.size' value='23390'/>
+        <property name='download.size' value='23390'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.osgi' version='3.4.0.v20080605-1900'>
+      <properties size='3'>
+        <property name='artifact.size' value='994117'/>
+        <property name='download.size' value='994117'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='de.unikassel.ascharf.planDesigner.core.feature' version='1.0.0.200810292354'>
+      <properties size='2'>
+        <property name='artifact.size' value='1204'/>
+        <property name='download.size' value='1204'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.uni_kassel.cn.planDesigner.codegeneration' version='1.0.0.200812161923'>
+      <properties size='3'>
+        <property name='artifact.size' value='58743'/>
+        <property name='download.size' value='58743'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.uni_kassel.cn.planDesigner.ui' version='1.0.0.200812161929'>
+      <properties size='3'>
+        <property name='artifact.size' value='1060374'/>
+        <property name='download.size' value='1060374'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.uni_kassel.cn.planDesigner.codegeneration' version='1.0.0.200812161926'>
+      <properties size='3'>
+        <property name='artifact.size' value='58743'/>
+        <property name='download.size' value='58743'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.expressions' version='3.4.0.v20080603-2000'>
+      <properties size='3'>
+        <property name='artifact.size' value='83841'/>
+        <property name='download.size' value='83841'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui' version='3.4.1.M20080910-0800'>
+      <properties size='3'>
+        <property name='artifact.size' value='145322'/>
+        <property name='download.size' value='145322'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.ide' version='3.4.1.M20080903-2000'>
+      <properties size='3'>
+        <property name='artifact.size' value='2035334'/>
+        <property name='download.size' value='2035334'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.views.log' version='1.0.0.v20080522-2200'>
+      <properties size='3'>
+        <property name='artifact.size' value='132168'/>
+        <property name='download.size' value='132168'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.codegeneration' version='1.0.0.200809302352'>
+      <properties size='3'>
+        <property name='artifact.size' value='12881'/>
+        <property name='download.size' value='12881'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.ibm.icu' version='3.8.1.v20080530'>
+      <properties size='3'>
+        <property name='artifact.size' value='4467363'/>
+        <property name='download.size' value='4467363'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.jobs' version='3.4.0.v20080512'>
+      <properties size='3'>
+        <property name='artifact.size' value='82491'/>
+        <property name='download.size' value='82491'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.swt.win32.win32.x86' version='3.4.1.v3449c'>
+      <properties size='3'>
+        <property name='artifact.size' value='2123125'/>
+        <property name='download.size' value='2123125'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.update' version='1.0.0.200809302352'>
+      <properties size='3'>
+        <property name='artifact.size' value='13166'/>
+        <property name='download.size' value='13166'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.filesystem.win32.x86' version='1.1.0.v20080604-1400'>
+      <properties size='3'>
+        <property name='artifact.size' value='16969'/>
+        <property name='download.size' value='16969'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.ui' version='1.0.0.200810010017'>
+      <properties size='3'>
+        <property name='artifact.size' value='603309'/>
+        <property name='download.size' value='603309'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='de.uni_kassel.cn.planDesigner.platform.feature' version='1.0.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='2245'/>
+        <property name='download.size' value='2245'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='de.unikassel.ascharf.pml.update' version='1.0.0.200810292354'>
+      <properties size='3'>
+        <property name='artifact.size' value='13168'/>
+        <property name='download.size' value='13168'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='de.unikassel.ascharf.planDesigner.core.feature' version='1.0.0.200810010012'>
+      <properties size='2'>
+        <property name='artifact.size' value='1202'/>
+        <property name='download.size' value='1202'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.runtime.compatibility.registry' version='3.2.200.v20080610'>
+      <properties size='3'>
+        <property name='artifact.size' value='13891'/>
+        <property name='download.size' value='13891'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.help' version='3.3.101.v20080702_34x'>
+      <properties size='3'>
+        <property name='artifact.size' value='216698'/>
+        <property name='download.size' value='216698'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>

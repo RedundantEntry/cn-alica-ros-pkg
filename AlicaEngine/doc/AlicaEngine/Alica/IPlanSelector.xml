@@ -1,0 +1,96 @@
+<Type Name="IPlanSelector" FullName="Alica.IPlanSelector">
+  <TypeSignature Language="C#" Value="public interface IPlanSelector" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPlanSelector" />
+  <AssemblyInfo>
+    <AssemblyName>AlicaEngine</AssemblyName>
+    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetBestSimilarAssignment">
+      <MemberSignature Language="C#" Value="public Alica.RunningPlan GetBestSimilarAssignment (Alica.RunningPlan rp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Alica.RunningPlan GetBestSimilarAssignment(class Alica.RunningPlan rp) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.RunningPlan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rp" Type="Alica.RunningPlan" />
+      </Parameters>
+      <Docs>
+        <param name="rp">
+            The old <see cref="T:Alica.RunningPlan" /></param>
+        <summary> Get the best Assignment for this RP with its plan and old
+            Assignment, which is also similar to the old Assignment </summary>
+        <returns>
+            The new and similar <see cref="T:Alica.Assignment" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBestSimilarAssignment">
+      <MemberSignature Language="C#" Value="public Alica.RunningPlan GetBestSimilarAssignment (Alica.RunningPlan rp, System.Collections.Generic.ICollection&lt;int&gt; robots);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Alica.RunningPlan GetBestSimilarAssignment(class Alica.RunningPlan rp, class System.Collections.Generic.ICollection`1&lt;int32&gt; robots) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Alica.RunningPlan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rp" Type="Alica.RunningPlan" />
+        <Parameter Name="robots" Type="System.Collections.Generic.ICollection&lt;System.Int32&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="rp">To be added.</param>
+        <param name="robots">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPlansForState">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedList&lt;Alica.RunningPlan&gt; GetPlansForState (Alica.RunningPlan planningParent, System.Collections.Generic.LinkedList&lt;Alica.AbstractPlan&gt; plans, System.Collections.Generic.ICollection&lt;int&gt; robotIDs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.LinkedList`1&lt;class Alica.RunningPlan&gt; GetPlansForState(class Alica.RunningPlan planningParent, class System.Collections.Generic.LinkedList`1&lt;class Alica.AbstractPlan&gt; plans, class System.Collections.Generic.ICollection`1&lt;int32&gt; robotIDs) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
+        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.LinkedList&lt;Alica.RunningPlan&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="planningParent" Type="Alica.RunningPlan" />
+        <Parameter Name="plans" Type="System.Collections.Generic.LinkedList&lt;Alica.AbstractPlan&gt;" />
+        <Parameter Name="robotIDs" Type="System.Collections.Generic.ICollection&lt;System.Int32&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="planningParent">To be added.</param>
+        <param name="plans">To be added.</param>
+        <param name="robotIDs">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

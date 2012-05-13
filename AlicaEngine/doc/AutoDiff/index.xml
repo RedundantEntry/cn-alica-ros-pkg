@@ -1,0 +1,165 @@
+<Overview>
+  <Assemblies>
+    <Assembly Name="AutoDiff" Version="0.3.4514.21140">
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCompany("Alex Shtof")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyConfiguration("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCopyright("Copyright © NA 2010")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyDescription("High-performance and high-accuracy automatic function-differentiation library suitable for optimization and numeric computing.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyFileVersion("1.0.0.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyProduct("AutoDiff")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTitle("AutoDiff")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTrademark("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.Guid("e294e492-271d-48ae-a047-c03bc13b9f6f")</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Assembly>
+  </Assemblies>
+  <Remarks>To be added.</Remarks>
+  <Copyright>To be added.</Copyright>
+  <Types>
+    <Namespace Name="AutoDiff">
+      <Type Name="Abs" Kind="Class" />
+      <Type Name="And" Kind="Class" />
+      <Type Name="Atan2" Kind="Class" />
+      <Type Name="Constant" Kind="Class" />
+      <Type Name="ConstraintUtility" Kind="Class" />
+      <Type Name="Cos" Kind="Class" />
+      <Type Name="Exp" Kind="Class" />
+      <Type Name="ICompiledTerm" Kind="Interface" />
+      <Type Name="IntPower" Kind="Class" />
+      <Type Name="ITermVisitor" Kind="Interface" />
+      <Type Name="ITermVisitor`1" DisplayName="ITermVisitor&lt;TResult&gt;" Kind="Interface" />
+      <Type Name="Log" Kind="Class" />
+      <Type Name="LTConstraint" Kind="Class" />
+      <Type Name="LTEConstraint" Kind="Class" />
+      <Type Name="Max" Kind="Class" />
+      <Type Name="Min" Kind="Class" />
+      <Type Name="Or" Kind="Class" />
+      <Type Name="Product" Kind="Class" />
+      <Type Name="Reification" Kind="Class" />
+      <Type Name="Sigmoid" Kind="Class" />
+      <Type Name="Sin" Kind="Class" />
+      <Type Name="Sum" Kind="Class" />
+      <Type Name="Term" Kind="Class" />
+      <Type Name="Term+AndType" Kind="Enumeration" />
+      <Type Name="Term+OrType" Kind="Enumeration" />
+      <Type Name="TermBuilder" Kind="Class" />
+      <Type Name="TermUtils" Kind="Class" />
+      <Type Name="TVec" Kind="Class" />
+      <Type Name="Variable" Kind="Class" />
+      <Type Name="Zero" Kind="Class" />
+    </Namespace>
+  </Types>
+  <Title>AutoDiff</Title>
+  <ExtensionMethods>
+    <ExtensionMethod>
+      <Targets>
+        <Target Type="T:AutoDiff.Term" />
+      </Targets>
+      <Member MemberName="Compile">
+        <MemberSignature Language="C#" Value="public static AutoDiff.ICompiledTerm Compile (this AutoDiff.Term term, AutoDiff.Variable[] variables);" />
+        <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.ICompiledTerm Compile(class AutoDiff.Term term, class AutoDiff.Variable[] variables) cil managed" />
+        <MemberType>ExtensionMethod</MemberType>
+        <ReturnValue>
+          <ReturnType>AutoDiff.ICompiledTerm</ReturnType>
+        </ReturnValue>
+        <Parameters>
+          <Parameter Name="term" Type="AutoDiff.Term" RefType="this" />
+          <Parameter Name="variables" Type="AutoDiff.Variable[]">
+            <Attributes>
+              <Attribute>
+                <AttributeName>System.ParamArray</AttributeName>
+              </Attribute>
+            </Attributes>
+          </Parameter>
+        </Parameters>
+        <Docs>
+          <param name="term">The term to compile.</param>
+          <param name="variables">The variables contained in the term.</param>
+          <summary>
+            Creates a compiled representation of a given term that allows efficient evaluation of the value/gradient.
+            </summary>
+        </Docs>
+        <Link Type="AutoDiff.TermUtils" Member="M:AutoDiff.TermUtils.Compile(AutoDiff.Term,AutoDiff.Variable[])" />
+      </Member>
+    </ExtensionMethod>
+    <ExtensionMethod>
+      <Targets>
+        <Target Type="T:AutoDiff.Term" />
+      </Targets>
+      <Member MemberName="Differentiate">
+        <MemberSignature Language="C#" Value="public static double[] Differentiate (this AutoDiff.Term term, AutoDiff.Variable[] variables, double[] point);" />
+        <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64[] Differentiate(class AutoDiff.Term term, class AutoDiff.Variable[] variables, float64[] point) cil managed" />
+        <MemberType>ExtensionMethod</MemberType>
+        <ReturnValue>
+          <ReturnType>System.Double[]</ReturnType>
+        </ReturnValue>
+        <Parameters>
+          <Parameter Name="term" Type="AutoDiff.Term" RefType="this" />
+          <Parameter Name="variables" Type="AutoDiff.Variable[]" />
+          <Parameter Name="point" Type="System.Double[]" />
+        </Parameters>
+        <Docs>
+          <param name="term">The term representing the function to differentiate.</param>
+          <param name="variables">The variables used in <paramref name="term" />.</param>
+          <param name="point">The values assigned to the variables in <paramref name="variables" /></param>
+          <summary>
+            Computes the gradient of the function represented by a given term at a given point.
+            </summary>
+        </Docs>
+        <Link Type="AutoDiff.TermUtils" Member="M:AutoDiff.TermUtils.Differentiate(AutoDiff.Term,AutoDiff.Variable[],System.Double[])" />
+      </Member>
+    </ExtensionMethod>
+    <ExtensionMethod>
+      <Targets>
+        <Target Type="T:AutoDiff.Term" />
+      </Targets>
+      <Member MemberName="Evaluate">
+        <MemberSignature Language="C#" Value="public static double Evaluate (this AutoDiff.Term term, AutoDiff.Variable[] variables, double[] point);" />
+        <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 Evaluate(class AutoDiff.Term term, class AutoDiff.Variable[] variables, float64[] point) cil managed" />
+        <MemberType>ExtensionMethod</MemberType>
+        <ReturnValue>
+          <ReturnType>System.Double</ReturnType>
+        </ReturnValue>
+        <Parameters>
+          <Parameter Name="term" Type="AutoDiff.Term" RefType="this" />
+          <Parameter Name="variables" Type="AutoDiff.Variable[]" />
+          <Parameter Name="point" Type="System.Double[]" />
+        </Parameters>
+        <Docs>
+          <param name="term">The term representing the function to evaluate.</param>
+          <param name="variables">The variables used in <paramref name="term" />.</param>
+          <param name="point">The values assigned to the variables in <paramref name="variables" /></param>
+          <summary>
+            Evaluates the function represented by a given term at a given point.
+            </summary>
+        </Docs>
+        <Link Type="AutoDiff.TermUtils" Member="M:AutoDiff.TermUtils.Evaluate(AutoDiff.Term,AutoDiff.Variable[],System.Double[])" />
+      </Member>
+    </ExtensionMethod>
+  </ExtensionMethods>
+</Overview>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.uni_kassel.cn.alica/src"
+    editDirectory="/de.uni_kassel.cn.planDesigner.edit/src" modelPluginID="de.uni_kassel.cn.alica"
+    modelName="AlicaDSL" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false" providerRootExtendsClass="" editPluginID="de.uni_kassel.cn.planDesigner.edit"
+    tableProviders="true">
+  <foreignModel>alicaDSL.ecore</foreignModel>
+  <genPackages prefix="Alica" basePackage="de.uni_kassel.cn" disposableProviderFactory="true"
+      ecorePackage="alicaDSL.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="alicaDSL.ecore#//UtilityModes">
+      <genEnumLiterals ecoreEnumLiteral="alicaDSL.ecore#//UtilityModes/Dc"/>
+      <genEnumLiterals ecoreEnumLiteral="alicaDSL.ecore#//UtilityModes/Max"/>
+      <genEnumLiterals ecoreEnumLiteral="alicaDSL.ecore#//UtilityModes/Min"/>
+      <genEnumLiterals ecoreEnumLiteral="alicaDSL.ecore#//UtilityModes/Avg"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="alicaDSL.ecore#//Transition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//Transition/msg"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//Transition/preCondition"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference alicaDSL.ecore#//Transition/inPoint"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference alicaDSL.ecore#//Transition/outPoint"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//Transition/syncTransitions"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//SuccessTransition"/>
+    <genClasses image="false" ecoreClass="alicaDSL.ecore#//Condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//Condition/conditionString"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference alicaDSL.ecore#//Condition/abstractPlan"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference alicaDSL.ecore#//Condition/vars"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//Condition/quantifiers"/>
+      <genOperations ecoreOperation="alicaDSL.ecore#//Condition/ensureVariableConsistency">
+        <genParameters ecoreParameter="alicaDSL.ecore#//Condition/ensureVariableConsistency/parentPlan"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//PreCondition"/>
+    <genClasses ecoreClass="alicaDSL.ecore#//FailureTransition"/>
+    <genClasses ecoreClass="alicaDSL.ecore#//SyncTransition">
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference alicaDSL.ecore#//SyncTransition/inSync"/>
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//SyncTransition/talkTimeout"/>
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//SyncTransition/syncTimeout"/>
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//SyncTransition/failOnSyncTimeOut"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="alicaDSL.ecore#//ConnectionPoint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//ConnectionPoint/minCardinality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//ConnectionPoint/maxCardinality"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference alicaDSL.ecore#//ConnectionPoint/inTransition"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference alicaDSL.ecore#//ConnectionPoint/outTransition"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="alicaDSL.ecore#//IConnectable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//IConnectable/entryPoints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//IConnectable/exitPoints"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//EntryPoint">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//EntryPoint/task"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference alicaDSL.ecore#//EntryPoint/connectable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//EntryPoint/successRequired"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="alicaDSL.ecore#//ExitPoint">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//ExitPoint/result"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference alicaDSL.ecore#//ExitPoint/connectable"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//SuccessPoint"/>
+    <genClasses ecoreClass="alicaDSL.ecore#//FailurePoint"/>
+    <genClasses image="false" ecoreClass="alicaDSL.ecore#//AbstractPlan">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//AbstractPlan/rating"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//AbstractPlan/conditions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//AbstractPlan/masterPlan"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//AbstractPlan/utilityFunction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//AbstractPlan/utilities"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//AbstractPlan/utilityThreshold"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//AbstractPlan/vars"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//Behaviour">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//Behaviour/configurations"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//State">
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference alicaDSL.ecore#//State/plans"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference alicaDSL.ecore#//State/inPlan"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//State/parametrisation"/>
+      <genOperations ecoreOperation="alicaDSL.ecore#//State/ensureParametrisationConsistency"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//Plan">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//Plan/priority"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//Plan/states"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//Plan/transitions"/>
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//Plan/minCardinality"/>
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//Plan/maxCardinality"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//Plan/syncTransitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//Plan/synchronisations"/>
+      <genOperations ecoreOperation="alicaDSL.ecore#//Plan/calculateCardinalities"/>
+      <genOperations ecoreOperation="alicaDSL.ecore#//Plan/ensureParametrisationConsistency"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//Utility">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//Utility/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//Utility/modes"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//PlanType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//PlanType/parametrisation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//PlanType/plans"/>
+      <genOperations ecoreOperation="alicaDSL.ecore#//PlanType/ensureParametrisationConsistency"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//Rating"/>
+    <genClasses ecoreClass="alicaDSL.ecore#//Result"/>
+    <genClasses ecoreClass="alicaDSL.ecore#//RuntimeCondition"/>
+    <genClasses image="false" ecoreClass="alicaDSL.ecore#//PlanElement">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//PlanElement/id"/>
+      <genFeatures createChild="false" propertyDescription="" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//PlanElement/name"/>
+      <genFeatures property="None" createChild="false" propertyCategory="" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//PlanElement/comment"/>
+      <genOperations ecoreOperation="alicaDSL.ecore#//PlanElement/generateID"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//Task">
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//Task/description"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//EStringToEStringMapEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//EStringToEStringMapEntry/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//EStringToEStringMapEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//BehaviourConfiguration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//BehaviourConfiguration/parameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//BehaviourConfiguration/deferring"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//BehaviourConfiguration/frequency"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference alicaDSL.ecore#//BehaviourConfiguration/behaviour"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//BehaviourConfiguration/eventDriven"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//Role">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//Role/characteristics"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//RoleSet">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//RoleSet/usableWithPlanID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//RoleSet/default"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//RoleSet/mappings"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//ELongToDoubleMapEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//ELongToDoubleMapEntry/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//ELongToDoubleMapEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//RoleDefinitionSet">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//RoleDefinitionSet/roles"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//RoleTaskMapping">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//RoleTaskMapping/taskPriorities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//RoleTaskMapping/role"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//Characteristic">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//Characteristic/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//Characteristic/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//Characteristic/weight"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//TaskGraph">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//TaskGraph/nodes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//TaskGraph/edges"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//Edge">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//Edge/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//Edge/to"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//TaskWrapper">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//TaskWrapper/task"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//TaskWrapper/mappings"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//InternalRoleTaskMapping">
+      <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference alicaDSL.ecore#//InternalRoleTaskMapping/role"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//InternalRoleTaskMapping/priority"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//Node">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//Node/inEdge"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//Node/outEdge"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//TaskRepository">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//TaskRepository/tasks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//TaskRepository/defaultTask"/>
+      <genOperations ecoreOperation="alicaDSL.ecore#//TaskRepository/createDefaultTask"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//UtilityRepository">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//UtilityRepository/utilities"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//UtilityReference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//UtilityReference/weight"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//UtilityReference/utility"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//UtilityMode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//UtilityMode/mode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//UtilityMode/expression"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference alicaDSL.ecore#//UtilityMode/parent"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//UtilityModeExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//UtilityModeExpression/variable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//UtilityModeExpression/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//UtilityModeExpression/entryPoint"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//Synchronisation">
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference alicaDSL.ecore#//Synchronisation/syncTransitions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//Synchronisation/talkTimeout"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//Synchronisation/syncTimeout"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//Synchronisation/failOnSyncTimeOut"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//Variable/Type"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//Parametrisation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//Parametrisation/subplan"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//Parametrisation/subvar"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//Parametrisation/var"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//AnnotatedPlan">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//AnnotatedPlan/plan"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//AnnotatedPlan/activated"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="alicaDSL.ecore#//Quantifier">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//Quantifier/scope"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//Quantifier/sorts"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//ForallAgents"/>
+    <genClasses image="false" ecoreClass="alicaDSL.ecore#//IInhabitable"/>
+    <genClasses ecoreClass="alicaDSL.ecore#//Capability">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//Capability/key"/>
+      <genFeatures property="None" children="true" createChild="true" propertySortChoices="true"
+          ecoreFeature="ecore:EReference alicaDSL.ecore#//Capability/CapValues"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//CapValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//CapValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="alicaDSL.ecore#//CapabilityDefinitionSet">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//CapabilityDefinitionSet/Capabilities"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

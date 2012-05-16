@@ -5,6 +5,7 @@
     <AssemblyName>AlicaEngine</AssemblyName>
     <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
     <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+    <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
@@ -19,6 +20,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -42,6 +44,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -67,6 +70,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>

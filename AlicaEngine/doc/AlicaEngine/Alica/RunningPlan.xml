@@ -5,6 +5,7 @@
     <AssemblyName>AlicaEngine</AssemblyName>
     <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
     <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+    <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -24,6 +25,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -38,6 +40,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -61,6 +64,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -80,6 +84,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.EntryPoint</ReturnType>
@@ -96,6 +101,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.State</ReturnType>
@@ -112,6 +118,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.State</ReturnType>
@@ -129,6 +136,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -146,6 +154,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -171,6 +180,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -192,6 +202,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -213,6 +224,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -234,6 +246,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.Assignment</ReturnType>
@@ -250,6 +263,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.Assignment</ReturnType>
@@ -267,6 +281,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt64</ReturnType>
@@ -283,6 +298,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>
@@ -302,6 +318,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.BasicBehaviour</ReturnType>
@@ -319,6 +336,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.IBehaviourPool</ReturnType>
@@ -335,6 +353,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;Alica.RunningPlan&gt;</ReturnType>
@@ -351,6 +370,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;Alica.RunningPlan&gt;</ReturnType>
@@ -368,6 +388,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.ConstraintStore</ReturnType>
@@ -385,6 +406,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.CycleManager</ReturnType>
@@ -402,6 +424,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -420,6 +443,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -438,6 +462,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -454,6 +479,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.Dictionary&lt;Alica.AbstractPlan,System.Int32&gt;</ReturnType>
@@ -470,6 +496,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -486,6 +513,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -505,6 +533,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -522,6 +551,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -539,6 +569,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -559,6 +590,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.EntryPoint</ReturnType>
@@ -578,6 +610,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -594,6 +627,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.RunningPlan</ReturnType>
@@ -610,6 +644,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.RunningPlan</ReturnType>
@@ -627,6 +662,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.AbstractPlan</ReturnType>
@@ -643,6 +679,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.AbstractPlan</ReturnType>
@@ -660,6 +697,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt64</ReturnType>
@@ -676,6 +714,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt64</ReturnType>
@@ -695,6 +734,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.PlanType</ReturnType>
@@ -711,6 +751,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -728,6 +769,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.PlanType</ReturnType>
@@ -745,6 +787,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>
@@ -761,6 +804,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt64</ReturnType>
@@ -777,6 +821,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt64</ReturnType>
@@ -796,6 +841,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.PlanStatus</ReturnType>
@@ -812,6 +858,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.PlanStatus</ReturnType>
@@ -829,6 +876,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.ITeamObserver</ReturnType>
@@ -845,6 +893,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

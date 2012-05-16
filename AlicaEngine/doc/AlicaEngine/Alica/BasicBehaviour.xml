@@ -5,6 +5,7 @@
     <AssemblyName>AlicaEngine</AssemblyName>
     <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
     <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+    <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -18,19 +19,24 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public BasicBehaviour (string name);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="C#" Value="protected BasicBehaviour (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="name">
+            The name of the behaviour.
+            </param>
+        <summary>
+            Basic constructor. Initialises various timers. Should only be called from the contructor of inherting classes.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -41,6 +47,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -58,6 +65,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -77,6 +85,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.EntryPoint</ReturnType>
@@ -106,6 +115,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -127,6 +137,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.EntryPoint</ReturnType>
@@ -153,6 +164,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -173,6 +185,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -190,12 +203,15 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The name of this behaviour.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -206,13 +222,18 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>
+            Gets or sets the name.
+            </summary>
+        <value>
+            The name.
+            </value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -223,12 +244,15 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Parameters are behaviour configuration specific fixed values. They are set before the behaviour is activated.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -239,6 +263,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;</ReturnType>
@@ -258,6 +283,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -275,6 +301,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.Int32&gt;</ReturnType>
@@ -298,6 +325,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.Int32&gt;</ReturnType>
@@ -306,9 +334,15 @@
         <Parameter Name="ep" Type="Alica.EntryPoint" />
       </Parameters>
       <Docs>
-        <param name="ep">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="ep">
+            The EntryPoint of the higher level plan.
+            </param>
+        <summary>
+            Allows to query for robots that are working on a different task at some higher level of the plan hierarchy
+            </summary>
+        <returns>
+            The set of robots, identified by id that are working in the specified EntryPoint.
+            </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -319,6 +353,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.HashSet&lt;System.Int32&gt;</ReturnType>
@@ -345,6 +380,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>
@@ -366,6 +402,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.HashSet&lt;System.Int32&gt;</ReturnType>
@@ -388,6 +425,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.Int32&gt;</ReturnType>
@@ -409,6 +447,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -432,6 +471,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.RunningPlan</ReturnType>
@@ -451,6 +491,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -475,6 +516,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.AutoResetEvent</ReturnType>
@@ -492,6 +534,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -511,6 +554,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.Variable</ReturnType>
@@ -536,6 +580,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int64</ReturnType>
@@ -561,6 +606,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.LinkedList&lt;Alica.Variable&gt;</ReturnType>

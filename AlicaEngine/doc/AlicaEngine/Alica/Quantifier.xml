@@ -5,6 +5,7 @@
     <AssemblyName>AlicaEngine</AssemblyName>
     <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
     <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+    <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Alica.PlanElement</BaseTypeName>
@@ -24,6 +25,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="id" Type="System.Int64" />
@@ -44,6 +46,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;System.String&gt;</ReturnType>
@@ -63,6 +66,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.PlanElement</ReturnType>
@@ -81,6 +85,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.EntryPoint</ReturnType>
@@ -102,6 +107,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.Plan</ReturnType>
@@ -123,6 +129,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.State</ReturnType>
@@ -144,6 +151,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;AutoDiff.Term[]&gt;</ReturnType>
@@ -167,6 +175,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;Alica.Variable[]&gt;</ReturnType>
@@ -190,6 +199,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -208,6 +218,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -226,6 +237,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -244,6 +256,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

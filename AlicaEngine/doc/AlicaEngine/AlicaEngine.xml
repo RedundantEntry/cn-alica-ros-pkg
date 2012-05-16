@@ -827,6 +827,24 @@
             The base class for all behaviours. All Behaviours must inherit from this class.
             </summary>
         </member>
+        <member name="M:Alica.BasicBehaviour.#ctor(System.String)">
+            <summary>
+            Basic constructor. Initialises various timers. Should only be called from the contructor of inherting classes.
+            </summary>
+            <param name="name">
+            The name of the behaviour.
+            </param>
+        </member>
+        <member name="F:Alica.BasicBehaviour.name">
+            <summary>
+            The name of this behaviour.
+            </summary>
+        </member>
+        <member name="F:Alica.BasicBehaviour.parameters">
+            <summary>
+            Parameters are behaviour configuration specific fixed values. They are set before the behaviour is activated.
+            </summary>
+        </member>
         <member name="P:Alica.BasicBehaviour.Parameters">
             <summary>
             The set of static Parameters as defined by the <see cref="T:Alica.BehaviourConfiguration" />.
@@ -846,6 +864,14 @@
             <summary>
             The Failure flag. Raised by a behaviour to indicate it has failed in some way.
             </summary>
+        </member>
+        <member name="P:Alica.BasicBehaviour.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
         </member>
         <member name="P:Alica.BasicBehaviour.RunningPlan">
             <summary>
@@ -971,6 +997,17 @@
             A <see cref="T:Alica.EntryPoint" /></param>
             <returns>
             A <see cref="!:ICollection`1" /></returns>
+        </member>
+        <member name="M:Alica.BasicBehaviour.RobotsInEntryPointOfHigherPlan(Alica.EntryPoint)">
+            <summary>
+            Allows to query for robots that are working on a different task at some higher level of the plan hierarchy
+            </summary>
+            <returns>
+            The set of robots, identified by id that are working in the specified EntryPoint.
+            </returns>
+            <param name="ep">
+            The EntryPoint of the higher level plan.
+            </param>
         </member>
         <member name="M:Alica.BasicBehaviour.GetOwnId">
             <summary>
@@ -1634,7 +1671,7 @@
             Obtain a result for this query as a list of doubles
             </summary>
             <returns>
-            The solution.
+            A bool indicating if the solver was able to satisfy the constraint problem.
             </returns>
             <param name="rp">
             The <see cref="T:Alica.RunningPlan" /> in which this query is executed.
@@ -1643,7 +1680,20 @@
             The resulting list of double, contains firstly all values for the static variables, followed by the robot specific variables.
             </param>
         </member>
-        <!--FIXME: Invalid documentation markup was found for member M:Alica.ConstraintQuery.GetSolution(Alica.RunningPlan,System.Collections.Generic.List{System.Object}@)-->
+        <member name="M:Alica.ConstraintQuery.GetSolution(Alica.RunningPlan,System.Collections.Generic.List{System.Object}@)">
+            <summary>
+            Obtain a result for this query, including non-numerals.
+            </summary>
+            <returns>
+            A bool indicating wether or not the constraint system could be solved.
+            </returns>
+            <param name="rp">
+            The <see cref="T:Alica.RunningPlan" /> in which this query is executed.
+            </param>
+            <param name="result">
+            The solution as a list of objects.
+            </param>
+        </member>
         <member name="T:Alica.ConstraintBuilder">
             <summary>
             A static helper class, providing simple factory methods for domain-independent constraints.

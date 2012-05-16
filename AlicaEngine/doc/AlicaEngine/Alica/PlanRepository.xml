@@ -5,6 +5,7 @@
     <AssemblyName>AlicaEngine</AssemblyName>
     <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
     <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+    <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -25,6 +26,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -41,6 +43,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.Dictionary&lt;System.Int64,Alica.Behaviour&gt;</ReturnType>
@@ -58,6 +61,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.Dictionary&lt;System.Int64,Alica.Capability&gt;</ReturnType>
@@ -75,6 +79,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.Dictionary&lt;System.Int64,Alica.Characteristic&gt;</ReturnType>
@@ -92,6 +97,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.Dictionary&lt;System.Int64,Alica.EntryPoint&gt;</ReturnType>
@@ -109,6 +115,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.Dictionary&lt;System.Int64,Alica.Plan&gt;</ReturnType>
@@ -126,6 +133,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.Dictionary&lt;System.Int64,Alica.PlanType&gt;</ReturnType>
@@ -143,6 +151,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.Dictionary&lt;System.Int64,Alica.Quantifier&gt;</ReturnType>
@@ -160,6 +169,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.Dictionary&lt;System.Int64,Alica.Role&gt;</ReturnType>
@@ -177,6 +187,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.Dictionary&lt;System.Int64,Alica.State&gt;</ReturnType>
@@ -194,6 +205,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.Dictionary&lt;System.Int64,Alica.SyncTransition&gt;</ReturnType>
@@ -211,6 +223,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -228,6 +241,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.Dictionary&lt;System.Int64,Alica.Task&gt;</ReturnType>
@@ -245,6 +259,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.Dictionary&lt;System.Int64,Alica.Transition&gt;</ReturnType>
@@ -262,6 +277,7 @@
       <AssemblyInfo>
         <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
         <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.Dictionary&lt;System.Int64,Alica.Variable&gt;</ReturnType>

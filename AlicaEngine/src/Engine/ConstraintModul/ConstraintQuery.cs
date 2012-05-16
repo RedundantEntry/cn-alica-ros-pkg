@@ -236,7 +236,7 @@ namespace Alica {
 		/// Obtain a result for this query as a list of doubles
 		/// </summary>
 		/// <returns>
-		/// The solution.
+		/// A bool indicating if the solver was able to satisfy the constraint problem.
 		/// </returns>
 		/// <param name='rp'>
 		/// The <see cref="RunningPlan"/> in which this query is executed.
@@ -356,19 +356,20 @@ namespace Alica {
 			}	
 			
 			return ret;			
-		}
+		}		
+		
 		/// <summary>
 		/// Obtain a result for this query, including non-numerals.
 		/// </summary>
-		/// <param name="rp">
+		/// <returns>
+		/// A bool indicating wether or not the constraint system could be solved.
+		/// </returns>
+		/// <param name='rp'>
 		/// The <see cref="RunningPlan"/> in which this query is executed.
 		/// </param>
-		/// <param name="result">
-		/// The resulting <see cref="List<System.Object>"/>, contains firstly all values for the static variables, followed by the robot specific variables.
+		/// <param name='result'>
+		/// The solution as a list of objects.
 		/// </param>
-		/// <returns>
-		/// A <see cref="System.Boolean"/>
-		/// </returns>
 		public bool GetSolution(RunningPlan rp,out List<object> result) {
 #if CQ_DEBUG			
 			long time = DateTime.UtcNow.Ticks;

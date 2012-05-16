@@ -21,8 +21,14 @@ namespace Alica
 		public int DueTime {get; set;}
 		public int Period {get; set;}
 		
+		/// <summary>
+		/// The name of this behaviour.
+		/// </summary>
 		protected string name = "";
 		
+		/// <summary>
+		/// Parameters are behaviour configuration specific fixed values. They are set before the behaviour is activated.
+		/// </summary>
 		protected Dictionary<string, string> parameters = new Dictionary<string, string>();
 		
 		private LinkedList<Variable> variables = null;
@@ -38,8 +44,14 @@ namespace Alica
 		private bool terminating;
 		private EventListener listener;
 		private bool callInit;
-		//public BasicBehaviour(string name, Dictionary<string, string> parameters)
-		public BasicBehaviour(string name)
+		
+		/// <summary>
+		/// Basic constructor. Initialises various timers. Should only be called from the contructor of inherting classes.
+		/// </summary>
+		/// <param name='name'>
+		/// The name of the behaviour.
+		/// </param>
+		protected BasicBehaviour(string name)
 		{						
 						
 			this.name = name;
@@ -48,8 +60,7 @@ namespace Alica
 			this.terminating = false;
 			this.callInit = false;
 			Thread exe = new Thread(new ThreadStart(this.__RunEventDriven));
-			exe.Start();
-						
+			exe.Start();					
 			
 		}
 		
@@ -143,7 +154,12 @@ namespace Alica
 			}
 			get { return this.failure && !this.callInit; }			
 		}
-		
+		/// <summary>
+		/// Gets or sets the name.
+		/// </summary>
+		/// <value>
+		/// The name.
+		/// </value>
 		public string Name
 		{
 			set { this.name = value; }
@@ -334,6 +350,15 @@ namespace Alica
 			if (ep==null) return null;
 			return this.RunningPlan.Parent.Assignment.GetRobotsWorking(ep);
 		}
+		/// <summary>
+		/// Allows to query for robots that are working on a different task at some higher level of the plan hierarchy
+		/// </summary>
+		/// <returns>
+		/// The set of robots, identified by id that are working in the specified EntryPoint.
+		/// </returns>
+		/// <param name='ep'>
+		/// The EntryPoint of the higher level plan.
+		/// </param>
 		protected ICollection<int> RobotsInEntryPointOfHigherPlan(EntryPoint ep) {
 			if (ep==null) return null;
 			RunningPlan cur = this.RunningPlan.Parent;

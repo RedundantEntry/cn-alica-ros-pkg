@@ -3,7 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TVec extends System.Object" />
   <AssemblyInfo>
     <AssemblyName>AutoDiff</AssemblyName>
-    <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+    <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -21,7 +21,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class AutoDiff.Term[] terms) cil managed" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="terms" Type="AutoDiff.Term[]">
@@ -45,7 +45,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class AutoDiff.Term&gt; terms) cil managed" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="terms" Type="System.Collections.Generic.IEnumerable&lt;AutoDiff.Term&gt;" />
@@ -63,7 +63,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class AutoDiff.TVec first, class AutoDiff.Term[] rest) cil managed" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="first" Type="AutoDiff.TVec" />
@@ -89,7 +89,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.TVec CrossProduct(class AutoDiff.TVec left, class AutoDiff.TVec right) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.TVec</ReturnType>
@@ -113,7 +113,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance int32 Dimension" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -131,7 +131,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class AutoDiff.Term[] GetTerms() cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term[]</ReturnType>
@@ -151,7 +151,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term InnerProduct(class AutoDiff.TVec left, class AutoDiff.TVec right) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -175,7 +175,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.Term Item(int32)" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -197,7 +197,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.TVec Normalize" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.TVec</ReturnType>
@@ -215,7 +215,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.Term NormSquared" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -233,7 +233,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.TVec op_Addition(class AutoDiff.TVec left, class AutoDiff.TVec right) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.TVec</ReturnType>
@@ -257,7 +257,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.TVec op_Multiply(class AutoDiff.Term scalar, class AutoDiff.TVec vector) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.TVec</ReturnType>
@@ -281,7 +281,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.TVec op_Multiply(class AutoDiff.TVec vector, class AutoDiff.Term scalar) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.TVec</ReturnType>
@@ -305,7 +305,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.Term op_Multiply(class AutoDiff.TVec left, class AutoDiff.TVec right) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -329,7 +329,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.TVec op_Subtraction(class AutoDiff.TVec left, class AutoDiff.TVec right) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.TVec</ReturnType>
@@ -353,7 +353,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class AutoDiff.TVec op_UnaryNegation(class AutoDiff.TVec vector) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.TVec</ReturnType>
@@ -375,7 +375,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -392,7 +392,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.Term X" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -410,7 +410,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.Term Y" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -428,7 +428,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.Term Z" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>

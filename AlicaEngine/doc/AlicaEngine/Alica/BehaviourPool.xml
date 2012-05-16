@@ -3,10 +3,8 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BehaviourPool extends System.Object implements class Alica.IBehaviourPool" />
   <AssemblyInfo>
     <AssemblyName>AlicaEngine</AssemblyName>
-    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+    <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+    <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,10 +26,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -46,10 +42,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddBehaviour(class Alica.RunningPlan rp) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -71,10 +65,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Init() cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -91,10 +83,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsBehaviourAvailable(class Alica.Behaviour b) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -117,10 +107,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveBehaviour(class Alica.RunningPlan rp) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -142,10 +130,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Stop() cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

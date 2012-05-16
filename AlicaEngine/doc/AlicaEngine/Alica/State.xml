@@ -3,10 +3,8 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit State extends Alica.PlanElement" />
   <AssemblyInfo>
     <AssemblyName>AlicaEngine</AssemblyName>
-    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+    <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+    <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Alica.PlanElement</BaseTypeName>
@@ -24,10 +22,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -42,10 +38,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 id) cil managed" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="id" Type="System.Int64" />
@@ -64,10 +58,8 @@
       <MemberSignature Language="ILAsm" Value=".field family class Alica.Plan inPlan" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.Plan</ReturnType>
@@ -82,10 +74,8 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Alica.Plan InPlan" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.Plan</ReturnType>
@@ -103,10 +93,8 @@
       <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Generic.List`1&lt;class Alica.Transition&gt; inTransitions" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;Alica.Transition&gt;</ReturnType>
@@ -121,10 +109,8 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Alica.Transition&gt; InTransitions" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;Alica.Transition&gt;</ReturnType>
@@ -142,10 +128,8 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool IsFailureState" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -163,10 +147,8 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool IsSuccessState" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -184,10 +166,8 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool IsTerminal" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -205,10 +185,8 @@
       <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Generic.List`1&lt;class Alica.Transition&gt; outTransitions" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;Alica.Transition&gt;</ReturnType>
@@ -223,10 +201,8 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Alica.Transition&gt; OutTransitions" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;Alica.Transition&gt;</ReturnType>
@@ -244,10 +220,8 @@
       <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Generic.List`1&lt;class Alica.Parametrisation&gt; parametrisation" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;Alica.Parametrisation&gt;</ReturnType>
@@ -262,10 +236,8 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Alica.Parametrisation&gt; Parametrisation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;Alica.Parametrisation&gt;</ReturnType>
@@ -283,10 +255,8 @@
       <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Generic.LinkedList`1&lt;class Alica.AbstractPlan&gt; plans" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.LinkedList&lt;Alica.AbstractPlan&gt;</ReturnType>
@@ -301,10 +271,8 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.LinkedList`1&lt;class Alica.AbstractPlan&gt; Plans" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.LinkedList&lt;Alica.AbstractPlan&gt;</ReturnType>
@@ -322,10 +290,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

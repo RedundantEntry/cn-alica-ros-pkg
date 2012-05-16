@@ -3,10 +3,8 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Synchronisation extends System.Object" />
   <AssemblyInfo>
     <AssemblyName>AlicaEngine</AssemblyName>
-    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+    <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+    <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -22,10 +20,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 myID, class Alica.SyncTransition st, class Alica.SyncModul sm) cil managed" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="myID" Type="System.Int32" />
@@ -45,10 +41,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ChangeOwnData(int64 transitionID, bool conditionHolds) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -69,10 +63,8 @@
       <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Generic.List`1&lt;int64&gt; connectedTransitions" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;System.Int64&gt;</ReturnType>
@@ -87,10 +79,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void IntegrateSyncReady(class RosCS.AlicaEngine.SyncReady ready) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -109,10 +99,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IntegrateSyncTalk(class RosCS.AlicaEngine.SyncTalk talk, unsigned int64 curTick) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -134,10 +122,8 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool IsSyncComplete() cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -154,10 +140,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsValid(unsigned int64 curTick) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -177,10 +161,8 @@
       <MemberSignature Language="ILAsm" Value=".field family class RosCS.AlicaEngine.SyncData lastTalkData" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>RosCS.AlicaEngine.SyncData</ReturnType>
@@ -195,10 +177,8 @@
       <MemberSignature Language="ILAsm" Value=".field family unsigned int64 lastTalkTime" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt64</ReturnType>
@@ -213,10 +193,8 @@
       <MemberSignature Language="ILAsm" Value=".field family unsigned int64 lastTick" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt64</ReturnType>
@@ -231,10 +209,8 @@
       <MemberSignature Language="ILAsm" Value=".field family int32 myID" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -249,10 +225,8 @@
       <MemberSignature Language="ILAsm" Value=".field family class Alica.SyncRow myRow" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.SyncRow</ReturnType>
@@ -267,10 +241,8 @@
       <MemberSignature Language="ILAsm" Value=".field family bool readyForSync" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -285,10 +257,8 @@
       <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Generic.List`1&lt;class RosCS.AlicaEngine.SyncReady&gt; receivedSyncReadys" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;RosCS.AlicaEngine.SyncReady&gt;</ReturnType>
@@ -303,10 +273,8 @@
       <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Generic.List`1&lt;class Alica.SyncRow&gt; rowsOK" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;Alica.SyncRow&gt;</ReturnType>
@@ -321,10 +289,8 @@
       <MemberSignature Language="ILAsm" Value=".field family class Alica.RunningPlan runningPlan" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.RunningPlan</ReturnType>
@@ -339,10 +305,8 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SendSyncReady() cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -358,10 +322,8 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SendTalk(class RosCS.AlicaEngine.SyncData sd) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -380,10 +342,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetTick(unsigned int64 now) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -402,10 +362,8 @@
       <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Generic.List`1&lt;class Alica.SyncRow&gt; syncMatrix" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;Alica.SyncRow&gt;</ReturnType>
@@ -420,10 +378,8 @@
       <MemberSignature Language="ILAsm" Value=".field family class Alica.SyncModul syncModul" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.SyncModul</ReturnType>
@@ -438,10 +394,8 @@
       <MemberSignature Language="ILAsm" Value=".field family unsigned int64 syncStartTime" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt64</ReturnType>
@@ -456,10 +410,8 @@
       <MemberSignature Language="ILAsm" Value=".field family class Alica.SyncTransition syncTransition" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.SyncTransition</ReturnType>
@@ -474,10 +426,8 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Alica.SyncTransition SyncTransition" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.SyncTransition</ReturnType>

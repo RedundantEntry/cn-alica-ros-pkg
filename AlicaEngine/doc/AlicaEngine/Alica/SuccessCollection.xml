@@ -3,10 +3,8 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SuccessCollection extends System.Object" />
   <AssemblyInfo>
     <AssemblyName>AlicaEngine</AssemblyName>
-    <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-    <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-    <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-    <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+    <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+    <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -22,10 +20,8 @@
       <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -41,10 +37,8 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Alica.EntryPoint[] EntryPoints" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.EntryPoint[]</ReturnType>
@@ -60,10 +54,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.ICollection`1&lt;int32&gt; GetRobots(class Alica.EntryPoint k) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.Int32&gt;</ReturnType>
@@ -83,10 +75,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.ICollection`1&lt;int32&gt; GetRobotsById(int64 id) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.Int32&gt;</ReturnType>
@@ -106,10 +96,8 @@
       <MemberSignature Language="ILAsm" Value=".field family class Alica.EntryPoint[] keys" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.EntryPoint[]</ReturnType>
@@ -124,10 +112,8 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;int32&gt;[] Robots" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;[]</ReturnType>
@@ -143,10 +129,8 @@
       <MemberSignature Language="ILAsm" Value=".field family int32 size" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -161,10 +145,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -181,10 +163,8 @@
       <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Generic.List`1&lt;int32&gt;[] values" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4514.21141</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22820</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.22905</AssemblyVersion>
-        <AssemblyVersion>0.9.4514.23556</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
+        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;[]</ReturnType>

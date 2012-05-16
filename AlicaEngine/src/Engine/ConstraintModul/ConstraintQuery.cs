@@ -233,17 +233,17 @@ namespace Alica {
 				
 		}
 		/// <summary>
-		/// Obtain a result for this query
+		/// Obtain a result for this query as a list of doubles
 		/// </summary>
-		/// <param name="rp">
+		/// <returns>
+		/// The solution.
+		/// </returns>
+		/// <param name='rp'>
 		/// The <see cref="RunningPlan"/> in which this query is executed.
 		/// </param>
-		/// <param name="result">
-		/// The resulting <see cref="List<System.Double>"/>, contains firstly all values for the static variables, followed by the robot specific variables.
+		/// <param name='result'>
+		/// The resulting list of double, contains firstly all values for the static variables, followed by the robot specific variables.
 		/// </param>
-		/// <returns>
-		/// A <see cref="System.Boolean"/>
-		/// </returns>
 		public bool GetSolution(RunningPlan rp,out List<double> result) {
 #if CQ_DEBUG			
 			long time = DateTime.UtcNow.Ticks;

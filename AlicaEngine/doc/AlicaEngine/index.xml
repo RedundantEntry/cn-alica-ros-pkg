@@ -1,6 +1,6 @@
 <Overview>
   <Assemblies>
-    <Assembly Name="AlicaEngine" Version="0.9.4514.23556">
+    <Assembly Name="AlicaEngine" Version="0.9.4519.36039">
       <Attributes>
         <Attribute>
           <AttributeName>System.Reflection.AssemblyCompany("Distributed Autonomous Systems Labratory, University of Kassel")</AttributeName>
@@ -68,12 +68,10 @@
       <Type Name="DefaultUtilityFunction" Kind="Class" />
       <Type Name="EngineTrigger" Kind="Delegate" />
       <Type Name="EntryPoint" Kind="Class" />
-      <Type Name="EntryPointRobotPair" Kind="Class" />
       <Type Name="EpByTaskComparer" Kind="Class" />
       <Type Name="Evaluate" Kind="Delegate" />
       <Type Name="EventListener" Kind="Class" />
       <Type Name="ExitPoint" Kind="Class" />
-      <Type Name="ExploratingUtilityFunction" Kind="Class" />
       <Type Name="ExpressionHandler" Kind="Class" />
       <Type Name="FailurePoint" Kind="Class" />
       <Type Name="ForallAgents" Kind="Class" />

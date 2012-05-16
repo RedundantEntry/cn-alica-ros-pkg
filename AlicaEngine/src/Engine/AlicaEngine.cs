@@ -90,7 +90,9 @@ namespace Alica
 		/// </summary>
 		public bool IsTerminating{get; private set;}	
 	
-		
+		/// <summary>
+		/// Internal Constructor
+		/// </summary>
 		protected AlicaEngine()
 		{
 			//Sanity check:
@@ -227,6 +229,9 @@ namespace Alica
 			Console.WriteLine("AE: Initialisation finished, standing by.");
 		
 		}
+		/// <summary>
+		/// Register with this <see cref="EngineTrigger"/> to be called after an engine iteration is complete.
+		/// </summary>
 		public EngineTrigger OnPlanBaseIterationComplete;
 		
 		internal void IterationComplete() {
@@ -294,6 +299,12 @@ namespace Alica
 		{
 			get { return this.repository; }
 		}
+		/// <summary>
+		/// Gets the PlanBase, which holds the internal state of the agent.
+		/// </summary>
+		/// <value>
+		/// The PlanBase
+		/// </value>
 		public PlanBase PB
 		{
 			get { return this.planBase; }
@@ -303,6 +314,12 @@ namespace Alica
 		/// </summary>
 		public ITeamObserver TO {get{return this.teamObserver;}}
 		
+		/// <summary>
+		/// Gets the RoleAssignment
+		/// </summary>
+		/// <value>
+		/// The RoleAssignment, responsible for allocating roles to robots.
+		/// </value>
 		public IRoleAssignment RA
 		{
 			get { return this.roleAssignment; }
@@ -314,12 +331,22 @@ namespace Alica
 		{
 			get {return this.log;}
 		}
-		
+		/// <summary>
+		/// Gets the SyncModul
+		/// </summary>
+		/// <value>
+		/// The SyncModul enables synchronised transitions.
+		/// </value>
 		public ISyncModul SM
 		{
 			get { return this.syncModul; }
 		}
-		
+		/// <summary>
+		/// Gets AuthorityManager
+		/// </summary>
+		/// <value>
+		/// The AuthorityManager detects and resolvs conflicts in task allocation.
+		/// </value>
 		public AuthorityManager AM
 		{
 			get { return this.auth; }

@@ -3,7 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit TermBuilder extends System.Object" />
   <AssemblyInfo>
     <AssemblyName>AutoDiff</AssemblyName>
-    <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+    <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -21,7 +21,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term BoundedRectangle(class AutoDiff.TVec arg, class AutoDiff.TVec leftLower, class AutoDiff.TVec rightUpper, float64 steepness) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -47,7 +47,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term BoundedValue(class AutoDiff.Term arg, class AutoDiff.Term leftBound, class AutoDiff.Term rightBound, float64 steepness) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -73,7 +73,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Constant(float64 value) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -95,7 +95,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Cos(class AutoDiff.Term arg) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -117,7 +117,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term EuclidianDistance(class AutoDiff.TVec one, class AutoDiff.TVec two) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -139,7 +139,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term EuclidianDistanceSqr(class AutoDiff.TVec one, class AutoDiff.TVec two) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -161,7 +161,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Exp(class AutoDiff.Term arg) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -183,7 +183,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Gaussian(class AutoDiff.TVec args, class AutoDiff.TVec mean, float64 variance) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -207,7 +207,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Log(class AutoDiff.Term arg) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -229,7 +229,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term NormalDistribution(class AutoDiff.TVec args, class AutoDiff.TVec mean, float64 variance) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -253,7 +253,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Power(class AutoDiff.Term t, float64 power) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -277,7 +277,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Product(class AutoDiff.Term v1, class AutoDiff.Term v2, class AutoDiff.Term[] rest) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -309,7 +309,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term QuadForm(class AutoDiff.Term x1, class AutoDiff.Term x2, class AutoDiff.Term a11, class AutoDiff.Term a12, class AutoDiff.Term a21, class AutoDiff.Term a22) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -341,7 +341,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Sigmoid(class AutoDiff.Term arg, class AutoDiff.Term upperBound, class AutoDiff.Term lowerBound, class AutoDiff.Term mid, float64 steepness) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -369,7 +369,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Term Sin(class AutoDiff.Term arg) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -391,7 +391,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Sum Sum(class System.Collections.Generic.IEnumerable`1&lt;class AutoDiff.Term&gt; terms) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Sum</ReturnType>
@@ -413,7 +413,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.Sum Sum(class AutoDiff.Term v1, class AutoDiff.Term v2, class AutoDiff.Term[] rest) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Sum</ReturnType>

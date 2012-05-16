@@ -3,7 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITermVisitor" />
   <AssemblyInfo>
     <AssemblyName>AutoDiff</AssemblyName>
-    <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+    <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
@@ -18,7 +18,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.Abs abs) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -40,7 +40,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.And and) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -62,7 +62,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.Atan2 atan2) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -81,7 +81,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.Constant constant) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -103,7 +103,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.ConstraintUtility cu) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -125,7 +125,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.Cos cos) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -147,7 +147,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.Exp exp) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -169,7 +169,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.IntPower intPower) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -191,7 +191,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.Log log) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -213,7 +213,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.LTConstraint constraint) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -235,7 +235,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.LTEConstraint constraint) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -257,7 +257,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.Max max) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -279,7 +279,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.Min min) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -301,7 +301,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.Or or) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -323,7 +323,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.Product product) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -345,7 +345,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.Reification r) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -364,7 +364,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.Sigmoid sigmoid) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -386,7 +386,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.Sin sin) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -408,7 +408,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.Sum sum) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -430,7 +430,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.Variable variable) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -452,7 +452,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class AutoDiff.Zero zero) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

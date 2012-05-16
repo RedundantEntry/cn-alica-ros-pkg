@@ -1,6 +1,6 @@
 <Overview>
   <Assemblies>
-    <Assembly Name="AutoDiff" Version="0.3.4514.21140">
+    <Assembly Name="AutoDiff" Version="0.3.4519.36039">
       <Attributes>
         <Attribute>
           <AttributeName>System.Reflection.AssemblyCompany("Alex Shtof")</AttributeName>

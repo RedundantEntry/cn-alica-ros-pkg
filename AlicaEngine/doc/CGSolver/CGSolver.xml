@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>/home/hendrik/impera/cn/Alica/AlicaEngine/../../lib/CGSolver</name>
+        <name>/home/hendrik/workspace/official/lib/CGSolver</name>
     </assembly>
     <members>
         <member name="T:Alica.Reasoner.CGSolver">

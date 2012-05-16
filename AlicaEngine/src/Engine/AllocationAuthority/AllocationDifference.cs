@@ -4,19 +4,22 @@ using System.Collections.Generic;
 
 namespace Alica
 {	
-	public class EntryPointRobotPair {
+	/// <summary>
+	/// A simple helper class for conflict detection
+	/// </summary>
+	internal class EntryPointRobotPair {
 		
-		protected EntryPoint key;
-		protected int val;
-		public EntryPoint Key {
+		protected internal EntryPoint key;
+		protected internal int val;
+		internal EntryPoint Key {
 			get { return this.key; }
 			set { this.key=value; }			
 		}
-		public int Value {
+		internal int Value {
 			get { return this.val; }
 			set { this.val=value; }			
 		}
-		public EntryPointRobotPair(EntryPoint ep, int r) {
+		internal EntryPointRobotPair(EntryPoint ep, int r) {
 			this.key = ep;
 			this.val = r;
 		}
@@ -44,9 +47,9 @@ namespace Alica
 		public enum Reason {
 			message, utility, empty
 		}
-		public List<EntryPointRobotPair> additions;
-		public List<EntryPointRobotPair> subtractions;
-		public AllocationDifference() {
+		internal List<EntryPointRobotPair> additions;
+		internal List<EntryPointRobotPair> subtractions;
+		internal AllocationDifference() {
 			this.additions= new List<EntryPointRobotPair>();
 			this.subtractions = new List<EntryPointRobotPair>();
 		}

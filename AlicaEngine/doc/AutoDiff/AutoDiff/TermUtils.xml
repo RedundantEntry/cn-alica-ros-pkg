@@ -3,7 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit TermUtils extends System.Object" />
   <AssemblyInfo>
     <AssemblyName>AutoDiff</AssemblyName>
-    <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+    <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -21,7 +21,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class AutoDiff.ICompiledTerm Compile(class AutoDiff.Term term, class AutoDiff.Variable[] variables) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.ICompiledTerm</ReturnType>
@@ -56,7 +56,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64[] Differentiate(class AutoDiff.Term term, class AutoDiff.Variable[] variables, float64[] point) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double[]</ReturnType>
@@ -84,7 +84,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 Evaluate(class AutoDiff.Term term, class AutoDiff.Variable[] variables, float64[] point) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4514.21140</AssemblyVersion>
+        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>

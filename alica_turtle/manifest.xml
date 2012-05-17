@@ -1,0 +1,17 @@
+<package>
+  <description brief="alica_turtle">
+
+     alica_turtle
+
+  </description>
+  <author>hendrik</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/alica_turtle</url>
+  <depend package="AlicaEngine" />
+  <depend package="Castor" />
+  <depend package="roscs" />
+  <depend package="turtlesim" />
+</package>
+
+

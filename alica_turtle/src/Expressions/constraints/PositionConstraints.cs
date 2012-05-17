@@ -75,7 +75,7 @@ public static void GetConstraint1337246237969(ConstraintDescriptor c, RunningPla
 			c.Constraint &= (distab > 2);			
 		}
 	}
-
+	//Note: use the operator | for disjunctions
 	//additionally, we require a maximal distance between pairs of the turtles:			
 
 	for(int i=0; i<positions.Count-1; i++) {

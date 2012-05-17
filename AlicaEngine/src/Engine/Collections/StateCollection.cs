@@ -73,6 +73,16 @@ namespace Alica
 			}			
 			return ret;
 		}
+		public List<int> GetRobotsInStateSorted(State s) {
+			List<int> ret = new List<int>();
+			for(int i=0; i <this.keys.Count; i++) {
+				if (this.values[i] == s) {
+					ret.Add(this.keys[i]);
+				}
+			}
+			ret.Sort();
+			return ret;
+		}
 		public HashSet<int> GetRobotsInState(long sid) {
 			HashSet<int> ret = new HashSet<int>();
 			for(int i=0; i <this.keys.Count; i++) {

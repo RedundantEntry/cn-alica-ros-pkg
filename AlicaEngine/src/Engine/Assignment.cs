@@ -180,6 +180,12 @@ namespace Alica
 		public ICollection<int> GetRobotsWorking(long epid) {
 			return this.epRobotsMapping.GetRobotsById(epid);
 		}
+		public List<int> GetRobotsWorkingSorted(EntryPoint ep) {
+			List<int> ret = new List<int>(GetRobotsWorking(ep));
+			ret.Sort();
+			return ret;
+		}
+		
 		/// <summary>
 		/// The robots that are currently working on or already succeeded in a specific task, referred to by an EntryPoint.
 		/// </summary>
@@ -355,6 +361,14 @@ namespace Alica
 			for(int i=0; i<this.epRobotsMapping.Count; i++) {
 				ret.AddRange(this.epRobotsMapping.Robots[i]);
 			}
+			return ret;
+		}
+		public List<int> GetAllRobotsSorted() {
+			List<int> ret = new List<int>();
+			for(int i=0; i<this.epRobotsMapping.Count; i++) {
+				ret.AddRange(this.epRobotsMapping.Robots[i]);
+			}
+			ret.Sort();
 			return ret;
 		}
 		internal void Clear() {

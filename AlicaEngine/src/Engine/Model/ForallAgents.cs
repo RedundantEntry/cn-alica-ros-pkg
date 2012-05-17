@@ -39,15 +39,16 @@ namespace Alica
 			robots = null;
 			if (this.ScopeIsPlan) {
 				if(p.Plan == this.GetScopedPlan())
-				  robots = p.Assignment.GetAllRobots();
+				  robots = p.Assignment.GetAllRobotsSorted();
 			} else
 			if (this.ScopeIsEntryPoint) {
-				robots = p.Assignment.GetRobotsWorking(this.GetScopedEntryPoint());
+				robots = p.Assignment.GetRobotsWorkingSorted(this.GetScopedEntryPoint());
 			} else
 			if (this.ScopeIsState) {
-				robots = p.Assignment.RobotStateMapping.GetRobotsInState(this.GetScopedState());
+				robots = p.Assignment.RobotStateMapping.GetRobotsInStateSorted(this.GetScopedState());
 			}
 			if(robots == null) return null;
+			
 			List<AD.Term[]> ret = new List<AD.Term[]>();
 			ITeamObserver to = AlicaEngine.Get().TO;
 			foreach(int r in robots) {
@@ -73,13 +74,13 @@ namespace Alica
 			robots = null;
 			if (this.ScopeIsPlan) {
 				if(p.Plan == this.GetScopedPlan())
-				  robots = p.Assignment.GetAllRobots();
+				  robots = p.Assignment.GetAllRobotsSorted();
 			} else
 			if (this.ScopeIsEntryPoint) {
-				robots = p.Assignment.GetRobotsWorking(this.GetScopedEntryPoint());
+				robots = p.Assignment.GetRobotsWorkingSorted(this.GetScopedEntryPoint());
 			} else
 			if (this.ScopeIsState) {
-				robots = p.Assignment.RobotStateMapping.GetRobotsInState(this.GetScopedState());
+				robots = p.Assignment.RobotStateMapping.GetRobotsInStateSorted(this.GetScopedState());
 			}
 			if(robots == null) return null;
 			List<Variable[]> ret = new List<Variable[]>();

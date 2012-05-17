@@ -63,7 +63,7 @@ namespace alica_turtle
 		public void OnPose(Pose p) {
 			//Normalize theta:
 			if (p.Theta > Math.PI) p.Theta -=(float)(2*Math.PI);
-			else if (p.Theta < Math.PI) p.Theta +=(float)(2*Math.PI);
+			else if (p.Theta < -Math.PI) p.Theta +=(float)(2*Math.PI);
 			this.ownPos = p;
 			//Console.WriteLine("My Position is {0} {1} {2}",p.X,p.Y,p.Theta);
 		}

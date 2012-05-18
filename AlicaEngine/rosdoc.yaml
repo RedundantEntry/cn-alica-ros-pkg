@@ -4,7 +4,7 @@
 
 - builder: external
   external_url: http://cn-alica-ros-pkg.googlecode.com/git/AlicaEngine/doc/AlicaEngine/Alica/AlicaEngine.html
-  external_label: Main Classs
+  external_label: Main Class
 
 - builder: external
   external_url: http://cn-alica-ros-pkg.googlecode.com/git/AlicaEngine/doc/AlicaEngine/Alica/BasicBehaviour.html

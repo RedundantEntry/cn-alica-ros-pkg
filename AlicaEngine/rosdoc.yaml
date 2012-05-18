@@ -1,0 +1,28 @@
+- builder: external
+  external_url: http://cn-alica-ros-pkg.googlecode.com/git/AlicaEngine/doc/AlicaEngine/Alica/index.html
+  external_label: Alica Namespace
+
+- builder: external
+  external_url: http://cn-alica-ros-pkg.googlecode.com/git/AlicaEngine/doc/AlicaEngine/Alica/AlicaEngine.html
+  external_label: Main Classs
+
+- builder: external
+  external_url: http://cn-alica-ros-pkg.googlecode.com/git/AlicaEngine/doc/AlicaEngine/Alica/BasicBehaviour.html
+  external_label: Behaviour Super Class
+
+- builder: external
+  external_url: http://cn-alica-ros-pkg.googlecode.com/git/AlicaEngine/doc/AlicaEngine/Alica/RunningPlan.html
+  external_label: State Representation
+
+- builder: external
+  external_url: http://cn-alica-ros-pkg.googlecode.com/git/AlicaEngine/doc/AlicaEngine/Alica/ConstraintDescriptor.html
+  external_label: Constraint Description Class
+
+- builder: external
+  external_url: http://cn-alica-ros-pkg.googlecode.com/git/AlicaEngine/doc/AlicaEngine/Alica/ConstraintQuery.html
+  external_label: Constraint Query Class
+
+- builder: external
+  external_url: http://cn-alica-ros-pkg.googlecode.com/git/AlicaEngine/doc/AutoDiff/index.html
+  external_label: AutoDiff Namespace (Constraint Primitives)
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uiextensionmodel:PmlUiExtensionMap xmlns:uiextensionmodel="http:///de.uni_kassel.cn/planDesigner/ui/extensionmodel">
+  <extension>
+    <key href="Position.pml#1337246213063"/>
+    <value xPos="111" yPos="88" width="81" height="67" collapsed="false"/>
+  </extension>
+  <extension>
+    <key href="Position.pml#1337246194633"/>
+    <value width="511" height="321"/>
+  </extension>
+  <extension>
+    <key href="Position.pml#1337246213064"/>
+    <value/>
+  </extension>
+  <extension>
+    <key href="GoToPos.beh#1337245634486"/>
+    <value/>
+  </extension>
+  <extension>
+    <key href="Position.pml#1337246237969"/>
+    <value xPos="291" yPos="65"/>
+  </extension>
+</uiextensionmodel:PmlUiExtensionMap>

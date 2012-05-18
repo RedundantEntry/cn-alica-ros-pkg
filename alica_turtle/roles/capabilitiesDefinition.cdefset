@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<alica:CapabilityDefinitionSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:alica="http:///de.uni_kassel.cn" id="1337239638663" name="" comment="">
+  <capabilities id="1337239640880" name="Speed" comment="">
+    <capValues id="1337239652136" name="Slow" comment=""/>
+    <capValues id="1337239660328" name="Fast" comment=""/>
+  </capabilities>
+</alica:CapabilityDefinitionSet>

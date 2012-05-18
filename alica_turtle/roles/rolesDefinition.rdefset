@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<alica:RoleDefinitionSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:alica="http:///de.uni_kassel.cn" id="1337239614088" name="" comment="">
+  <roles id="1337239617497" name="Wanderer" comment="">
+    <characteristics id="1337239675897" name="Speed" comment="" weight="1.0">
+      <capability>capabilitiesDefinition.cdefset#1337239640880</capability>
+      <value>capabilitiesDefinition.cdefset#1337239652136</value>
+    </characteristics>
+  </roles>
+</alica:RoleDefinitionSet>

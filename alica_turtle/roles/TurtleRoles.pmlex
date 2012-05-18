@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uiextensionmodel:PmlUiExtensionMap xmlns:uiextensionmodel="http:///de.uni_kassel.cn/planDesigner/ui/extensionmodel">
+  <extension>
+    <key href="rolesDefinition.rdefset#1337239617497"/>
+    <value collapsed="false"/>
+  </extension>
+  <extension>
+    <key href="TurtleRoles.graph#//@nodes.0"/>
+    <value xPos="366" yPos="31" width="15" height="15" collapsed="false"/>
+  </extension>
+  <extension>
+    <key href="TurtleRoles.graph#//@nodes.1"/>
+    <value xPos="366" yPos="81" width="143" height="68" collapsed="false"/>
+  </extension>
+</uiextensionmodel:PmlUiExtensionMap>

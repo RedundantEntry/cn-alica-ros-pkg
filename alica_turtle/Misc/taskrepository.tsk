@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<alica:TaskRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:alica="http:///de.uni_kassel.cn" id="1337239596527" name="" comment="" defaultTask="1337239596602">
+  <tasks id="1337239596602" name="DefaultTask" comment="" description="Default Task."/>
+</alica:TaskRepository>

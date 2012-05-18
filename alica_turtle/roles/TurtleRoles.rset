@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<alica:RoleSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:alica="http:///de.uni_kassel.cn" id="1337240046894" name="TurtleRoles.rset" comment="" usableWithPlanID="1337239596521" default="true">
+  <mappings id="1337240046898" name="" comment="">
+    <taskPriorities id="1337240046900" name="" comment="" key="1337239596602" value="0.5"/>
+    <role>rolesDefinition.rdefset#1337239617497</role>
+  </mappings>
+</alica:RoleSet>

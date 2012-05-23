@@ -3,9 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAssignment" />
   <AssemblyInfo>
     <AssemblyName>AlicaEngine</AssemblyName>
-    <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-    <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-    <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+    <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
@@ -20,9 +18,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetEntryPointCount() cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -42,9 +38,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Alica.EntryPoint[] GetEntryPoints() cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.EntryPoint[]</ReturnType>
@@ -63,9 +57,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.ICollection`1&lt;int32&gt; GetRobotsWorking(class Alica.EntryPoint ep) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.Int32&gt;</ReturnType>
@@ -85,9 +77,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.ICollection`1&lt;int32&gt; GetRobotsWorking(int64 epid) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.Int32&gt;</ReturnType>
@@ -107,9 +97,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.List`1&lt;int32&gt; GetRobotsWorkingAndFinished(class Alica.EntryPoint ep) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>
@@ -129,9 +117,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.List`1&lt;int32&gt; GetRobotsWorkingAndFinished(int64 epid) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>
@@ -151,9 +137,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.List`1&lt;int32&gt; GetUniqueRobotsWorkingAndFinished(class Alica.EntryPoint ep) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>
@@ -173,9 +157,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance float64 Max" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>
@@ -193,9 +175,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance float64 Min" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>
@@ -213,9 +193,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance int32 NumUnAssignedRobots" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -233,9 +211,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 TotalRobotCount() cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -252,9 +228,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;int32&gt; UnAssignedRobots" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>

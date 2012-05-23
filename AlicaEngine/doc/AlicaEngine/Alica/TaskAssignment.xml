@@ -3,9 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TaskAssignment extends System.Object implements class Alica.ITaskAssignment" />
   <AssemblyInfo>
     <AssemblyName>AlicaEngine</AssemblyName>
-    <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-    <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-    <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+    <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,9 +26,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.LinkedList`1&lt;class Alica.Plan&gt; planList, class System.Collections.Generic.ICollection`1&lt;int32&gt; paraRobots, bool preassignOtherRobots) cil managed" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="planList" Type="System.Collections.Generic.LinkedList&lt;Alica.Plan&gt;" />
@@ -51,9 +47,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool AddAlreadyAssignedRobots(class Alica.PartialAssignment pa, class System.Collections.Generic.Dictionary`2&lt;int32, class Alica.SimplePlanTree&gt; simplePlanTreeDic) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -75,9 +69,7 @@
       <MemberSignature Language="ILAsm" Value=".field family class Alica.EntryPoint[] entryPointArray" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.EntryPoint[]</ReturnType>
@@ -92,9 +84,7 @@
       <MemberSignature Language="ILAsm" Value=".field family class C5.SortedArray`1&lt;class Alica.PartialAssignment&gt; fringe" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>C5.SortedArray&lt;Alica.PartialAssignment&gt;</ReturnType>
@@ -109,9 +99,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Alica.Assignment GetNextBestAssignment(class Alica.IAssignment oldAss) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.Assignment</ReturnType>
@@ -131,9 +119,7 @@
       <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Generic.LinkedList`1&lt;class Alica.Plan&gt; planList" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.LinkedList&lt;Alica.Plan&gt;</ReturnType>
@@ -148,9 +134,7 @@
       <MemberSignature Language="ILAsm" Value=".field family int32[] robots" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32[]</ReturnType>
@@ -165,9 +149,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

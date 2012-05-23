@@ -3,9 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit TaskRoleStruct extends System.ValueType" />
   <AssemblyInfo>
     <AssemblyName>AlicaEngine</AssemblyName>
-    <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-    <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-    <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+    <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ValueType</BaseTypeName>
@@ -21,9 +19,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 tid, int64 rid) cil managed" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="tid" Type="System.Int64" />
@@ -41,9 +37,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object ob) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -63,9 +57,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -82,9 +74,7 @@
       <MemberSignature Language="ILAsm" Value=".field public int64 roleId" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int64</ReturnType>
@@ -99,9 +89,7 @@
       <MemberSignature Language="ILAsm" Value=".field public int64 taskId" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int64</ReturnType>

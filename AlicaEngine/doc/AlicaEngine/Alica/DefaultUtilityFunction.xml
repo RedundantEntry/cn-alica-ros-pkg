@@ -3,9 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DefaultUtilityFunction extends Alica.UtilityFunction" />
   <AssemblyInfo>
     <AssemblyName>AlicaEngine</AssemblyName>
-    <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-    <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-    <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+    <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Alica.UtilityFunction</BaseTypeName>
@@ -23,9 +21,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Alica.Plan plan) cil managed" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="plan" Type="Alica.Plan" />
@@ -45,9 +41,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype Alica.UtilityInterval Eval(class Alica.IAssignment newAss, class Alica.IAssignment oldAss) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Alica.UtilityInterval</ReturnType>
@@ -70,9 +64,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance float64 Eval(class Alica.RunningPlan newRP, class Alica.RunningPlan oldRP) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>
@@ -95,9 +87,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

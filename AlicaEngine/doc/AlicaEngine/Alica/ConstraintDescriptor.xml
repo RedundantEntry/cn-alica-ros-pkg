@@ -3,9 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConstraintDescriptor extends System.Object" />
   <AssemblyInfo>
     <AssemblyName>AlicaEngine</AssemblyName>
-    <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-    <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-    <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+    <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -23,9 +21,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class AutoDiff.Variable[] vars, class System.Collections.Generic.List`1&lt;class System.Collections.Generic.List`1&lt;class AutoDiff.Term[]&gt;&gt; domVars) cil managed" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="vars" Type="AutoDiff.Variable[]" />
@@ -43,9 +39,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.Collections.Generic.ICollection`1&lt;int32&gt;&gt; AgentsInScope" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;System.Collections.Generic.ICollection&lt;System.Int32&gt;&gt;</ReturnType>
@@ -61,9 +55,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64[,] AllRanges() cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double[,]</ReturnType>
@@ -84,9 +76,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class AutoDiff.Term&gt; AllVars" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;AutoDiff.Term&gt;</ReturnType>
@@ -104,9 +94,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.Term Constraint" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -124,9 +112,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.Collections.Generic.List`1&lt;float64[,]&gt;&gt; DomainRanges" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;System.Collections.Generic.List&lt;System.Double[,]&gt;&gt;</ReturnType>
@@ -144,9 +130,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.Collections.Generic.List`1&lt;class AutoDiff.Term[]&gt;&gt; DomainVars" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;System.Collections.Generic.List&lt;AutoDiff.Term[]&gt;&gt;</ReturnType>
@@ -164,9 +148,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object FixedValue(class AutoDiff.Term variable) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -190,9 +172,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFixedValue(class AutoDiff.Term variable, object val) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -219,9 +199,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool SetsUtilitySignificanceThreshold" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -237,9 +215,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance float64[,] StaticRanges" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double[,]</ReturnType>
@@ -257,9 +233,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.Term[] StaticVars" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term[]</ReturnType>
@@ -277,9 +251,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.Term Utility" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -297,9 +269,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance float64 UtilitySignificanceThreshold" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>
@@ -315,9 +285,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance float64 UtilitySufficiencyThreshold" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.9.4519.36005</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36039</AssemblyVersion>
-        <AssemblyVersion>0.9.4519.36842</AssemblyVersion>
+        <AssemblyVersion>0.9.4526.29561</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>

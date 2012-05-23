@@ -1,6 +1,6 @@
 <Overview>
   <Assemblies>
-    <Assembly Name="AlicaEngine" Version="0.9.4519.36842">
+    <Assembly Name="AlicaEngine" Version="0.9.4526.29561">
       <Attributes>
         <Attribute>
           <AttributeName>System.Reflection.AssemblyCompany("Distributed Autonomous Systems Labratory, University of Kassel")</AttributeName>

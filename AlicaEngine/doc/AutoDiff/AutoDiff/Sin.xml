@@ -3,7 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit Sin extends AutoDiff.Term" />
   <AssemblyInfo>
     <AssemblyName>AutoDiff</AssemblyName>
-    <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
+    <AssemblyVersion>0.3.4526.29560</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>AutoDiff.Term</BaseTypeName>
@@ -21,7 +21,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class AutoDiff.Term arg) cil managed" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.3.4526.29560</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="arg" Type="AutoDiff.Term" />
@@ -39,7 +39,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Accept(class AutoDiff.ITermVisitor visitor) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.3.4526.29560</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -60,7 +60,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!TResult Accept&lt;TResult&gt;(class AutoDiff.ITermVisitor`1&lt;!!TResult&gt; visitor) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.3.4526.29560</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TResult</ReturnType>
@@ -88,7 +88,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class AutoDiff.Term AggregateConstants() cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.3.4526.29560</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -105,7 +105,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class AutoDiff.Term Arg" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.3.4526.29560</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -123,7 +123,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class AutoDiff.Term Derivative(class AutoDiff.Variable v) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.3.4526.29560</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>AutoDiff.Term</ReturnType>
@@ -143,7 +143,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyVersion>0.3.4519.36039</AssemblyVersion>
+        <AssemblyVersion>0.3.4526.29560</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

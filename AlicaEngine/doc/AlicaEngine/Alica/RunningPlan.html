@@ -220,7 +220,7 @@
       </div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:Alica.RunningPlan:Docs:Version Information">
-        <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+        <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
       <h2 class="Section" id="Members">Members</h2>
       <div class="SectionBox" id="_Members">
         <p>
@@ -553,7 +553,9 @@
                 <td>
                   <i>
                     <a href="../Alica/State.html">State</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. 
+            Gets the state currently inhabited by the local agent. Null if none exists.
+            </td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -565,7 +567,10 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. 
+            Indicates wether an allocation is needed in the <a href="../Alica/RunningPlan.html#P:Alica.RunningPlan.ActiveState">RunningPlan.ActiveState</a>.
+            If set to true, the next engine iteration will perform a task allocation and set it to false.
+            </td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -577,7 +582,9 @@
                 <td>
                   <i>
                     <a href="../Alica/Assignment.html">Assignment</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. 
+            The current assignment of robots to <a href="../Alica/EntryPoint.html">Alica.EntryPoint</a>s.
+            </td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -603,7 +610,9 @@
                 <td>
                   <i>
                     <a href="../Alica/BasicBehaviour.html">BasicBehaviour</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. 
+            The behaviour represented by this running plan, in case there is any, otherwise null.
+            </td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -615,7 +624,9 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;RunningPlan&gt;</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. 
+            The children of this RunningPlan.
+            </td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -627,7 +638,9 @@
                 <td>
                   <i>
                     <a href="../Alica/ConstraintStore.html">ConstraintStore</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. 
+            Gets the constraint store, which contains all constrains associated with this RunningPlan.
+            </td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -639,7 +652,9 @@
                 <td>
                   <i>
                     <a href="../Alica/CycleManager.html">CycleManager</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. 
+            The <a href="../Alica/CycleManager.html">Alica.CycleManager</a> of this running plan, which detects and resolvs conflicts in task allocation.
+            </td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -665,7 +680,9 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. 
+            Returns the number of failures detected while this RunningPlan was executed.
+            </td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -677,7 +694,9 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. 
+            Indicates whether this running plan represents a behaviour.
+            </td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -703,7 +722,9 @@
                 <td>
                   <i>
                     <a href="../Alica/RunningPlan.html">RunningPlan</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. 
+            Gets the parent RunningPlan of this RunningPlan. Null in case this is the top-level element.
+            </td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -715,7 +736,9 @@
                 <td>
                   <i>
                     <a href="../Alica/AbstractPlan.html">AbstractPlan</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. 
+            The abstract plan associated with this running plan, a model element.
+            </td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -741,7 +764,9 @@
                 <td>
                   <i>
                     <a href="../Alica/PlanType.html">PlanType</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. 
+            Gets the PlanType of the currently executed plan. Null if the <a href="../Alica/AbstractPlan.html">Alica.AbstractPlan</a> associated does not belong to a PlanType.
+            </td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -844,7 +869,9 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:Alica.RunningPlan.EvalPreCondition">EvalPreCondition</a>
-                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Evaluates the precondition of the associated plan.
+            </blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -854,7 +881,9 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:Alica.RunningPlan.EvalRuntimeCondition">EvalRuntimeCondition</a>
-                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Evals the runtime condition of the associated plan.
+            </blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -864,7 +893,9 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:Alica.RunningPlan.LimitToRobots(System.Collections.Generic.ICollection{System.Int32})">LimitToRobots</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.ICollection`1">ICollection&lt;int&gt;</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.ICollection`1">ICollection&lt;int&gt;</a>)<blockquote>
+            Removes any robot not in robots
+            </blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -874,7 +905,9 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:Alica.RunningPlan.PrintRecursive">PrintRecursive</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>
+            Simple method to recursively print the plan-tree.
+            </blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -906,7 +939,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:Alica.RunningPlan:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="M:Alica.RunningPlan.Accept(Alica.IPlanTreeVisitor)">Accept Method</h3>
@@ -932,7 +965,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:Alica.RunningPlan.Accept(Alica.IPlanTreeVisitor):Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="P:Alica.RunningPlan.Active">Active Property</h3>
@@ -952,7 +985,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.Active:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="F:Alica.RunningPlan.activeEntryPoint">activeEntryPoint Field</h3>
@@ -968,7 +1001,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="F:Alica.RunningPlan.activeEntryPoint:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="F:Alica.RunningPlan.activeState">activeState Field</h3>
@@ -984,47 +1017,48 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="F:Alica.RunningPlan.activeState:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="P:Alica.RunningPlan.ActiveState">ActiveState Property</h3>
         <blockquote id="P:Alica.RunningPlan.ActiveState:member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+            Gets the state currently inhabited by the local agent. Null if none exists.
+            </p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../Alica/State.html">State</a> <b>ActiveState</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:Alica.RunningPlan.ActiveState:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+            The state of the active.
+            </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.ActiveState:Remarks">
             <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.ActiveState:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="P:Alica.RunningPlan.AllocationNeeded">AllocationNeeded Property</h3>
         <blockquote id="P:Alica.RunningPlan.AllocationNeeded:member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+            Indicates wether an allocation is needed in the <a href="../Alica/RunningPlan.html#P:Alica.RunningPlan.ActiveState">RunningPlan.ActiveState</a>.
+            If set to true, the next engine iteration will perform a task allocation and set it to false.
+            </p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>AllocationNeeded</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:Alica.RunningPlan.AllocationNeeded:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+            <tt>true</tt> if allocation needed; otherwise, <tt>false</tt>.
+            </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.AllocationNeeded:Remarks">
             <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.AllocationNeeded:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="M:Alica.RunningPlan.AnyChildrenStatus(Alica.PlanStatus)">AnyChildrenStatus Method</h3>
@@ -1053,7 +1087,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:Alica.RunningPlan.AnyChildrenStatus(Alica.PlanStatus):Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="M:Alica.RunningPlan.AnyChildrenTaskFailure">AnyChildrenTaskFailure Method</h3>
@@ -1072,7 +1106,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:Alica.RunningPlan.AnyChildrenTaskFailure:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="M:Alica.RunningPlan.AnyChildrenTaskSuccess">AnyChildrenTaskSuccess Method</h3>
@@ -1091,7 +1125,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:Alica.RunningPlan.AnyChildrenTaskSuccess:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="M:Alica.RunningPlan.AnyChildrenTaskTerminated">AnyChildrenTaskTerminated Method</h3>
@@ -1110,7 +1144,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:Alica.RunningPlan.AnyChildrenTaskTerminated:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="F:Alica.RunningPlan.ass">ass Field</h3>
@@ -1126,27 +1160,27 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="F:Alica.RunningPlan.ass:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="P:Alica.RunningPlan.Assignment">Assignment Property</h3>
         <blockquote id="P:Alica.RunningPlan.Assignment:member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+            The current assignment of robots to <a href="../Alica/EntryPoint.html">Alica.EntryPoint</a>s.
+            </p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../Alica/Assignment.html">Assignment</a> <b>Assignment</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:Alica.RunningPlan.Assignment:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+            The assignment.
+            </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.Assignment:Remarks">
             <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.Assignment:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="F:Alica.RunningPlan.assignmentProtectionTime">assignmentProtectionTime Field</h3>
@@ -1162,7 +1196,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="F:Alica.RunningPlan.assignmentProtectionTime:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="P:Alica.RunningPlan.AvailableRobots">AvailableRobots Property</h3>
@@ -1182,27 +1216,27 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.AvailableRobots:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="P:Alica.RunningPlan.BasicBehaviour">BasicBehaviour Property</h3>
         <blockquote id="P:Alica.RunningPlan.BasicBehaviour:member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+            The behaviour represented by this running plan, in case there is any, otherwise null.
+            </p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../Alica/BasicBehaviour.html">BasicBehaviour</a> <b>BasicBehaviour</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:Alica.RunningPlan.BasicBehaviour:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+            The basic behaviour.
+            </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.BasicBehaviour:Remarks">
             <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.BasicBehaviour:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="F:Alica.RunningPlan.bp">bp Field</h3>
@@ -1218,7 +1252,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="F:Alica.RunningPlan.bp:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="F:Alica.RunningPlan.children">children Field</h3>
@@ -1234,107 +1268,107 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="F:Alica.RunningPlan.children:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="P:Alica.RunningPlan.Children">Children Property</h3>
         <blockquote id="P:Alica.RunningPlan.Children:member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+            The children of this RunningPlan.
+            </p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;RunningPlan&gt;</a> <b>Children</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:Alica.RunningPlan.Children:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+            The children.
+            </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.Children:Remarks">
             <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.Children:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="P:Alica.RunningPlan.ConstraintStore">ConstraintStore Property</h3>
         <blockquote id="P:Alica.RunningPlan.ConstraintStore:member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+            Gets the constraint store, which contains all constrains associated with this RunningPlan.
+            </p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../Alica/ConstraintStore.html">ConstraintStore</a> <b>ConstraintStore</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:Alica.RunningPlan.ConstraintStore:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+            The constraint store.
+            </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.ConstraintStore:Remarks">
             <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.ConstraintStore:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="P:Alica.RunningPlan.CycleManagement">CycleManagement Property</h3>
         <blockquote id="P:Alica.RunningPlan.CycleManagement:member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+            The <a href="../Alica/CycleManager.html">Alica.CycleManager</a> of this running plan, which detects and resolvs conflicts in task allocation.
+            </p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../Alica/CycleManager.html">CycleManager</a> <b>CycleManagement</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:Alica.RunningPlan.CycleManagement:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+            The cycle manager
+            </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.CycleManagement:Remarks">
             <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.CycleManagement:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="M:Alica.RunningPlan.EvalPreCondition">EvalPreCondition Method</h3>
         <blockquote id="M:Alica.RunningPlan.EvalPreCondition:member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+            Evaluates the precondition of the associated plan.
+            </p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>EvalPreCondition</b> ()</div>
           <h4 class="Subsection">Returns</h4>
           <blockquote class="SubsectionBox" id="M:Alica.RunningPlan.EvalPreCondition:Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+            Wether the precondition currently holds or not.
+            </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:Alica.RunningPlan.EvalPreCondition:Remarks">
             <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:Alica.RunningPlan.EvalPreCondition:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="M:Alica.RunningPlan.EvalRuntimeCondition">EvalRuntimeCondition Method</h3>
         <blockquote id="M:Alica.RunningPlan.EvalRuntimeCondition:member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+            Evals the runtime condition of the associated plan.
+            </p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>EvalRuntimeCondition</b> ()</div>
           <h4 class="Subsection">Returns</h4>
           <blockquote class="SubsectionBox" id="M:Alica.RunningPlan.EvalRuntimeCondition:Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+            Wether the runtime currently holds or not.
+            </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:Alica.RunningPlan.EvalRuntimeCondition:Remarks">
             <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:Alica.RunningPlan.EvalRuntimeCondition:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="F:Alica.RunningPlan.failCount">failCount Field</h3>
@@ -1350,7 +1384,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="F:Alica.RunningPlan.failCount:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="F:Alica.RunningPlan.failedSubPlans">failedSubPlans Field</h3>
@@ -1366,7 +1400,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="F:Alica.RunningPlan.failedSubPlans:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="F:Alica.RunningPlan.failHandlingNeeded">failHandlingNeeded Field</h3>
@@ -1382,7 +1416,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="F:Alica.RunningPlan.failHandlingNeeded:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="P:Alica.RunningPlan.FailHandlingNeeded">FailHandlingNeeded Property</h3>
@@ -1402,54 +1436,54 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.FailHandlingNeeded:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="P:Alica.RunningPlan.Failure">Failure Property</h3>
         <blockquote id="P:Alica.RunningPlan.Failure:member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+            Returns the number of failures detected while this RunningPlan was executed.
+            </p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>Failure</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:Alica.RunningPlan.Failure:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+            The number of failures detected.
+            </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.Failure:Remarks">
             <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.Failure:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="P:Alica.RunningPlan.IsBehaviour">IsBehaviour Property</h3>
         <blockquote id="P:Alica.RunningPlan.IsBehaviour:member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+            Indicates whether this running plan represents a behaviour.
+            </p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsBehaviour</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:Alica.RunningPlan.IsBehaviour:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+            <tt>true</tt> if this instance is representing a behaviour; otherwise, <tt>false</tt>.
+            </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.IsBehaviour:Remarks">
             <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.IsBehaviour:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="M:Alica.RunningPlan.LimitToRobots(System.Collections.Generic.ICollection{System.Int32})">LimitToRobots Method</h3>
         <blockquote id="M:Alica.RunningPlan.LimitToRobots(System.Collections.Generic.ICollection{System.Int32}):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+            Removes any robot not in robots
+            </p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LimitToRobots</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.ICollection`1">ICollection&lt;int&gt;</a> robots)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -1459,8 +1493,8 @@
                 <i>robots</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+            The set of robots that can participate in this running plan.
+            </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
@@ -1469,7 +1503,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:Alica.RunningPlan.LimitToRobots(System.Collections.Generic.ICollection{System.Int32}):Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="P:Alica.RunningPlan.OwnEntryPoint">OwnEntryPoint Property</h3>
@@ -1489,7 +1523,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.OwnEntryPoint:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="F:Alica.RunningPlan.ownId">ownId Field</h3>
@@ -1505,7 +1539,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="F:Alica.RunningPlan.ownId:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="F:Alica.RunningPlan.parent">parent Field</h3>
@@ -1521,27 +1555,27 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="F:Alica.RunningPlan.parent:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="P:Alica.RunningPlan.Parent">Parent Property</h3>
         <blockquote id="P:Alica.RunningPlan.Parent:member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+            Gets the parent RunningPlan of this RunningPlan. Null in case this is the top-level element.
+            </p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../Alica/RunningPlan.html">RunningPlan</a> <b>Parent</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:Alica.RunningPlan.Parent:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+            The parent.
+            </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.Parent:Remarks">
             <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.Parent:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="F:Alica.RunningPlan.plan">plan Field</h3>
@@ -1557,27 +1591,27 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="F:Alica.RunningPlan.plan:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="P:Alica.RunningPlan.Plan">Plan Property</h3>
         <blockquote id="P:Alica.RunningPlan.Plan:member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+            The abstract plan associated with this running plan, a model element.
+            </p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../Alica/AbstractPlan.html">AbstractPlan</a> <b>Plan</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:Alica.RunningPlan.Plan:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+            The plan.
+            </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.Plan:Remarks">
             <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.Plan:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="F:Alica.RunningPlan.planStartTime">planStartTime Field</h3>
@@ -1593,7 +1627,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="F:Alica.RunningPlan.planStartTime:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="P:Alica.RunningPlan.PlanStartTime">PlanStartTime Property</h3>
@@ -1613,7 +1647,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.PlanStartTime:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="F:Alica.RunningPlan.planType">planType Field</h3>
@@ -1629,14 +1663,14 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="F:Alica.RunningPlan.planType:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="M:Alica.RunningPlan.PrintRecursive">PrintRecursive Method</h3>
         <blockquote id="M:Alica.RunningPlan.PrintRecursive:member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+            Simple method to recursively print the plan-tree.
+            </p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>PrintRecursive</b> ()</div>
           <h2 class="Section">Remarks</h2>
@@ -1645,27 +1679,27 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:Alica.RunningPlan.PrintRecursive:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="P:Alica.RunningPlan.RealisedPlanType">RealisedPlanType Property</h3>
         <blockquote id="P:Alica.RunningPlan.RealisedPlanType:member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+            Gets the PlanType of the currently executed plan. Null if the <a href="../Alica/AbstractPlan.html">Alica.AbstractPlan</a> associated does not belong to a PlanType.
+            </p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../Alica/PlanType.html">PlanType</a> <b>RealisedPlanType</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:Alica.RunningPlan.RealisedPlanType:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+            The type of the realised plan.
+            </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.RealisedPlanType:Remarks">
             <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.RealisedPlanType:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="F:Alica.RunningPlan.robotsAvail">robotsAvail Field</h3>
@@ -1681,7 +1715,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="F:Alica.RunningPlan.robotsAvail:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="F:Alica.RunningPlan.stateStartTime">stateStartTime Field</h3>
@@ -1697,7 +1731,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="F:Alica.RunningPlan.stateStartTime:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="P:Alica.RunningPlan.StateStartTime">StateStartTime Property</h3>
@@ -1717,7 +1751,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.StateStartTime:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="F:Alica.RunningPlan.status">status Field</h3>
@@ -1733,7 +1767,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="F:Alica.RunningPlan.status:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="P:Alica.RunningPlan.Status">Status Property</h3>
@@ -1753,7 +1787,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:Alica.RunningPlan.Status:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="F:Alica.RunningPlan.to">to Field</h3>
@@ -1769,7 +1803,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="F:Alica.RunningPlan.to:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
         <h3 id="M:Alica.RunningPlan.ToString">ToString Method</h3>
@@ -1789,7 +1823,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:Alica.RunningPlan.ToString:Version Information">
-            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4519.36005, 0.9.4519.36039, 0.9.4519.36842</div>
+            <b>Namespace: </b>Alica<br /><b>Assembly: </b>AlicaEngine (in AlicaEngine.dll)<br /><b>Assembly Versions: </b>0.9.4526.29561</div>
           <hr size="1" />
         </blockquote>
       </div>

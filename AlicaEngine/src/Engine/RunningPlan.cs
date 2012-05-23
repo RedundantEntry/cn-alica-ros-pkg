@@ -390,6 +390,12 @@ namespace Alica
 			}
 			
 		}
+		/// <summary>
+		/// Removes any robot not in robots
+		/// </summary>
+		/// <param name='robots'>
+		/// The set of robots that can participate in this running plan.
+		/// </param>
 		public void LimitToRobots(ICollection<int> robots) {
 			if(this.IsBehaviour) return;
 			if(!this.CycleManagement.MayDoUtilityCheck()) return;
@@ -408,9 +414,34 @@ namespace Alica
 			}
 
 		}
+		/// <summary>
+		/// Indicates wether an allocation is needed in the <see cref="RunningPlan.ActiveState"/>.
+		/// If set to true, the next engine iteration will perform a task allocation and set it to false.
+		/// </summary>
+		/// <value>
+		/// <c>true</c> if allocation needed; otherwise, <c>false</c>.
+		/// </value>
 		public bool AllocationNeeded { get; internal set; }
+		/// <summary>
+		/// The <see cref="CycleManager"/> of this running plan, which detects and resolvs conflicts in task allocation.
+		/// </summary>
+		/// <value>
+		/// The cycle manager
+		/// </value>
 		public CycleManager CycleManagement { get; private set;}
+		/// <summary>
+		/// Indicates whether this running plan represents a behaviour.
+		/// </summary>
+		/// <value>
+		/// <c>true</c> if this instance is representing a behaviour; otherwise, <c>false</c>.
+		/// </value>
 		public bool IsBehaviour{get; private set; }
+		/// <summary>
+		/// The behaviour represented by this running plan, in case there is any, otherwise null.
+		/// </summary>
+		/// <value>
+		/// The basic behaviour.
+		/// </value>
 		public BasicBehaviour BasicBehaviour{get; internal set;}
 		
 		//public bool RuntimeCondition{get; set;}
@@ -433,14 +464,31 @@ namespace Alica
 				this.failHandlingNeeded = value;
 			}			
 		}
-		
+		/// <summary>
+		/// The current assignment of robots to <see cref="EntryPoint"/>s.
+		/// </summary>
+		/// <value>
+		/// The assignment.
+		/// </value>
 		public Assignment Assignment{
 			get { return this.ass;}
 			internal set { this.ass = value;}
 		}
+		/// <summary>
+		/// The children of this RunningPlan.
+		/// </summary>
+		/// <value>
+		/// The children.
+		/// </value>
 		public List<RunningPlan> Children {
 			get { return this.children; }
 		}
+		/// <summary>
+		/// The abstract plan associated with this running plan, a model element.
+		/// </summary>
+		/// <value>
+		/// The plan.
+		/// </value>
 		public AbstractPlan Plan {
 			get {return this.plan;}
 			internal set {
@@ -451,6 +499,12 @@ namespace Alica
 				this.plan = value;
 			}
 		}
+		/// <summary>
+		/// Gets the state currently inhabited by the local agent. Null if none exists.
+		/// </summary>
+		/// <value>
+		/// The state of the active.
+		/// </value>
 		public State ActiveState {
 			get {return this.activeState;}
 			internal set {
@@ -471,10 +525,22 @@ namespace Alica
 				
 			}
 		}
+		/// <summary>
+		/// Gets the parent RunningPlan of this RunningPlan. Null in case this is the top-level element.
+		/// </summary>
+		/// <value>
+		/// The parent.
+		/// </value>
 		public RunningPlan Parent {
 			get { return this.parent;}
 			internal set { this.parent = value;}
 		}
+		/// <summary>
+		/// Gets the PlanType of the currently executed plan. Null if the <see cref="AbstractPlan"/> associated does not belong to a PlanType.
+		/// </summary>
+		/// <value>
+		/// The type of the realised plan.
+		/// </value>
 		public PlanType RealisedPlanType {
 			get { return this.planType;}
 		}
@@ -492,6 +558,12 @@ namespace Alica
 				return this.status;
 			}
 		}
+		/// <summary>
+		/// Evaluates the precondition of the associated plan.
+		/// </summary>
+		/// <returns>
+		/// Wether the precondition currently holds or not.
+		/// </returns>
 		public bool EvalPreCondition() {
 			if(this.plan==null) {
 				throw new Exception("Cannot Eval Condition, Plan is null");
@@ -504,6 +576,12 @@ namespace Alica
 				return false;
 			}
 		}
+		/// <summary>
+		/// Evals the runtime condition of the associated plan.
+		/// </summary>
+		/// <returns>
+		/// Wether the runtime currently holds or not.
+		/// </returns>		
 		public bool EvalRuntimeCondition() {
 			if(this.plan==null) {
 				throw new Exception("Cannot Eval Condition, Plan is null");
@@ -534,12 +612,24 @@ namespace Alica
 			this.failCount++;
 			this.FailHandlingNeeded = true;
 		}
+		/// <summary>
+		/// Returns the number of failures detected while this RunningPlan was executed.
+		/// </summary>
+		/// <value>
+		/// The number of failures detected.
+		/// </value>
 		public int Failure {get {return this.failCount;}}
 		internal void ClearFailures() {
 			this.failCount = 0;
 		}
 		
 #region *** Constraint Specific ***
+		/// <summary>
+		/// Gets the constraint store, which contains all constrains associated with this RunningPlan.
+		/// </summary>
+		/// <value>
+		/// The constraint store.
+		/// </value>
 		public ConstraintStore ConstraintStore {get; private set;}
 		/*public void RecursiveAttachPlanConstraints() {
 			ConstraintStore.AttachConstraint(this.Plan.PreCondition,this);
@@ -775,6 +865,9 @@ namespace Alica
 			return ret;
 			
 		}
+		/// <summary>
+		/// Simple method to recursively print the plan-tree.
+		/// </summary>
 		public void PrintRecursive() {
 			Console.WriteLine(this);
 			foreach(RunningPlan c in this.children) {

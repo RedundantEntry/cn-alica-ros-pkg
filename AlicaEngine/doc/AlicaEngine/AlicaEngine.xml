@@ -566,10 +566,107 @@
             The robot's current EntryPoint. Null if it is idling
             </summary>
         </member>
+        <member name="P:Alica.RunningPlan.AllocationNeeded">
+            <summary>
+            Indicates wether an allocation is needed in the <see cref="P:Alica.RunningPlan.ActiveState" />.
+            If set to true, the next engine iteration will perform a task allocation and set it to false.
+            </summary>
+            <value>
+                <c>true</c> if allocation needed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Alica.RunningPlan.CycleManagement">
+            <summary>
+            The <see cref="T:Alica.CycleManager" /> of this running plan, which detects and resolvs conflicts in task allocation.
+            </summary>
+            <value>
+            The cycle manager
+            </value>
+        </member>
+        <member name="P:Alica.RunningPlan.IsBehaviour">
+            <summary>
+            Indicates whether this running plan represents a behaviour.
+            </summary>
+            <value>
+                <c>true</c> if this instance is representing a behaviour; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Alica.RunningPlan.BasicBehaviour">
+            <summary>
+            The behaviour represented by this running plan, in case there is any, otherwise null.
+            </summary>
+            <value>
+            The basic behaviour.
+            </value>
+        </member>
         <member name="P:Alica.RunningPlan.FailHandlingNeeded">
             <summary>
             Indicates whether this plan needs failure handling
             </summary>
+        </member>
+        <member name="P:Alica.RunningPlan.Assignment">
+            <summary>
+            The current assignment of robots to <see cref="T:Alica.EntryPoint" />s.
+            </summary>
+            <value>
+            The assignment.
+            </value>
+        </member>
+        <member name="P:Alica.RunningPlan.Children">
+            <summary>
+            The children of this RunningPlan.
+            </summary>
+            <value>
+            The children.
+            </value>
+        </member>
+        <member name="P:Alica.RunningPlan.Plan">
+            <summary>
+            The abstract plan associated with this running plan, a model element.
+            </summary>
+            <value>
+            The plan.
+            </value>
+        </member>
+        <member name="P:Alica.RunningPlan.ActiveState">
+            <summary>
+            Gets the state currently inhabited by the local agent. Null if none exists.
+            </summary>
+            <value>
+            The state of the active.
+            </value>
+        </member>
+        <member name="P:Alica.RunningPlan.Parent">
+            <summary>
+            Gets the parent RunningPlan of this RunningPlan. Null in case this is the top-level element.
+            </summary>
+            <value>
+            The parent.
+            </value>
+        </member>
+        <member name="P:Alica.RunningPlan.RealisedPlanType">
+            <summary>
+            Gets the PlanType of the currently executed plan. Null if the <see cref="T:Alica.AbstractPlan" /> associated does not belong to a PlanType.
+            </summary>
+            <value>
+            The type of the realised plan.
+            </value>
+        </member>
+        <member name="P:Alica.RunningPlan.Failure">
+            <summary>
+            Returns the number of failures detected while this RunningPlan was executed.
+            </summary>
+            <value>
+            The number of failures detected.
+            </value>
+        </member>
+        <member name="P:Alica.RunningPlan.ConstraintStore">
+            <summary>
+            Gets the constraint store, which contains all constrains associated with this RunningPlan.
+            </summary>
+            <value>
+            The constraint store.
+            </value>
         </member>
         <member name="M:Alica.RunningPlan.SetFailedChild(Alica.AbstractPlan)">
             <summary>
@@ -670,6 +767,35 @@
             </summary>
             <param name="newR">
             A <see cref="T:Alica.RunningPlan" /></param>
+        </member>
+        <member name="M:Alica.RunningPlan.LimitToRobots(System.Collections.Generic.ICollection{System.Int32})">
+            <summary>
+            Removes any robot not in robots
+            </summary>
+            <param name="robots">
+            The set of robots that can participate in this running plan.
+            </param>
+        </member>
+        <member name="M:Alica.RunningPlan.EvalPreCondition">
+            <summary>
+            Evaluates the precondition of the associated plan.
+            </summary>
+            <returns>
+            Wether the precondition currently holds or not.
+            </returns>
+        </member>
+        <member name="M:Alica.RunningPlan.EvalRuntimeCondition">
+            <summary>
+            Evals the runtime condition of the associated plan.
+            </summary>
+            <returns>
+            Wether the runtime currently holds or not.
+            </returns>
+        </member>
+        <member name="M:Alica.RunningPlan.PrintRecursive">
+            <summary>
+            Simple method to recursively print the plan-tree.
+            </summary>
         </member>
         <member name="T:Alica.EngineTrigger">
             <summary>

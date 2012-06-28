@@ -97,7 +97,7 @@ namespace AutoDiff
 		public override Term Derivative(Variable v)
 		{
 			Term t = Steepness * (this.Arg.Derivative(v) - this.Mid.Derivative(v)) * new Exp(this.Steepness * (-this.Arg+this.Mid));
-			return t/ new IntPower((new Exp(this.Steepness * this.Arg) + new Exp(this.Steepness * this.Mid)),2);			
+			return t/ new ConstPower((new Exp(this.Steepness * this.Arg) + new Exp(this.Steepness * this.Mid)),2);			
 		}
 		
     }

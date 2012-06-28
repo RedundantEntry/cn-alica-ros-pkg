@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,8 +13,8 @@ namespace AutoDiff
             private readonly Compiled.TapeElement[] tape;
             public double LocalDerivative;
             public int ArgumentIndex;
-			protected static double Epsilon = 10E-5;
-
+			private static double Epsilon = 10E-5;
+			
             public DiffVisitor(Compiled.TapeElement[] tape)
             {
                 this.tape = tape;
@@ -24,74 +24,96 @@ namespace AutoDiff
             {
 
             }
-			//tan(x)' = 1 / cos(cos(x))
-			//asin(x)' = 1 / sqrt(1-x^2)
-			//acos(x)' = - 1 / sqrt(1-x^2)
-			//d atan2(y,x) = ( -y / (x^2+y^2),			
-			//				x / (x^2+y^2) )
+
             public void Visit(Compiled.Exp elem)
             {
-                LocalDerivative = elem.Derivative * elem.Value;
+                LocalDerivative = elem.Adjoint * elem.Value;
             }
 
             public void Visit(Compiled.Log elem)
             {
-                LocalDerivative = elem.Derivative / ValueOf(elem.Arg);
+                LocalDerivative = elem.Adjoint / ValueOf(elem.Arg);
             }
-			
- 			public void Visit(Compiled.Sin elem)
+
+            public void Visit(Compiled.ConstPower elem)
             {
-                LocalDerivative = elem.Derivative * Math.Cos(ValueOf(elem.Arg));
-//Console.WriteLine("Sin: {0} = {1} {2}",LocalDerivative , elem.Derivative , Math.Cos(ValueOf(elem.Arg)));
-            }			
- 			public void Visit(Compiled.Cos elem)
-            {
-                LocalDerivative = - elem.Derivative * Math.Sin(ValueOf(elem.Arg));;
-//Console.WriteLine("Cos: {0} = -{1} * {2}",LocalDerivative , elem.Derivative , Math.Sin(ValueOf(elem.Arg)));				
+                LocalDerivative = elem.Adjoint * elem.Exponent * Math.Pow(ValueOf(elem.Base), elem.Exponent - 1);
             }
-			
-			public void Visit(Compiled.Abs elem)
+
+            public void Visit(Compiled.TermPower elem)
             {
-				if (ValueOf(elem.Arg) >= 0) {
-					LocalDerivative = elem.Derivative;
-				} else if (ValueOf(elem.Arg) < 0) {
-					LocalDerivative = -elem.Derivative;
-				}
-			}
-			
-			public void Visit(Compiled.Power elem)
-            {
-                LocalDerivative = elem.Derivative * elem.Exponent * Math.Pow(ValueOf(elem.Base), elem.Exponent - 1);
-//Console.WriteLine("Power: {0} <= {1} {2}",LocalDerivative, elem.Derivative,ValueOf(elem.Base));				
+                Debug.Assert(ArgumentIndex == 0 || ArgumentIndex == 1);
+
+                if (ArgumentIndex == 0)
+                {
+                    var exponent = ValueOf(elem.Exponent);
+                    LocalDerivative = elem.Adjoint * exponent * Math.Pow(ValueOf(elem.Base), exponent - 1);
+                }
+                else
+                {
+                    var baseValue = ValueOf(elem.Base);
+                    LocalDerivative = elem.Adjoint * Math.Pow(baseValue, ValueOf(elem.Exponent)) * Math.Log(baseValue);
+                }
             }
 
             public void Visit(Compiled.Product elem)
             {
                 Debug.Assert(ArgumentIndex == 0 || ArgumentIndex == 1);
-                if (ArgumentIndex == 0) {
-                    LocalDerivative = elem.Derivative * ValueOf(elem.Right);
-					
-				}
-                else {
-                    LocalDerivative = elem.Derivative * ValueOf(elem.Left);	
-
-				}
-				
+                if (ArgumentIndex == 0)
+                    LocalDerivative = elem.Adjoint * ValueOf(elem.Right);
+                else
+                    LocalDerivative = elem.Adjoint * ValueOf(elem.Left);
             }
+            
+
+            public void Visit(Compiled.Sum elem)
+            {
+                LocalDerivative = elem.Adjoint;
+            }
+
+            
+            public void Visit(Compiled.Variable var)
+            {
+            }
+
+            private double ValueOf(int index)
+            {
+                return tape[index].Value;
+            }
+			
+			///Additions by Carpe Noctem:
+			
+			public void Visit(Compiled.Sin elem)
+            {
+                LocalDerivative = elem.Adjoint * Math.Cos(ValueOf(elem.Arg));
+            }			
+ 			public void Visit(Compiled.Cos elem)
+            {
+                LocalDerivative = - elem.Adjoint * Math.Sin(ValueOf(elem.Arg));;
+            }
+			
+			public void Visit(Compiled.Abs elem)
+            {
+				if (ValueOf(elem.Arg) >= 0) {
+					LocalDerivative = elem.Adjoint;
+				} else if (ValueOf(elem.Arg) < 0) {
+					LocalDerivative = -elem.Adjoint;
+				}
+			}
 			public void Visit(Compiled.Reification elem) {
 				if (ArgumentIndex == 0) {
 					if (ValueOf(elem.Condition) > 0) {						
 						LocalDerivative = 0;
 					}
 					else {
-						LocalDerivative = elem.Derivative * (elem.Max-elem.Min); //*elem.Max/Math.Abs(ValueOf(elem.Condition));
+						LocalDerivative = elem.Adjoint * (elem.Max-elem.Min); //*elem.Max/Math.Abs(ValueOf(elem.Condition));
 					}
 					
 				} else {
 					if (ValueOf(elem.Condition) <= 0) {	
 						LocalDerivative = 0;
 					} else {
-						LocalDerivative = -elem.Derivative * (elem.Max-elem.Min);
+						LocalDerivative = -elem.Adjoint * (elem.Max-elem.Min);
 					}
 				}
 			}
@@ -99,10 +121,10 @@ namespace AutoDiff
 			public void Visit(Compiled.Min elem) {
 				if (ArgumentIndex == 0) {
 					if (ValueOf(elem.Left) < ValueOf(elem.Right)) {
-						LocalDerivative = elem.Derivative;
+						LocalDerivative = elem.Adjoint;
 					}
 					else if (ValueOf(elem.Left) == ValueOf(elem.Right)) {
-						if (ValueOf(elem.Left)< 0.5) LocalDerivative = elem.Derivative;
+						if (ValueOf(elem.Left)< 0.5) LocalDerivative = elem.Adjoint;
 						else LocalDerivative = 0;//elem.Derivative*.5;
 					}
 					else {
@@ -110,7 +132,7 @@ namespace AutoDiff
 					}
 				} else {
 					if (ValueOf(elem.Left) > ValueOf(elem.Right)) {
-						LocalDerivative = elem.Derivative;
+						LocalDerivative = elem.Adjoint;
 					} else if (ValueOf(elem.Left) == ValueOf(elem.Right)) {
 						LocalDerivative = 0;//elem.Derivative*.5;
 					} else {
@@ -122,15 +144,15 @@ namespace AutoDiff
 			public void Visit(Compiled.Max elem) {
 				if (ArgumentIndex == 0) {
 					if (ValueOf(elem.Left) > ValueOf(elem.Right)) {
-						LocalDerivative = elem.Derivative;
+						LocalDerivative = elem.Adjoint;
 					} else if (ValueOf(elem.Left) == ValueOf(elem.Right)) {
-						if (ValueOf(elem.Left) <= 0.5) LocalDerivative = elem.Derivative;
+						if (ValueOf(elem.Left) <= 0.5) LocalDerivative = elem.Adjoint;
 						else LocalDerivative = 0;
 					}
 					else LocalDerivative = 0;
 				} else {
 					if (ValueOf(elem.Right) > ValueOf(elem.Left)) {
-						LocalDerivative = elem.Derivative;
+						LocalDerivative = elem.Adjoint;
 					} else {
 						LocalDerivative = 0;
 					}
@@ -143,23 +165,23 @@ namespace AutoDiff
 					if (ValueOf(elem.Left) > 0.75) {
 						LocalDerivative = 0;
 					}
-					else LocalDerivative = elem.Derivative;					
+					else LocalDerivative = elem.Adjoint;					
 				} else {
 					if (ValueOf(elem.Right) > 0.75) {
 						LocalDerivative = 0;
-					} else LocalDerivative = elem.Derivative;
+					} else LocalDerivative = elem.Adjoint;
 				}				
 			}
 			public void Visit(Compiled.Or elem) {
 				if (ArgumentIndex == 0) {
 					if (ValueOf(elem.Right) > 0.75) {
 						LocalDerivative = 0;
-					} else LocalDerivative = elem.Derivative;
+					} else LocalDerivative = elem.Adjoint;
 				} else {
 					if (ValueOf(elem.Left) > 0.75) {
 						LocalDerivative = 0;
 					} else {
-						LocalDerivative = elem.Derivative;
+						LocalDerivative = elem.Adjoint;
 					}
 				}				
 			}
@@ -172,24 +194,23 @@ namespace AutoDiff
 				if (Double.IsPositiveInfinity(e) || e == 0) {
 				
 					if (ArgumentIndex == 0) {
-						LocalDerivative = elem.Steepness * elem.Derivative * Epsilon;
+						LocalDerivative = elem.Steepness * elem.Adjoint * Epsilon;
 					} else {
-						LocalDerivative = - elem.Steepness * elem.Derivative * Epsilon;
+						LocalDerivative = - elem.Steepness * elem.Adjoint * Epsilon;
 					}
 				} else
 				if (ArgumentIndex == 0) {
-					LocalDerivative = elem.Steepness * elem.Derivative * e / ((e+1)*(e+1));
-					if (Math.Abs(LocalDerivative) < Math.Abs(elem.Steepness * elem.Derivative * Epsilon)) {
-						LocalDerivative  = elem.Steepness * elem.Derivative * Epsilon;
+					LocalDerivative = elem.Steepness * elem.Adjoint * e / ((e+1)*(e+1));
+					if (Math.Abs(LocalDerivative) < Math.Abs(elem.Steepness * elem.Adjoint * Epsilon)) {
+						LocalDerivative  = elem.Steepness * elem.Adjoint * Epsilon;
 					}
 				} else {
-					LocalDerivative = -elem.Steepness * elem.Derivative * e / ((e+1)*(e+1));
-					if (Math.Abs(LocalDerivative) < Math.Abs(elem.Steepness * elem.Derivative * Epsilon)) {
-						LocalDerivative  = - elem.Steepness * elem.Derivative * Epsilon;
+					LocalDerivative = -elem.Steepness * elem.Adjoint * e / ((e+1)*(e+1));
+					if (Math.Abs(LocalDerivative) < Math.Abs(elem.Steepness * elem.Adjoint * Epsilon)) {
+						LocalDerivative  = - elem.Steepness * elem.Adjoint * Epsilon;
 					}
 				}
 				
-//Console.WriteLine("SigDif: {0} <= {1}",LocalDerivative, elem.Derivative);
             }
 			public void Visit(Compiled.LTConstraint elem)
             {
@@ -207,9 +228,9 @@ namespace AutoDiff
 				//Normal behaviour:
 				else {
 					if (ArgumentIndex == 0) {
-						LocalDerivative = - elem.Steepness * elem.Derivative;
+						LocalDerivative = - elem.Steepness * elem.Adjoint;
 					} else {
-						LocalDerivative = elem.Steepness * elem.Derivative;
+						LocalDerivative = elem.Steepness * elem.Adjoint;
 					}
 				}
 				
@@ -223,9 +244,9 @@ namespace AutoDiff
 				//Normal behaviour:
 				else {
 					if (ArgumentIndex == 0) {
-						LocalDerivative = - elem.Steepness * elem.Derivative;
+						LocalDerivative = - elem.Steepness * elem.Adjoint;
 					} else {
-						LocalDerivative = elem.Steepness * elem.Derivative;
+						LocalDerivative = elem.Steepness * elem.Adjoint;
 					}
 				}
 				
@@ -234,40 +255,26 @@ namespace AutoDiff
             {
 				if (ArgumentIndex == 0) {
 					if (ValueOf(elem.Constraint) < 0.999) {
-						LocalDerivative = elem.Derivative;
+						LocalDerivative = elem.Adjoint;
 					}
 					else LocalDerivative = 0;
 				} else {
 					if (ValueOf(elem.Constraint) < 0.999) {
 						LocalDerivative = 0;
 					} else {
-						LocalDerivative = ValueOf(elem.Constraint) * elem.Derivative;
+						LocalDerivative = ValueOf(elem.Constraint) * elem.Adjoint;
 					}
 				}			
 			}
 			public void Visit(Compiled.Atan2 elem) {
 				double denom = ValueOf(elem.Left)*ValueOf(elem.Left) + ValueOf(elem.Right)*ValueOf(elem.Right);
 				if (ArgumentIndex == 0) {
-					LocalDerivative = - ValueOf(elem.Right)*elem.Derivative / denom;
+					LocalDerivative = - ValueOf(elem.Right)*elem.Adjoint / denom;
 				} else {
-					LocalDerivative = ValueOf(elem.Left)*elem.Derivative / denom;
+					LocalDerivative = ValueOf(elem.Left)*elem.Adjoint / denom;
 				}				
 			}
-				
-
-            public void Visit(Compiled.Sum elem)
-            {
-                LocalDerivative = elem.Derivative;
-            }
-
-            public void Visit(Compiled.Variable var)
-            {
-            }
-
-            private double ValueOf(int index)
-            {
-                return tape[index].Value;
-            }
+			
 			
         }
     }

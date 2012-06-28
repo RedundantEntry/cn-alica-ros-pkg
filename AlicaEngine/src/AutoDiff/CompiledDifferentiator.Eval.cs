@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +10,7 @@ namespace AutoDiff
         private class EvalVisitor : Compiled.ITapeVisitor
         {
             public readonly Compiled.TapeElement[] tape;
-			
-			
+
             public EvalVisitor(Compiled.TapeElement[] tape)
             {
                 this.tape = tape;
@@ -25,30 +24,53 @@ namespace AutoDiff
             {
                 elem.Value = Math.Exp(ValueOf(elem.Arg));
             }
+
+            public void Visit(Compiled.Log elem)
+            {
+                elem.Value = Math.Log(ValueOf(elem.Arg));
+            }
+
+            public void Visit(Compiled.ConstPower elem)
+            {
+                elem.Value = Math.Pow(ValueOf(elem.Base), elem.Exponent);
+            }
+
+            public void Visit(Compiled.TermPower elem)
+            {
+                elem.Value = Math.Pow(ValueOf(elem.Base), ValueOf(elem.Exponent));
+            }
+
+            public void Visit(Compiled.Product elem)
+            {
+                elem.Value = ValueOf(elem.Left) * ValueOf(elem.Right);
+            }
+
+            public void Visit(Compiled.Sum elem)
+            {
+                elem.Value = 0;
+                for (int i = 0; i < elem.Terms.Length; ++i)
+                    elem.Value += ValueOf(elem.Terms[i]);
+            }
+
+            public void Visit(Compiled.Variable var)
+            {
+            }
+           
+
+            private double ValueOf(int index)
+            {
+                return tape[index].Value;
+            }
 			
- 			public void Visit(Compiled.Sin elem)
+			//Additions by Carpe Noctem:
+			
+			public void Visit(Compiled.Sin elem)
             {
                 elem.Value = Math.Sin(ValueOf(elem.Arg));
             }
  			public void Visit(Compiled.Cos elem)
             {
                 elem.Value = Math.Cos(ValueOf(elem.Arg));
-            }
-
-			
-			public void Visit(Compiled.Log elem)
-            {
-                elem.Value = Math.Log(ValueOf(elem.Arg));
-            }
-
-            public void Visit(Compiled.Power elem)
-            {
-                elem.Value = Math.Pow(ValueOf(elem.Base), elem.Exponent);
-            }
-
-            public void Visit(Compiled.Product elem)
-            {
-                elem.Value = ValueOf(elem.Left) * ValueOf(elem.Right);
             }
 			public void Visit(Compiled.Max elem)
             {
@@ -116,15 +138,6 @@ namespace AutoDiff
 					elem.Value = ValueOf(elem.Constraint)*ValueOf(elem.Utility);
 				}				
             }
-
-
-            public void Visit(Compiled.Sum elem)
-            {
-                elem.Value = 0;
-                for (int i = 0; i < elem.Terms.Length; ++i)
-                    elem.Value += ValueOf(elem.Terms[i]);
-            }
-			
 			public void Visit(Compiled.Abs elem)
             {
                  elem.Value = Math.Abs(ValueOf(elem.Arg));
@@ -133,15 +146,7 @@ namespace AutoDiff
             {
                 elem.Value = Math.Atan2(ValueOf(elem.Left) , ValueOf(elem.Right));
             }
-			
-            public void Visit(Compiled.Variable var)
-            {
-            }
 
-            private double ValueOf(int index)
-            {
-                return tape[index].Value;
-            }
         }
     }
 }

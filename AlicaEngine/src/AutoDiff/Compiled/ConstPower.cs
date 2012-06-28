@@ -5,13 +5,10 @@ using System.Text;
 
 namespace AutoDiff.Compiled
 {
-	class Constant : TapeElement
-	{
-        public Constant(double value)
-        {
-            Value = value;
-            Adjoint = 0;
-        }
+    class ConstPower : TapeElement
+    {
+        public int Base;
+        public double Exponent;
 
         public override void Accept(ITapeVisitor visitor)
         {

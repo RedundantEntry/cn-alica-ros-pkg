@@ -66,7 +66,11 @@ namespace AutoDiff
 		public override Term AggregateConstants()
 		{
 			Left = Left.AggregateConstants();
-			Right = Right.AggregateConstants();
+			if (Left == Term.True) return Left;
+			Right = Right.AggregateConstants();	
+			if (Left == Term.False) return Right;
+			if (Right == Term.True) return Right;
+			if (Right == Term.False) return Left;
 			if (Left is Constant && Right is Constant) {
 				return Math.Max ((Left as Constant).Value, (Right as Constant).Value);
 			} else {

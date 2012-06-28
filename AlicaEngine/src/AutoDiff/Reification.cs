@@ -16,8 +16,8 @@ namespace AutoDiff
         {
             Condition = condition;
 			NegatedCondition = condition.Negate();
-            Min = min;
-			Max = max;
+            MinVal = min;
+			MaxVal = max;
         }
 		/// <summary>
 		/// Gets or sets the constraint to reify
@@ -39,14 +39,14 @@ namespace AutoDiff
 		/// <value>
 		/// The value representing a violated constraint.
 		/// </value>
-	    public double Min { get; private set; }
+	    public double MinVal { get; private set; }
 		/// <summary>
 		/// Gets or sets the maximum.
 		/// </summary>
 		/// <value>
 		/// The value representing a satisfied constraint.
 		/// </value>
-		public double Max { get; private set; }
+		public double MaxVal { get; private set; }
 
         /// <summary>
         /// Accepts a term visitor

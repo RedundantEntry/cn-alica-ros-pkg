@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -53,8 +53,8 @@ namespace AutoDiff
         {
             return visitor.Visit(this);
         }
-        
-        public override string ToString()
+		
+		public override string ToString()
 		{
 			return string.Format("( {0} * {1} )", Left, Right);
 		}
@@ -85,15 +85,6 @@ namespace AutoDiff
 		public override Term Derivative(Variable v)
 		{
 			return this.Left*this.Right.Derivative(v) + this.Right*this.Left.Derivative(v);
-		}
-		public override bool Equals (object obj)
-		{
-			if (this == obj) return true;
-			if (obj is Product) {
-				Product o = (Product)obj;
-				return this.Left.Equals(o.Left) && this.Right.Equals(o.Right);
-			}
-			return false;
 		}
     }
 }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +7,7 @@ namespace AutoDiff
 {
     /// <summary>
     /// Represents a variable term. Variable terms are substituted for real values during evaluation and
-    /// differentiation. For more info see <see cref="Evaluator"/> and <see cref="Differentiator"/> classes.
+    /// differentiation. 
     /// </summary>
     [Serializable]
     public class Variable : Term
@@ -33,10 +33,14 @@ namespace AutoDiff
         {
             return visitor.Visit(this);
         }
-        
-        public override string ToString()
+		/// Additions by Carpe Noctem:
+		
+		public double GlobalMin = Double.NegativeInfinity;
+		public double GlobalMax = Double.PositiveInfinity;
+		public override string ToString()
 		{
 			int hash = this.GetHashCode();
+			//return (hash<0 ? string.Format ("Var_{0}[{1}..{2}]",-hash,Min,Max) : string.Format ("Var{0}[{1}..{2}]",hash,Min,Max));
 			return (hash<0 ? string.Format ("Var_{0}",-hash) : string.Format ("Var{0}",hash));
 		}
 		

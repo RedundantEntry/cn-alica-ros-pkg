@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -59,8 +59,8 @@ namespace AutoDiff
         {
             return visitor.Visit(this);
         }
-        
-        public override string ToString()
+		
+		public override string ToString()
 		{
 			string ret = string.Format ("( {0}",Terms[0].ToString());
 			for (int i = 1; i < Terms.Count; i++) {
@@ -81,13 +81,16 @@ namespace AutoDiff
 					sum += (curSummand as Constant).Value;
 					foundConst = true;
 				} else {
-					if(!(curSummand is Zero)) nonConstTerms.Add (curSummand);
+					if(!(curSummand is Zero)) nonConstTerms.Add(curSummand);
 				}
 			}
 			if (nonConstTerms.Count == 0) {
 				return sum;
-			} else if (foundConst){
-				nonConstTerms.Add(sum);
+			} else if (!foundConst && nonConstTerms.Count == 1) {
+				return nonConstTerms[0];
+			}
+			if (foundConst){			
+				nonConstTerms.Add(sum);				
 			}
 			Terms = new ReadOnlyCollection<Term>(nonConstTerms);
 			return this;
@@ -99,20 +102,6 @@ namespace AutoDiff
 				t.Add(Terms[i].Derivative(v));
 			}
 			return new Sum(t);
-		}
-		public override bool Equals (object obj)
-		{
-			if (this == obj) return true;
-			if(obj is Sum) {
-				Sum o = (Sum)obj;
-				if (o.Terms.Count != this.Terms.Count) return false;
-				for(int i=0; i<this.Terms.Count; i++) {
-					if (!this.Terms[i].Equals(o.Terms[i])) return false;
-				}
-				return true;
-				
-			}
-			return false;
 		}
     }
 }

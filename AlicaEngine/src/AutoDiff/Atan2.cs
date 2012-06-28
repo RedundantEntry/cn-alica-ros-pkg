@@ -73,7 +73,7 @@ namespace AutoDiff
 		public override Term Derivative(Variable v)
 		{
 			Term t = this.Left*this.Right.Derivative(v) - this.Right*this.Left.Derivative(v);
-			return t/ (new IntPower(this.Left,2) + 	new IntPower(this.Right,2));
+			return t/ (new ConstPower(this.Left,2) + 	new ConstPower(this.Right,2));
 		}
     }
 }

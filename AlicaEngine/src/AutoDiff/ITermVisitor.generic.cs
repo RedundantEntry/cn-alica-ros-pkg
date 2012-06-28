@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,9 +28,16 @@ namespace AutoDiff
         /// <summary>
         /// Computes a value for a power term.
         /// </summary>
-        /// <param name="intPower">The input term.</param>
+        /// <param name="power">The input term.</param>
         /// <returns>The result of the computation.</returns>
-        TResult Visit(IntPower intPower);
+        TResult Visit(ConstPower power);
+
+        /// <summary>
+        /// Computes a value for a power term.
+        /// </summary>
+        /// <param name="power">The input term.</param>
+        /// <returns>The result of the computation.</returns>
+        TResult Visit(TermPower power);
 
         /// <summary>
         /// Computes a value for a product term.
@@ -39,6 +46,36 @@ namespace AutoDiff
         /// <returns>The result of the computation.</returns>
         TResult Visit(Product product);
 
+        /// <summary>
+        /// Computes a value for a sum term.
+        /// </summary>
+        /// <param name="sum">The input term.</param>
+        /// <returns>The result of the computation.</returns>
+        TResult Visit(Sum sum);
+
+        /// <summary>
+        /// Computes a value for a variable term.
+        /// </summary>
+        /// <param name="variable">The input term.</param>
+        /// <returns>The result of the computation.</returns>
+        TResult Visit(Variable variable);
+
+        /// <summary>
+        /// Computes a value for a logarithm term.
+        /// </summary>
+        /// <param name="log">The input term.</param>
+        /// <returns>The result of the computation.</returns>
+        TResult Visit(Log log);
+
+        /// <summary>
+        /// Computes a value for an exponential function term.
+        /// </summary>
+        /// <param name="exp">The input term.</param>
+        /// <returns>The result of the computation.</returns>
+        TResult Visit(Exp exp);
+		
+		
+		///Additions by Carpe Noctem:
 		
 		/// <summary>
         /// Computes a value for a sigmoid term.
@@ -97,26 +134,6 @@ namespace AutoDiff
         /// <returns>The result of the computation.</returns>
         TResult Visit(ConstraintUtility cu);
 		
-        /// <summary>
-        /// Computes a value for a sum term.
-        /// </summary>
-        /// <param name="sum">The input term.</param>
-        /// <returns>The result of the computation.</returns>
-        TResult Visit(Sum sum);
-
-        /// <summary>
-        /// Computes a value for a variable term.
-        /// </summary>
-        /// <param name="variable">The input term.</param>
-        /// <returns>The result of the computation.</returns>
-        TResult Visit(Variable variable);
-
-        /// <summary>
-        /// Computes a value for a logarithm term.
-        /// </summary>
-        /// <param name="log">The input term.</param>
-        /// <returns>The result of the computation.</returns>
-        TResult Visit(Log log);
 		
         /// <summary>
         /// Computes a value for a sine term.
@@ -131,14 +148,7 @@ namespace AutoDiff
         /// <param name="cos">The input term.</param>
         /// <returns>The result of the computation.</returns>
         TResult Visit(Cos cos);
-
-        /// <summary>
-        /// Computes a value for an exponential function term.
-        /// </summary>
-        /// <param name="exp">The input term.</param>
-        /// <returns>The result of the computation.</returns>
-        TResult Visit(Exp exp);
-		
+       
 		
 		/// <summary>
         /// Computes a value for an exponential function term.
@@ -146,8 +156,10 @@ namespace AutoDiff
         /// <param name="abs">The input term.</param>
         /// <returns>The result of the computation.</returns>
         TResult Visit(Abs abs);
+		
 		TResult Visit(Atan2 atan2);
 		
 		TResult Visit(Reification r);
+      
     }
 }

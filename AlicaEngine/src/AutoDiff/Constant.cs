@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -48,9 +48,10 @@ namespace AutoDiff
         {
             return visitor.Visit(this);
         }
-        
-        public override string ToString()
+		public override string ToString()
 		{
+			if (this == Term.True) return "true";
+			if (this == Term.False) return "false";
 			return string.Format ("{0}", Value);
 		}
 		
@@ -61,14 +62,6 @@ namespace AutoDiff
 		public override Term Derivative(Variable v)
 		{
 			return 0;
-		}
-		public override bool Equals (object obj)
-		{
-			if (obj is Constant) {
-				return this.Value == ((Constant)obj).Value;
-			}
-			
-			return false;
 		}
     }
 }

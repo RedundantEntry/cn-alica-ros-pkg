@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+//using System.Diagnostics.Contracts;
 
 namespace AutoDiff
 {
@@ -10,7 +10,7 @@ namespace AutoDiff
     /// Base class for all automatically-differentiable terms.
     /// </summary>
     [Serializable]
-    
+    //[ContractClass(typeof(TermContacts))]
     public abstract partial class Term
     {
         /// <summary>
@@ -26,14 +26,6 @@ namespace AutoDiff
         /// <param name="visitor">The visitor to accept</param>
         /// <returns>The result from the visitor's visit function.</returns>
         public abstract TResult Accept<TResult>(ITermVisitor<TResult> visitor);
-        
-        public abstract Term AggregateConstants();
-		
-		public abstract Term Derivative(Variable v);
-		
-		public double Min = Double.NegativeInfinity;
-		public double Max = Double.PositiveInfinity;
-		
 
         /// <summary>
         /// Converts a floating point constant to a constant term.
@@ -50,17 +42,17 @@ namespace AutoDiff
         /// </summary>
         /// <param name="left">First term in the sum</param>
         /// <param name="right">Second term in the sum</param>
-        /// <returns>A term representing the sum of <see cref="left"/> and <see cref="right"/>.</returns>
+        /// <returns>A term representing the sum of <paramref name="left"/> and <paramref name="right"/>.</returns>
         public static Term operator+(Term left, Term right)
         {
-			 if (left is Zero && right is Zero)
+            if (left is Zero && right is Zero)
                 return new Zero();
             else if (left is Zero)
                 return right;
             else if (right is Zero)
                 return left;
             else
-                return TermBuilder.Sum(left, right);            
+                return TermBuilder.Sum(left, right);
         }
 
         /// <summary>
@@ -68,10 +60,21 @@ namespace AutoDiff
         /// </summary>
         /// <param name="left">The first term in the product</param>
         /// <param name="right">The second term in the product</param>
-        /// <returns>A term representing the product of <see cref="left"/> and <see cref="right"/>.</returns>
+        /// <returns>A term representing the product of <paramref name="left"/> and <paramref name="right"/>.</returns>
         public static Term operator*(Term left, Term right)
         {
             return TermBuilder.Product(left, right);
+        }
+
+        /// <summary>
+        /// Constructs a fraction term of the two given terms.
+        /// </summary>
+        /// <param name="numerator">The numerator of the fraction. That is, the "top" part.</param>
+        /// <param name="denominator">The denominator of the fraction. That is, the "bottom" part.</param>
+        /// <returns>A term representing the fraction <paramref name="numerator"/> over <paramref name="denominator"/>.</returns>
+        public static Term operator/(Term numerator, Term denominator)
+        {
+            return TermBuilder.Product(numerator, TermBuilder.Power(denominator, -1));
         }
 
         /// <summary>
@@ -94,37 +97,31 @@ namespace AutoDiff
         {
             return (-1) * term;
         }
+		///Additions by Carpe Noctem:
+		public abstract Term AggregateConstants();
 		
-		/// <summary>
-        /// Constructs a fraction term of the two given terms.
-        /// </summary>
-        /// <param name="numerator">The numerator of the fraction. That is, the "top" part.</param>
-        /// <param name="denominator">The denominator of the fraction. That is, the "bottom" part.</param>
-        /// <returns>A term representing the fraction <paramref name="numerator"/> over <paramref name="denominator"/>.</returns>
-        public static Term operator/(Term numerator, Term denominator)
-        {
-            return TermBuilder.Product(numerator, TermBuilder.Power(denominator, -1));
-        }
-
+		public abstract Term Derivative(Variable v);
 		
-		
+		public double Min = Double.NegativeInfinity;
+		public double Max = Double.PositiveInfinity;
+		public List<Term> Parents = new List<Term>();
+		public Term Prev;
+		public Term Next;
     }
-
-   
+	/*
+    [ContractClassFor(typeof(Term))]
     abstract class TermContacts : Term
     {
         public override void Accept(ITermVisitor visitor)
         {
-			if(visitor==null) throw new Exception("visitor == null");
-            //Contract.Requires(visitor != null);
+            Contract.Requires(visitor != null);
         }
 
         public override TResult Accept<TResult>(ITermVisitor<TResult> visitor)
         {
-            if(visitor==null) throw new Exception("visitor == null");
-			//Contract.Requires(visitor != null);
+            Contract.Requires(visitor != null);
             return default(TResult);
         }
     }
-
+	*/
 }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,30 +14,58 @@ namespace AutoDiff
         /// Performs an action for a constant term.
         /// </summary>
         /// <param name="constant">The input term.</param>
-        /// <returns>The result of the computation.</returns>
         void Visit(Constant constant);
 
         /// <summary>
         /// Performs an action for a zero term.
         /// </summary>
         /// <param name="zero">The input term.</param>
-        /// <returns>The result of the computation.</returns>
         void Visit(Zero zero);
+
+        /// <summary>
+        /// Performs an action for a constant power term.
+        /// </summary>
+        /// <param name="power">The input term.</param>
+        void Visit(ConstPower power);
 
         /// <summary>
         /// Performs an action for a power term.
         /// </summary>
-        /// <param name="intPower">The input term.</param>
-        /// <returns>The result of the computation.</returns>
-        void Visit(IntPower intPower);
+        /// <param name="power">The input term.</param>
+        void Visit(TermPower power);
 
         /// <summary>
         /// Performs an action for a product term.
         /// </summary>
         /// <param name="product">The input term.</param>
-        /// <returns>The result of the computation.</returns>
         void Visit(Product product);
 
+        /// <summary>
+        /// Performs an action for a sum term.
+        /// </summary>
+        /// <param name="sum">The input term.</param>
+        void Visit(Sum sum);
+
+        /// <summary>
+        /// Performs an action for a variable term.
+        /// </summary>
+        /// <param name="variable">The input term.</param>
+        void Visit(Variable variable);
+
+        /// <summary>
+        /// Performs an action for a logarithm term.
+        /// </summary>
+        /// <param name="log">The input term.</param>
+        void Visit(Log log);
+
+        /// <summary>
+        /// Performs an action for an exponential function term.
+        /// </summary>
+        /// <param name="exp">The input term.</param>
+        void Visit(Exp exp);
+		
+		///Additions by Carpe Noctem:
+		
 		/// <summary>
         /// Performs an action for a sigmoid term.
         /// </summary>
@@ -93,30 +121,9 @@ namespace AutoDiff
         /// </summary>
         /// <param name="cu">The input term.</param>
         /// <returns>The result of the computation.</returns>
-        void Visit(ConstraintUtility cu);		
-		
-        /// <summary>
-        /// Performs an action for a sum term.
-        /// </summary>
-        /// <param name="sum">The input term.</param>
-        /// <returns>The result of the computation.</returns>
-        void Visit(Sum sum);
-
-        /// <summary>
-        /// Performs an action for a variable term.
-        /// </summary>
-        /// <param name="variable">The input term.</param>
-        /// <returns>The result of the computation.</returns>
-        void Visit(Variable variable);
-
-        /// <summary>
-        /// Performs an action for a logarithm term.
-        /// </summary>
-        /// <param name="log">The input term.</param>
-        /// <returns>The result of the computation.</returns>
-        void Visit(Log log);
-		
-        /// <summary>
+        void Visit(ConstraintUtility cu);	
+       
+		 /// <summary>
         /// Performs an action for a sine term.
         /// </summary>
         /// <param name="sin">The input term.</param>
@@ -135,16 +142,24 @@ namespace AutoDiff
         /// </summary>
         /// <param name="abs">The input term.</param>
         /// <returns>The result of the computation.</returns>
-        void Visit(Abs abs);		
+        void Visit(Abs abs);	
 		
-        /// <summary>
-        /// Performs an action for an exponential function term.
-        /// </summary>
-        /// <param name="exp">The input term.</param>
-        /// <returns>The result of the computation.</returns>
-        void Visit(Exp exp);
+		/// <summary>
+		/// Performs an action for an atan2 term.
+		/// </summary>
+		/// <param name='atan2'>
+		/// Atan2.
+		/// </param>
 		void Visit(Atan2 atan2);
+		
+		/// <summary>
+		/// Performs an action for a reified constraint
+		/// </summary>
+		/// <param name='r'>
+		/// R.
+		/// </param>
 		void Visit(Reification r);
+		
 		
     }
 }

@@ -8,7 +8,6 @@ namespace AutoDiff.Compiled
 	class Exp : TapeElement
     {
         public int Arg;
-		
 
         public override void Accept(ITapeVisitor visitor)
         {

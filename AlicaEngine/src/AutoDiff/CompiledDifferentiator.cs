@@ -1,7 +1,8 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+//using System.Diagnostics.Contracts;
 using System.Diagnostics;
 using System.Collections.ObjectModel;
 
@@ -21,12 +22,14 @@ namespace AutoDiff
         /// <param name="variables">The variables.</param>
         public CompiledDifferentiator(Term function, Variable[] variables)
         {
-            if(function == null) throw new Exception("function == null");
-			if(variables == null) throw new Exception("variables == null");
-			//Contract.Requires(function != null);
-            //Contract.Requires(variables != null);
-            //Contract.Requires(Contract.ForAll(variables, variable => variable != null));
-            //Contract.Ensures(Dimension == variables.Length);
+            /*
+            Contract.Requires(function != null);
+            Contract.Requires(variables != null);
+            Contract.Requires(Contract.ForAll(variables, variable => variable != null));
+            Contract.Ensures(Dimension == variables.Length);
+			*/
+            if (function is Variable)
+                function = new ConstPower(function, 1);
 
             var tapeList = new List<Compiled.TapeElement>();
             new Compiler(variables, tapeList).Compile(function);
@@ -40,52 +43,63 @@ namespace AutoDiff
 
         public double Evaluate(double[] arg)
         {
-			if(arg == null) throw new Exception("arg == null");
-			if(arg.Length != Dimension) throw new Exception("arg.Length != Dimension");
-            //Contract.Requires(arg != null);
-            //Contract.Requires(arg.Length == Dimension);
+            /*
+            Contract.Requires(arg != null);
+            Contract.Requires(arg.Length == Dimension);
+            */
             EvaluateTape(arg);
             return tape.Last().Value;
         }
 
         public Tuple<double[], double> Differentiate(double[] arg)
         {
-			
-			if(arg == null) throw new Exception("arg == null");
-			if(arg.Length != Dimension) throw new Exception("arg.Length != Dimension");
-			//Contract.Requires(arg != null);
-            //Contract.Requires(arg.Length == Dimension);
-
-            EvaluateTape(arg);
-            DifferetiateTape();
-
-            var gradient = tape.Take(Dimension).Select(elem => elem.Derivative).ToArray();
-            var value = tape.Last().Value;
+			/*
+            Contract.Requires(arg != null);
+            Contract.Requires(arg.Length == Dimension);
+			*/
+            ForwardSweep(arg);
+            ReverseSweep();
+			//Replacement for Linq code -- HS
+			double[] gradient = new double[Dimension];
+			for(int i=0; i<Dimension; i++) {
+				gradient[i] = tape[i].Adjoint;
+			}			
+			double value = tape[tape.Length-1].Value;
+            //var gradient = tape.Take(Dimension).Select(elem => elem.Adjoint).ToArray();			
+            //var value = tape.Last().Value;
 
             return Tuple.Create(gradient, value);
         }
-		
-		
-        private void DifferetiateTape()
-        {
-            tape.Last().Derivative = 1; // derivative of the last variable with respect to itself is 1.
-            var diffVisitor = new DiffVisitor(tape);
-            for (int i = tape.Length - 2; i >= 0; --i)
-            {
-                tape[i].Derivative = 0;
-                for (int j = 0; j < tape[i].InputOf.Length; ++j)
-                {
-                    var connection = tape[i].InputOf[j];
-                    Debug.Assert(connection.IndexOnTape > i);
 
-                    var inputElement = tape[connection.IndexOnTape];
-                    diffVisitor.ArgumentIndex = connection.ArgumentIndex;
-                    inputElement.Accept(diffVisitor);
-//Console.Write("{0} + {1} = ",tape[i].Derivative,diffVisitor.LocalDerivative);
-                    tape[i].Derivative += diffVisitor.LocalDerivative;
-//Console.WriteLine("{0}",tape[i].Derivative);				
-                }
+        private void ReverseSweep()
+        {
+			//Removed Linq code -- HS
+			tape[tape.Length-1].Adjoint = 1;
+            //tape.Last().Adjoint = 1;
+            
+            // initialize adjoints
+            for (int i = 0; i < tape.Length - 1; ++i)
+                tape[i].Adjoint = 0;
+
+            // accumulate adjoints
+            for (int i = tape.Length - 1; i >= Dimension; --i)
+            {
+                var inputs = tape[i].Inputs;
+                var adjoint = tape[i].Adjoint;
+                
+                for(int j = 0; j < inputs.Length; ++j)
+                    tape[inputs[j].Index].Adjoint += adjoint * inputs[j].Weight;
             }
+        }
+
+        private void ForwardSweep(double[] arg)
+        {
+            for (int i = 0; i < Dimension; ++i)
+                tape[i].Value = arg[i];
+
+            var forwardDiffVisitor = new ForwardSweepVisitor(tape);
+            for (int i = Dimension; i < tape.Length; ++i)
+                tape[i].Accept(forwardDiffVisitor);
         }
 
         private void EvaluateTape(double[] arg)

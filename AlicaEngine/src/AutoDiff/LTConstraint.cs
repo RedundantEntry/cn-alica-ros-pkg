@@ -98,14 +98,14 @@ namespace AutoDiff
 		{
 			throw new Exception("Symbolic Derivation of Less-Than not supported.");
 		}
-		public override bool Equals (object obj)
+		/*public override bool Equals (object obj)
 		{
 			if (this == obj) return true;
 			if (obj is LTConstraint) {
 				return this.Left.Equals(((LTConstraint)obj).Left) && this.Right.Equals(((LTConstraint)obj).Right);
 			}
 			return base.Equals (obj);
-		}
+		}*/
 		
     }
 }

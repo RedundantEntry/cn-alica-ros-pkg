@@ -11,7 +11,8 @@
   <depend package="roscs" />
   <depend package="roscpp" />
   <depend package="Castor"/> 
-  <depend package="AlicaEngine"/> 
+  <depend package="AlicaEngine"/>
+  <depend package="std_msgs" /> 
   <rosdep name="gtk-sharp"/>
 </package>
 

@@ -12,6 +12,7 @@
   <depend package="Castor" />
   <depend package="roscs" />
   <depend package="turtlesim" />
+  <depend package="std_msgs" />
 </package>
 
 

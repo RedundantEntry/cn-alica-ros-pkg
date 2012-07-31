@@ -11,6 +11,7 @@
   <depend package="roscs" />
   <depend package="roscpp" />
   <depend package="Castor"/>
+  <depend package="std_msgs" />
  <export>
     <cs lpath="${prefix}/../../lib" />
     <rosdoc config="rosdoc.yaml" />

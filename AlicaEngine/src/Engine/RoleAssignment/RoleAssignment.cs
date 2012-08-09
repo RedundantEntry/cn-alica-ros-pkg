@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using C5;
+using RosCS;
+using RosCS.AlicaEngine;
 
 namespace Alica
 {		
@@ -26,12 +28,15 @@ namespace Alica
 		/// </summary>
 		private RobotProperties ownRobotProperties;
 		private ITeamObserver to;
+		private Publisher rolePub;
 
 		public RoleAssignment()
 		{
 			this.robotRoleMapping = new Dictionary<int,Role>();				
 			this.availableRobots  = new List<RobotProperties>();				
 			this.sortedRobots 	  = new C5.SortedArray<RobotRoleUtility>();
+			Node rosNode = new Node("AlicaEngine");
+			this.rolePub = new Publisher(rosNode,"OwnRole",RoleSwitch.TypeId,1);
 			
 		}
 		
@@ -122,8 +127,7 @@ namespace Alica
 			{				
 				MapRoleToRobot(rp);				
 			}
-			
-			//if (ownRole == null) AlicaEngine.Get().Abort("RA: Cannot find own role!");
+						
 						
 		}
 		
@@ -147,7 +151,7 @@ namespace Alica
 						robotRoleMapping.Add(rc.Robot.Id, rc.Role);						
 						if(ownRobotProperties.Id == rc.Robot.Id)
 						{	
-							ownRole = rc.Role;
+							OwnRole = rc.Role;
 						}
 						to.GetRobotById(rc.Robot.Id).LastRole = rc.Role;
 						break;		
@@ -209,7 +213,15 @@ namespace Alica
 				}*/
 				return this.ownRole;
 			}
-			//set{ this.ownRole = value; }
+			private set {
+				if (this.ownRole != value) {
+					RoleSwitch rs = new RoleSwitch();
+					rs.SenderID = this.ownRobotProperties.Id;
+					rs.RoleID = value.Id;
+					this.rolePub.Send(rs);
+				}
+				this.ownRole = value;
+			}			
 		}
 		public void Tick() {
 				//this.RoleUtilities();
